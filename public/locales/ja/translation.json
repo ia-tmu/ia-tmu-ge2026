@@ -4,12 +4,14 @@
     "title": "ヒーローのタイトル",
     "subtitle": "ヒーローのサブタイトル"
   },
-  "samplesection": {
+  "sampleSection": {
     "title": "サンプルセクションのタイトル",
-    "subtitle": "サンプルセクションのサブタイトル"
+    "subtitle": "サンプルセクションのサブタイトル",
+    "works": "作品一覧へ"
   },
   "works": {
     "title": "これは作品一覧ページ",
-    "description": "ここでは作品の一覧を見ることができます。"
+    "subtitle": "ここでは作品の一覧を見ることができます。",
+    "back": "ホームに戻る"
   }
 }

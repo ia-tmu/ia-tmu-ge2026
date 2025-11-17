@@ -4,12 +4,14 @@
     "title": "Hero Title",
     "subtitle": "Hero subtitle"
   },
-  "samplesection": {
+  "sampleSection": {
     "title": "Sample Section Title",
-    "subtitle": "Sample Section Subtitle"
+    "subtitle": "Sample Section Subtitle",
+    "works": "Go to Works"
   },
   "works": {
     "title": "this is a works page",
-    "description": "here you can see a list of works."
+    "subtitle": "here you can see a list of works.",
+    "back": "Back to Home"
   }
 }
