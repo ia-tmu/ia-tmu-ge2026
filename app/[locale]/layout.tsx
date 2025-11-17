@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import I18nProvider from './components/I18nProvider';
+import I18nProvider from './features/I18nProvider';
 import { Locale, locales, initI18next } from '../i18n';
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";

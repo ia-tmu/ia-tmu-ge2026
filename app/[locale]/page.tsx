@@ -9,9 +9,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <div>
       <Hero />
-      <Section />
-      <Button href={localePath(locale as string, "/works")}>Go to Works Page</Button>
-      {/* <LangSwitcher /> */}
+      <Section>
+        <Button href={localePath(locale as string, "/works")}>Go to Works Page</Button>
+        <LangSwitcher />
+      </Section>
     </div >
   );
 }

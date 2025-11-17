@@ -7,7 +7,7 @@ export default function Button({
   href?: string,
   onClick?: () => void
 }) {
-  const baseClass = "px-4 py-2 bg-black text-white text-sm font-bold rounded-full"
+  const baseClass = "px-4 py-2 w-fit bg-black text-white text-sm font-bold rounded-full"
 
   if (href) return <Link href={href} className={baseClass}>{children}</Link>
 

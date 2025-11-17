@@ -1,6 +1,6 @@
 export function localePath(locale: string, path: string) {
   if (locale === "ja") {
-    return path; // prefixなし
+    return path;
   }
   return `/${locale}${path}`;
 }
