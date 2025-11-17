@@ -1,22 +1,17 @@
-import { initI18next, Locale } from '../i18n';
+import Hero from "./features/Hero";
+import Section from "./components/Section";
+import Button from "./components/Button";
+import LangSwitcher from "./features/LangSwitcher";
+import { localePath } from "./lib/localePath";
 
-export default async function Page({
-  params
-}: {
-  params: Promise<{ locale: Locale }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const i18n = await initI18next(locale, ['translation']);
-
-  console.log('Current locale:', locale);
-  console.log('Loaded resources:', i18n.services.resourceStore.data);
-  console.log('Translation test:', i18n.t('test'));
-
-  const { t } = i18n;
-
   return (
     <div>
-      <h1>{t("test")}</h1>
-    </div>
+      <Hero />
+      <Section />
+      <Button href={localePath(locale as string, "/works")}>Go to Works Page</Button>
+      <LangSwitcher />
+    </div >
   );
 }

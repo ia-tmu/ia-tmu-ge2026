@@ -1,3 +1,15 @@
 {
-  "test": "this is a test text"
+  "test": "this is a test text",
+  "hero": {
+    "title": "Hero Title",
+    "subtitle": "Hero subtitle"
+  },
+  "samplesection": {
+    "title": "Sample Section Title",
+    "subtitle": "Sample Section Subtitle"
+  },
+  "works": {
+    "title": "this is a works page",
+    "description": "here you can see a list of works."
+  }
 }

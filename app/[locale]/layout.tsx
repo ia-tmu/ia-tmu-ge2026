@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Locale, locales } from '../i18n';
+import I18nProvider from './components/I18nProvider';
+import { Locale, locales, initI18next } from '../i18n';
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 
@@ -30,12 +31,20 @@ export default async function RootLayout({
   params: Promise<{ locale: Locale }>;
 }>) {
   const { locale } = await params;
+  const i18n = await initI18next(locale, ['translation']);
+  const resources = {
+    [locale]: {
+      translation: i18n.getResourceBundle(locale, 'translation'),
+    },
+  };
   return (
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <I18nProvider locale={locale} resources={resources}>
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );
