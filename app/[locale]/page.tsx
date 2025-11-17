@@ -11,7 +11,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <Hero />
       <Section />
       <Button href={localePath(locale as string, "/works")}>Go to Works Page</Button>
-      <LangSwitcher />
+      {/* <LangSwitcher /> */}
     </div >
   );
 }
