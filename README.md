@@ -161,17 +161,11 @@ pnpm は、Node.js のパッケージ（ライブラリ）を管理するため�
 
 **インストール方法：**
 
-ターミナルで以下のコマンドを実行します：
+pnpm公式が推奨している方法でインストールします。
 
+**macOS / Linux の場合:**
 ```bash
-npm install -g pnpm
-```
-
-**macOS / Linux で権限エラーが出る場合：**
-
-```bash
-sudo npm install -g pnpm
-```
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 インストールが完了したら、以下のコマンドで確認します：
 
