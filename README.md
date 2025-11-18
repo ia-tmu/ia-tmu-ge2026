@@ -99,6 +99,7 @@ nvm（Node Version Manager）を使用すると、複数の Node.js バージョ
 **macOS / Linux の場合：**
 
 1. ターミナルを開いて、以下のコマンドで nvm をインストールします：
+   （インストールの例：バージョン等が異なる場合があります）
 
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
