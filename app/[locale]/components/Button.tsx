@@ -1,21 +1,27 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Button({
-  children, href, onClick
+  children,
+  href,
+  onClick,
 }: {
-  children: React.ReactNode,
-  href?: string,
-  onClick?: () => void
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
 }) {
-  const baseClass = "px-4 py-2 w-fit bg-muted text-muted-foreground text-sm font-bold rounded-full"
+  const baseClass =
+    "px-4 py-2 w-fit bg-muted text-muted-foreground text-sm font-bold rounded-full";
 
-  if (href) return <Link href={href} className={baseClass}>{children}</Link>
-
-  const handleClick = () => {
-    onClick && onClick()
-  }
+  if (href)
+    return (
+      <Link href={href} className={baseClass}>
+        {children}
+      </Link>
+    );
 
   return (
-    <button className={baseClass} onClick={handleClick}>{children}</button>
-  )
+    <button className={baseClass} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
