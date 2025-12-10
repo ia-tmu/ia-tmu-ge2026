@@ -15,7 +15,7 @@ export default function Teaser() {
         <div className="hidden md:block w-full h-full relative">
           <Image
             src="/images/top/fv/fv-bg.png"
-            alt="Background"
+            alt=""
             fill
             className="object-cover object-right"
             priority
