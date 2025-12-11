@@ -14,13 +14,14 @@ const title =
   "東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026";
 const description = `
   インダストリアルアート学科・学域の卒業・修了制作研究展を開催します。
-  ｜ 2026年3月1日(土)〜3月7日(日)（3月2日(月)は休館日）
-  ｜ @東京都美術館 ギャラリーA・B【入場無料】
-  ｜ 今年の展示名は「卒業・修了制作研究展2026」
+  2026年3月1日(日)〜3月7日(土)（3月2日(月)は休館日）
+  @東京都美術館 ギャラリーA・B【入場無料】
   会期：9:30 - 17:30（最終入場17:00）
   最終日3/7は 9:30 - 12:00（最終入場11:30）
 `;
-const baseUrl = "https://industrial-art.sd.tmu.ac.jp/ge2026/";
+const baseUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}/`
+  : "https://industrial-art.sd.tmu.ac.jp/ge2026/";
 const ogpImageUrl = `${baseUrl}images/ogp.png`;
 
 export const metadata: Metadata = {
