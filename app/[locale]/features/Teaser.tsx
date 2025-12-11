@@ -68,7 +68,7 @@ export default function Teaser() {
   }, []); // 初回マウント時のみ実行
 
   return (
-    <div className="relative w-full z-0 h-dvh overflow-hidden bg-gray-400/50 md:bg-background text-foreground font-sans">
+    <div className="relative w-full z-0 h-dvh overflow-hidden bg-gray-400/50 md:bg-background text-white md:text-foreground font-sans">
       {/* Background Layer (z-0) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* PC: Cover + Right Position */}
@@ -102,8 +102,8 @@ export default function Teaser() {
           opacity={0}
           blurAmount={fogBlur}
           textureType="rough"
-          baseFrequency="0.005 0.005"
-          numOctaves={60}
+          baseFrequency="0.006 0.006"
+          numOctaves={20}
           className="w-full h-full pointer-events-none"
         />
       )}
@@ -120,7 +120,7 @@ export default function Teaser() {
           </div>
 
           {/* Lang Switcher */}
-          <div className="bg-white/80 p-2 rounded-md backdrop-blur-sm shadow-sm">
+          <div className="bg-white/80 p-2 rounded-md backdrop-blur-sm shadow-sm text-foreground">
             <LangSwitcher />
           </div>
         </div>
