@@ -114,10 +114,7 @@ export default function Teaser() {
         <div className="flex justify-between items-start">
           {/* Logo Area */}
           <div className="flex flex-col">
-            <h1
-              className="text-4xl md:text-6xl font-serif tracking-widest leading-none"
-              style={{ writingMode: "vertical-rl" }}
-            >
+            <h1 className="text-4xl md:text-6xl font-serif tracking-widest leading-none [writing-mode:vertical-rl]">
               {t("teaser.logo")}
             </h1>
           </div>
