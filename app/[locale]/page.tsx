@@ -1,12 +1,14 @@
-import Hero from "./features/Hero";
-import SampleSection from "./features/SampleSection";
+import Teaser from "./features/Teaser";
 
-export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   // const { locale } = await params;
   return (
-    <div>
-      <Hero />
-      <SampleSection />
-    </div >
+    <main>
+      <Teaser />
+    </main>
   );
 }
