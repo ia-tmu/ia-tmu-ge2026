@@ -4,23 +4,27 @@ export default function Button({
   children,
   href,
   onClick,
+  target,
 }: {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
+  target?: string;
 }) {
-  const baseClass =
+  const buttonBaseClass =
     "px-4 py-2 w-fit bg-muted text-muted-foreground text-sm font-bold rounded-full";
+
+  const linkBaseClass = "hover:opacity-50 transition-opacity";
 
   if (href)
     return (
-      <Link href={href} className={baseClass}>
+      <Link href={href} className={linkBaseClass} target={target}>
         {children}
       </Link>
     );
 
   return (
-    <button className={baseClass} onClick={onClick}>
+    <button className={buttonBaseClass} onClick={onClick}>
       {children}
     </button>
   );

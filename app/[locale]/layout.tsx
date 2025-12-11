@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import I18nProvider from "./features/I18nProvider";
 import {
   Locale,
@@ -7,20 +8,10 @@ import {
   isValidLocale,
   defaultLocale,
 } from "../i18n";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import "../../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const title = "東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026";
+const title =
+  "東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026";
 const description = `
   インダストリアルアート学科・学域の卒業・修了制作研究展を開催します。
   ｜ 2026年3月1日(土)〜3月7日(日)（3月2日(月)は休館日）
@@ -108,9 +99,23 @@ export default async function RootLayout({
   };
   return (
     <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
+        <Script
+          id="adobe-fonts"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d) {
+                var config = {
+                  kitId: 'rzs4zgy',
+                  scriptTimeout: 3000,
+                  async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+              })(document);
+            `,
+          }}
+        />
         <I18nProvider locale={locale} resources={resources}>
           {children}
         </I18nProvider>
