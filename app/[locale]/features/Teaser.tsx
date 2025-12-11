@@ -1,15 +1,75 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import LangSwitcher from "./LangSwitcher";
+import { TracingPaper } from "../components/TracingPaper";
+import Button from "../components/Button";
 
 export default function Teaser() {
   const { t } = useTranslation();
+  // const initialOpacity = 0; // TracingPaperのopacityは0-1の範囲
+  const initialBlur = 20;
+
+  // アニメーションの状態管理（BlurEffect.tsxを参考にStateベースに戻す）
+  // const [fogOpacity, setFogOpacity] = useState(initialOpacity);
+  const [fogBlur, setFogBlur] = useState(initialBlur);
+  const [isVisible, setIsVisible] = useState(true);
+  const rafIdRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    // マウント確認
+    if (!isVisible) return;
+
+    const duration = 4000; // 4秒かけてアニメーション
+    const startTime = Date.now();
+
+    // ease-out cubic関数
+    const easeOutCubic = (x: number): number => {
+      return 1 - Math.pow(1 - x, 3);
+    };
+
+    const animate = () => {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const progress = Math.min(elapsed / (duration / 1000), 1);
+
+      const eased = easeOutCubic(progress);
+
+      // 初期値から0へ徐々に減らす
+      // const newOpacity = initialOpacity * (1 - eased);
+      const newBlur = initialBlur * (1 - eased);
+
+      // 小数点以下の精度を調整（不要な再レンダリングを減らすため）
+      // const roundedOpacity = Math.round(newOpacity * 1000) / 1000;
+      const roundedBlur = Math.round(newBlur * 100) / 100;
+
+      // setFogOpacity(roundedOpacity);
+      setFogBlur(roundedBlur);
+
+      if (progress < 1) {
+        rafIdRef.current = requestAnimationFrame(animate);
+      } else {
+        // アニメーション完了
+        setIsVisible(false);
+        rafIdRef.current = null;
+      }
+    };
+
+    // アニメーション開始
+    rafIdRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+        rafIdRef.current = null;
+      }
+    };
+  }, []); // 初回マウント時のみ実行
 
   return (
-    <div className="relative w-full h-[100dvh] overflow-hidden bg-background text-foreground font-sans animate-fade-in">
-      {/* Background Layer */}
+    <div className="relative w-full z-0 h-dvh overflow-hidden bg-gray-400/50 md:bg-background text-foreground font-sans">
+      {/* Background Layer (z-0) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* PC: Cover + Right Position */}
         <div className="hidden md:block w-full h-full relative">
@@ -17,6 +77,7 @@ export default function Teaser() {
             src="/images/top/fv/fv-bg.png"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover object-right"
             priority
           />
@@ -27,14 +88,28 @@ export default function Teaser() {
             src="/images/top/fv/fv-bg-sp.png"
             alt="Background"
             fill
+            sizes="100vw"
             className="object-contain object-center"
             priority
           />
         </div>
       </div>
 
-      {/* Content Layer */}
-      <div className="relative z-10 w-full h-full flex flex-col justify-between p-6 md:p-12 lg:p-16 box-border">
+      {/* Fog Layer - TracingPaper (z-30: 最前面) */}
+      {/* Stateベースでアニメーション制御 */}
+      {isVisible && (
+        <TracingPaper
+          opacity={0}
+          blurAmount={fogBlur}
+          textureType="rough"
+          baseFrequency="0.005 0.005"
+          numOctaves={60}
+          className="w-full h-full pointer-events-none"
+        />
+      )}
+
+      {/* Content Layer (z-20) */}
+      <div className="relative w-full h-full flex flex-col justify-between p-6 md:p-12 lg:p-16 animate-fade-in">
         {/* Top Section */}
         <div className="flex justify-between items-start">
           {/* Logo Area */}
@@ -54,7 +129,7 @@ export default function Teaser() {
         </div>
 
         {/* Center/Main Title Area */}
-        <div className="flex flex-col justify-center flex-grow mt-8 mb-8 md:max-w-[70%] lg:max-w-[50%]">
+        <div className="flex flex-col justify-center grow mt-8 mb-8 md:max-w-[70%] lg:max-w-[50%]">
           <p className="text-xs md:text-sm font-medium mb-3 tracking-wide whitespace-pre-line">
             {t("teaser.department")}
           </p>
@@ -68,15 +143,15 @@ export default function Teaser() {
 
         {/* Bottom Details Area */}
         <div className="space-y-6">
-          <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-6 border-t border-foreground/10 pt-6">
+          <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-6 pt-6">
             <div>
               <div className="flex items-start gap-3 md:gap-5 mb-2">
                 <div className="flex flex-col items-center">
                   <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                    3/1
+                    {t("teaser.dates.start")}
                   </span>
-                  <span className="text-lg md:text-2xl font-normal mt-1">
-                    Sat
+                  <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
+                    {t("teaser.dates.startDay")}
                   </span>
                 </div>
                 <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
@@ -84,10 +159,10 @@ export default function Teaser() {
                 </span>
                 <div className="flex flex-col items-center">
                   <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                    3/7
+                    {t("teaser.dates.end")}
                   </span>
-                  <span className="text-lg md:text-2xl font-normal mt-1">
-                    Sun
+                  <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
+                    {t("teaser.dates.endDay")}
                   </span>
                 </div>
               </div>
@@ -104,15 +179,18 @@ export default function Teaser() {
 
           {/* Footer Links */}
           <div className="flex flex-wrap gap-6 text-xs md:text-sm font-medium opacity-60">
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            <Button
+              href="https://www.instagram.com/tmu_ia_sotsuten/"
+              target="_blank"
+            >
               Instagram
-            </a>
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            </Button>
+            <Button href="https://x.com/tmu_ia_sotsuten" target="_blank">
               X (Twitter)
-            </a>
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            </Button>
+            <Button href="https://industrial-art.sd.tmu.ac.jp/" target="_blank">
               Department Website
-            </a>
+            </Button>
           </div>
         </div>
       </div>

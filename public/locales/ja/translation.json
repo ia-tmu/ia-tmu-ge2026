@@ -18,7 +18,13 @@
     "department": "東京都立大学 システムデザイン学部・研究科\nインダストリアルアート学科・学域",
     "exhibitionTitle": "卒業・修了制作研究展 2026",
     "englishTitle": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art\nShowcase of Graduate & Undergraduate Student Works 2026",
-    "period": "3/1 Sat - 3/7 Sun",
+    "period": "3/1 Sun - 3/7 Sat",
+    "dates": {
+      "start": "3/1",
+      "startDay": "Sun",
+      "end": "3/7",
+      "endDay": "Sat"
+    },
     "admission": "入場無料",
     "hours": "9:30 - 17:30（最終入場 17:00）",
     "lastDayHours": "3/7 最終日のみ 9:30 - 12:00（最終入場 11:30）",
