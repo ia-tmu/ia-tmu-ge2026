@@ -16,14 +16,39 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: fot-tsukuaoldmin-pr6n, "しっぽり明朝", "游明朝", "Yu Mincho",
+    "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3",
+    "Noto Serif JP", serif;
+  --font-serif: fot-tsukuaoldmin-pr6n, "しっぽり明朝", "Times New Roman",
+    "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN",
+    "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP", serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Adobe Fontsが読み込まれるまでフォールバックフォントを使用 */
+html.wf-loading body {
+  font-family: "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho",
+    "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3",
+    "Noto Serif JP", serif;
+}
+
+/* Adobe Fontsが読み込まれた後、Adobe Fontsを使用 */
+html.wf-active body,
+html.wf-inactive body {
+  font-family: var(--font-sans);
+}
+
+/* 英語テキスト用のフォント設定 */
+:lang(en),
+[lang="en"] {
+  font-family: "Times New Roman", Times, serif, fot-tsukuaoldmin-pr6n,
+    "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN",
+    "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP";
 }
 
 @keyframes fadeIn {
