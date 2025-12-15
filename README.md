@@ -279,7 +279,7 @@ pnpm build
 静的エクスポートを実行するには、以下のコマンドを実行します：
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 このコマンドは以下の処理を実行します：
@@ -328,7 +328,7 @@ npm run serve:export
 #### 1. 静的ファイルの生成
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ビルドが成功すると、`out` ディレクトリに静的ファイルが生成されます。
@@ -410,7 +410,7 @@ ls -la out/
 
    ```bash
    rm -rf .next
-   npm run build
+   pnpm run build
    ```
 
 3. **将来的にこのページが必要になった場合**:
@@ -454,7 +454,7 @@ ls -la out/
 
   ```bash
   rm -rf .next
-  npm run build
+  pnpm run build
   ```
 
   ビルドキャッシュをクリアしてから再ビルドしてください

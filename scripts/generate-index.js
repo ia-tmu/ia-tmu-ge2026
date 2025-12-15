@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require("fs");
 const path = require("path");
+const { locales, defaultLocale } = require("../i18n.config.js");
 
 // basePathを取得
 // 本番環境では常に /ge2026 を使用
@@ -18,8 +20,8 @@ const indexHtml = `<!DOCTYPE html>
   <script>
     (function() {
       // サポートされているロケール
-      const supportedLocales = ['ja', 'en'];
-      const defaultLocale = 'ja';
+      const supportedLocales = ${JSON.stringify(locales)};
+      const defaultLocale = '${defaultLocale}';
       
       // ブラウザの言語設定を取得
       const browserLang = navigator.language || navigator.userLanguage;

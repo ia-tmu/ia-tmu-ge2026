@@ -1,23 +1,29 @@
 // app/i18n.ts
-import { createInstance } from 'i18next';
-import { initReactI18next } from 'react-i18next/initReactI18next';
-import resourcesToBackend from 'i18next-resources-to-backend';
+import { createInstance } from "i18next";
+import { initReactI18next } from "react-i18next/initReactI18next";
+import resourcesToBackend from "i18next-resources-to-backend";
 
-export const locales = ['ja', 'en'] as const;
-export const defaultLocale = 'ja' as const;
+// 共通設定ファイルから読み込む（Single Source of Truth）
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const i18nConfigData = require("../i18n.config.js");
+export const locales = i18nConfigData.locales as readonly ["ja", "en"];
+export const defaultLocale = i18nConfigData.defaultLocale as "ja";
 
 export type Locale = (typeof locales)[number];
 
 export const i18nConfig = {
   locales,
   defaultLocale,
-}
+};
 
 export function isValidLocale(locale: string): locale is Locale {
   return locales.includes(locale as Locale);
 }
 
-export async function initI18next(locale: Locale, namespaces: string[] = ['translation']) {
+export async function initI18next(
+  locale: Locale,
+  namespaces: string[] = ["translation"]
+) {
   const i18nInstance = createInstance();
 
   await i18nInstance
@@ -32,7 +38,7 @@ export async function initI18next(locale: Locale, namespaces: string[] = ['trans
       lng: locale,
       fallbackLng: defaultLocale,
       ns: namespaces,
-      defaultNS: 'translation',
+      defaultNS: "translation",
       supportedLngs: locales,
       interpolation: {
         escapeValue: false,
