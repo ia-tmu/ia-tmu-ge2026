@@ -6,7 +6,11 @@ const isDev = process.env.NODE_ENV === "development";
 const isVercel = process.env.VERCEL === "1";
 // Vercelではルートパス、本番環境（大学サーバー）では /ge2026 配下とする
 // 開発モードでは basePath は不要（ローカル開発では /ge2026 プレフィックスは不要）
-const basePath = isDev ? "" : isVercel ? "" : "/ge2026";
+const basePath = isDev
+  ? ""
+  : isVercel
+  ? process.env.BASE_PATH || ""
+  : "/ge2026";
 
 const nextConfig: NextConfig = {
   // 開発モードでは静的エクスポートを無効化（middlewareを使用するため）

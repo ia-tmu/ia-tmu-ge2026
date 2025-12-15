@@ -19,8 +19,9 @@ const description = `
   会期：9:30 - 17:30（最終入場17:00）
   最終日3/7は 9:30 - 12:00（最終入場11:30）
 `;
+const basePath = process.env.BASE_PATH || "";
 const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}/`
+  ? `https://${process.env.VERCEL_URL}${basePath}/`
   : "https://industrial-art.sd.tmu.ac.jp/ge2026/";
 const ogpImageUrl = `${baseUrl}images/ogp.png`;
 
