@@ -71,7 +71,7 @@ export default function Concept() {
             </div>
             <div className="flex flex-col gap-3 items-center">
               <div>
-                © 2024 Department of Industrial Art, Tokyo Metropolitan
+                © 2025 Department of Industrial Art, Tokyo Metropolitan
                 University
               </div>
 
