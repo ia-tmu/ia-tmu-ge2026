@@ -14,7 +14,8 @@ export default function Button({
   const buttonBaseClass =
     "px-4 py-2 w-fit bg-muted text-muted-foreground text-sm font-bold rounded-full";
 
-  const linkBaseClass = "hover:opacity-50 transition-opacity";
+  const linkBaseClass =
+    "hover:opacity-60 transition-opacity underline underline-offset-3 hover:no-underline";
 
   if (href)
     return (
