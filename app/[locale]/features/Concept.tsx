@@ -25,16 +25,6 @@ export default function Concept() {
 
   return (
     <div ref={containerRef} className="relative w-full h-[120dvh] z-20">
-      {/* 固定されたエリア（背景画像のブラーはFixedBackgroundで制御） */}
-      <div className="sticky top-0 w-full h-[120dvh]">
-        <motion.div
-          style={{
-            opacity: conceptAreaOpacity,
-          }}
-          className="w-full h-full"
-        />
-      </div>
-
       {/* コンセプトテキスト（スクロールに応じてフェードイン） */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl px-3 md:px-12 lg:px-16 z-30">
         <motion.div
@@ -53,9 +43,9 @@ export default function Concept() {
         </motion.div>
       </div>
 
-      {/* SNSリンク（画面下部に固定） */}
-      <div className="sticky bottom-0 w-full pointer-events-none z-30">
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-4xl px-2 md:px-12 lg:px-16 pointer-events-auto">
+      {/* SNSリンク */}
+      <div className="fixed bottom-8 w-full pointer-events-none z-30">
+        <div className="w-full max-w-4xl px-2 md:px-12 lg:px-16 mx-auto pointer-events-auto">
           <motion.div
             style={{
               opacity: conceptAreaOpacity,

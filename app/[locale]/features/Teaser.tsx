@@ -96,18 +96,7 @@ export default function Teaser() {
           {/* Logo Area */}
           <div className="relative">
             <h1>
-              {/* SP: White Logo */}
-              {/* <div className=" relative w-40 h-40">
-              <Image
-                src="/images/logo/ge-logo-white.png"
-                alt={t("teaser.logo")}
-                fill
-                sizes="128px"
-                className="object-contain object-top-left"
-                priority
-              />
-            </div> */}
-              {/* PC: Black Logo */}
+              {/* Black Logo */}
               <div className="block relative w-32 h-32 md:w-64 md:h-64">
                 <Image
                   src="/images/logo/ge-logo-black.png"

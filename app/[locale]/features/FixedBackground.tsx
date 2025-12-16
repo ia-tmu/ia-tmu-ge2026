@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { TracingPaper } from "../components/TracingPaper";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
 export default function FixedBackground() {
   const initialBlur = 20;
@@ -68,25 +68,19 @@ export default function FixedBackground() {
         rafIdRef.current = null;
       }
     };
-  }, []); // 初回マウント時のみ実行
+  }, [isVisible]); // 初回マウント時のみ実行
 
   // スクロール時のブラーと透明度の状態
   const [scrollBlurValue, setScrollBlurValue] = useState(0);
   const [scrollOpacityValue, setScrollOpacityValue] = useState(0);
 
-  useEffect(() => {
-    const unsubscribeBlur = scrollBlur.on("change", (latest) => {
-      setScrollBlurValue(latest);
-    });
-    const unsubscribeOpacity = scrollOpacity.on("change", (latest) => {
-      setScrollOpacityValue(latest);
-    });
+  useMotionValueEvent(scrollBlur, "change", (latest) => {
+    setScrollBlurValue(latest);
+  });
 
-    return () => {
-      unsubscribeBlur();
-      unsubscribeOpacity();
-    };
-  }, [scrollBlur, scrollOpacity, isVisible]);
+  useMotionValueEvent(scrollOpacity, "change", (latest) => {
+    setScrollOpacityValue(latest);
+  });
 
   // 初期ロード時のブラーとスクロール時のブラーを合成
   const currentBlur = isVisible ? fogBlur : scrollBlurValue;
@@ -117,7 +111,7 @@ export default function FixedBackground() {
           <div className="block md:hidden w-full h-screen relative">
             <Image
               src="/images/top/fv/fv-bg-sp.png"
-              alt="Background"
+              alt=""
               fill
               sizes="100vw"
               className="object-cover object-center"
@@ -126,18 +120,6 @@ export default function FixedBackground() {
             />
           </div>
         </div>
-
-        {/* Fog Layer - TracingPaper (初期ロード時とスクロール時のブラーアニメーション) */}
-        {/* {(isVisible || scrollBlurValue > 0) && (
-          <TracingPaper
-            opacity={currentOpacity}
-            blurAmount={currentBlur}
-            textureType="rough"
-            baseFrequency="0.006 0.006"
-            numOctaves={20}
-            className="w-full h-full pointer-events-none"
-          />
-        )} */}
 
         <TracingPaper
           opacity={currentOpacity}
