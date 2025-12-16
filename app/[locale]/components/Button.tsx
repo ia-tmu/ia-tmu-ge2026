@@ -19,7 +19,12 @@ export default function Button({
 
   if (href)
     return (
-      <Link href={href} className={linkBaseClass} target={target}>
+      <Link
+        href={href}
+        className={linkBaseClass}
+        target={target}
+        onClick={onClick}
+      >
         {children}
       </Link>
     );

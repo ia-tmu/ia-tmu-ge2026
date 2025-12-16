@@ -17,10 +17,16 @@ const nextConfig: NextConfig = {
   // 本番ビルド時のみ静的エクスポートを有効化
   ...(isDev ? {} : { output: "export" }),
   basePath,
+  env: {
+    // クライアントサイドでbasePathを参照できるように環境変数として公開
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   // 静的エクスポートでは画像の最適化機能が使えないため無効化
   images: {
     unoptimized: true,
   },
+  // Apache等の静的ホスティングでディレクトリインデックス（/path/）を正しく機能させる設定
+  trailingSlash: true,
 };
 
 export default nextConfig;
