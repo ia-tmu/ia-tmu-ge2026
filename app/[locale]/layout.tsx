@@ -102,7 +102,7 @@ export default async function RootLayout({
   };
   return (
     <html lang={locale}>
-      <body className="antialiased">
+      <body className="antialiased scroll-smooth">
         <ScrollManager />
         <Script
           id="adobe-fonts"
