@@ -8,6 +8,7 @@ import {
   isValidLocale,
   defaultLocale,
 } from "../i18n";
+import ScrollManager from "./components/ScrollManager";
 import "../../globals.css";
 
 const title =
@@ -102,6 +103,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className="antialiased">
+        <ScrollManager />
         <Script
           id="adobe-fonts"
           strategy="afterInteractive"

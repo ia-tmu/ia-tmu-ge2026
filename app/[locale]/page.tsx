@@ -1,4 +1,6 @@
 import Teaser from "./features/Teaser";
+import FixedBackground from "./features/FixedBackground";
+import Concept from "./features/Concept";
 
 export default async function Page({
   params,
@@ -7,8 +9,10 @@ export default async function Page({
 }) {
   // const { locale } = await params;
   return (
-    <main>
+    <main className="relative">
+      <FixedBackground />
       <Teaser />
+      <Concept />
     </main>
   );
 }

@@ -15,6 +15,7 @@
     "prepare:export": "cd out && ln -sf . ge2026 2>/dev/null || true"
   },
   "dependencies": {
+    "framer-motion": "^11.11.17",
     "i18next": "^25.6.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
