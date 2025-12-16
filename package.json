@@ -7,11 +7,15 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run postbuild",
+    "postbuild": "node scripts/generate-index.js",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "serve:export": "npm run prepare:export && npx serve@latest out -p 3001",
+    "prepare:export": "cd out && ln -sf . ge2026 2>/dev/null || true"
   },
   "dependencies": {
+    "framer-motion": "^11.11.17",
     "i18next": "^25.6.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
@@ -32,5 +36,8 @@
     "eslint-config-next": "16.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "volta": {
+    "node": "22.21.1"
   }
 }

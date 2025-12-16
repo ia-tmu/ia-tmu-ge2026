@@ -17,7 +17,6 @@
   "teaser": {
     "department": "東京都立大学 システムデザイン学部・研究科\nインダストリアルアート学科・学域",
     "exhibitionTitle": "卒業・修了制作研究展 2026",
-    "englishTitle": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art\nShowcase of Graduate & Undergraduate Student Works 2026",
     "period": "3/1 Sun - 3/7 Sat",
     "dates": {
       "start": "3/1",
@@ -31,5 +30,9 @@
     "closed": "休館日：3/2 月",
     "location": "東京都美術館 ギャラリーA・B",
     "logo": "卒展"
+  },
+  "concept": {
+    "title": "『もや』",
+    "description": "形のない「もや」の中を、私たちは進む。\n見えそうで見えない向こう側。\n迷い、立ち止まり、ときに見失いながらも、\n歩み続けることで、少しずつ光が見えてくる。\nそんな軌跡が「もや」を晴らしていく。"
   }
 }

@@ -17,7 +17,6 @@
   "teaser": {
     "department": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art",
     "exhibitionTitle": "Showcase of Graduate & Undergraduate Student Works 2026",
-    "englishTitle": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art\nShowcase of Graduate & Undergraduate Student Works 2026",
     "period": "3/1 Sun - 3/7 Sat",
     "dates": {
       "start": "3/1",
@@ -31,5 +30,9 @@
     "closed": "Closed: 3/2 Mon",
     "location": "Tokyo Metropolitan Art Museum Gallery A・B",
     "logo": "GE"
+  },
+  "concept": {
+    "title": "『もや』",
+    "description": "形のない「もや」の中を、私たちは進む。\n見えそうで見えない向こう側。\n迷い、立ち止まり、ときに見失いながらも、\n歩み続けることで、少しずつ光が見えてくる。\nそんな軌跡が「もや」を晴らしていく。"
   }
 }
