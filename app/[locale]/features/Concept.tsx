@@ -26,7 +26,7 @@ export default function Concept() {
   return (
     <div ref={containerRef} className="relative w-full h-[120dvh] z-20">
       {/* コンセプトテキスト（スクロールに応じてフェードイン） */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl px-3 md:px-12 lg:px-16 z-30">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:left-0 md:translate-x-0 w-max max-w-4xl px-3 md:px-12 lg:px-16 z-30">
         <motion.div
           style={{
             opacity: textOpacity,
@@ -34,10 +34,36 @@ export default function Concept() {
           }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-wider text-foreground">
-            {t("concept.title")}
+          <h2 className="relative text-4xl md:text-5xl font-light mb-8 tracking-wider text-foreground inline-block">
+            {/* Blur Layer: 両端を表示、中央を隠す */}
+            <span
+              className="absolute inset-0 select-none pointer-events-none w-full"
+              aria-hidden="true"
+              style={{
+                filter: "blur(4px)",
+                maskImage:
+                  "linear-gradient(to right, white 0%, transparent 40%, transparent 60%, white 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, white 0%, transparent 40%, transparent 60%, white 100%)",
+              }}
+            >
+              {t("concept.title")}
+            </span>
+
+            {/* Sharp Layer: 両端を隠す、中央を表示 */}
+            <span
+              className="relative z-10 block w-full"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, transparent 0%, white 40%, white 60%, transparent 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent 0%, white 40%, white 60%, transparent 100%)",
+              }}
+            >
+              {t("concept.title")}
+            </span>
           </h2>
-          <p className="text-base md:text-lg font-light leading-12 whitespace-pre-line text-foreground">
+          <p className="text-base md:text-lg font-light leading-10 whitespace-pre-line text-foreground">
             {t("concept.description")}
           </p>
         </motion.div>
