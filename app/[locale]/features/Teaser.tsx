@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import geLogoBlack from "../../../public/images/logo/ge-logo-black.png";
 import LangSwitcher from "./LangSwitcher";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -142,38 +143,60 @@ export default function Teaser() {
         >
           <div className="flex flex-col gap-6 pt-4">
             <div>
-              <div className="flex flex-col md:flex-row items-start md:items-center w-fit gap-3 md:gap-5">
-                {/* 日付の位置関係修正 */}
-                <div className="flex flex-col items-start md:items-center">
+              <div className="flex items-start gap-2 md:gap-3 mb-2">
+                {/* Start Date */}
+                <div className="flex flex-col">
                   <div className="flex items-center justify-center">
-                    <span className="text-5xl font-light tracking-tighter leading-none mb-4 -mr-0.5">
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mb-2 md:mb-3 -mr-0.5 md:-mr-1">
                       {t("teaser.dates.start").split("/")[0]}
                     </span>
-                    <span className="block w-px h-15 bg-current transform rotate-30 mx-2" />
-                    <span className="text-5xl font-light tracking-tighter leading-none mt-4 -ml-0.5">
+                    <span className="block w-px h-10 md:h-12 bg-current transform rotate-30 mx-2 md:mx-3" />
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mt-2 md:mt-3 -ml-0.5 md:-ml-1">
                       {t("teaser.dates.start").split("/")[1]}
                     </span>
                   </div>
-                  <span className="text-3xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
-                    {t("teaser.dates.startDay")}
-                  </span>
+                  <div className="flex justify-between w-full mt-1 px-0.5">
+                    {t("teaser.dates.startDay")
+                      .split("")
+                      .map((char, i) => (
+                        <span
+                          key={i}
+                          className="text-xl md:text-2xl font-normal leading-none scale-y-80 origin-top"
+                        >
+                          {char}
+                        </span>
+                      ))}
+                  </div>
                 </div>
-                <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                  <span className="block w-[0.05rem] h-[3rem] ml-[0.5rem] md:m-0 md:w-[1rem] md:h-[0.1rem] bg-foreground"></span>
-                </span>
-                <div className="flex flex-col items-start md:items-center">
+
+                {/* Separator */}
+                <div className="h-10 md:h-12 flex items-end">
+                  <span className="block w-2 mb-2 md:mb-2.5 md:w-2.5 h-px bg-current" />
+                </div>
+
+                {/* End Date */}
+                <div className="flex flex-col">
                   <div className="flex items-center justify-center">
-                    <span className="text-5xl font-light tracking-tighter leading-none mb-4 -mr-0.5">
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mb-2 md:mb-3 -mr-0.5 md:-mr-1">
                       {t("teaser.dates.end").split("/")[0]}
                     </span>
-                    <span className="block w-px h-15 bg-current transform rotate-30 mx-2" />
-                    <span className="text-5xl font-light tracking-tighter leading-none mt-4 -ml-0.5">
+                    <span className="block w-px h-10 md:h-12 bg-current transform rotate-30 mx-2 md:mx-3" />
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mt-2 md:mt-3 -ml-0.5 md:-ml-1">
                       {t("teaser.dates.end").split("/")[1]}
                     </span>
                   </div>
-                  <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
-                    {t("teaser.dates.endDay")}
-                  </span>
+                  <div className="flex justify-between w-full mt-1 px-0.5">
+                    {t("teaser.dates.endDay")
+                      .split("")
+                      .map((char, i) => (
+                        <span
+                          key={i}
+                          className="text-xl md:text-2xl font-normal leading-none scale-y-80 origin-top"
+                        >
+                          {char}
+                        </span>
+                      ))}
+                  </div>
                 </div>
               </div>
               {/* <p className="text-sm font-medium">{t("teaser.department")}</p> */}
@@ -201,8 +224,8 @@ export default function Teaser() {
             {/*   <p className="text-lg font-medium mt-2">{t("teaser.location")}</p> */}
             {/* </div> */}
           </div>
-        </div>
-      </motion.div>
+        </div >
+      </motion.div >
     </>
   );
 }

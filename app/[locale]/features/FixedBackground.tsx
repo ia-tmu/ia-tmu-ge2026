@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import fvBg from "../../../public/images/top/fv/fv-bg.png";
+import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
 import { TracingPaper } from "../components/TracingPaper";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
@@ -99,7 +101,7 @@ export default function FixedBackground() {
           {/* PC: Cover + Right Position */}
           <div className="hidden opacity-85 md:block w-full h-screen relative">
             <Image
-              src="/images/top/fv/fv-bg.png"
+              src={fvBg}
               alt=""
               fill
               sizes="100vw"
@@ -110,7 +112,7 @@ export default function FixedBackground() {
           {/* SP: Cover + Center */}
           <div className="opacity-90 block md:hidden w-full h-screen relative">
             <Image
-              src="/images/top/fv/fv-bg-sp.png"
+              src={fvBgSp}
               alt=""
               fill
               sizes="100vw"
