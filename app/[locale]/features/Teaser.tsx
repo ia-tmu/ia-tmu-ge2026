@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import geLogoBlack from "../../../public/images/logo/ge-logo-black.png";
 import LangSwitcher from "./LangSwitcher";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -99,7 +100,7 @@ export default function Teaser() {
               {/* Black Logo */}
               <div className="block relative w-32 h-32 md:w-64 md:h-64">
                 <Image
-                  src="/images/logo/ge-logo-black.png"
+                  src={geLogoBlack}
                   alt={t("teaser.logo")}
                   fill
                   sizes="192px"
