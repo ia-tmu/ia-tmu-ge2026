@@ -78,7 +78,7 @@ export default function Teaser() {
   return (
     <>
       {/* スクロール監視用のスペーサー（非表示） */}
-      <div ref={scrollContainerRef} className="h-[80dvh]" />
+      <div ref={scrollContainerRef} className="h-[100dvh]" />
       <motion.div
         className="fixed inset-0 w-full z-10 h-dvh flex flex-col justify-between p-6 md:p-8 lg:p-10 text-foreground font-sans pointer-events-none"
         style={{

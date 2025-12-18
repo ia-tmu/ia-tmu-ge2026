@@ -1,36 +1,63 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Button from "../components/Button";
 
 export default function Concept() {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: containerRef,
+  //   offset: ["start start", "end start"],
+  // });
 
   // テキストのフェードイン（ブラーが十分に強くなった時）
   // スクロール進捗に応じて段階的に表示
-  const textOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-  const textY = useTransform(scrollYProgress, [0, 0.1], [20, 0]);
+  // const textOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  // const textY = useTransform(scrollYProgress, [0, 0.1], [20, 0]);
 
   // Conceptエリア全体のフェードイン（Teaserのフェードアウトと同期）
   // スクロール最下部で完全に表示されるように範囲を拡張
-  const conceptAreaOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  // const conceptAreaOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  //
+  //
+  const [isFullyVisible, setIsFullyVisible] = useState(false);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsFullyVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.75,
+      }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full h-[120dvh] z-20">
+    <div ref={containerRef} className="relative w-full h-[100dvh] z-20">
       {/* コンセプトテキスト（スクロールに応じてフェードイン） */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl px-3 md:px-12 lg:px-16 z-30">
+        {/* <motion.div */}
+        {/*   style={{ opacity: textOpacity, y: textY }} */}
+        {/*   className="text-center" */}
         <motion.div
-          style={{
-            opacity: textOpacity,
-            y: textY,
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            isFullyVisible
+              ? { opacity: 1, y: 0 }
+              : { opacity: 0, y: 20 }
+          }
+          transition={{
+            duration: 3.0,
+            ease: "easeOut",
           }}
           className="text-center"
         >
@@ -41,49 +68,6 @@ export default function Concept() {
             {t("concept.description")}
           </p>
         </motion.div>
-      </div>
-
-      {/* SNSリンク */}
-      <div className="fixed bottom-8 w-full pointer-events-none z-30">
-        <div className="w-full max-w-4xl px-2 md:px-12 lg:px-16 mx-auto pointer-events-auto">
-          <motion.div
-            style={{
-              opacity: conceptAreaOpacity,
-            }}
-            className="flex flex-col gap-8 items-center text-xs md:text-sm font-medium"
-          >
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <Button
-                href="https://www.instagram.com/tmu_ia_sotsuten/"
-                target="_blank"
-              >
-                Instagram
-              </Button>
-              <Button href="https://x.com/tmu_ia_sotsuten" target="_blank">
-                X (Twitter)
-              </Button>
-              <Button
-                href="https://industrial-art.sd.tmu.ac.jp/"
-                target="_blank"
-              >
-                Department Website
-              </Button>
-            </div>
-            <div className="flex flex-col gap-3 items-center">
-              <div>
-                © {new Date().getFullYear()} Department of Industrial Art, Tokyo Metropolitan
-                University
-              </div>
-
-              <Button
-                href="https://industrial-art.sd.tmu.ac.jp/privacy-policy.html"
-                target="_blank"
-              >
-                Privacy policy
-              </Button>
-            </div>
-          </motion.div>
-        </div>
       </div>
     </div>
   );
