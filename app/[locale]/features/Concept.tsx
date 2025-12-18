@@ -30,12 +30,10 @@ export default function Concept() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsFullyVisible(true);
-        }
+        setIsFullyVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.9,
+        threshold: 0.75,
       }
     );
 
