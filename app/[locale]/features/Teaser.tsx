@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import geLogoBlack from "../../../public/images/logo/ge-logo-black.png";
 import LangSwitcher from "./LangSwitcher";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -78,7 +79,7 @@ export default function Teaser() {
   return (
     <>
       {/* スクロール監視用のスペーサー（非表示） */}
-      <div ref={scrollContainerRef} className="h-[80dvh]" />
+      <div ref={scrollContainerRef} className="h-[100dvh]" />
       <motion.div
         className="fixed inset-0 w-full z-10 h-dvh flex flex-col justify-between p-6 md:p-8 lg:p-10 text-foreground font-sans pointer-events-none"
         style={{
@@ -99,7 +100,7 @@ export default function Teaser() {
               {/* Black Logo */}
               <div className="block relative w-32 h-32 md:w-64 md:h-64">
                 <Image
-                  src="/images/logo/ge-logo-black.png"
+                  src={geLogoBlack}
                   alt={t("teaser.logo")}
                   fill
                   sizes="192px"
@@ -142,25 +143,60 @@ export default function Teaser() {
         >
           <div className="flex flex-col gap-6 pt-4">
             <div>
-              <div className="flex items-start gap-3 md:gap-5 mb-2">
-                <div className="flex flex-col items-center">
-                  <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                    {t("teaser.dates.start")}
-                  </span>
-                  <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
-                    {t("teaser.dates.startDay")}
-                  </span>
+              <div className="flex items-start gap-2 md:gap-3 mb-2">
+                {/* Start Date */}
+                <div className="flex flex-col">
+                  <div className="flex items-center justify-center">
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mb-2 md:mb-3 -mr-0.5 md:-mr-1">
+                      {t("teaser.dates.start").split("/")[0]}
+                    </span>
+                    <span className="block w-px h-10 md:h-12 bg-current transform rotate-30 mx-2 md:mx-3" />
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mt-2 md:mt-3 -ml-0.5 md:-ml-1">
+                      {t("teaser.dates.start").split("/")[1]}
+                    </span>
+                  </div>
+                  <div className="flex justify-between w-full mt-1 px-0.5">
+                    {t("teaser.dates.startDay")
+                      .split("")
+                      .map((char, i) => (
+                        <span
+                          key={i}
+                          className="text-xl md:text-2xl font-normal leading-none scale-y-80 origin-top"
+                        >
+                          {char}
+                        </span>
+                      ))}
+                  </div>
                 </div>
-                <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                  -
-                </span>
-                <div className="flex flex-col items-center">
-                  <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                    {t("teaser.dates.end")}
-                  </span>
-                  <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
-                    {t("teaser.dates.endDay")}
-                  </span>
+
+                {/* Separator */}
+                <div className="h-10 md:h-12 flex items-end">
+                  <span className="block w-2 mb-2 md:mb-2.5 md:w-2.5 h-px bg-current" />
+                </div>
+
+                {/* End Date */}
+                <div className="flex flex-col">
+                  <div className="flex items-center justify-center">
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mb-2 md:mb-3 -mr-0.5 md:-mr-1">
+                      {t("teaser.dates.end").split("/")[0]}
+                    </span>
+                    <span className="block w-px h-10 md:h-12 bg-current transform rotate-30 mx-2 md:mx-3" />
+                    <span className="text-3xl md:text-4xl font-light tracking-tighter leading-none mt-2 md:mt-3 -ml-0.5 md:-ml-1">
+                      {t("teaser.dates.end").split("/")[1]}
+                    </span>
+                  </div>
+                  <div className="flex justify-between w-full mt-1 px-0.5">
+                    {t("teaser.dates.endDay")
+                      .split("")
+                      .map((char, i) => (
+                        <span
+                          key={i}
+                          className="text-xl md:text-2xl font-normal leading-none scale-y-80 origin-top"
+                        >
+                          {char}
+                        </span>
+                      ))}
+                  </div>
                 </div>
               </div>
               <p className="text-sm font-medium">{t("teaser.admission")}</p>
