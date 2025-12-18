@@ -2,7 +2,8 @@
 
 :root {
   --background: #fff; /*背景*/
-  --foreground: #252525; /*テキスト*/
+  /* --foreground: #252525; /*テキスト*/
+  --foreground: #fff; /*テキスト*/
   --primary: #f5b111; /*アクセント*/
   --primary-foreground: #000; /*アクセント上のテキスト*/
   --muted: #f0f0f0; /*サブ背景*/

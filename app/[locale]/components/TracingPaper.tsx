@@ -69,7 +69,8 @@ export const TracingPaper = memo(
           ref={blurLayerRef}
           className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundColor: `rgba(255, 255, 255, ${opacity})`,
+            backgroundColor: `rgba(0, 0, 0, ${opacity})`,
+            // backgroundColor: `rgba(255, 255, 255, ${opacity})`,
             backdropFilter: `blur(${blurAmount}px)`,
             WebkitBackdropFilter: `blur(${blurAmount}px)`, // Safari用
             willChange: "backdrop-filter, background-color",
