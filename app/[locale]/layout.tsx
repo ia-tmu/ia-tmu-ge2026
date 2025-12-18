@@ -8,6 +8,7 @@ import {
   isValidLocale,
   defaultLocale,
 } from "../i18n";
+import ClientLanguageRedirect from "./features/ClientLanguageRedirect";
 import ScrollManager from "./components/ScrollManager";
 import "../../globals.css";
 
@@ -121,6 +122,7 @@ export default async function RootLayout({
           }}
         />
         <I18nProvider locale={locale} resources={resources}>
+          <ClientLanguageRedirect locale={locale} />
           {children}
         </I18nProvider>
       </body>

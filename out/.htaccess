@@ -1,0 +1,25 @@
+# Apache Configuration for Next.js Static Export
+
+# 1. Disable Directory Listing (Security)
+# Prevents users from seeing a list of files if index.html is missing
+Options -Indexes
+
+# 3. Default Character Set
+AddDefaultCharset UTF-8
+
+# 4. Caching Rules (Optional but recommended)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Images
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  # CSS, JS
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
