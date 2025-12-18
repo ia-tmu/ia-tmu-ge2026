@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import geLogoBlack from "../../../public/images/logo/ge-logo-black.png";
+import geLogoWhite from "../../../public/images/logo/ge-logo-white.png";
 import LangSwitcher from "./LangSwitcher";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -100,7 +100,7 @@ export default function Teaser() {
               {/* Black Logo */}
               <div className="block relative w-44 md:w-82 h-auto aspect-square ">
                 <Image
-                  src="/images/logo/ge-logo-white.png"
+                  src={geLogoWhite}
                   alt={t("teaser.logo")}
                   fill
                   sizes="192px"
@@ -224,8 +224,8 @@ export default function Teaser() {
             {/*   <p className="text-lg font-medium mt-2">{t("teaser.location")}</p> */}
             {/* </div> */}
           </div>
-        </div >
-      </motion.div >
+        </div>
+      </motion.div>
     </>
   );
 }

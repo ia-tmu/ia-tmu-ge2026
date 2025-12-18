@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
+import guruguru01 from "../../../public/images/top/guruguru_01.png";
+import guruguru02 from "../../../public/images/top/guruguru_02.png";
 import { TracingPaper } from "../components/TracingPaper";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
@@ -125,7 +127,7 @@ export default function FixedBackground() {
           <div className="absolute w-full md:w-3/5 h-[50dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
             <div className="w-60 md:w-96 aspect-square absolute top-0 left-0">
               <Image
-                src="/images/top/guruguru_01.png"
+                src={guruguru01}
                 alt="guruguru"
                 fill
                 className="object-contain object-top-left"
@@ -135,7 +137,7 @@ export default function FixedBackground() {
 
             <div className="w-60 md:w-96 aspect-square absolute bottom-0 right-0">
               <Image
-                src="/images/top/guruguru_02.png"
+                src={guruguru02}
                 alt="guruguru"
                 fill
                 className="object-contain object-bottom-right"
