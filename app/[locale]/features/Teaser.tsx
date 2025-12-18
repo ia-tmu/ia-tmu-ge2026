@@ -97,9 +97,9 @@ export default function Teaser() {
           <div className="relative">
             <h1>
               {/* Black Logo */}
-              <div className="block relative w-32 h-32 md:w-64 md:h-64">
+              <div className="block relative w-44 md:w-82 h-auto aspect-square ">
                 <Image
-                  src="/images/logo/ge-logo-black.png"
+                  src="/images/logo/ge-logo-white.png"
                   alt={t("teaser.logo")}
                   fill
                   sizes="192px"
@@ -111,26 +111,26 @@ export default function Teaser() {
           </div>
 
           {/* Lang Switcher */}
-          <div className="bg-white/80 p-2 rounded-md backdrop-blur-sm shadow-sm text-foreground pointer-events-auto">
+          <div className="p-2 pointer-events-auto">
             <LangSwitcher />
           </div>
         </div>
 
         {/* Center/Main Title Area - フェードイン */}
-        <div
-          className="flex flex-col justify-center grow mt-6 mb-6 md:max-w-[70%] lg:max-w-[50%]"
-          style={{
-            opacity: contentOpacity,
-            transition: "opacity 0.1s ease-out",
-          }}
-        >
-          <p className="text-xs md:text-sm font-medium mb-3 tracking-wide whitespace-pre-line">
-            {t("teaser.department")}
-          </p>
-          <h2 className="text-2xl md:text-4xl font-light mb-6 tracking-wider">
-            {t("teaser.exhibitionTitle")}
-          </h2>
-        </div>
+        {/* <div */}
+        {/*   className="flex flex-col justify-center grow mt-6 mb-6 md:max-w-[70%] lg:max-w-[50%]" */}
+        {/*   style={{ */}
+        {/*     opacity: contentOpacity, */}
+        {/*     transition: "opacity 0.1s ease-out", */}
+        {/*   }} */}
+        {/* > */}
+        {/*   <p className="text-xs md:text-sm font-medium mb-3 tracking-wide whitespace-pre-line"> */}
+        {/*     {t("teaser.department")} */}
+        {/*   </p> */}
+        {/*   <h2 className="text-2xl md:text-4xl font-light mb-6 tracking-wider"> */}
+        {/*     {t("teaser.exhibitionTitle")} */}
+        {/*   </h2> */}
+        {/* </div> */}
 
         {/* Bottom Details Area - フェードイン */}
         <div
@@ -142,36 +142,64 @@ export default function Teaser() {
         >
           <div className="flex flex-col gap-6 pt-4">
             <div>
-              <div className="flex items-start gap-3 md:gap-5 mb-2">
-                <div className="flex flex-col items-center">
-                  <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                    {t("teaser.dates.start")}
-                  </span>
-                  <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
+              <div className="flex flex-col md:flex-row items-start md:items-center w-fit gap-3 md:gap-5">
+                {/* 日付の位置関係修正 */}
+                <div className="flex flex-col items-start md:items-center">
+                  <div className="flex items-center justify-center">
+                    <span className="text-5xl font-light tracking-tighter leading-none mb-4 -mr-0.5">
+                      {t("teaser.dates.start").split("/")[0]}
+                    </span>
+                    <span className="block w-px h-15 bg-current transform rotate-30 mx-2" />
+                    <span className="text-5xl font-light tracking-tighter leading-none mt-4 -ml-0.5">
+                      {t("teaser.dates.start").split("/")[1]}
+                    </span>
+                  </div>
+                  <span className="text-3xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
                     {t("teaser.dates.startDay")}
                   </span>
                 </div>
                 <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                  -
+                  <span className="block w-[0.05rem] h-[3rem] ml-[0.5rem] md:m-0 md:w-[1rem] md:h-[0.1rem] bg-foreground"></span>
                 </span>
-                <div className="flex flex-col items-center">
-                  <span className="text-5xl md:text-7xl font-light tracking-tighter leading-none">
-                    {t("teaser.dates.end")}
-                  </span>
+                <div className="flex flex-col items-start md:items-center">
+                  <div className="flex items-center justify-center">
+                    <span className="text-5xl font-light tracking-tighter leading-none mb-4 -mr-0.5">
+                      {t("teaser.dates.end").split("/")[0]}
+                    </span>
+                    <span className="block w-px h-15 bg-current transform rotate-30 mx-2" />
+                    <span className="text-5xl font-light tracking-tighter leading-none mt-4 -ml-0.5">
+                      {t("teaser.dates.end").split("/")[1]}
+                    </span>
+                  </div>
                   <span className="text-3xl md:text-4xl font-normal mt-1 inline-block scale-y-80 origin-top tracking-widest">
                     {t("teaser.dates.endDay")}
                   </span>
                 </div>
               </div>
-              <p className="text-sm font-medium">{t("teaser.admission")}</p>
+              {/* <p className="text-sm font-medium">{t("teaser.department")}</p> */}
             </div>
 
-            <div className="flex flex-col gap-1 text-sm">
-              <p>{t("teaser.hours")}</p>
-              <p>{t("teaser.lastDayHours")}</p>
-              <p>{t("teaser.closed")}</p>
-              <p className="text-lg font-medium mt-2">{t("teaser.location")}</p>
+            {/* Center/Main Title Area - フェードイン */}
+            <div
+              className="flex flex-col justify-center grow md:max-w-[70%] lg:max-w-[50%]"
+              style={{
+                opacity: contentOpacity,
+                transition: "opacity 0.1s ease-out",
+              }}
+            >
+              <h2 className="text-2xl md:text-4xl font-light mb-3 tracking-wider">
+                {t("teaser.exhibitionTitle")}
+              </h2>
+              <p className="text-xs md:text-sm font-medium mb-3 tracking-wide whitespace-pre-line">
+                {t("teaser.department")}
+              </p>
             </div>
+            {/* <div className="flex flex-col gap-1 text-sm"> */}
+            {/*   <p>{t("teaser.hours")}</p> */}
+            {/*   <p>{t("teaser.lastDayHours")}</p> */}
+            {/*   <p>{t("teaser.closed")}</p> */}
+            {/*   <p className="text-lg font-medium mt-2">{t("teaser.location")}</p> */}
+            {/* </div> */}
           </div>
         </div>
       </motion.div>
