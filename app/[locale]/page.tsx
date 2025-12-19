@@ -1,6 +1,7 @@
 import Teaser from "./features/Teaser";
 import FixedBackground from "./features/FixedBackground";
 import Concept from "./features/Concept";
+import Info from "./features/Info"
 import Footer from "./components/Footer";
 
 export default async function Page({
@@ -10,10 +11,11 @@ export default async function Page({
 }) {
   // const { locale } = await params;
   return (
-    <main className="relative">
+    <main className="relative text-sm md:text-base">
       <FixedBackground />
       <Teaser />
       <Concept />
+      <Info />
       <Footer />
     </main>
   );

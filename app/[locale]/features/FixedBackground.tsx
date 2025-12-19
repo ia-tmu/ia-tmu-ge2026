@@ -122,14 +122,14 @@ export default function FixedBackground() {
               alt=""
               fill
               sizes="100vw"
-              className="object-cover object-center scale-150"
+              className="object-cover object-center scale-175"
               style={{ willChange: "transform" }}
               priority
             />
           </div>
           {/* 賑やかし */}
-          <div className="absolute w-full md:w-3/5 h-[50dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
-            <div className="w-60 md:w-96 aspect-square absolute top-0 left-0">
+          <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
+            <div className="w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0">
               <Image
                 src={guruguru01}
                 alt="guruguru"
@@ -139,7 +139,7 @@ export default function FixedBackground() {
               />
             </div>
 
-            <div className="w-60 md:w-96 aspect-square absolute bottom-0 right-0">
+            <div className="w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0">
               <Image
                 src={guruguru02}
                 alt="guruguru"
