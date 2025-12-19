@@ -3,6 +3,7 @@
 import React, { memo, forwardRef } from "react";
 
 export type TextureType = "fine" | "rough";
+export type TracingPaperVariant = "css" | "svg";
 
 interface TracingPaperProps {
   className?: string;
@@ -14,6 +15,7 @@ interface TracingPaperProps {
   numOctaves?: number;
   blurLayerRef?: React.RefObject<HTMLDivElement | null>;
   style?: React.CSSProperties;
+  variant?: TracingPaperVariant;
 }
 
 export const TracingPaper = memo(
@@ -28,6 +30,7 @@ export const TracingPaper = memo(
       numOctaves: propNumOctaves,
       blurLayerRef,
       style,
+      variant = "css",
     },
     ref
   ) {
@@ -79,55 +82,58 @@ export const TracingPaper = memo(
         />
 
         {/* ノイズ生成用のSVG (iOS対策としてHTML要素にfilterをかけるのではなく、SVGのrectを表示する) */}
-        <svg
-          key={uniqueKey}
-          className="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-40 mix-blend-overlay"
-          style={{
-            // Safariでの再描画トリガー用ハック
-            transform: "translateZ(0)",
-          }}
-        >
-          <filter id={noiseId} x="0" y="0" width="100%" height="100%">
-            {/* 紙の繊維感のような細かなノイズ */}
-            <feTurbulence
-              type={type}
-              baseFrequency={baseFrequency}
-              numOctaves={numOctaves}
-              stitchTiles="noStitch"
-              result="noise"
-            />
+        {/* variant="svg" の場合のみ描画（パフォーマンス向上のためデフォルトでは無効化） */}
+        {variant === "svg" && (
+          <svg
+            key={uniqueKey}
+            className="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-40 mix-blend-overlay"
+            style={{
+              // Safariでの再描画トリガー用ハック
+              transform: "translateZ(0)",
+            }}
+          >
+            <filter id={noiseId} x="0" y="0" width="100%" height="100%">
+              {/* 紙の繊維感のような細かなノイズ */}
+              <feTurbulence
+                type={type}
+                baseFrequency={baseFrequency}
+                numOctaves={numOctaves}
+                stitchTiles="noStitch"
+                result="noise"
+              />
 
-            {/* 粗い紙の場合はライティング効果を追加して立体感を出す */}
-            {textureType === "rough" && (
-              <>
-                <feDiffuseLighting
-                  in="noise"
-                  lightingColor="white"
-                  surfaceScale="12"
-                  result="diffuseNoise"
-                >
-                  <feDistantLight azimuth="20" elevation="60" />
-                </feDiffuseLighting>
-              </>
-            )}
+              {/* 粗い紙の場合はライティング効果を追加して立体感を出す */}
+              {textureType === "rough" && (
+                <>
+                  <feDiffuseLighting
+                    in="noise"
+                    lightingColor="white"
+                    surfaceScale="12"
+                    result="diffuseNoise"
+                  >
+                    <feDistantLight azimuth="20" elevation="60" />
+                  </feDiffuseLighting>
+                </>
+              )}
 
-            {/* ノイズのコントラスト調整とグレースケール化 */}
-            <feColorMatrix
-              type="matrix"
-              // R, G, B の値を統一してグレースケール化（虹色ノイズの防止）
-              // ここではGチャンネルの値を採用
-              values="0 1 0 0 0
-                    0 1 0 0 0
-                    0 1 0 0 0
-                    0 0 0 1 -0.1"
-              in={textureType === "rough" ? "diffuseNoise" : "noise"}
-              result="coloredNoise"
-            />
-          </filter>
+              {/* ノイズのコントラスト調整とグレースケール化 */}
+              <feColorMatrix
+                type="matrix"
+                // R, G, B の値を統一してグレースケール化（虹色ノイズの防止）
+                // ここではGチャンネルの値を採用
+                values="0 1 0 0 0
+                      0 1 0 0 0
+                      0 1 0 0 0
+                      0 0 0 1 -0.1"
+                in={textureType === "rough" ? "diffuseNoise" : "noise"}
+                result="coloredNoise"
+              />
+            </filter>
 
-          {/* フィルターを適用したRectを描画 */}
-          <rect width="100%" height="100%" filter={`url(#${noiseId})`} />
-        </svg>
+            {/* フィルターを適用したRectを描画 */}
+            <rect width="100%" height="100%" filter={`url(#${noiseId})`} />
+          </svg>
+        )}
 
         {/* コンテンツ */}
         <div className="relative z-10">{children}</div>

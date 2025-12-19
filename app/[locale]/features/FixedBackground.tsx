@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
+import guruguru01 from "../../../public/images/top/guruguru_01.png";
+import guruguru02 from "../../../public/images/top/guruguru_02.png";
 import { TracingPaper } from "../components/TracingPaper";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
@@ -23,8 +25,12 @@ export default function FixedBackground() {
   });
 
   // スクロールに応じてブラーと透明度を調整
-  const scrollBlur = useTransform(scrollYProgress, [0, 1], [0, 70]);
-  const scrollOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scrollBlur = useTransform(scrollYProgress, [0, 0.3, 1], [0, 30, 30]);
+  const scrollOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 1],
+    [0, 0.15, 0.15]
+  );
 
   useEffect(() => {
     // マウント確認
@@ -95,7 +101,7 @@ export default function FixedBackground() {
         ref={conceptScrollRef}
         className="h-[120dvh] absolute top-[80dvh] w-full pointer-events-none"
       />
-      <div className="bg-black fixed inset-0 z-0 pointer-events-none">
+      <div className="bg-black/30 fixed inset-0 z-0 pointer-events-none">
         {/* Background Layer */}
         <div className="absolute inset-0 z-0 -top-[5%] md:top-0">
           {/* PC: Cover + Right Position */}
@@ -116,16 +122,16 @@ export default function FixedBackground() {
               alt=""
               fill
               sizes="100vw"
-              className="object-cover object-center scale-150"
+              className="object-cover object-center scale-175"
               style={{ willChange: "transform" }}
               priority
             />
           </div>
           {/* 賑やかし */}
-          <div className="absolute w-full md:w-3/5 h-[50dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
-            <div className="w-60 md:w-96 aspect-square absolute top-0 left-0">
+          <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
+            <div className="w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0">
               <Image
-                src="/images/top/guruguru_01.png"
+                src={guruguru01}
                 alt="guruguru"
                 fill
                 className="object-contain object-top-left"
@@ -133,9 +139,9 @@ export default function FixedBackground() {
               />
             </div>
 
-            <div className="w-60 md:w-96 aspect-square absolute bottom-0 right-0">
+            <div className="w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0">
               <Image
-                src="/images/top/guruguru_02.png"
+                src={guruguru02}
                 alt="guruguru"
                 fill
                 className="object-contain object-bottom-right"

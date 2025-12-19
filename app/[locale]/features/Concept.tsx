@@ -1,8 +1,10 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
+import moyaWhite from "../../../public/images/concept/moya_white.png";
 
 export default function Concept() {
   const { t } = useTranslation();
@@ -51,9 +53,7 @@ export default function Concept() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={
-            isFullyVisible
-              ? { opacity: 1, y: 0 }
-              : { opacity: 0, y: 20 }
+            isFullyVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
           }
           transition={{
             duration: 3.0,
@@ -65,8 +65,8 @@ export default function Concept() {
           {/*   {t("concept.title")} */}
           {/* </h2> */}
           <h2 className="w-fit">
-            <img
-              src="/images/concept/moya_white.png"
+            <Image
+              src={moyaWhite}
               alt={t("moya")}
               className="block relative w-32 md:w-44 h-auto object-contain"
             />
