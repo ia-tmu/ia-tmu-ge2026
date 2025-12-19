@@ -11,7 +11,7 @@ export default async function Page({
 }) {
   // const { locale } = await params;
   return (
-    <main className="relative">
+    <main className="relative text-sm md:text-base">
       <FixedBackground />
       <Teaser />
       <Concept />
