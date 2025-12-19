@@ -25,7 +25,7 @@ export default function FixedBackground() {
   });
 
   // スクロールに応じてブラーと透明度を調整
-  const scrollBlur = useTransform(scrollYProgress, [0, 1], [0, 70]);
+  const scrollBlur = useTransform(scrollYProgress, [0, 0.2, 1], [0, 70, 70]);
   const scrollOpacity = useTransform(
     scrollYProgress,
     [0, 0.2, 1],
