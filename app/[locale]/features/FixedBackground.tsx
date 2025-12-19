@@ -26,7 +26,11 @@ export default function FixedBackground() {
 
   // スクロールに応じてブラーと透明度を調整
   const scrollBlur = useTransform(scrollYProgress, [0, 1], [0, 70]);
-  const scrollOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scrollOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 1],
+    [0, 0.15, 0.15]
+  );
 
   useEffect(() => {
     // マウント確認
@@ -97,7 +101,7 @@ export default function FixedBackground() {
         ref={conceptScrollRef}
         className="h-[120dvh] absolute top-[80dvh] w-full pointer-events-none"
       />
-      <div className="bg-black fixed inset-0 z-0 pointer-events-none">
+      <div className="bg-black/30 fixed inset-0 z-0 pointer-events-none">
         {/* Background Layer */}
         <div className="absolute inset-0 z-0 -top-[5%] md:top-0">
           {/* PC: Cover + Right Position */}
