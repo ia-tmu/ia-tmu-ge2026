@@ -33,10 +33,11 @@
     "locationTitle": "Venue",
     "location": "Tokyo Metropolitan Art Museum Gallery A・B",
     "access": [
-      "JR上野駅「公園口」より徒歩7分",
-      "東京メトロ銀座線・日比谷線 上野駅「7番出口」より徒歩10分",
-      "京成電鉄 京成上野駅より徒歩10分"
+      "7 min walking from JR Ueno Station “Park Gate”.",
+      "10 min walking from Ueno Station “Exit 7”, Tokyo Metro Ginza Line, Hibiya Line.",
+      "10 min walking from Keisei Line Keisei Ueno Station."
     ],
+    "notice": "Please refrain from contacting the Tokyo Metropolitan Art Museum regarding this exhibition.",
     "logo": "GE"
   },
   "concept": {
