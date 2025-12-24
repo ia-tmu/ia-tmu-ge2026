@@ -10,6 +10,7 @@ import {
 } from "../i18n";
 import ClientLanguageRedirect from "./features/ClientLanguageRedirect";
 import ScrollManager from "./components/ScrollManager";
+import BuildInfoLogger from "./components/BuildInfoLogger";
 import "../../globals.css";
 
 const title =
@@ -123,6 +124,7 @@ export default async function RootLayout({
         />
         <I18nProvider locale={locale} resources={resources}>
           <ClientLanguageRedirect locale={locale} />
+          <BuildInfoLogger />
           {children}
         </I18nProvider>
       </body>

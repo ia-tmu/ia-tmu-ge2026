@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && npm run postbuild",
+    "build:no-export": "SKIP_EXPORT=true next build",
     "postbuild": "node scripts/generate-index.js",
     "start": "next start",
     "lint": "eslint",
