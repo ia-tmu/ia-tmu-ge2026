@@ -12,16 +12,16 @@ import ClientLanguageRedirect from "./features/ClientLanguageRedirect";
 import ScrollManager from "./components/ScrollManager";
 import BuildInfoLogger from "./components/BuildInfoLogger";
 import "../../globals.css";
+import siteConfig from "../../site.config";
 
-const title =
-  "東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026";
-const description = `
-  インダストリアルアート学科・学域の卒業・修了制作研究展を開催します。
-  2026年3月1日(日)〜3月7日(土)（3月2日(月)は休館日）
-  @東京都美術館 ギャラリーA・B【入場無料】
-  会期：9:30 - 17:30（最終入場17:00）
-  最終日3/7は 9:30 - 12:00（最終入場11:30）
-`;
+const {
+  title,
+  description,
+  keywords,
+  twitterSite,
+  defaultLocale: siteLocale,
+} = siteConfig;
+
 const basePath = process.env.BASE_PATH || "";
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}${basePath}/`
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description,
     url: baseUrl,
     siteName: title,
-    locale: "ja_JP",
+    locale: siteLocale,
     images: [
       {
         url: ogpImageUrl,
@@ -56,23 +56,13 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "@tmu_ia_sotsuten",
+    site: twitterSite,
     title,
     description,
     images: ogpImageUrl,
   },
 
-  keywords: [
-    "東京都立大学",
-    "システムデザイン学部",
-    "インダストリアルアート",
-    "卒業制作",
-    "修了制作",
-    "展示",
-    "2026",
-    "東京",
-    "東京都美術館",
-  ],
+  keywords,
 
   alternates: {
     canonical: baseUrl,
