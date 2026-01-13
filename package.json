@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "framer-motion": "^11.11.17",
+    "google-auth-library": "^10.5.0",
+    "googleapis": "^170.0.0",
     "i18next": "^25.6.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
