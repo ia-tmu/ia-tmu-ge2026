@@ -33,7 +33,7 @@ export default function LangSwitcher() {
   };
 
   return (
-    <Button href={targetHref} onClick={handleLanguageChange}>
+    <Button href={targetHref} className={"text-2xl !no-underline"} onClick={handleLanguageChange}>
       {locale === "ja" ? "EN" : "JA"}
     </Button>
   );
