@@ -64,15 +64,23 @@ export default function SheetsPage() {
   }
 
   function driveToImageUrl(raw: string): string | null {
-    // https://drive.google.com/open?id=FILE_ID
-    const m = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-    if (!m?.[1]) return null;
-    const fileId = m[1];
-    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w800-h800`;
+    // 1. id=PARAMETER (e.g. https://drive.google.com/open?id=FILE_ID)
+    let m = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    if (m?.[1]) {
+      return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w800-h800`;
     }
 
+    // 2. /file/d/PATH_SEGMENT (e.g. https://drive.google.com/file/d/FILE_ID/view)
+    m = raw.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+    if (m?.[1]) {
+      return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w800-h800`;
+    }
+
+    return null;
+  }
+
     function isUrl(v: unknown): v is string {
-    return typeof v === "string" && v.startsWith("http");
+    return typeof v === "string" && v.trim().startsWith("http");
     }
 
 
