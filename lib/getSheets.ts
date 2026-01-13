@@ -44,7 +44,7 @@ export async function fetchFirstSheetValues() {
   // ② 最初のシートを丸ごと取得（必要なら範囲を "A1:Z" みたいに絞ってOK）
   const valuesRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: `${firstSheetTitle}!A1:C200`,
+    range: `${firstSheetTitle}!B1:C200`,
     valueRenderOption: "UNFORMATTED_VALUE",
   });
 
