@@ -1,5 +1,6 @@
 "use client";
 
+import { color } from "framer-motion";
 import { useEffect, useState } from "react";
 
 /** セルに入りうる値 */
@@ -76,8 +77,8 @@ export default function SheetsPage() {
 
 
   return (
-    <div style={{ padding: 16 }}>
-      <h1 style={{ fontSize: 20, fontWeight: 700 }}>
+    <div className="p-4 text-black">
+      <h1 style={{fontSize: 20, fontWeight: 700 }}>
         {data.spreadsheetTitle} / {data.sheetTitle}
       </h1>
 
