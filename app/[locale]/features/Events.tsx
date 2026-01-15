@@ -4,6 +4,7 @@ import Image from "next/image";
 import Section from "../components/Section";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { ExternalLinkIcon } from "../components/Icons";
 
 interface Speaker {
   name: string;
@@ -49,7 +50,11 @@ export default function Events() {
           url: "#",
           imageUrl: "",
         },
-        { name: t("events.sessions.0.speakers.2.name"), imageUrl: "" },
+        {
+          name: t("events.sessions.0.speakers.2.name"),
+          profile: t("events.sessions.0.speakers.2.profile"),
+          imageUrl: "",
+        },
       ],
     },
     {
@@ -68,7 +73,11 @@ export default function Events() {
           imageUrl: "",
         },
         { name: t("events.sessions.1.speakers.1.name"), imageUrl: "" },
-        { name: t("events.sessions.1.speakers.2.name"), imageUrl: "" },
+        {
+          name: t("events.sessions.1.speakers.2.name"),
+          profile: t("events.sessions.1.speakers.2.profile"),
+          imageUrl: "",
+        },
       ],
     },
     {
@@ -93,7 +102,11 @@ export default function Events() {
           url: "#",
           imageUrl: "",
         },
-        { name: t("events.sessions.2.speakers.2.name"), imageUrl: "" },
+        {
+          name: t("events.sessions.2.speakers.2.name"),
+          profile: t("events.sessions.2.speakers.2.profile"),
+          imageUrl: "",
+        },
       ],
     },
     {
@@ -105,7 +118,11 @@ export default function Events() {
       endDateTime: "20260306T160000",
       speakers: [
         { name: t("events.sessions.3.speakers.0.name"), imageUrl: "" },
-        { name: t("events.sessions.3.speakers.1.name"), imageUrl: "" },
+        {
+          name: t("events.sessions.3.speakers.1.name"),
+          profile: t("events.sessions.3.speakers.1.profile"),
+          imageUrl: "",
+        },
       ],
     },
   ];
@@ -178,7 +195,7 @@ export default function Events() {
               {/* 登壇者リスト */}
               <ul className="flex flex-col gap-3 mt-2">
                 {session.speakers.map((speaker, sIndex) => (
-                  <li key={sIndex} className="flex items-start gap-3 text-sm">
+                  <li key={sIndex} className="flex items-center gap-3 text-sm">
                     {/* 顔写真 */}
                     <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-black/10">
                       {speaker.imageUrl && (
@@ -192,10 +209,33 @@ export default function Events() {
                     </div>
 
                     <div className="flex-1 flex flex-wrap flex-col md:flex-row md:items-center gap-x-2 gap-y-1">
-                      <span className="font-bold whitespace-nowrap">
-                        {speaker.name}
-                      </span>
-                      <div className="flex flex-wrap items-center gap-2 text-xs text-black/60">
+                      {speaker.url ? (
+                        <Link
+                          href={speaker.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="group flex items-center gap-1 hover:text-white/60 transition-colors cursor-pointer duration-300">
+                            <span className="font-bold whitespace-nowrap underline underline-offset-2 decoration-current group-hover:decoration-transparent transition-all duration-300">
+                              {speaker.name}
+                            </span>
+
+                            <div className="h-4 w-4">
+                              <ExternalLinkIcon
+                                width={16}
+                                height={16}
+                                className=""
+                              />
+                            </div>
+                          </div>
+                        </Link>
+                      ) : (
+                        <span className="font-bold whitespace-nowrap">
+                          {speaker.name}
+                        </span>
+                      )}
+
+                      <div className="flex flex-wrap items-center gap-x-2 text-xs text-black/60">
                         {speaker.profile && (
                           <span className="whitespace-nowrap">
                             {speaker.profile}
@@ -207,16 +247,6 @@ export default function Events() {
                           </span>
                         )}
                       </div>
-                      {speaker.url && (
-                        <Link
-                          href={speaker.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="ml-auto inline-flex items-center justify-center px-3 py-1 text-[10px] font-bold text-white bg-black rounded-full hover:bg-black/70 transition-colors"
-                        >
-                          WEB
-                        </Link>
-                      )}
                     </div>
                   </li>
                 ))}

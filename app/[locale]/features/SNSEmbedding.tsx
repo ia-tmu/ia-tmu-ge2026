@@ -13,6 +13,10 @@ export default function SNSEmbedding() {
   return (
     <Section title={"SNS"}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center w-full max-w-5xl mx-auto mb-8">
+        {/* Instagram埋め込みエリア */}
+        <div className="flex justify-center md:justify-end w-full">
+          <InstagramEmbed url="https://www.instagram.com/p/DSe5lniElEw/?utm_source=ig_embed&amp;utm_campaign=loading" />
+        </div>
         {/* テキストエリア */}
         <div className="space-y-6 py-8">
           <div className="space-y-2">
@@ -50,11 +54,6 @@ export default function SNSEmbedding() {
               />
             </Link>
           </div>
-        </div>
-
-        {/* Instagram埋め込みエリア */}
-        <div className="flex justify-center md:justify-end w-full">
-          <InstagramEmbed url="https://www.instagram.com/p/DSe5lniElEw/?utm_source=ig_embed&amp;utm_campaign=loading" />
         </div>
       </div>
     </Section>

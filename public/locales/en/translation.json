@@ -66,7 +66,8 @@
             "gradYear": "2021 Grad"
           },
           {
-            "name": "Current Student"
+            "name": "Current Student",
+            "profile": "Interior Design Studio"
           }
         ]
       },
@@ -82,10 +83,13 @@
             "gradYear": "2014 Grad"
           },
           {
-            "name": "〇〇〇〇"
+            "name": "〇〇〇〇",
+            "profile": "Product & Service Design Studio",
+            "gradYear": "2014 Grad"
           },
           {
-            "name": "Current Student"
+            "name": "Current Student",
+            "profile": "Product & Service Design Studio"
           }
         ]
       },
@@ -106,7 +110,8 @@
             "gradYear": "2012 Grad"
           },
           {
-            "name": "Current Student"
+            "name": "Current Student",
+            "profile": "Visual Communication Design Studio"
           }
         ]
       },
@@ -120,7 +125,8 @@
             "name": "Professor 〇〇〇〇"
           },
           {
-            "name": "Current Student"
+            "name": "Current Student",
+            "profile": "Transportation Design Studio"
           }
         ]
       }
