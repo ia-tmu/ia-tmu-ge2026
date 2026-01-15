@@ -30,38 +30,32 @@ export const fragmentShader = `
   }
   
   void main() {
-    // アスペクト比補正を適用
     vec2 uv = vUv;
     
-    // 画像を画面全体にカバー（background-size: cover と同じ）
     float imageAspect = uImageAspect;
     float planeAspect = uPlaneAspect;
     
     vec2 scale;
     if (planeAspect > imageAspect) {
-      // 画面が横長の場合
       scale = vec2(1.0, imageAspect / planeAspect);
     } else {
-      // 画面が縦長の場合
       scale = vec2(planeAspect / imageAspect, 1.0);
     }
     
-    // UV座標を中央揃えでスケーリング
     uv = (uv - 0.5) / scale + 0.5;
     
-    // 既存のノイズブラー処理
     float blur = uBlurStrength * 0.02;
     vec2 n = vec2(
       noise(uv * 5.0),
       noise(uv * 5.0 + 10.0)
     );
     
-    vec4 color = vec4(0.0);
-    color += texture2D(uTexture, uv + n * blur);
-    color += texture2D(uTexture, uv - n * blur);
-    color += texture2D(uTexture, uv + n.yx * blur);
-    color += texture2D(uTexture, uv - n.yx * blur);
-    color *= 0.25;
+    vec4 color = texture2D(uTexture);
+    // color += texture2D(uTexture, uv + n * blur);
+    // color += texture2D(uTexture, uv - n * blur);
+    // color += texture2D(uTexture, uv + n.yx * blur);
+    // color += texture2D(uTexture, uv - n.yx * blur);
+    // color *= 0.25;
     
     gl_FragColor = color;
   }
@@ -71,6 +65,6 @@ export const vertexShader = `
   varying vec2 vUv;
   void main() {
     vUv = uv;
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    gl_Position = vec4(position, 1.0);
   }
 `;
