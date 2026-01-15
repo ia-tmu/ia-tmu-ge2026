@@ -16,6 +16,7 @@
     "prepare:export": "cd out && ln -sf . ge2026 2>/dev/null || true"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.5.0",
     "framer-motion": "^11.11.17",
     "i18next": "^25.6.2",
     "i18next-browser-languagedetector": "^8.2.0",
@@ -26,13 +27,15 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-i18next": "^16.3.3",
-    "react-router-dom": "^7.9.5"
+    "react-router-dom": "^7.9.5",
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.182.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "tailwindcss": "^4",
