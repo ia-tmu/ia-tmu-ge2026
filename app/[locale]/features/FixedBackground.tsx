@@ -4,8 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
-import guruguru01 from "../../../public/images/top/guruguru_01.png";
-import guruguru02 from "../../../public/images/top/guruguru_02.png";
+// import guruguru01 from "../../../public/images/top/guruguru_01.png";
+// import guruguru02 from "../../../public/images/top/guruguru_02.png";
+import guruguru01 from "../../../public/images/top/guruguru_01.gif";
+import guruguru02 from "../../../public/images/top/guruguru_02.gif";
 import { TracingPaper } from "../components/TracingPaper";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
