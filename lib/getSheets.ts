@@ -12,7 +12,8 @@ export async function fetchFirstSheetValues() {
   const privateKeyRaw = process.env.GOOGLE_PRIVATE_KEY;
 
   if (!spreadsheetId) throw new Error("Missing env: SPREADSHEET_ID");
-  if (!clientEmail) throw new Error("Missing env: GOOGLE_SERVICE_ACCOUNT_EMAIL");
+  if (!clientEmail)
+    throw new Error("Missing env: GOOGLE_SERVICE_ACCOUNT_EMAIL");
   if (!privateKeyRaw) throw new Error("Missing env: GOOGLE_PRIVATE_KEY");
 
   const auth = new google.auth.GoogleAuth({
@@ -32,10 +33,9 @@ export async function fetchFirstSheetValues() {
   });
 
   const spreadsheetTitle = meta.data.properties?.title ?? "(untitled)";
-  const firstSheetTitle =
-    meta.data.sheets
-      ?.sort((a, b) => (a.properties?.index ?? 0) - (b.properties?.index ?? 0))
-      ?.[0]?.properties?.title;
+  const firstSheetTitle = meta.data.sheets?.sort(
+    (a, b) => (a.properties?.index ?? 0) - (b.properties?.index ?? 0)
+  )?.[0]?.properties?.title;
 
   if (!firstSheetTitle) {
     throw new Error("No sheets found in the spreadsheet.");
