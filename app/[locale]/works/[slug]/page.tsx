@@ -1,22 +1,28 @@
-import { locales, type Locale } from "../../../i18n";
-
 // 静的エクスポート用の設定
 export const dynamicParams = false;
 
-// 静的エクスポート用: すべてのロケールとslugの組み合わせを生成
-export async function generateStaticParams(): Promise<
-  Array<{ locale: Locale; slug: string }>
-> {
-  // 現時点ではworksのデータがないため、空の配列を返す
-  // 将来的にworksデータが追加されたら、以下のように変更:
-  // const works = await getWorks(); // worksデータを取得
-  // return locales.flatMap((locale) =>
-  //   works.map((work) => ({ locale, slug: work.slug }))
-  // );
+export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
+  try {
+    const params: Array<{ slug: string }> = [{ slug: "__placeholder__" }];
 
-  return [];
+    console.log("generateStaticParams-@/works/[slug]:", params);
+    return params;
+  } catch (e) {
+    console.error("generateStaticParams error:", e);
+    return [{ slug: "__placeholder__" }];
+  }
 }
 
-export default function Work() {
-  return <h1>this is a work page.</h1>;
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function Work({ params }: Props) {
+  const { slug } = await params;
+
+  return (
+    <div className="container mx-auto p-8">
+      <h1 className="text-3xl font-bold mb-6">{String(slug)}</h1>
+    </div>
+  );
 }
