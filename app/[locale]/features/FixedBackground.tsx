@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
+import Guruguru from "./GuruguruVideo";
 import { TracingPaper } from "../components/TracingPaper";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
@@ -126,21 +127,15 @@ export default function FixedBackground() {
           </div>
           {/* 賑やかし */}
           <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
-            <video
+            <Guruguru
               src="/images/top/guruguru_01.webm"
-              className="object-top-left w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0 mix-blend-lighten"
-              autoPlay
-              loop
-              muted
-              playsInline
+              className="object-top-left w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0"
+              startDelayMs={1000}
             />
-            <video
+            <Guruguru
               src="/images/top/guruguru_02.webm"
-              className="object-bottom-right w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0 mix-blend-lighten"
-              autoPlay
-              loop
-              muted
-              playsInline
+              className="object-bottom-right w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0"
+              startDelayMs={3000}
             />
           </div>
         </div>
