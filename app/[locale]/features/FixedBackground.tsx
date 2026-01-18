@@ -4,8 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
-import guruguru01 from "../../../public/images/top/guruguru_01.png";
-import guruguru02 from "../../../public/images/top/guruguru_02.png";
+import Guruguru from "./GuruguruVideo";
 import { TracingPaper } from "../components/TracingPaper";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
@@ -101,8 +100,7 @@ export default function FixedBackground() {
         ref={conceptScrollRef}
         className="h-[120dvh] absolute top-[80dvh] w-full pointer-events-none"
       />
-      <div className="bg-black/30 fixed inset-0 z-0 pointer-events-none">
-        {/* Background Layer */}
+      <div className="bg-black/30 fixed inset-0 z-0 isolate pointer-events-none">
         <div className="absolute inset-0 z-0 -top-[5%] md:top-0">
           {/* PC: Cover + Right Position */}
           <div className="hidden opacity-85 md:block w-full h-screen relative">
@@ -129,28 +127,18 @@ export default function FixedBackground() {
           </div>
           {/* 賑やかし */}
           <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
-            <div className="w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0">
-              <Image
-                src={guruguru01}
-                alt="guruguru"
-                fill
-                className="object-contain object-top-left"
-                priority
-              />
-            </div>
-
-            <div className="w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0">
-              <Image
-                src={guruguru02}
-                alt="guruguru"
-                fill
-                className="object-contain object-bottom-right"
-                priority
-              />
-            </div>
+            <Guruguru
+              src="/images/top/guruguru_01.webm"
+              className="object-top-left w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0"
+              startDelayMs={1000}
+            />
+            <Guruguru
+              src="/images/top/guruguru_02.webm"
+              className="object-bottom-right w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0"
+              startDelayMs={3000}
+            />
           </div>
         </div>
-
         <TracingPaper
           opacity={currentOpacity}
           blurAmount={currentBlur}
