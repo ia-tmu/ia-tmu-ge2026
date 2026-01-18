@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
 import moyaWhite from "../../../public/images/concept/moya_white.png";
 
@@ -72,7 +72,13 @@ export default function Concept() {
             />
           </h2>
           <p className="text-sm  md:text-base font-light leading-10 whitespace-pre-line text-foreground">
-            {t("concept.description")}
+            <Trans
+              i18nKey="concept.description"
+              components={{
+                br: <br className="md:hidden" />,
+                br2: <br className="hidden md:block" />,
+              }}
+            />
           </p>
         </motion.div>
       </div>

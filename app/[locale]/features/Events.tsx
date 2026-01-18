@@ -1,17 +1,19 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Section from "../components/Section";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { ExternalLinkIcon } from "../components/Icons";
+import funayamaImage from "../../../public/images/events/funayama_takashi.jpg";
+import inoueImage from "../../../public/images/events/inoue_yu.jpg";
 
 interface Speaker {
   name: string;
   profile?: string;
   gradYear?: string;
   url?: string;
-  imageUrl?: string;
+  imageUrl?: string | StaticImageData;
 }
 
 interface EventSession {
@@ -40,14 +42,14 @@ export default function Events() {
           name: t("events.sessions.0.speakers.0.name"),
           profile: t("events.sessions.0.speakers.0.profile"),
           gradYear: t("events.sessions.0.speakers.0.gradYear"),
-          url: "#",
+          url: t("events.sessions.0.speakers.0.url"),
           imageUrl: "",
         },
         {
           name: t("events.sessions.0.speakers.1.name"),
           profile: t("events.sessions.0.speakers.1.profile"),
           gradYear: t("events.sessions.0.speakers.1.gradYear"),
-          url: "#",
+          url: t("events.sessions.0.speakers.1.url"),
           imageUrl: "",
         },
         {
@@ -69,7 +71,7 @@ export default function Events() {
           name: t("events.sessions.1.speakers.0.name"),
           profile: t("events.sessions.1.speakers.0.profile"),
           gradYear: t("events.sessions.1.speakers.0.gradYear"),
-          url: "#",
+          url: t("events.sessions.1.speakers.0.url"),
           imageUrl: "",
         },
         { name: t("events.sessions.1.speakers.1.name"), imageUrl: "" },
@@ -92,15 +94,15 @@ export default function Events() {
           name: t("events.sessions.2.speakers.0.name"),
           profile: t("events.sessions.2.speakers.0.profile"),
           gradYear: t("events.sessions.2.speakers.0.gradYear"),
-          url: "#",
-          imageUrl: "",
+          url: t("events.sessions.2.speakers.0.url"),
+          imageUrl: inoueImage,
         },
         {
           name: t("events.sessions.2.speakers.1.name"),
           profile: t("events.sessions.2.speakers.1.profile"),
           gradYear: t("events.sessions.2.speakers.1.gradYear"),
-          url: "#",
-          imageUrl: "",
+          url: t("events.sessions.2.speakers.1.url"),
+          imageUrl: funayamaImage,
         },
         {
           name: t("events.sessions.2.speakers.2.name"),
@@ -202,7 +204,8 @@ export default function Events() {
                         <Image
                           src={speaker.imageUrl}
                           alt={speaker.name}
-                          fill
+                          width={40}
+                          height={40}
                           className="h-full w-full object-cover"
                         />
                       )}

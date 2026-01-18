@@ -46,7 +46,7 @@
   },
   "events": {
     "title": "Events",
-    "sectionTitle": "『IA卒展トークセッション』",
+    "sectionTitle": "IA卒展トークセッション",
     "description": "卒展会場内にて、インダスの卒業生と教授、現役学生が今回の卒展テーマ『もや』を切り口にクロストークを行います。",
     "sessions": [
       {
@@ -58,12 +58,14 @@
           {
             "name": "武田真衣",
             "profile": "製品サービスデザインスタジオ",
-            "gradYear": "2019卒"
+            "gradYear": "2019卒",
+            "url": "#"
           },
           {
             "name": "髙橋健太郎",
             "profile": "インテリアデザインスタジオ",
-            "gradYear": "2021卒"
+            "gradYear": "2021卒",
+            "url": "#"
           },
           {
             "name": "現役学生",
@@ -80,7 +82,8 @@
           {
             "name": "島影圭佑",
             "profile": "製品・サービスデザインスタジオ",
-            "gradYear": "2014卒"
+            "gradYear": "2014卒",
+            "url": "#"
           },
           {
             "name": "〇〇〇〇"
@@ -100,12 +103,14 @@
           {
             "name": "井上悠",
             "profile": "ビジュアルコミュニケーションデザインスタジオ",
-            "gradYear": "2014卒"
+            "gradYear": "2014卒",
+            "url": "https://yuinoue.jp/"
           },
           {
             "name": "舟山貴士",
             "profile": "ビジュアルコミュニケーションデザインスタジオ",
-            "gradYear": "2012卒"
+            "gradYear": "2012卒",
+            "url": "http://mt-funa.com/"
           },
           {
             "name": "現役学生",
