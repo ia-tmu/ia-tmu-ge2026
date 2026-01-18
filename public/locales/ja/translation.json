@@ -58,14 +58,12 @@
           {
             "name": "武田真衣",
             "profile": "製品サービスデザインスタジオ",
-            "gradYear": "2019卒",
-            "url": "#"
+            "gradYear": "2019卒"
           },
           {
             "name": "髙橋健太郎",
             "profile": "インテリアデザインスタジオ",
-            "gradYear": "2021卒",
-            "url": "#"
+            "gradYear": "2021卒"
           },
           {
             "name": "現役学生",
@@ -103,14 +101,12 @@
           {
             "name": "井上悠",
             "profile": "ビジュアルコミュニケーションデザインスタジオ",
-            "gradYear": "2014卒",
-            "url": "https://yuinoue.jp/"
+            "gradYear": "2014卒"
           },
           {
             "name": "舟山貴士",
             "profile": "ビジュアルコミュニケーションデザインスタジオ",
-            "gradYear": "2012卒",
-            "url": "http://mt-funa.com/"
+            "gradYear": "2012卒"
           },
           {
             "name": "現役学生",
@@ -139,5 +135,8 @@
   "sns": {
     "sectionTitle": "SNSで情報発信しています",
     "description": "最新情報はこちらからご確認ください"
+  },
+  "webExhibition": {
+    "description": "会場に足を運べない方々にも<br/>制作や研究をご覧いただけるよう、<br2/>Web展として研究や作品の概要を掲載予定です。"
   }
 }

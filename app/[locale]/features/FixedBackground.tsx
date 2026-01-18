@@ -6,7 +6,11 @@ import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
 import Guruguru from "./GuruguruVideo";
 import { TracingPaper } from "../components/TracingPaper";
-import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { useScroll, useTransform, useMotionValueEvent } from "framer-motion"
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const guruguru01Webm = `${basePath}/images/top/guruguru_01.webm`;
+const guruguru02Webm = `${basePath}/images/top/guruguru_02.webm`;
 
 export default function FixedBackground() {
   const initialBlur = 20;
@@ -24,10 +28,10 @@ export default function FixedBackground() {
   });
 
   // スクロールに応じてブラーと透明度を調整
-  const scrollBlur = useTransform(scrollYProgress, [0, 0.3, 1], [0, 30, 30]);
+  const scrollBlur = useTransform(scrollYProgress, [0, 0.2, 1], [0, 30, 30]);
   const scrollOpacity = useTransform(
     scrollYProgress,
-    [0, 0.3, 1],
+    [0, 0.2, 1],
     [0, 0.15, 0.15]
   );
 
@@ -128,12 +132,12 @@ export default function FixedBackground() {
           {/* 賑やかし */}
           <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
             <Guruguru
-              src="/images/top/guruguru_01.webm"
+              src={guruguru01Webm}
               className="object-top-left w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0"
               startDelayMs={1000}
             />
             <Guruguru
-              src="/images/top/guruguru_02.webm"
+              src={guruguru02Webm}
               className="object-bottom-right w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0"
               startDelayMs={3000}
             />

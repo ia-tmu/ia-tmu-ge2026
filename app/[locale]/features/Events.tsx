@@ -4,9 +4,11 @@ import Image, { StaticImageData } from "next/image";
 import Section from "../components/Section";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { ExternalLinkIcon } from "../components/Icons";
+import { ExternalLinkIcon, PersonIcon } from "../components/Icons";
 import funayamaImage from "../../../public/images/events/funayama_takashi.jpg";
 import inoueImage from "../../../public/images/events/inoue_yu.jpg";
+import takahashiImage from "../../../public/images/events/kentaro_takahashi.jpg";
+import takedaImage from "../../../public/images/events/mai_takeda.jpg";
 
 interface Speaker {
   name: string;
@@ -42,15 +44,14 @@ export default function Events() {
           name: t("events.sessions.0.speakers.0.name"),
           profile: t("events.sessions.0.speakers.0.profile"),
           gradYear: t("events.sessions.0.speakers.0.gradYear"),
-          url: t("events.sessions.0.speakers.0.url"),
-          imageUrl: "",
+          imageUrl: takedaImage,
         },
         {
           name: t("events.sessions.0.speakers.1.name"),
           profile: t("events.sessions.0.speakers.1.profile"),
           gradYear: t("events.sessions.0.speakers.1.gradYear"),
-          url: t("events.sessions.0.speakers.1.url"),
-          imageUrl: "",
+          url: "https://www.instagram.com/kentaro.t97",
+          imageUrl: takahashiImage,
         },
         {
           name: t("events.sessions.0.speakers.2.name"),
@@ -94,14 +95,14 @@ export default function Events() {
           name: t("events.sessions.2.speakers.0.name"),
           profile: t("events.sessions.2.speakers.0.profile"),
           gradYear: t("events.sessions.2.speakers.0.gradYear"),
-          url: t("events.sessions.2.speakers.0.url"),
+          url: "https://yuinoue.jp/",
           imageUrl: inoueImage,
         },
         {
           name: t("events.sessions.2.speakers.1.name"),
           profile: t("events.sessions.2.speakers.1.profile"),
           gradYear: t("events.sessions.2.speakers.1.gradYear"),
-          url: t("events.sessions.2.speakers.1.url"),
+          url: "http://mt-funa.com/",
           imageUrl: funayamaImage,
         },
         {
@@ -200,14 +201,22 @@ export default function Events() {
                   <li key={sIndex} className="flex items-center gap-3 text-sm">
                     {/* 顔写真 */}
                     <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-black/10">
-                      {speaker.imageUrl && (
+                      {speaker.imageUrl ? (
                         <Image
                           src={speaker.imageUrl}
                           alt={speaker.name}
-                          width={40}
-                          height={40}
+                          width={500}
+                          height={500}
                           className="h-full w-full object-cover"
                         />
+                      ) : (
+                        <div className="h-full w-full flex items-center justify-center">
+                          <PersonIcon
+                            width={24}
+                            height={24}
+                            color="white"
+                          />
+                        </div>
                       )}
                     </div>
 

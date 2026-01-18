@@ -107,8 +107,8 @@
           {
             "name": "Takashi Funayama",
             "profile": "Visual Communication Design Studio",
-            "gradYear": "2012 Grad"
-          },
+              "gradYear": "2012 Grad"
+            },
           {
             "name": "Current Student",
             "profile": "Visual Communication Design Studio"
@@ -136,5 +136,8 @@
   "sns": {
     "sectionTitle": "We share information on SNS",
     "description": "Please check here for the latest information."
+  },
+  "webExhibition": {
+    "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview of research and works<br2/>as a web exhibition."
   }
 }
