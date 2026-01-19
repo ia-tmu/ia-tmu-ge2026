@@ -29,12 +29,12 @@ export default function Footer() {
               University
             </div>
 
-            <Button
+            {/* <Button
               href="https://industrial-art.sd.tmu.ac.jp/privacy-policy.html"
               target="_blank"
             >
               Privacy policy
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
