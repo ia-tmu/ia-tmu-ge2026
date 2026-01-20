@@ -64,7 +64,7 @@ export default function Guruguru({
       clearTimeout(resetTimer);
       clearTimeout(startTimer);
     };
-  }, [pauseMs, fadeMs, startDelayMs]);
+  }, [src, pauseMs, fadeMs, startDelayMs]);
 
   return (
     <video

@@ -155,7 +155,7 @@ export default function Events() {
           <h3 className="text-xl md:text-2xl font-bold">
             {t("events.sectionTitle")}
           </h3>
-          <p className="leading-relaxed max-w-3xl">{t("events.description")}</p>
+          <p className="leading-relaxed">{t("events.description")}</p>
         </div>
 
         {/* セッション一覧 */}
@@ -163,7 +163,7 @@ export default function Events() {
           {sessions.map((session, index) => (
             <div key={index} className="flex flex-col gap-4">
               {/* 日時 */}
-              <div className="flex items-center justify-between border-b border-black/10 pb-2">
+              <div className="flex items-center justify-between border-b border-dark-blue-primary/10 pb-2">
                 <div className="flex items-baseline gap-4">
                   <span className="text-xl font-en font-medium">
                     {session.date}
@@ -175,7 +175,7 @@ export default function Events() {
                     href={createGoogleCalendarUrl(session)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs border border-black/10 px-2 py-1 rounded hover:bg-black hover:text-white transition-colors flex items-center gap-1"
+                    className="text-xs border border-gray-primary hover:border-dark-blue-primary px-2 py-1 rounded hover:bg-dark-blue-primary hover:text-foreground transition-colors flex items-center gap-1 duration-300"
                     title="Googleカレンダーに追加"
                   >
                     <span>＋ Calendar</span>
@@ -200,7 +200,7 @@ export default function Events() {
                 {session.speakers.map((speaker, sIndex) => (
                   <li key={sIndex} className="flex items-center gap-3 text-sm">
                     {/* 顔写真 */}
-                    <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-black/10">
+                    <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-dark-blue-primary/10">
                       {speaker.imageUrl ? (
                         <Image
                           src={speaker.imageUrl}
@@ -247,7 +247,7 @@ export default function Events() {
                         </span>
                       )}
 
-                      <div className="flex flex-wrap items-center gap-x-2 text-xs text-black/60">
+                      <div className="flex flex-wrap items-center gap-x-2 text-xs">
                         {speaker.profile && (
                           <span className="whitespace-nowrap">
                             {speaker.profile}
