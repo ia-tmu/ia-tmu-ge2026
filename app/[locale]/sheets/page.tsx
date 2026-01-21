@@ -34,7 +34,7 @@ export default async function SheetsPage() {
 
   if (data.error) {
     return (
-      <div style={{ padding: 16, color: "crimson" }}>Error: {data.error}</div>
+      <div className="p-4 text-red-600">Error: {data.error}</div>
     );
   }
 
@@ -53,7 +53,7 @@ export default async function SheetsPage() {
 
   return (
     <div className="p-4 text-black">
-      <h1 style={{ fontSize: 20, fontWeight: 700 }}>
+      <h1 className="text-xl font-bold">
         {data.spreadsheetTitle} / {data.sheetTitle}
       </h1>
 
