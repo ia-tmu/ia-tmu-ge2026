@@ -200,13 +200,13 @@ export default function Events() {
                 {session.speakers.map((speaker, sIndex) => (
                   <li key={sIndex} className="flex items-center gap-3 text-sm">
                     {/* 顔写真 */}
-                    <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-dark-blue-primary/10">
+                    <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-dark-blue-primary/10">
                       {speaker.imageUrl ? (
                         <Image
                           src={speaker.imageUrl}
                           alt={speaker.name}
-                          width={500}
-                          height={500}
+                          width={1000}
+                          height={1000}
                           className="h-full w-full object-cover"
                         />
                       ) : (

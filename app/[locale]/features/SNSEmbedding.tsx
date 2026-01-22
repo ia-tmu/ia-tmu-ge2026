@@ -38,15 +38,13 @@ export default function SNSEmbedding() {
               <h3 className="text-xl text-center md:text-2xl font-bold z-10">
                 {t("sns.sectionTitle")}
               </h3>
-              <button className="cursor-pointer w-36 md:w-60 aspect-square absolute top-1/2 left-1/2 md:-translate-x-1/4 lg:translate-x-0 -translate-y-5/8" onClick={() => {
-                setCurrentGuruguru((currentGuruguru + 1) % guruguruWebm.length);
-              }}>
+             
               <Guruguru
-                    src={guruguruWebm[currentGuruguru]}
-                    className=""
-                    startDelayMs={1000}
+                className="w-36 md:w-60 aspect-square absolute top-1/2 left-1/2 translate-x-1/5 md:-translate-x-1/4 lg:translate-x-0 -translate-y-5/8"
+                src={guruguruWebm[3]}
+                startDelayMs={1000}
               />
-              </button>
+
             </div>
             <p className="leading-relaxed text-sm md:text-base text-center">
               {t("sns.description")}

@@ -21,15 +21,11 @@ export default function WebExhibition() {
 
         <div className="relative">
           <h1 className="text-4xl md:text-6xl font-semibold text-center">Coming Soon</h1>
-          <button className="w-40 md:w-72 aspect-square cursor-pointer absolute top-1/2 left-1/2 md:translate-x-1/4 -translate-y-5/8" onClick={() => {
-            setCurrentGuruguru((currentGuruguru + 1) % guruguruWebm.length);
-          }}>
             <Guruguru
-                src={guruguruWebm[currentGuruguru]}
+             className="w-40 md:w-72 aspect-square absolute top-1/2 -left-1/5 md:-left-1/3 -translate-y-5/8"
+                src={guruguruWebm[2]}
                 startDelayMs={1000}
             />
-          </button>
-          
         </div>
 
         <div className="text-center text-xs md:text-sm leading-6 md:leading-8">
