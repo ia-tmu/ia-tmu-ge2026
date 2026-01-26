@@ -9,6 +9,10 @@ import funayamaImage from "../../../public/images/events/funayama_takashi.jpg";
 import inoueImage from "../../../public/images/events/inoue_yu.jpg";
 import takahashiImage from "../../../public/images/events/kentaro_takahashi.jpg";
 import takedaImage from "../../../public/images/events/mai_takeda.jpg";
+// import kusumiImage from "../../../public/images/events/kiyoshi_kusumi.jpg";
+import shimakageImage from "../../../public/images/events/keisuke_shimakage.jpeg";
+import tsuchiyaImage from "../../../public/images/events/shin_tsuchiya.jpg";
+import babaImage from "../../../public/images/events/tetsuaki_baba.png";
 
 interface Speaker {
   name: string;
@@ -62,20 +66,24 @@ export default function Events() {
     },
     {
       date: "3/1 sun",
-      time: "15:00-16:00",
+      time: "15:00-16:30",
       title: t("events.sessions.1.title"),
       subtitle: t("events.sessions.1.subtitle"),
       startDateTime: "20260301T150000",
-      endDateTime: "20260301T160000",
+      endDateTime: "20260301T163000",
       speakers: [
         {
           name: t("events.sessions.1.speakers.0.name"),
-          profile: t("events.sessions.1.speakers.0.profile"),
-          gradYear: t("events.sessions.1.speakers.0.gradYear"),
-          url: t("events.sessions.1.speakers.0.url"),
+          url: "",
           imageUrl: "",
         },
-        { name: t("events.sessions.1.speakers.1.name"), imageUrl: "" },
+        {
+          name: t("events.sessions.1.speakers.1.name"),
+          profile: t("events.sessions.1.speakers.1.profile"),
+          gradYear: t("events.sessions.1.speakers.1.gradYear"),
+          imageUrl: shimakageImage,
+          url: "https://scrapbox.io/ksksmkg/",
+        },
         {
           name: t("events.sessions.1.speakers.2.name"),
           profile: t("events.sessions.1.speakers.2.profile"),
@@ -120,10 +128,11 @@ export default function Events() {
       startDateTime: "20260306T150000",
       endDateTime: "20260306T160000",
       speakers: [
-        { name: t("events.sessions.3.speakers.0.name"), imageUrl: "" },
+        { name: t("events.sessions.3.speakers.0.name"), imageUrl: babaImage, url: "https://tetsuakibaba.jp/", },
+        { name: t("events.sessions.3.speakers.1.name"), imageUrl: tsuchiyaImage, url: "https://trailer-house.sxd-d.com/designer/", },
         {
-          name: t("events.sessions.3.speakers.1.name"),
-          profile: t("events.sessions.3.speakers.1.profile"),
+          name: t("events.sessions.3.speakers.2.name"),
+          profile: t("events.sessions.3.speakers.2.profile"),
           imageUrl: "",
         },
       ],
@@ -134,13 +143,12 @@ export default function Events() {
     if (!session.startDateTime || !session.endDateTime) return "";
 
     const text = encodeURIComponent(
-      `【IA卒展トークセッション】${session.title}`
+      `【${t("events.sectionTitle")}】${session.title}`
     );
     const details = encodeURIComponent(
       `日時：${session.date} ${session.time}\n` +
-        `登壇者：${session.speakers.map((s) => s.name).join("、")}\n\n` +
-        `東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026\n` +
-        `会場：東京都美術館`
+      `登壇者：${session.speakers.map((s) => s.name).join("、")}\n\n` +
+      `${t("teaser.locationTitle")}：${t("teaser.location")}`
     );
     const location = encodeURIComponent("東京都美術館");
 

@@ -47,85 +47,78 @@
   "events": {
     "title": "Events",
     "sectionTitle": "IA Graduation Exhibition Talk Sessions",
-    "description": "Graduates, professors, and current students of Industrial Art will hold cross-talk sessions at the exhibition venue, focusing on this year's theme, 'Moya'.",
+    "description": "At the graduation exhibition venue, IA alumni, faculty members, and current students will come together for a cross-talk session, exploring this year’s theme, “Moya,” as a starting point.",
     "sessions": [
       {
-        "date": "3/1 sun",
-        "time": "13:00-14:30",
-        "title": "Facing 'Moya' with Me",
-        "subtitle": "Until the mist takes shape.",
+        "title": "How I Engage with “Moya”",
+        "subtitle": "Until the Haze Takes Shape",
         "speakers": [
           {
             "name": "Mai Takeda",
-            "profile": "Product Service Design Studio",
-            "gradYear": "2019 Grad"
+            "profile": "Equipment & Service Design Studio",
+            "gradYear": "Class of 2019"
           },
           {
             "name": "Kentaro Takahashi",
             "profile": "Interior Design Studio",
-            "gradYear": "2021 Grad"
+            "gradYear": "Class of 2021"
           },
           {
-            "name": "Current Student",
+            "name": "Student",
             "profile": "Interior Design Studio"
           }
         ]
       },
       {
-        "date": "3/1 sun",
-        "time": "15:00-16:00",
-        "title": "Connecting 'Moya' to Society",
-        "subtitle": "Turning 'troubles' into products.",
+        "title": "Supporting “Moya”",
+        "subtitle": "Practices of Curation, Installation, and Critique",
         "speakers": [
           {
+            "name": "Professor Kiyoshi Kusumi"
+          },
+          {
             "name": "Keisuke Shimakage",
-            "profile": "Product & Service Design Studio",
-            "gradYear": "2014 Grad"
+            "profile": "Equipment & Service Design Studio",
+            "gradYear": "Class of 2014"
           },
           {
-            "name": "〇〇〇〇",
-            "profile": "Product & Service Design Studio",
-            "gradYear": "2014 Grad"
-          },
-          {
-            "name": "Current Student",
-            "profile": "Product & Service Design Studio"
+            "name": "Student",
+            "profile": "Equipment & Service Design Studio"
           }
         ]
       },
       {
-        "date": "3/6 fri",
-        "time": "13:00-14:00",
-        "title": "Transforming 'Moya' into a 'Communicable Form'",
-        "subtitle": "Techniques of verbalization, visualization, and editing.",
+        "title": "“Moya” into a Communicable Form",
+        "subtitle": "Techniques for Verbalization, Visualization, and Editing",
         "speakers": [
           {
             "name": "Yu Inoue",
             "profile": "Visual Communication Design Studio",
-            "gradYear": "2014 Grad"
+            "gradYear": "Class of 2014"
           },
           {
             "name": "Takashi Funayama",
             "profile": "Visual Communication Design Studio",
-              "gradYear": "2012 Grad"
-            },
+            "gradYear": "Class of 2012"
+          },
           {
-            "name": "Current Student",
+            "name": "Student",
             "profile": "Visual Communication Design Studio"
           }
         ]
       },
       {
-        "date": "3/6 fri",
-        "time": "15:00-16:00",
-        "title": "Reflecting on this Graduation Exhibition",
-        "subtitle": "Looking back on 20 years of IA",
+        "title": "Practices of Curation, Installation, and Critique",
+        "subtitle": "About IA's 20th Anniversary",
         "speakers": [
           {
-            "name": "Professor 〇〇〇〇"
+            "name": "Professor Tetsuaki Baba"
           },
           {
-            "name": "Current Student",
+            "name": "Associate Professor Shin Tsuchiya"
+          },
+          {
+            "name": "Student",
             "profile": "Transportation Design Studio"
           }
         ]
