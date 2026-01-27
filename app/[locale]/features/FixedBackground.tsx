@@ -41,6 +41,11 @@ export default function FixedBackground() {
     [1, 0]
   )
 
+  const componentDisplay = useTransform(
+    componentOpacity,
+    (v) => (v < 0.01 ? "none" : "block")
+  )
+
   useEffect(() => {
     // マウント確認
     if (!isVisible) return;
@@ -108,11 +113,14 @@ export default function FixedBackground() {
       {/* Conceptのスクロール監視用の参照要素（非表示） */}
       <div
         ref={conceptScrollRef}
-        className="h-[120dvh] absolute top-[80dvh] w-full pointer-events-none"
+        className="h-[120dvh] absolute top-[0dvh] w-full pointer-events-none"
       />
       <motion.div
         className="bg-black/30 fixed inset-0 z-0 isolate pointer-events-none"
-        style={{ opacity: componentOpacity }}
+        style={{
+          opacity: componentOpacity,
+          display: componentDisplay
+        }}
       >
         <div className="absolute inset-0 z-0 -top-[5%] md:top-0">
           {/* PC: Cover + Right Position */}
