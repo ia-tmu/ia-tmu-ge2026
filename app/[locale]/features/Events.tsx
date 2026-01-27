@@ -9,6 +9,10 @@ import funayamaImage from "../../../public/images/events/funayama_takashi.jpg";
 import inoueImage from "../../../public/images/events/inoue_yu.jpg";
 import takahashiImage from "../../../public/images/events/kentaro_takahashi.jpg";
 import takedaImage from "../../../public/images/events/mai_takeda.jpg";
+// import kusumiImage from "../../../public/images/events/kiyoshi_kusumi.jpg";
+import shimakageImage from "../../../public/images/events/keisuke_shimakage.jpeg";
+import tsuchiyaImage from "../../../public/images/events/shin_tsuchiya.jpg";
+import babaImage from "../../../public/images/events/tetsuaki_baba.png";
 
 interface Speaker {
   name: string;
@@ -62,20 +66,24 @@ export default function Events() {
     },
     {
       date: "3/1 sun",
-      time: "15:00-16:00",
+      time: "15:00-16:30",
       title: t("events.sessions.1.title"),
       subtitle: t("events.sessions.1.subtitle"),
       startDateTime: "20260301T150000",
-      endDateTime: "20260301T160000",
+      endDateTime: "20260301T163000",
       speakers: [
         {
           name: t("events.sessions.1.speakers.0.name"),
-          profile: t("events.sessions.1.speakers.0.profile"),
-          gradYear: t("events.sessions.1.speakers.0.gradYear"),
-          url: t("events.sessions.1.speakers.0.url"),
+          url: "",
           imageUrl: "",
         },
-        { name: t("events.sessions.1.speakers.1.name"), imageUrl: "" },
+        {
+          name: t("events.sessions.1.speakers.1.name"),
+          profile: t("events.sessions.1.speakers.1.profile"),
+          gradYear: t("events.sessions.1.speakers.1.gradYear"),
+          imageUrl: shimakageImage,
+          url: "https://scrapbox.io/ksksmkg/",
+        },
         {
           name: t("events.sessions.1.speakers.2.name"),
           profile: t("events.sessions.1.speakers.2.profile"),
@@ -120,10 +128,11 @@ export default function Events() {
       startDateTime: "20260306T150000",
       endDateTime: "20260306T160000",
       speakers: [
-        { name: t("events.sessions.3.speakers.0.name"), imageUrl: "" },
+        { name: t("events.sessions.3.speakers.0.name"), imageUrl: babaImage, url: "https://tetsuakibaba.jp/", },
+        { name: t("events.sessions.3.speakers.1.name"), imageUrl: tsuchiyaImage, url: "https://trailer-house.sxd-d.com/designer/", },
         {
-          name: t("events.sessions.3.speakers.1.name"),
-          profile: t("events.sessions.3.speakers.1.profile"),
+          name: t("events.sessions.3.speakers.2.name"),
+          profile: t("events.sessions.3.speakers.2.profile"),
           imageUrl: "",
         },
       ],
@@ -134,13 +143,12 @@ export default function Events() {
     if (!session.startDateTime || !session.endDateTime) return "";
 
     const text = encodeURIComponent(
-      `【IA卒展トークセッション】${session.title}`
+      `【${t("events.sectionTitle")}】${session.title}`
     );
     const details = encodeURIComponent(
       `日時：${session.date} ${session.time}\n` +
-        `登壇者：${session.speakers.map((s) => s.name).join("、")}\n\n` +
-        `東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026\n` +
-        `会場：東京都美術館`
+      `登壇者：${session.speakers.map((s) => s.name).join("、")}\n\n` +
+      `${t("teaser.locationTitle")}：${t("teaser.location")}`
     );
     const location = encodeURIComponent("東京都美術館");
 
@@ -155,7 +163,7 @@ export default function Events() {
           <h3 className="text-xl md:text-2xl font-bold">
             {t("events.sectionTitle")}
           </h3>
-          <p className="leading-relaxed max-w-3xl">{t("events.description")}</p>
+          <p className="leading-relaxed">{t("events.description")}</p>
         </div>
 
         {/* セッション一覧 */}
@@ -163,7 +171,7 @@ export default function Events() {
           {sessions.map((session, index) => (
             <div key={index} className="flex flex-col gap-4">
               {/* 日時 */}
-              <div className="flex items-center justify-between border-b border-black/10 pb-2">
+              <div className="flex items-center justify-between border-b border-dark-blue-primary/10 pb-2">
                 <div className="flex items-baseline gap-4">
                   <span className="text-xl font-en font-medium">
                     {session.date}
@@ -175,7 +183,7 @@ export default function Events() {
                     href={createGoogleCalendarUrl(session)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs border border-black/10 px-2 py-1 rounded hover:bg-black hover:text-white transition-colors flex items-center gap-1"
+                    className="text-xs border border-gray-primary hover:border-dark-blue-primary px-2 py-1 rounded hover:bg-dark-blue-primary hover:text-foreground transition-colors flex items-center gap-1 duration-300"
                     title="Googleカレンダーに追加"
                   >
                     <span>＋ Calendar</span>
@@ -200,13 +208,13 @@ export default function Events() {
                 {session.speakers.map((speaker, sIndex) => (
                   <li key={sIndex} className="flex items-center gap-3 text-sm">
                     {/* 顔写真 */}
-                    <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-black/10">
+                    <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-dark-blue-primary/10">
                       {speaker.imageUrl ? (
                         <Image
                           src={speaker.imageUrl}
                           alt={speaker.name}
-                          width={500}
-                          height={500}
+                          width={1000}
+                          height={1000}
                           className="h-full w-full object-cover"
                         />
                       ) : (
@@ -247,7 +255,7 @@ export default function Events() {
                         </span>
                       )}
 
-                      <div className="flex flex-wrap items-center gap-x-2 text-xs text-black/60">
+                      <div className="flex flex-wrap items-center gap-x-2 text-xs">
                         {speaker.profile && (
                           <span className="whitespace-nowrap">
                             {speaker.profile}

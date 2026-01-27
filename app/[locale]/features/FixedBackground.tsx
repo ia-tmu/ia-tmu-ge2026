@@ -6,11 +6,13 @@ import fvBg from "../../../public/images/top/fv/fv-bg.png";
 import fvBgSp from "../../../public/images/top/fv/fv-bg-sp.png";
 import Guruguru from "./GuruguruVideo";
 import { TracingPaper } from "../components/TracingPaper";
-import { useScroll, useTransform, useMotionValueEvent } from "framer-motion"
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion"
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const guruguru01Webm = `${basePath}/images/top/guruguru_01.webm`;
 const guruguru02Webm = `${basePath}/images/top/guruguru_02.webm`;
+const guruguru01Static = `${basePath}/images/top/guruguru_01.png`;
+const guruguru02Static = `${basePath}/images/top/guruguru_02.png`;
 
 export default function FixedBackground() {
   const initialBlur = 20;
@@ -34,6 +36,17 @@ export default function FixedBackground() {
     [0, 0.2, 1],
     [0, 0.15, 0.15]
   );
+
+  const componentOpacity = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1, 0]
+  )
+
+  const componentDisplay = useTransform(
+    componentOpacity,
+    (v) => (v < 0.01 ? "none" : "block")
+  )
 
   useEffect(() => {
     // マウント確認
@@ -102,9 +115,15 @@ export default function FixedBackground() {
       {/* Conceptのスクロール監視用の参照要素（非表示） */}
       <div
         ref={conceptScrollRef}
-        className="h-[120dvh] absolute top-[80dvh] w-full pointer-events-none"
+        className="h-[120dvh] absolute top-[0dvh] w-full pointer-events-none"
       />
-      <div className="bg-black/30 fixed inset-0 z-0 isolate pointer-events-none">
+      <motion.div
+        className="bg-black/30 fixed inset-0 z-0 isolate pointer-events-none"
+        style={{
+          opacity: componentOpacity,
+          display: componentDisplay
+        }}
+      >
         <div className="absolute inset-0 z-0 -top-[5%] md:top-0">
           {/* PC: Cover + Right Position */}
           <div className="hidden opacity-85 md:block w-full h-screen relative">
@@ -133,11 +152,15 @@ export default function FixedBackground() {
           <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
             <Guruguru
               src={guruguru01Webm}
+              staticSrc={guruguru01Static}
+              staticImageClassName="justify-start"
               className="object-top-left w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0"
               startDelayMs={1000}
             />
             <Guruguru
               src={guruguru02Webm}
+              staticSrc={guruguru02Static}
+              staticImageClassName="justify-end"
               className="object-bottom-right w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0"
               startDelayMs={3000}
             />
@@ -151,7 +174,7 @@ export default function FixedBackground() {
           numOctaves={20}
           className="w-full h-full pointer-events-none"
         />
-      </div>
-    </div>
+      </motion.div>
+    </div >
   );
 }

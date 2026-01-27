@@ -5,7 +5,8 @@ import Guruguru from "./GuruguruVideo";
 import { Trans } from "react-i18next";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const guruguru01Webm = `${basePath}/images/top/guruguru_01.webm`;
+const guruguru03Webm = `${basePath}/images/top/guruguru_03.webm`;
+const guruguru03Static = `${basePath}/images/top/guruguru_03.png`;
 
 export default function WebExhibition() {
   return (
@@ -15,9 +16,11 @@ export default function WebExhibition() {
         <div className="relative">
           <h1 className="text-4xl md:text-6xl font-semibold text-center">Coming Soon</h1>
           <Guruguru
-                src={guruguru01Webm}
-                className="w-40 md:w-72 aspect-square absolute top-1/2 left-1/2 md:translate-x-1/4 -translate-y-5/8"
-                startDelayMs={1000}
+            className="w-40 md:w-72 aspect-square absolute top-1/2 right-3/4 md:-left-5/12 -translate-y-6/8"
+            src={guruguru03Webm}
+            staticSrc={guruguru03Static}
+            staticImageClassName="justify-center"
+            startDelayMs={1000}
           />
         </div>
 
