@@ -5,8 +5,9 @@ import { useAspect, useTexture } from "@react-three/drei"
 import * as THREE from "three"
 
 function Moya() {
-  const texture = useTexture("/images/top/texture.png") as THREE.Texture;
-  // const texture = useTexture("/images/top/fv/fv-bg.png")
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const texturePath = `${basePath}/images/top/texture.png`;
+  const texture = useTexture(texturePath) as THREE.Texture;
 
   const { width, height } = texture.image as HTMLImageElement
   const scale = useAspect(width, height, 1)
