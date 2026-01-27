@@ -95,7 +95,7 @@ export default function Guruguru({
       clearTimeout(resetTimer);
       clearTimeout(startTimer);
     };
-  }, [pauseMs, fadeMs, startDelayMs]);
+  }, [src, pauseMs, fadeMs, startDelayMs]);
 
   if (movieDisabled) {
     return (
@@ -121,7 +121,7 @@ export default function Guruguru({
       className={className}
       style={{
         opacity: phase === "fading" ? 0 : 1,
-        transition: `opacity ${fadeMs} ms ease-out`,
+        transition: `opacity ${fadeMs}ms ease-out`,
       }}
     />
   );

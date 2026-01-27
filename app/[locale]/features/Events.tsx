@@ -124,7 +124,6 @@ export default function Events() {
       date: "3/6 fri",
       time: "15:00-16:00",
       title: t("events.sessions.3.title"),
-      subtitle: t("events.sessions.3.subtitle"),
       startDateTime: "20260306T150000",
       endDateTime: "20260306T160000",
       speakers: [
@@ -183,7 +182,7 @@ export default function Events() {
                     href={createGoogleCalendarUrl(session)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs border border-gray-primary hover:border-dark-blue-primary px-2 py-1 rounded hover:bg-dark-blue-primary hover:text-foreground transition-colors flex items-center gap-1 duration-300"
+                    className="text-xs border border-foreground hover:border-dark-blue-primary px-2 py-1 rounded hover:bg-dark-blue-primary hover:text-foreground transition-colors flex items-center gap-1 duration-300"
                     title="Googleカレンダーに追加"
                   >
                     <span>＋ Calendar</span>
