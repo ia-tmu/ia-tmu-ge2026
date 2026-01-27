@@ -10,7 +10,9 @@ import instagramLogo from "../../../public/images/logo/Instagram-logo-white.svg"
 import Guruguru from "./GuruguruVideo";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const guruguru01Webm = `${basePath}/images/top/guruguru_01.webm`;
+const guruguru04Webm = `${basePath}/images/top/guruguru_04.webm`;
+const guruguru04Static = `${basePath}/images/top/guruguru_04.png`;
+
 
 export default function SNSEmbedding() {
   const { t } = useTranslation();
@@ -28,11 +30,15 @@ export default function SNSEmbedding() {
               <h3 className="text-xl text-center md:text-2xl font-bold z-10">
                 {t("sns.sectionTitle")}
               </h3>
+
               <Guruguru
-                    src={guruguru01Webm}
-                    className="w-36 md:w-60 aspect-square absolute top-1/2 left-1/2 md:-translate-x-1/4 lg:translate-x-0 -translate-y-5/8"
-                    startDelayMs={1000}
+                className="w-36 md:w-60 aspect-square absolute top-1/2 left-1/2 translate-x-1/4  md:translate-x-1/12 -translate-y-5/8"
+                src={guruguru04Webm}
+                staticSrc={guruguru04Static}
+                staticImageClassName="justify-center md:!w-34 !w-20 md:!translate-x-1/2 !translate-x-3/3"
+                startDelayMs={1000}
               />
+
             </div>
             <p className="leading-relaxed text-sm md:text-base text-center">
               {t("sns.description")}

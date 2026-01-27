@@ -1,16 +1,46 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+
 
 type GuruguruProps = {
   src: string;
+  staticSrc: string;
+  staticImageClassName?: string;
   className?: string;
   pauseMs?: number;
   fadeMs?: number;
   startDelayMs?: number;
 };
 
+
+const shouldUseStaticImage = () => {
+  const ua = navigator.userAgent.toLowerCase();
+
+  // 1. iOSデバイスの検出（iPhone/iPad/iPod）
+  // iOSのすべてのブラウザはWebKitベースでWebMのアルファチャネルに対応していない
+  const isIOS = /iphone|ipad|ipod/.test(ua);
+
+  // 2. デスクトップSafariの検出
+  // "safari" を含むが "chrome" や "chromium"、"crios" を含まないことを確認
+  const isSafariUA = ua.includes('safari') &&
+    !ua.includes('chrome') &&
+    !ua.includes('chromium') &&
+    !ua.includes('crios');
+
+  // 3. iPhoneのChromeの検出（CriOSが含まれる）
+  const isIOSChrome = /crios/.test(ua);
+
+  // iOSデバイス、デスクトップSafari、またはiPhoneのChromeの場合は静止画に切り替え
+  return isIOS || isSafariUA || isIOSChrome;
+}
+
+
+
 export default function Guruguru({
   src,
+  staticSrc,
+  staticImageClassName,
   className,
   pauseMs = 5000,
   fadeMs = 1000,
@@ -18,6 +48,7 @@ export default function Guruguru({
 }: GuruguruProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [phase, setPhase] = useState<"playing" | "holding" | "fading">("playing");
+  const movieDisabled = shouldUseStaticImage();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -66,6 +97,20 @@ export default function Guruguru({
     };
   }, [pauseMs, fadeMs, startDelayMs]);
 
+  if (movieDisabled) {
+    return (
+      <div className={`${className} flex flex-col ${staticImageClassName}`}>
+        <Image
+          src={staticSrc}
+          width={0}
+          height={0}
+          alt="guruguru"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    )
+  }
+
   return (
     <video
       ref={videoRef}
@@ -76,7 +121,7 @@ export default function Guruguru({
       className={className}
       style={{
         opacity: phase === "fading" ? 0 : 1,
-        transition: `opacity ${fadeMs}ms ease-out`,
+        transition: `opacity ${fadeMs} ms ease-out`,
       }}
     />
   );

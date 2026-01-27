@@ -11,6 +11,8 @@ import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-mot
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const guruguru01Webm = `${basePath}/images/top/guruguru_01.webm`;
 const guruguru02Webm = `${basePath}/images/top/guruguru_02.webm`;
+const guruguru01Static = `${basePath}/images/top/guruguru_01.png`;
+const guruguru02Static = `${basePath}/images/top/guruguru_02.png`;
 
 export default function FixedBackground() {
   const initialBlur = 20;
@@ -150,11 +152,15 @@ export default function FixedBackground() {
           <div className="absolute w-full md:w-3/5 h-[40dvh] md:h-[90dvh] top-1/2 -translate-y-1/2 right-10">
             <Guruguru
               src={guruguru01Webm}
+              staticSrc={guruguru01Static}
+              staticImageClassName="justify-start"
               className="object-top-left w-60 md:w-96 aspect-square absolute top-0 left-10 md:left-0"
               startDelayMs={1000}
             />
             <Guruguru
               src={guruguru02Webm}
+              staticSrc={guruguru02Static}
+              staticImageClassName="justify-end"
               className="object-bottom-right w-60 md:w-96 aspect-square absolute bottom-0 -right-20 md:right-0"
               startDelayMs={3000}
             />
