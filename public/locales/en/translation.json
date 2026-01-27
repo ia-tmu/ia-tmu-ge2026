@@ -41,7 +41,103 @@
     "logo": "GE"
   },
   "concept": {
-    "title": "『もや』",
-    "description": "形のない「もや」の中を、私たちは進む。\n見えそうで見えない向こう側。\n迷い、立ち止まり、ときに見失いながらも、\n歩み続けることで、少しずつ光が見えてくる。\nそんな軌跡が「もや」を晴らしていく。"
+    "title": "『Moya』",
+    "description": "Amidst a mist with no shape, we move.\nTowards a seeable but invisible direction.\nWe get lost, we stop and, even though we lose our way,<br/> we walk.<br2/> Until we receive the sight of light.\nAnd the very journey clears the fog."
+  },
+  "events": {
+    "title": "Events",
+    "sectionTitle": "IA Graduation Exhibition Talk Sessions",
+    "description": "Graduates, professors, and current students of Industrial Art will hold cross-talk sessions at the exhibition venue, focusing on this year's theme, 'Moya'.",
+    "sessions": [
+      {
+        "date": "3/1 sun",
+        "time": "13:00-14:30",
+        "title": "Facing 'Moya' with Me",
+        "subtitle": "Until the mist takes shape.",
+        "speakers": [
+          {
+            "name": "Mai Takeda",
+            "profile": "Product Service Design Studio",
+            "gradYear": "2019 Grad"
+          },
+          {
+            "name": "Kentaro Takahashi",
+            "profile": "Interior Design Studio",
+            "gradYear": "2021 Grad"
+          },
+          {
+            "name": "Current Student",
+            "profile": "Interior Design Studio"
+          }
+        ]
+      },
+      {
+        "date": "3/1 sun",
+        "time": "15:00-16:00",
+        "title": "Connecting 'Moya' to Society",
+        "subtitle": "Turning 'troubles' into products.",
+        "speakers": [
+          {
+            "name": "Keisuke Shimakage",
+            "profile": "Product & Service Design Studio",
+            "gradYear": "2014 Grad"
+          },
+          {
+            "name": "〇〇〇〇",
+            "profile": "Product & Service Design Studio",
+            "gradYear": "2014 Grad"
+          },
+          {
+            "name": "Current Student",
+            "profile": "Product & Service Design Studio"
+          }
+        ]
+      },
+      {
+        "date": "3/6 fri",
+        "time": "13:00-14:00",
+        "title": "Transforming 'Moya' into a 'Communicable Form'",
+        "subtitle": "Techniques of verbalization, visualization, and editing.",
+        "speakers": [
+          {
+            "name": "Yu Inoue",
+            "profile": "Visual Communication Design Studio",
+            "gradYear": "2014 Grad"
+          },
+          {
+            "name": "Takashi Funayama",
+            "profile": "Visual Communication Design Studio",
+              "gradYear": "2012 Grad"
+            },
+          {
+            "name": "Current Student",
+            "profile": "Visual Communication Design Studio"
+          }
+        ]
+      },
+      {
+        "date": "3/6 fri",
+        "time": "15:00-16:00",
+        "title": "Reflecting on this Graduation Exhibition",
+        "subtitle": "Looking back on 20 years of IA",
+        "speakers": [
+          {
+            "name": "Professor 〇〇〇〇"
+          },
+          {
+            "name": "Current Student",
+            "profile": "Transportation Design Studio"
+          }
+        ]
+      }
+    ]
+  },
+  "moya": "moya",
+  "sns": {
+    "sectionTitle": "We share information on SNS",
+    "description": "Please check here for the latest information."
+  },
+  "webExhibition": {
+    "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview of research and works<br2/>as a web exhibition."
   }
 }

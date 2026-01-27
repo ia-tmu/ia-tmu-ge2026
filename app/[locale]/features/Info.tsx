@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Section from "../components/Section"
-import Heading from "../components/Heading"
+import Section from "../components/Section";
+import Heading from "../components/Heading";
 import { useTranslation } from "react-i18next";
 
 export default function Info() {
@@ -41,12 +41,12 @@ export default function Info() {
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6478.732430516302!2d139.772939!3d35.717211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c281e3bfa6f%3A0x8418dfeeb8bcab50!2z5p2x5Lqs6YO9576O6KGT6aSo!5e0!3m2!1sja!2sjp!4v1766077753050!5m2!1sja!2sjp"
-          className="w-full aspect-square h-auto grayscale rounded-lg overflow-hidden"
+          className="w-full aspect-square h-auto grayscale rounded-md overflow-hidden"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
     </Section>
-  )
+  );
 }
