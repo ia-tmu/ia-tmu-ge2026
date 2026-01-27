@@ -8,21 +8,13 @@ import Link from "next/link";
 import xLogo from "../../../public/images/logo/x-logo-white.svg";
 import instagramLogo from "../../../public/images/logo/Instagram-logo-white.svg";
 import Guruguru from "./GuruguruVideo";
-import { useState } from "react";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const guruguru01Webm = `${basePath}/images/top/guruguru_01.webm`;
-const guruguru02Webm = `${basePath}/images/top/guruguru_02.webm`;
-const guruguru03Webm = `${basePath}/images/top/guruguru_03.webm`;
 const guruguru04Webm = `${basePath}/images/top/guruguru_04.webm`;
-const guruguru05Webm = `${basePath}/images/top/guruguru_05.webm`;
+const guruguru04Static = `${basePath}/images/top/guruguru_04.png`;
 
 
 export default function SNSEmbedding() {
-  const [currentGuruguru, setCurrentGuruguru] = useState(0);
-  const guruguruWebm = [guruguru01Webm, guruguru02Webm, guruguru03Webm, guruguru04Webm, guruguru05Webm];
-
-
   const { t } = useTranslation();
   return (
     <Section title={"SNS"}>
@@ -38,10 +30,12 @@ export default function SNSEmbedding() {
               <h3 className="text-xl text-center md:text-2xl font-bold z-10">
                 {t("sns.sectionTitle")}
               </h3>
-             
+
               <Guruguru
-                className="w-36 md:w-60 aspect-square absolute top-1/2 left-1/2 translate-x-1/5 md:-translate-x-1/4 lg:translate-x-0 -translate-y-5/8"
-                src={guruguruWebm[3]}
+                className="w-36 md:w-60 aspect-square absolute top-1/2 left-1/2 translate-x-1/4  md:translate-x-1/12 -translate-y-5/8"
+                src={guruguru04Webm}
+                staticSrc={guruguru04Static}
+                staticImageClassName="justify-center md:!w-34 !w-20 md:!translate-x-1/2 !translate-x-3/3"
                 startDelayMs={1000}
               />
 
