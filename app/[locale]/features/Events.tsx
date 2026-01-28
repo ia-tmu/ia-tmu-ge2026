@@ -162,7 +162,7 @@ export default function Events() {
           <h3 className="text-xl md:text-2xl font-bold">
             {t("events.sectionTitle")}
           </h3>
-          <p className="leading-relaxed">{t("events.description")}</p>
+          <p className="leading-relaxed font-semibold">{t("events.description")}</p>
         </div>
 
         {/* セッション一覧 */}
@@ -196,7 +196,7 @@ export default function Events() {
                   {session.title}
                 </h4>
                 {session.subtitle && (
-                  <span className="text-sm font-medium mt-1">
+                  <span className="text-sm mt-1">
                     {session.subtitle}
                   </span>
                 )}

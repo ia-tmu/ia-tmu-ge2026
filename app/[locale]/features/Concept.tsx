@@ -48,7 +48,7 @@ export default function Concept() {
               className="block relative w-32 md:w-44 h-auto object-contain"
             />
           </h2>
-          <p className="text-sm  md:text-base font-light leading-10 whitespace-pre-line text-foreground">
+          <p className="text-sm  md:text-base font-medium leading-10 whitespace-pre-line text-foreground">
             <Trans
               i18nKey="concept.description"
               components={{
