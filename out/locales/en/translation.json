@@ -41,7 +41,95 @@
     "logo": "GE"
   },
   "concept": {
-    "title": "『もや』",
-    "description": "形のない「もや」の中を、私たちは進む。\n見えそうで見えない向こう側。\n迷い、立ち止まり、ときに見失いながらも、\n歩み続けることで、少しずつ光が見えてくる。\nそんな軌跡が「もや」を晴らしていく。"
+    "title": "『Moya』",
+    "description": "Amidst a mist with no shape, we move.\nTowards a seeable but invisible direction.\nWe get lost, we stop and, even though we lose our way,<br/> we walk.<br2/> Until we receive the sight of light.\nAnd the very journey clears the fog."
+  },
+  "events": {
+    "title": "Events",
+    "sectionTitle": "IA Graduation Exhibition Talk Sessions",
+    "description": "At the graduation exhibition venue, IA alumni, faculty members, and current students will come together for a cross-talk session, exploring this year’s theme, “Moya,” as a starting point.",
+    "sessions": [
+      {
+        "title": "How I Engage with “Moya”",
+        "subtitle": "Until the Haze Takes Shape",
+        "speakers": [
+          {
+            "name": "Mai Takeda",
+            "profile": "Equipment & Service Design Studio",
+            "gradYear": "Class of 2019"
+          },
+          {
+            "name": "Kentaro Takahashi",
+            "profile": "Interior Design Studio",
+            "gradYear": "Class of 2021"
+          },
+          {
+            "name": "Student",
+            "profile": "Interior Design Studio"
+          }
+        ]
+      },
+      {
+        "title": "Supporting “Moya”",
+        "subtitle": "Practices of Curation, Installation, and Critique",
+        "speakers": [
+          {
+            "name": "Professor Kiyoshi Kusumi"
+          },
+          {
+            "name": "Keisuke Shimakage",
+            "profile": "Equipment & Service Design Studio",
+            "gradYear": "Class of 2014"
+          },
+          {
+            "name": "Student",
+            "profile": "Equipment & Service Design Studio"
+          }
+        ]
+      },
+      {
+        "title": "“Moya” into a Communicable Form",
+        "subtitle": "Techniques for Verbalization, Visualization, and Editing",
+        "speakers": [
+          {
+            "name": "Yu Inoue",
+            "profile": "Visual Communication Design Studio",
+            "gradYear": "Class of 2014"
+          },
+          {
+            "name": "Takashi Funayama",
+            "profile": "Visual Communication Design Studio",
+            "gradYear": "Class of 2012"
+          },
+          {
+            "name": "Student",
+            "profile": "Visual Communication Design Studio"
+          }
+        ]
+      },
+      {
+        "title": "Reflecting on This Year’s Graduation Exhibition / About IA's 20th Anniversary",
+        "speakers": [
+          {
+            "name": "Professor Tetsuaki Baba"
+          },
+          {
+            "name": "Associate Professor Shin Tsuchiya"
+          },
+          {
+            "name": "Student",
+            "profile": "Transportation Design Studio"
+          }
+        ]
+      }
+    ]
+  },
+  "moya": "moya",
+  "sns": {
+    "sectionTitle": "We share information on SNS",
+    "description": "Please check here for the latest information."
+  },
+  "webExhibition": {
+    "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview <br2/> of research and works as a web exhibition."
   }
 }
