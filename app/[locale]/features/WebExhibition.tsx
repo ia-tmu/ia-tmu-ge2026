@@ -24,7 +24,7 @@ export default function WebExhibition() {
           />
         </div>
 
-        <div className="text-center text-xs md:text-sm leading-6 md:leading-8">
+        <div className="text-center text-xs md:text-sm leading-6 md:leading-8 font-semibold">
           <Trans
             i18nKey="webExhibition.description"
             components={{

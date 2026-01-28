@@ -40,7 +40,7 @@ export default function SNSEmbedding() {
               />
 
             </div>
-            <p className="leading-relaxed text-sm md:text-base text-center">
+            <p className="leading-relaxed text-sm md:text-base text-center font-semibold">
               {t("sns.description")}
             </p>
           </div>
