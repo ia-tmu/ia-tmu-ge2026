@@ -9,7 +9,7 @@ import funayamaImage from "../../../public/images/events/funayama_takashi.jpg";
 import inoueImage from "../../../public/images/events/inoue_yu.jpg";
 import takahashiImage from "../../../public/images/events/kentaro_takahashi.jpg";
 import takedaImage from "../../../public/images/events/mai_takeda.jpg";
-// import kusumiImage from "../../../public/images/events/kiyoshi_kusumi.jpg";
+import kusumiImage from "../../../public/images/events/kiyoshi_kusumi.png";
 import shimakageImage from "../../../public/images/events/keisuke_shimakage.jpeg";
 import tsuchiyaImage from "../../../public/images/events/shin_tsuchiya.jpg";
 import babaImage from "../../../public/images/events/tetsuaki_baba.png";
@@ -74,8 +74,8 @@ export default function Events() {
       speakers: [
         {
           name: t("events.sessions.1.speakers.0.name"),
-          url: "",
-          imageUrl: "",
+          url: "https://www.instagram.com/kusumedia/",
+          imageUrl: kusumiImage,
         },
         {
           name: t("events.sessions.1.speakers.1.name"),
