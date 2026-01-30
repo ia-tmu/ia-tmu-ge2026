@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[91641,["/ge2026/_next/static/chunks/a250bd8eae67409e.js","/ge2026/_next/static/chunks/f4fd85e722e03927.js"],"default"]
 3:I[43110,["/ge2026/_next/static/chunks/a250bd8eae67409e.js","/ge2026/_next/static/chunks/f4fd85e722e03927.js"],"default"]
-0:{"buildId":"EJfkNrg1U18ofnp1VGndG","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"hPs8NZzSoBZYY2gCbDyEX","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
