@@ -82,7 +82,7 @@ export default function Events() {
           profile: t("events.sessions.1.speakers.1.profile"),
           gradYear: t("events.sessions.1.speakers.1.gradYear"),
           imageUrl: shimakageImage,
-          url: "https://scrapbox.io/ksksmkg/",
+          url: "https://note.com/ksksmkg/n/nec3cd8023347",
         },
         {
           name: t("events.sessions.1.speakers.2.name"),
