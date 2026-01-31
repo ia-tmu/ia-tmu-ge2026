@@ -72,6 +72,7 @@ export const metadata: Metadata = {
 export async function generateStaticParams(): Promise<
   Array<{ locale: Locale }>
 > {
+  console.log("generateStaticParams-@/layout:", locales);
   return locales.map((locale) => ({ locale }));
 }
 

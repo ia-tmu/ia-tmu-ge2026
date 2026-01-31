@@ -221,7 +221,7 @@ export default function Teaser() {
             {/*   <p>{t("teaser.hours")}</p> */}
             {/*   <p>{t("teaser.lastDayHours")}</p> */}
             {/*   <p>{t("teaser.closed")}</p> */}
-            {/*   <p className="text-lg font-medium mt-2">{t("teaser.location")}</p> */}
+            {/*   <p className="slg font-medium mt-2">{t("teaser.location")}</p> */}
             {/* </div> */}
           </div>
         </div>
