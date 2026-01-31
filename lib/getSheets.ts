@@ -113,6 +113,6 @@ export async function fetchAllIds(): Promise<string[]> {
     });
     return (rangeRes.data.values || []).map((row) => String(row[0]));
   } catch {
-    return [];
+    return ["1"];
   }
 }
