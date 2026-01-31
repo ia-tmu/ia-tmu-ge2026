@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { fetchFirstSheetValues } from "@/lib/getSheets";
+import { fetchSheetValues } from "@/lib/getSheets";
 
 export async function GET() {
   try {
-    const data = await fetchFirstSheetValues();
+    const data = await fetchSheetValues();
     return NextResponse.json(data);
   } catch (e) {
     const message = e instanceof Error ? e.message : "Unknown error";

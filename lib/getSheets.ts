@@ -1,6 +1,8 @@
 // lib/sheets.ts
 import { google } from "googleapis";
 
+const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "web_connect";
+
 // 共通の認証設定
 async function getSheetsClient() {
   const auth = new google.auth.GoogleAuth({
@@ -17,7 +19,7 @@ async function getSheetsClient() {
  * - 1行目をヘッダーとして分離
  * - headers / rows / objects も返す
  */
-export async function fetchFirstSheetValues() {
+export async function fetchSheetValues() {
   const sheets = await getSheetsClient();
   const spreadsheetId = process.env.SPREADSHEET_ID;
 
@@ -28,18 +30,11 @@ export async function fetchFirstSheetValues() {
   });
 
   const spreadsheetTitle = meta.data.properties?.title ?? "(untitled)";
-  const firstSheetTitle = meta.data.sheets?.sort(
-    (a, b) => (a.properties?.index ?? 0) - (b.properties?.index ?? 0)
-  )?.[0]?.properties?.title;
-
-  if (!firstSheetTitle) {
-    throw new Error("No sheets found in the spreadsheet.");
-  }
 
   // ② 最初のシートを丸ごと取得（必要なら範囲を "A1:Z" みたいに絞ってOK）
   const valuesRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: `${firstSheetTitle}!B1:C200`,
+    range: `${WORKS_SHEET_NAME}!B1:C`,
     valueRenderOption: "UNFORMATTED_VALUE",
   });
 
@@ -57,7 +52,7 @@ export async function fetchFirstSheetValues() {
   return {
     spreadsheetId,
     spreadsheetTitle,
-    sheetTitle: firstSheetTitle,
+    sheetTitle: WORKS_SHEET_NAME,
     headers,
     rows, // 2次元配列（ヘッダー除く）
     objects, // [{ヘッダー名: 値, ...}, ...]
@@ -75,7 +70,7 @@ export async function fetchRowBySlug(slug: string) {
   // 1. まず「IDが並んでいる列（例: A列）」だけを読み込んで、slugが何行目にあるか探す
   const rangeRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: "web_conect!A:A", 
+    range: `${WORKS_SHEET_NAME}!A:A`,
   });
 
   const ids = rangeRes.data.values || [];
@@ -89,7 +84,7 @@ export async function fetchRowBySlug(slug: string) {
   // 2. 特定した行だけを取得する
   const rowRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: `web_conect!A${rowIndex}:Z${rowIndex}`,
+    range: `${WORKS_SHEET_NAME}!A${rowIndex}:Z${rowIndex}`,
   });
 
   const rowData = rowRes.data.values?.[0] || [];
@@ -97,20 +92,27 @@ export async function fetchRowBySlug(slug: string) {
   // 3. 扱いやすいようにオブジェクト形式に変換（ヘッダーが必要な場合は別途取得）
   // ここではシンプルに配列、もしくは決まったキーで返します
   return {
-    name: rowData[1],   // B列
+    name: rowData[1], // B列
     image: rowData[2], // C列
   };
 }
 
 /**
  * generateStaticParams用のID一覧だけを取得する軽量関数
+ * シートが存在しない・未設定の場合は空配列を返しビルドを成功させる
  */
-export async function fetchAllIds() {
-  const sheets = await getSheetsClient();
-  const rangeRes = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SPREADSHEET_ID,
-    range: "web_conect!A2:A", // ヘッダーを除いたID列だけ
-  });
+export async function fetchAllIds(): Promise<string[]> {
+  const spreadsheetId = process.env.SPREADSHEET_ID;
+  if (!spreadsheetId) return [];
 
-  return (rangeRes.data.values || []).map((row) => String(row[0]));
+  try {
+    const sheets = await getSheetsClient();
+    const rangeRes = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range: `${WORKS_SHEET_NAME}!A2:A`,
+    });
+    return (rangeRes.data.values || []).map((row) => String(row[0]));
+  } catch {
+    return [];
+  }
 }
