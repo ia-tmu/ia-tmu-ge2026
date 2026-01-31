@@ -57,19 +57,14 @@ export default async function SheetsPage() {
         {data.spreadsheetTitle} / {data.sheetTitle}
       </h1>
 
-      <div style={{ overflowX: "auto", marginTop: 12 }}>
-        <table style={{ borderCollapse: "collapse", width: "100%" }}>
+      <div className="overflow-x-auto mt-3">
+        <table className="w-full border-collapse">
           <thead>
             <tr>
               {data.headers.map((h, i) => (
                 <th
                   key={i}
-                  style={{
-                    border: "1px solid #ddd",
-                    padding: 8,
-                    background: "#f7f7f7",
-                    whiteSpace: "nowrap",
-                  }}
+                  className="border border-gray-300 p-2 bg-gray-100 whitespace-nowrap"
                 >
                   {String(h)}
                 </th>
@@ -83,11 +78,7 @@ export default async function SheetsPage() {
                 {data.headers.map((_, cIdx) => (
                   <td
                     key={cIdx}
-                    style={{
-                      border: "1px solid #ddd",
-                      padding: 8,
-                      whiteSpace: "nowrap",
-                    }}
+                    className="border border-gray-300 p-2 whitespace-nowrap"
                   >
                     {(() => {
                       const cell = row[cIdx];
