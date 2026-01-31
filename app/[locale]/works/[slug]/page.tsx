@@ -19,17 +19,13 @@ export default async function Work({ params }: { params: Promise<{ slug: string 
     const fileId = m[1];
     return `https://lh3.googleusercontent.com/d/${fileId}`;
   }
+  
+  const work = await fetchRowBySlug(slug);
 
-  function isUrl(v: unknown): v is string {
-    return typeof v === "string" && v.startsWith("http");
-  }
-
-  let work;
-  try {
-    work = await fetchRowBySlug(slug);
-  } catch (e) {
+  if (!work) {
     notFound();
   }
+
 
   return (
     <div className="p-4 text-black">
