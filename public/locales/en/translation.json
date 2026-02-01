@@ -129,6 +129,15 @@
     "sectionTitle": "We share information on SNS",
     "description": "Please check here for the latest information."
   },
+  "header": {
+    "nav": {
+      "concept": "Concept",
+      "info": "Information",
+      "webExhibition": "Web Exhibition",
+      "events": "Events",
+      "sns": "SNS"
+    }
+  },
   "webExhibition": {
     "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview <br2/> of research and works as a web exhibition."
   }
