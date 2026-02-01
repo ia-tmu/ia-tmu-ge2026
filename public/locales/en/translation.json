@@ -10,9 +10,8 @@
     "works": "Go to Works"
   },
   "works": {
-    "title": "this is a works page",
-    "subtitle": "here you can see a list of works.",
-    "back": "Back to Home"
+    "title": "Web Exhibition",
+    "subtitle": "works and research projects"
   },
   "teaser": {
     "department": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art",

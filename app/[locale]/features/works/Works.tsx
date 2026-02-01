@@ -1,21 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import Section from "../components/Section";
 import { useTranslation } from "react-i18next";
+import {
+  STUDIO_KEYS,
+  isStudioKey,
+  getStudioName,
+  getStudioDesignDomain,
+  getStudioCategoryLabel,
+  getStudioShortName,
+  getStudioKeyByName,
+} from "../../types/studio";
+import { WorksListWithCategories } from "./WorksListWithCategories";
+import { SheetData } from "../../types/work";
 
-export type SheetData = {
-  spreadsheetTitle: string;
-  sheetTitle: string;
-  headers: (string | number)[];
-  rows: (string | number | null)[][];
-  error?: string;
-};
-
-function driveToImageUrl(raw: string): string | null {
-  const m = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-  if (!m?.[1]) return null;
-  return `https://lh3.googleusercontent.com/d/${m[1]}`;
+/** ヘッダー文字列がスタジオ key なら正式名称、それ以外はそのまま返す */
+function resolveHeaderLabel(header: string): string {
+  return isStudioKey(header) ? getStudioName(header) : header;
 }
 
 function isUrl(v: unknown): v is string {
@@ -32,11 +33,35 @@ export function Works({ data }: { data: SheetData }) {
   }
 
   return (
-    <Section title={t("works.title")} subtitle={t("works.subtitle")}>
-      <div className="p-4 text-black">
-        <h1 className="text-xl font-bold">
-          {data.spreadsheetTitle} / {data.sheetTitle}
-        </h1>
+    <div>
+      <div className="">
+
+        <div className="md:pb-4 border-b border-foreground pb-2">
+          <div className="text-sm md:text-base">
+            {t("works.subtitle")}
+          </div>
+          <h1 className="text-3xl md:text-4xl">
+            {t("works.title")}
+          </h1>
+        </div>
+
+
+        {STUDIO_KEYS.map((studioKey) => {
+          const worksForStudio = (data.works ?? []).filter(
+            (work) => getStudioKeyByName(work.studioName) === studioKey
+          );
+          return (
+            <WorksListWithCategories
+              key={studioKey}
+              title={getStudioShortName(studioKey)}
+              subtitle={getStudioDesignDomain(studioKey)}
+              categories={[getStudioCategoryLabel(studioKey)]}
+              works={worksForStudio}
+            />
+          );
+        })}
+
+
 
         <div className="overflow-x-auto mt-3">
           <table className="w-full border-collapse">
@@ -47,7 +72,7 @@ export function Works({ data }: { data: SheetData }) {
                     key={i}
                     className="border border-gray-300 p-2 bg-gray-100 whitespace-nowrap"
                   >
-                    {String(h)}
+                    {resolveHeaderLabel(String(h))}
                   </th>
                 ))}
               </tr>
@@ -64,17 +89,7 @@ export function Works({ data }: { data: SheetData }) {
                       {(() => {
                         const cell = row[cIdx];
                         if (isUrl(cell)) {
-                          const imgUrl = driveToImageUrl(cell);
-                          if (imgUrl) {
-                            return (
-                              <Image
-                                src={imgUrl}
-                                width={80}
-                                height={80}
-                                alt={String(cell ?? "")}
-                              />
-                            );
-                          }
+                          return <Image src={cell} width={80} height={80} alt={String(cell ?? "")} />;
                         }
                         return String(cell ?? "");
                       })()}
@@ -86,6 +101,6 @@ export function Works({ data }: { data: SheetData }) {
           </table>
         </div>
       </div>
-    </Section>
+    </div>
   );
 }

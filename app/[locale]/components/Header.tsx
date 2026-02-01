@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
@@ -46,22 +47,29 @@ function NavLink({
 
 export default function Header() {
     const { t } = useTranslation();
+    const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
     const fvScrollRef = useFVScrollRef();
 
+    // トップページかどうか（[locale] 直下のみ＝FV があるページ。pathname は / または /works/ など）
+    const path = (pathname ?? "").replace(/\/$/, "") || "/";
+    const isTopPage = path === "/";
+
     // FV→Concept のスクロールに合わせてロゴを透明→表示（Teaserのフェードアウトと同期）
+    // トップページ以外ではロゴを常に表示
     const { scrollYProgress } = useScroll({
         target: fvScrollRef ?? undefined,
         offset: ["start start", "end start"],
     });
-    const logoOpacity = useTransform(scrollYProgress, [0, 0.08, 0.2], [0, 0, 1]);
+    const logoOpacityFromScroll = useTransform(scrollYProgress, [0, 0.08, 0.2], [0, 0, 1]);
+    const logoOpacity = isTopPage ? logoOpacityFromScroll : 1;
 
     const closeMenu = useCallback(() => setMenuOpen(false), []);
 
     return (
         <>
             <div
-                className={`fixed inset-0 z-30 backdrop-blur-md transition-opacity duration-300 pointer-events-none ${menuOpen ? "opacity-100" : "opacity-0"}`}
+                className={`fixed inset-0 z-50 backdrop-blur-md transition-opacity duration-300 pointer-events-none ${menuOpen ? "opacity-100" : "opacity-0"}`}
                 aria-hidden={!menuOpen}
             />
 
@@ -70,10 +78,10 @@ export default function Header() {
             >
                 {/* 左: ロゴ（FV→Concept スクロールでフェードイン） */}
                 <motion.a
-                    href="#"
-                    className="shrink-0 w-10 h-10 md:w-14 md:h-14 relative overflow-hidden rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary block"
+                    href="/"
+                    className="shrink-0 w-10 h-10 md:w-14 md:h-14 relative overflow-hidden rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary block transition-opacity duration-300"
                     aria-label={t("teaser.logo")}
-                    style={{ opacity: logoOpacity }}
+                    style={{ opacity: menuOpen ? 1 : logoOpacity }}
                 >
                     <Image
                         src={geLogoWhite}
@@ -124,7 +132,7 @@ export default function Header() {
 
             <div
                 id="header-menu"
-                className={`fixed left-0 right-0 top-20 bottom-0 md:top-[120px] z-40 flex flex-col items-center justify-center transition-opacity duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                className={`fixed left-0 right-0 top-20 bottom-0 md:top-[120px] z-50 flex flex-col items-center justify-center transition-opacity duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                     }`}
                 aria-hidden={!menuOpen}
             >

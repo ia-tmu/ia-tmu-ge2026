@@ -3,6 +3,38 @@ import { google } from "googleapis";
 
 const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "web_connect";
 
+/** スプレッドシート1行分の列と意味の対応（A〜H列） */
+export type WorksRow = {
+  id: string; // A列
+  name: string; // B列
+  image: string; // C列
+  imageURL: string; // D列
+  studentID: string; // E列
+  studioName: string; // F列
+  workTitle: string; // G列
+  workDescription: string; // H列
+};
+
+function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
+  return {
+    id: String(row[0] ?? ""),
+    name: String(row[1] ?? ""),
+    image: driveToImageUrl(String(row[2])) ?? "",
+    imageURL: driveToImageUrl(String(row[3])) ?? "",
+    studentID: String(row[4] ?? ""),
+    studioName: String(row[5] ?? ""),
+    workTitle: String(row[6] ?? ""),
+    workDescription: String(row[7] ?? ""),
+  };
+}
+
+function driveToImageUrl(raw: string): string | null {
+  const m = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (!m?.[1]) return null;
+  const fileId = m[1];
+  return `https://lh3.googleusercontent.com/d/${fileId}`;
+}
+
 // 共通の認証設定
 async function getSheetsClient() {
   const auth = new google.auth.GoogleAuth({
@@ -31,22 +63,27 @@ export async function fetchSheetValues() {
 
   const spreadsheetTitle = meta.data.properties?.title ?? "(untitled)";
 
-  // ② 最初のシートを丸ごと取得（必要なら範囲を "A1:Z" みたいに絞ってOK）
+  // ② A〜H列を取得（id, name, image, imageURL, studentID, studio, workTitle, workDescription）
   const valuesRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: `${WORKS_SHEET_NAME}!B1:C`,
+    range: `${WORKS_SHEET_NAME}!A1:Z`,
     valueRenderOption: "UNFORMATTED_VALUE",
   });
 
   const values = valuesRes.data.values ?? [];
-  const [headers = [], ...rows] = values;
+  const [headers = [], ...rawRows] = values;
 
-  // ③ ヘッダー名 -> 値 のオブジェクト配列（google-spreadsheetの getRows() に近い）
+  // ③ 列と意味を対応させたオブジェクト配列（fetchRowBySlug と同じ形）
+  const works: WorksRow[] = rawRows.map((r) => rowToWorksRow(r ?? []));
+
+  // ④ 後方互換: ヘッダー名 -> 値 のオブジェクト配列
   const objects =
     headers.length === 0
       ? []
-      : rows.map((r) =>
-          Object.fromEntries(headers.map((h, i) => [String(h), r?.[i] ?? ""]))
+      : rawRows.map((r) =>
+          Object.fromEntries(
+            (headers as string[]).map((h, i) => [String(h), r?.[i] ?? ""])
+          )
         );
 
   return {
@@ -54,9 +91,10 @@ export async function fetchSheetValues() {
     spreadsheetTitle,
     sheetTitle: WORKS_SHEET_NAME,
     headers,
-    rows, // 2次元配列（ヘッダー除く）
-    objects, // [{ヘッダー名: 値, ...}, ...]
-    raw: values, // ヘッダー含む生データ
+    rows: rawRows, // 2次元配列（ヘッダー除く）
+    works, // 列と意味を対応させた配列（A=id, B=name, C=image, D=imageURL, E=studentID, F=studio, G=workTitle, H=workDescription）
+    objects,
+    raw: values,
   };
 }
 
@@ -89,12 +127,7 @@ export async function fetchRowBySlug(slug: string) {
 
   const rowData = rowRes.data.values?.[0] || [];
 
-  // 3. 扱いやすいようにオブジェクト形式に変換（ヘッダーが必要な場合は別途取得）
-  // ここではシンプルに配列、もしくは決まったキーで返します
-  return {
-    name: rowData[1], // B列
-    image: rowData[2], // C列
-  };
+  return rowToWorksRow(rowData);
 }
 
 /**
