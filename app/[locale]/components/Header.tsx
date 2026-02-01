@@ -75,7 +75,7 @@ export default function Header() {
                 >
                     <Image
                         src={geLogoWhite}
-                        alt=""
+                        alt={t("teaser.logo")}
                         fill
                         className="object-contain"
                         sizes="56px"
@@ -103,7 +103,6 @@ export default function Header() {
                         className="p-2 w-10 h-10 md:w-12 md:h-12 flex flex-col justify-center items-center gap-1.5 text-foreground hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary rounded"
                         aria-expanded={menuOpen}
                         aria-controls="header-menu"
-                        aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
                     >
                         <span
                             className={`block w-6 h-0.5 bg-current transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""
