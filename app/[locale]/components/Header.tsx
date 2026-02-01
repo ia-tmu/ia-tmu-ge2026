@@ -10,13 +10,15 @@ import LangSwitcher from "../features/LangSwitcher";
 import { useFVScrollRef } from "../contexts/FVScrollRefContext";
 
 const SECTION_IDS = [
-    { id: "sns", key: "header.nav.sns" },
+    { id: "concept", key: "header.nav.concept" },
     { id: "info", key: "header.nav.info" },
     { id: "web-exhibition", key: "header.nav.webExhibition" },
     { id: "events", key: "header.nav.events" },
+    { id: "sns", key: "header.nav.sns" },
 ] as const;
 
 const CENTER_NAV_IDS = [
+    { id: "concept", key: "header.nav.concept" },
     { id: "info", key: "header.nav.info" },
     { id: "web-exhibition", key: "header.nav.webExhibition" },
     { id: "events", key: "header.nav.events" },
@@ -64,7 +66,7 @@ export default function Header() {
             />
 
             <header
-                className={`w-full h-20 md:h-[120px] px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
+                className={`w-full h-20 md:h-24 px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
             >
                 {/* 左: ロゴ（FV→Concept スクロールでフェードイン） */}
                 <motion.a
@@ -135,7 +137,7 @@ export default function Header() {
                             {t(key)}
                         </NavLink>
                     ))}
-                    <div className="pt-4 md:pt-0 md:pl-4 border-t border-foreground/20 md:border-t-0 md:border-l md:border-foreground/20">
+                    <div className="pt-4 w-full md:w-max md:pt-0 md:pl-4 border-t border-foreground/20 md:border-t-0 md:border-l md:border-foreground/20 flex justify-center">
                         <LangSwitcher />
                     </div>
                 </nav>

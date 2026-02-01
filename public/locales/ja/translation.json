@@ -131,6 +131,7 @@
   },
   "header": {
     "nav": {
+      "concept": "Concept",
       "info": "Information",
       "webExhibition": "Web Exhibition",
       "events": "Events",
