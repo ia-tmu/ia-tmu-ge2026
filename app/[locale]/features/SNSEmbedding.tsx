@@ -17,7 +17,7 @@ const guruguru04Static = `${basePath}/images/top/guruguru_04.png`;
 export default function SNSEmbedding() {
   const { t } = useTranslation();
   return (
-    <Section id="sns" title={"SNS"}>
+    <Section title={"SNS"}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center w-full max-w-5xl mx-auto mb-8">
         {/* Instagram埋め込みエリア PC */}
         <div className="justify-center hidden md:flex md:justify-end w-full">

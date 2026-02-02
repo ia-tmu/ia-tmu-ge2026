@@ -1,5 +1,5 @@
 "use client"
-import { Suspense, useMemo, useRef, useEffect } from "react"
+import { Suspense, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { useAspect, useTexture } from "@react-three/drei"
 import * as THREE from "three"
@@ -12,15 +12,15 @@ function Moya() {
   const { width, height } = texture.image as HTMLImageElement
   const scale = useAspect(width, height, 1)
 
-  const materialRef = useRef<THREE.ShaderMaterial | null>(null)
-  const shaderMaterial = useMemo(() => {
-    const material = new THREE.ShaderMaterial({
-      uniforms: {
-        uTexture: { value: texture },
-        uTime: { value: 0 },
-        uResolution: { value: new THREE.Vector2(width, height) },
-      },
-      vertexShader: `
+  const shaderMaterial = useMemo(
+    () =>
+      new THREE.ShaderMaterial({
+        uniforms: {
+          uTexture: { value: texture },
+          uTime: { value: 0 },
+          uResolution: { value: new THREE.Vector2(width, height) },
+        },
+        vertexShader: `
           varying vec2 vUv;
           
           void main() {
@@ -28,7 +28,7 @@ function Moya() {
             gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
           }
         `,
-      fragmentShader: `
+        fragmentShader: `
           uniform sampler2D uTexture;
           uniform float uTime;
           uniform vec2 uResolution;
@@ -157,20 +157,14 @@ function Moya() {
             gl_FragColor = vec4(textured, 1.0);
           }
         `,
-    })
-    return material
-  }, [texture, width, height])
-
-  useEffect(() => {
-    materialRef.current = shaderMaterial
-    return () => {
-      materialRef.current = null
-    }
-  }, [shaderMaterial])
+      }),
+    [texture, width, height]
+  )
 
   useFrame((state) => {
-    const mat = materialRef.current
-    if (mat) mat.uniforms.uTime.value = state.clock.elapsedTime
+    if (shaderMaterial) {
+      shaderMaterial.uniforms.uTime.value = state.clock.elapsedTime
+    }
   })
 
   return (

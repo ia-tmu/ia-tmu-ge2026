@@ -28,7 +28,7 @@ export default function Concept() {
   }, []);
 
   return (
-    <div id="concept" ref={containerRef} className="relative w-full h-[100dvh] z-20">
+    <div ref={containerRef} className="relative w-full h-[100dvh] z-20">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl px-3 md:px-12 lg:px-16 z-30">
         <motion.div
           initial={{ opacity: 0 }}

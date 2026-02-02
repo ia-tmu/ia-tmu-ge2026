@@ -3,15 +3,15 @@
 :root {
   --background: #fff; /*背景*/
   /* --foreground: #252525; /*テキスト*/
-  --foreground: #fafbff; /*テキスト*/
+  --foreground: #FAFBFF; /*テキスト*/
   --primary: #f5b111; /*アクセント*/
   --primary-foreground: #000; /*アクセント上のテキスト*/
   --muted: #f0f0f0; /*サブ背景*/
   --muted-foreground: #a1a1a1; /*サブテキスト*/
   --black-text: #000425;
-  --gray-text: #c5c9d8;
+  --gray-text: #C5C9D8;
   --dark-blue-primary: #000032;
-  --gray-primary: #a7aebf;
+  --gray-primary: #A7AEBF;
 }
 
 @theme inline {
@@ -71,58 +71,4 @@ html.wf-inactive body {
 
 .animate-fade-in {
   animation: fadeIn 1.5s ease-out forwards;
-}
-
-/* スクロールエリアの左右フェード（md以上のみ・端までスクロールした側はフェードしない） */
-@media (min-width: 768px) {
-  .scroll-mask-both {
-    mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      black 4rem,
-      black calc(100% - 4rem),
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      black 4rem,
-      black calc(100% - 4rem),
-      transparent 100%
-    );
-    mask-size: 100% 100%;
-    -webkit-mask-size: 100% 100%;
-  }
-  .scroll-mask-left-only {
-    mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      black 4rem,
-      black 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      black 4rem,
-      black 100%
-    );
-    mask-size: 100% 100%;
-    -webkit-mask-size: 100% 100%;
-  }
-  .scroll-mask-right-only {
-    mask-image: linear-gradient(
-      to right,
-      black 0,
-      black calc(100% - 4rem),
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      black 0,
-      black calc(100% - 4rem),
-      transparent 100%
-    );
-    mask-size: 100% 100%;
-    -webkit-mask-size: 100% 100%;
-  }
 }

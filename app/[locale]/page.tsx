@@ -10,7 +10,7 @@ import SNSEmbedding from "./features/SNSEmbedding";
 
 export default async function Page() {
   return (
-    <main className="relative text-sm md:text-base pt-20 md:pt-[120px]">
+    <main className="relative text-sm md:text-base">
       <MoyaBG />
       <FixedBackground />
       <Teaser />

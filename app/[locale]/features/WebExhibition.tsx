@@ -10,7 +10,7 @@ const guruguru03Static = `${basePath}/images/top/guruguru_03.png`;
 
 export default function WebExhibition() {
   return (
-    <Section id="web-exhibition" title={"Web Exhibition"}>
+    <Section title={"Web Exhibition"}>
       <div className="grid h-full gap-20 py-50 items-center justify-center">
 
         <div className="relative">
