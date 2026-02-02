@@ -36,12 +36,6 @@ const nextConfig: NextConfig = {
   // 静的エクスポートでは画像の最適化機能が使えないため無効化
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
-      },
-    ],
   },
   // Apache等の静的ホスティングでディレクトリインデックス（/path/）を正しく機能させる設定
   trailingSlash: true,

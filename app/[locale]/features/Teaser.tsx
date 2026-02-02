@@ -1,26 +1,17 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import geLogoWhite from "../../../public/images/logo/ge-logo-white.png";
+import LangSwitcher from "./LangSwitcher";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useFVScrollRef } from "../contexts/FVScrollRefContext";
 
 export default function Teaser() {
   const { t } = useTranslation();
   const [contentOpacity, setContentOpacity] = useState(0);
   const rafIdRef = useRef<number | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const fvScrollRef = useFVScrollRef();
-
-  const setSpacerRef = useCallback(
-    (el: HTMLDivElement | null) => {
-      (scrollContainerRef).current = el;
-      if (fvScrollRef) (fvScrollRef).current = el;
-    },
-    [fvScrollRef]
-  );
 
   // スクロール監視（Conceptエリアとの切り替え用）
   const { scrollYProgress } = useScroll({
@@ -87,8 +78,8 @@ export default function Teaser() {
 
   return (
     <>
-      {/* スクロール監視用のスペーサー（非表示・Headerと共有） */}
-      <div ref={setSpacerRef} className="h-dvh" />
+      {/* スクロール監視用のスペーサー（非表示） */}
+      <div ref={scrollContainerRef} className="h-[100dvh]" />
       <motion.div
         className="fixed inset-0 w-full z-10 h-dvh flex flex-col justify-between p-6 md:p-8 lg:p-10 text-foreground font-sans pointer-events-none"
         style={{
@@ -120,6 +111,10 @@ export default function Teaser() {
             </h1>
           </div>
 
+          {/* Lang Switcher */}
+          <div className="p-2 pointer-events-auto">
+            <LangSwitcher />
+          </div>
         </div>
 
         {/* Center/Main Title Area - フェードイン */}
@@ -226,7 +221,7 @@ export default function Teaser() {
             {/*   <p>{t("teaser.hours")}</p> */}
             {/*   <p>{t("teaser.lastDayHours")}</p> */}
             {/*   <p>{t("teaser.closed")}</p> */}
-            {/*   <p className="slg font-medium mt-2">{t("teaser.location")}</p> */}
+            {/*   <p className="text-lg font-medium mt-2">{t("teaser.location")}</p> */}
             {/* </div> */}
           </div>
         </div>

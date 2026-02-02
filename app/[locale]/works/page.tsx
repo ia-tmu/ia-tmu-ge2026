@@ -1,42 +1,18 @@
-import { fetchSheetValues } from "@/lib/getSheets";
-import { Works } from "../features/works/Works";
-import type { SheetData } from "../types/work";
-import MoyaBG from "../features/MoyaBG";
-import Footer from "../components/Footer";
+"use client"
 
-export default async function WorksPage() {
-  let data: SheetData;
-  try {
-    const fetched = await fetchSheetValues();
-    data = {
-      spreadsheetTitle: fetched.spreadsheetTitle,
-      sheetTitle: fetched.sheetTitle,
-      headers: fetched.headers,
-      works: fetched.works,
-      rows: fetched.rows,
-      objects: fetched.objects,
-      raw: fetched.raw,
-    };
-  } catch (e: unknown) {
-    const message = e instanceof Error ? e.message : "Failed to fetch sheets";
-    data = {
-      spreadsheetTitle: "",
-      sheetTitle: "",
-      headers: [],
-      works: [],
-      rows: [],
-      objects: [],
-      raw: [],
-      error: message,
-    };
-  }
+import { useParams } from "next/navigation";
+import Button from "../components/Button"
+import Section from "../components/Section"
+import { useTranslation } from "react-i18next"
+import { localePath } from "../lib/localePath";
+
+export default function Works() {
+  const params = useParams();
+  const locale = params.locale;
+  const { t } = useTranslation()
   return (
-    <main className="relative text-sm md:text-base pt-20 md:pt-[120px]">
-      <MoyaBG />
-      <div className="max-w-[960px] mx-auto px-4 md:px-8">
-        <Works data={data} />
-      </div>
-      <Footer />
-    </main>
-  );
+    <Section title={t("works.title")} subtitle={t("works.subtitle")}>
+      <Button href={localePath(locale as string, "/")}>{t("works.back")}</Button>
+    </Section>
+  )
 }
