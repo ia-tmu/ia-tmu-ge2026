@@ -11,7 +11,7 @@ export default function Info() {
   const access = t("teaser.access", { returnObjects: true }) as string[];
 
   return (
-    <Section title={"Information"}>
+    <Section id="info" title={"Information"}>
       <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-9">
         <div className="flex flex-col items-start w-full mt-6 gap-9">
           <div className={rowStyle}>
