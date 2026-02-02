@@ -13,13 +13,6 @@ export async function generateStaticParams() {
 export default async function Work({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  function driveToImageUrl(raw: string): string | null {
-    const m = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-    if (!m?.[1]) return null;
-    const fileId = m[1];
-    return `https://lh3.googleusercontent.com/d/${fileId}`;
-  }
-  
   const work = await fetchRowBySlug(slug);
 
   if (!work) {
@@ -32,15 +25,15 @@ export default async function Work({ params }: { params: Promise<{ slug: string 
       <h1 className="text-4xl font-bold">{work.name}</h1>
       <div className="overflow-x-auto mt-3">
         {work.image && (
-        <div className="w-full max-w-lg float-right">
-          <Image
-            src={driveToImageUrl(work.image) || ""}
-            width={800}
-            height={600}
-            alt={work.name}
-            className="rounded-xl shadow-lg object-cover"
-          />
-        </div>
+          <div className="w-full max-w-lg float-right">
+            <Image
+              src={work.imageURL}
+              width={800}
+              height={600}
+              alt={work.name}
+              className="rounded-xl shadow-lg object-cover"
+            />
+          </div>
         )}
       </div>
     </div>

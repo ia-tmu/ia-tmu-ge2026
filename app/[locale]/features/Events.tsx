@@ -13,6 +13,7 @@ import kusumiImage from "../../../public/images/events/kiyoshi_kusumi.png";
 import shimakageImage from "../../../public/images/events/keisuke_shimakage.jpeg";
 import tsuchiyaImage from "../../../public/images/events/shin_tsuchiya.jpg";
 import babaImage from "../../../public/images/events/tetsuaki_baba.png";
+import kobayashiImage from "../../../public/images/events/sora_kobayashi.jpg";
 
 interface Speaker {
   name: string;
@@ -87,6 +88,13 @@ export default function Events() {
         {
           name: t("events.sessions.1.speakers.2.name"),
           profile: t("events.sessions.1.speakers.2.profile"),
+          gradYear: t("events.sessions.1.speakers.2.gradYear"),
+          imageUrl: kobayashiImage,
+          url: "https://www.instagram.com/sorakobayash1/",
+        },
+        {
+          name: t("events.sessions.1.speakers.3.name"),
+          profile: t("events.sessions.1.speakers.3.profile"),
           imageUrl: "",
         },
       ],
