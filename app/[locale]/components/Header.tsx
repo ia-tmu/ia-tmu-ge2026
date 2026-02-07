@@ -9,41 +9,16 @@ import { motion } from "framer-motion";
 import geLogoWhite from "../../../public/images/logo/ge-logo-white.png";
 import LangSwitcher from "../features/LangSwitcher";
 import { useFVScrollRef } from "../contexts/FVScrollRefContext";
+import Button from "./Button";
 
 const SECTION_IDS = [
     { id: "concept", key: "header.nav.concept" },
-    { id: "info", key: "header.nav.info" },
     { id: "web-exhibition", key: "header.nav.webExhibition" },
     { id: "events", key: "header.nav.events" },
+    { id: "info", key: "header.nav.info" },
     { id: "sns", key: "header.nav.sns" },
 ] as const;
 
-const CENTER_NAV_IDS = [
-    { id: "concept", key: "header.nav.concept" },
-    { id: "info", key: "header.nav.info" },
-    { id: "web-exhibition", key: "header.nav.webExhibition" },
-    { id: "events", key: "header.nav.events" },
-] as const;
-
-function NavLink({
-    href,
-    children,
-    onClick,
-}: {
-    href: string;
-    children: React.ReactNode;
-    onClick?: () => void;
-}) {
-    return (
-        <a
-            href={href}
-            onClick={onClick}
-            className="text-foreground hover:opacity-80 transition-opacity duration-300 underline underline-offset-4 hover:no-underline"
-        >
-            {children}
-        </a>
-    );
-}
 
 export default function Header() {
     const { t } = useTranslation();
@@ -54,6 +29,7 @@ export default function Header() {
     // トップページかどうか（[locale] 直下のみ＝FV があるページ。pathname は / または /works/ など）
     const path = (pathname ?? "").replace(/\/$/, "") || "/";
     const isTopPage = path === "/";
+    const isWorksPage = pathname?.startsWith("/works/");
 
     // FV→Concept のスクロールに合わせてロゴを透明→表示（Teaserのフェードアウトと同期）
     // トップページ以外ではロゴを常に表示
@@ -65,6 +41,15 @@ export default function Header() {
     const logoOpacity = isTopPage ? logoOpacityFromScroll : 1;
 
     const closeMenu = useCallback(() => setMenuOpen(false), []);
+
+
+    const Highlighted = ({ children }: { children: React.ReactNode }) => {
+        return (
+            <div className="text-dark-blue-primary! font-medium!">
+                {children}
+            </div>
+        )
+    }
 
     return (
         <>
@@ -95,13 +80,21 @@ export default function Header() {
 
                 {/* 中央: セクションリンク（md以上のみ表示） */}
                 <nav
-                    className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8"
+                    className="hidden md:flex absolute justify-center left-1/2 -translate-x-1/2 gap-8 min-w-[440px]"
                     aria-label="Main navigation"
                 >
-                    {CENTER_NAV_IDS.map(({ id, key }) => (
-                        <NavLink key={id} href={`#${id}`}>
-                            {t(key)}
-                        </NavLink>
+                    {SECTION_IDS.map(({ id, key }) => (
+                        isWorksPage && id === "web-exhibition" ? (
+                            <Button key={id} href={`/works`} linkNoUnderline={true}>
+                                <Highlighted>
+                                    {t(key)}
+                                </Highlighted>
+                            </Button>
+                        ) : (
+                            <Button key={id} href={`/#${id}`} linkNoUnderline={true}>
+                                {t(key)}
+                            </Button>
+                        )
                     ))}
                 </nav>
 
@@ -110,7 +103,7 @@ export default function Header() {
                     <button
                         type="button"
                         onClick={() => setMenuOpen((prev) => !prev)}
-                        className="p-2 w-10 h-10 md:w-12 md:h-12 flex flex-col justify-center items-center gap-1.5 text-foreground hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary rounded"
+                        className="md:hidden p-2 w-10 h-10 md:w-12 md:h-12 flex flex-col justify-center items-center gap-1.5 text-foreground hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary rounded"
                         aria-expanded={menuOpen}
                         aria-controls="header-menu"
                     >
@@ -127,8 +120,13 @@ export default function Header() {
                                 }`}
                         />
                     </button>
+
+                    <div className="hidden md:block">
+                        <LangSwitcher />
+                    </div>
+
                 </div>
-            </header>
+            </header >
 
             <div
                 id="header-menu"
@@ -141,9 +139,9 @@ export default function Header() {
                     aria-label="Menu navigation"
                 >
                     {SECTION_IDS.map(({ id, key }) => (
-                        <NavLink key={id} href={`#${id}`} onClick={closeMenu}>
+                        <Button key={id} href={`/#${id}`} linkNoUnderline={true} onClick={closeMenu}>
                             {t(key)}
-                        </NavLink>
+                        </Button>
                     ))}
                     <div className="pt-4 w-full md:w-max md:pt-0 md:pl-4 border-t border-foreground/20 md:border-t-0 md:border-l md:border-foreground/20 flex justify-center">
                         <LangSwitcher />
