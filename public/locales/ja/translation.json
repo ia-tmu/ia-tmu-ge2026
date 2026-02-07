@@ -10,9 +10,8 @@
     "works": "作品一覧へ"
   },
   "works": {
-    "title": "これは作品一覧ページ",
-    "subtitle": "ここでは作品の一覧を見ることができます。",
-    "back": "ホームに戻る"
+    "title": "Web Exhibition",
+    "subtitle": "作品・研究一覧"
   },
   "teaser": {
     "department": "東京都立大学 システムデザイン学部・研究科\nインダストリアルアート学科・学域",
@@ -133,6 +132,15 @@
   "sns": {
     "sectionTitle": "SNSで情報発信しています",
     "description": "最新情報はこちらからご確認ください"
+  },
+  "header": {
+    "nav": {
+      "concept": "Concept",
+      "info": "Information",
+      "webExhibition": "Web Exhibition",
+      "events": "Events",
+      "sns": "SNS"
+    }
   },
   "webExhibition": {
     "description": "会場に足を運べない方々にも<br/>制作や研究をご覧いただけるよう、<br2/>Web展として研究や作品の概要を掲載予定です。"
