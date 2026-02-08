@@ -25,12 +25,14 @@
   --color-gray-text: var(--gray-text);
   --color-gray-primary: var(--gray-primary);
   --color-dark-blue-primary: var(--dark-blue-primary);
-  --font-sans: fot-tsukuaoldmin-pr6n, "しっぽり明朝", "游明朝", "Yu Mincho",
-    "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3",
+  --font-sans:
+    fot-tsukuaoldmin-pr6n, "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho",
+    "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3",
     "Noto Serif JP", serif;
-  --font-serif: fot-tsukuaoldmin-pr6n, "しっぽり明朝", "Times New Roman",
-    "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN",
-    "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP", serif;
+  --font-serif:
+    fot-tsukuaoldmin-pr6n, "しっぽり明朝", "Times New Roman", "游明朝",
+    "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro",
+    "HiraMinProN-W3", "Noto Serif JP", serif;
 }
 
 body {
@@ -41,9 +43,9 @@ body {
 
 /* Adobe Fontsが読み込まれるまでフォールバックフォントを使用 */
 html.wf-loading body {
-  font-family: "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho",
-    "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3",
-    "Noto Serif JP", serif;
+  font-family:
+    "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN",
+    "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP", serif;
 }
 
 /* Adobe Fontsが読み込まれた後、Adobe Fontsを使用 */
@@ -55,8 +57,9 @@ html.wf-inactive body {
 /* 英語テキスト用のフォント設定 */
 :lang(en),
 [lang="en"] {
-  font-family: "Times New Roman", Times, serif, fot-tsukuaoldmin-pr6n,
-    "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN",
+  font-family:
+    "Times New Roman", Times, serif, fot-tsukuaoldmin-pr6n, "しっぽり明朝",
+    "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN",
     "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP";
 }
 
@@ -125,4 +128,74 @@ html.wf-inactive body {
     mask-size: 100% 100%;
     -webkit-mask-size: 100% 100%;
   }
+
+  /* 縦スクロールエリアの上下フェード */
+  .scroll-mask-vertical-both {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      black 4rem,
+      black calc(100% - 4rem),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      black 4rem,
+      black calc(100% - 4rem),
+      transparent 100%
+    );
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+  .scroll-mask-vertical-top-only {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      black 4rem,
+      black 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      black 4rem,
+      black 100%
+    );
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+  .scroll-mask-vertical-bottom-only {
+    mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black calc(100% - 4rem),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black calc(100% - 4rem),
+      transparent 100%
+    );
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+}
+
+/* 下端のみフェード（モバイルなど・縦スクロールと同様にコンテンツ自体が透明化） */
+.mask-fade-bottom {
+  mask-image: linear-gradient(
+    to bottom,
+    black 0,
+    black calc(100% - 6rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0,
+    black calc(100% - 6rem),
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }

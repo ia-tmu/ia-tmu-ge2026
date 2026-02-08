@@ -39,7 +39,7 @@ export interface StudioInfo {
   /** 研究室の正式名称 */
   name: string;
   /** 研究室の短縮名称 */
-  shortName: string;
+  enName: string;
   /** 研究室が取り組むデザイン領域（ユニーク） */
   designDomain: string;
   /** プロダクトデザインコア or メディアデザインコア */
@@ -53,79 +53,79 @@ export interface StudioInfo {
 export const STUDIO_MAP: Record<StudioKey, StudioInfo> = {
   interface: {
     name: "インターフェースデザインスタジオ",
-    shortName: "Interface",
+    enName: "Interface Design Studio",
     designDomain: "インターフェースデザイン",
     category: "media",
   },
   editing: {
     name: "エディティングスタジオ",
-    shortName: "Editing",
+    enName: "Editing Studio",
     designDomain: "エディティング",
     category: "media",
   },
   visual: {
-    name: "ビジュアルコミュニケーションデザインスタジオ",
-    shortName: "Visual Communication",
+    name: "ヴィジュアルコミュニケーションデザインスタジオ",
+    enName: "Visual Communication Design Studio",
     designDomain: "ビジュアルコミュニケーション",
     category: "media",
   },
   transportation: {
     name: "トランスポーテーションデザインスタジオ",
-    shortName: "Transportation",
+    enName: "Transportation Design Studio",
     designDomain: "トランスポーテーションデザイン",
     category: "product",
   },
   equipment: {
-    name: "製品・サービスデザインスタジオ",
-    shortName: "Product & Service",
+    name: "製品・サービスデザインスタジオ", // STUDIO_KEYS[4]
+    enName: "Product & Service Design Studio",
     designDomain: "製品・サービスデザイン",
     category: "product",
   },
   ergonomic: {
     name: "エルゴノミックデザインスタジオ",
-    shortName: "Ergonomic",
+    enName: "Ergonomic Design Studio",
     designDomain: "エルゴノミックデザイン",
     category: "product",
   },
   interactive: {
     name: "インタラクティブアートスタジオ",
-    shortName: "Interactive Art",
+    enName: "Interactive Art Studio",
     designDomain: "インタラクティブアート",
     category: "media",
   },
   interior: {
     name: "インテリアデザインスタジオ",
-    shortName: "Interior",
+    enName: "Interior Design Studio",
     designDomain: "インテリアデザイン",
     category: "product",
   },
   kinematograph: {
     name: "映像デザインスタジオ",
-    shortName: "Kinematograph",
+    enName: "Kinematograph Design Studio",
     designDomain: "映像デザイン",
     category: "media",
   },
   network: {
     name: "ネットワークデザインスタジオ",
-    shortName: "Network",
+    enName: "Network Design Studio",
     designDomain: "ネットワークデザイン",
     category: "media",
   },
   living: {
     name: "ソシオリビングデザインスタジオ",
-    shortName: "Socio Living",
+    enName: "Socio Living Design Studio",
     designDomain: "ソシオリビングデザイン",
     category: "product",
   },
   software: {
     name: "ソフトウェアデザインスタジオ",
-    shortName: "Software",
+    enName: "Software Design Studio",
     designDomain: "ソフトウェアデザイン",
     category: "media",
   },
   space: {
     name: "空間デザインスタジオ",
-    shortName: "Space",
+    enName: "Space Design Studio",
     designDomain: "空間デザイン",
     category: "product",
   },
@@ -140,7 +140,7 @@ export function isStudioKey(key: string): key is StudioKey {
 export function getStudioKeyByName(name: string): StudioKey | null {
   const normalized = name.trim();
   const entry = (Object.entries(STUDIO_MAP) as [StudioKey, StudioInfo][]).find(
-    ([, info]) => info.name.toLowerCase() === normalized.toLowerCase()
+    ([, info]) => info.name.toLowerCase() === normalized.toLowerCase(),
   );
   return entry ? entry[0] : null;
 }
@@ -151,8 +151,8 @@ export function getStudioName(key: StudioKey): string {
 }
 
 /** スタジオ key から短縮名称を取得 */
-export function getStudioShortName(key: StudioKey): string {
-  return STUDIO_MAP[key].shortName;
+export function getStudioEnName(key: StudioKey): string {
+  return STUDIO_MAP[key].enName;
 }
 
 /** スタジオ key からデザイン領域を取得 */

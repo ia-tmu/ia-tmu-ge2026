@@ -1,30 +1,29 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import {
   STUDIO_KEYS,
-  isStudioKey,
   getStudioName,
-  getStudioDesignDomain,
   getStudioCategoryLabel,
-  getStudioShortName,
+  getStudioEnName,
   getStudioKeyByName,
 } from "../../types/studio";
 import { WorksListWithCategories } from "./WorksListWithCategories";
 import { SheetData } from "../../types/work";
+import { useState } from "react";
 
 /** ヘッダー文字列がスタジオ key なら正式名称、それ以外はそのまま返す */
-function resolveHeaderLabel(header: string): string {
-  return isStudioKey(header) ? getStudioName(header) : header;
-}
+// function resolveHeaderLabel(header: string): string {
+//   return isStudioKey(header) ? getStudioName(header) : header;
+// }
 
-function isUrl(v: unknown): v is string {
-  return typeof v === "string" && v.startsWith("http");
-}
+// function isUrl(v: unknown): v is string {
+//   return typeof v === "string" && v.startsWith("http");
+// }
 
 export function Works({ data }: { data: SheetData }) {
   const { t } = useTranslation();
+  const [showAllSectionId, setShowAllSectionId] = useState<string | null>(null);
 
   if (data.error) {
     return (
@@ -53,17 +52,20 @@ export function Works({ data }: { data: SheetData }) {
           return (
             <WorksListWithCategories
               key={studioKey}
-              title={getStudioShortName(studioKey)}
-              subtitle={getStudioDesignDomain(studioKey)}
+              id={studioKey}
+              title={getStudioEnName(studioKey)}
+              subtitle={getStudioName(studioKey)}
               categories={[getStudioCategoryLabel(studioKey)]}
               works={worksForStudio}
+              showAllSectionId={showAllSectionId}
+              setShowAllSectionId={setShowAllSectionId}
             />
           );
         })}
 
 
 
-        <div className="overflow-x-auto mt-3">
+        {/* <div className="overflow-x-auto mt-3">
           <table className="w-full border-collapse">
             <thead>
               <tr>
@@ -99,7 +101,7 @@ export function Works({ data }: { data: SheetData }) {
               ))}
             </tbody>
           </table>
-        </div>
+        </div> */}
       </div>
     </div>
   );

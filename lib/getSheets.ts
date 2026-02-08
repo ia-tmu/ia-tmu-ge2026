@@ -13,6 +13,7 @@ export type WorksRow = {
   studioName: string; // F列
   workTitle: string; // G列
   workDescription: string; // H列
+  keywords: string[]; // I列
 };
 
 function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
@@ -25,6 +26,9 @@ function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
     studioName: String(row[5] ?? ""),
     workTitle: String(row[6] ?? ""),
     workDescription: String(row[7] ?? ""),
+    keywords: String(row[8] ?? "")
+      .split(",")
+      .map((k) => k.trim()),
   };
 }
 
@@ -82,8 +86,8 @@ export async function fetchSheetValues() {
       ? []
       : rawRows.map((r) =>
           Object.fromEntries(
-            (headers as string[]).map((h, i) => [String(h), r?.[i] ?? ""])
-          )
+            (headers as string[]).map((h, i) => [String(h), r?.[i] ?? ""]),
+          ),
         );
 
   return {
