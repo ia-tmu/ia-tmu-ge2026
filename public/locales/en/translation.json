@@ -11,7 +11,9 @@
   },
   "works": {
     "title": "Web Exhibition",
-    "subtitle": "works and research projects"
+    "subtitle": "works and research projects",
+    "viewAll": "View all",
+    "viewLess": "Close"
   },
   "teaser": {
     "department": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art",

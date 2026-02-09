@@ -1,4 +1,4 @@
-import { fetchSheetValues } from "@/lib/getSheets";
+import { fetchSheetValues } from "@/lib/get-works";
 import { Works } from "../features/works/Works";
 import type { SheetData } from "../types/work";
 import MoyaBG from "../features/MoyaBG";

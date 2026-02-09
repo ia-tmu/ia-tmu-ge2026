@@ -7,6 +7,7 @@ export interface Work {
   studioName: string;
   workTitle: string;
   workDescription: string;
+  keywords: string[];
 }
 
 export type SheetData = {

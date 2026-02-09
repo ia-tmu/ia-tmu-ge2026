@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build && npm run postbuild",
     "build:no-export": "SKIP_EXPORT=true next build",
-    "postbuild": "node scripts/generate-index.js",
+    "postbuild": "node build-scripts/generate-index.js",
     "start": "next start",
     "lint": "eslint",
     "serve:export": "npm run prepare:export && npx serve@latest out -p 3001",
