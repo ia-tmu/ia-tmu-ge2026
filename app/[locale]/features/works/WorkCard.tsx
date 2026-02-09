@@ -28,10 +28,6 @@ export function WorkCard({ work }: {
             {work.keywords?.map((keyword) => (
               <div key={`${work.id}-${keyword}`} className="text-xs w-full line-clamp-4 font-semibold">{keyword}</div>
             ))}
-            {/* ダミー */}
-            {["エディトリアルデザイン", "インタラクティブアート"].map((keyword) => (
-              <div key={`${work.id}-${keyword}`} className="text-xs w-full text-foreground/75 line-clamp-4 font-semibold"># {keyword}</div>
-            ))}
           </div>
         </div>
       </div>
