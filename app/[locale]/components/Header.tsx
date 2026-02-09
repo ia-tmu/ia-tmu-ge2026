@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
-import geLogoWhite from "../../../public/images/logo/ge-logo-white.png";
 import LangSwitcher from "../features/LangSwitcher";
 import { useFVScrollRef } from "../contexts/FVScrollRefContext";
 import Button from "./Button";
+import guruguru05Static from "../../../public/images/top/guruguru_05.png";
 
 const SECTION_IDS = [
     { id: "concept", key: "header.nav.concept" },
@@ -69,7 +69,7 @@ export default function Header() {
                     style={{ opacity: menuOpen ? 1 : logoOpacity }}
                 >
                     <Image
-                        src={geLogoWhite}
+                        src={guruguru05Static}
                         alt={t("teaser.logo")}
                         fill
                         className="object-contain"
