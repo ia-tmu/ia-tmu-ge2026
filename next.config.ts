@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { getBuildInfo } from "./scripts/get-build-info";
+import { getBuildInfo } from "./build-scripts/get-build-info";
 
 // 開発モードかどうかの判定
 const isDev = process.env.NODE_ENV === "development";
@@ -16,8 +16,8 @@ const isVercel = process.env.VERCEL === "1";
 const basePath = isDev
   ? ""
   : isVercel
-  ? process.env.BASE_PATH || ""
-  : "/ge2026";
+    ? process.env.BASE_PATH || ""
+    : "/ge2026";
 
 const nextConfig: NextConfig = {
   // 開発モードでは静的エクスポートを無効化（middlewareを使用するため）

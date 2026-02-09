@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { fetchRowBySlug, fetchAllIds } from "@/lib/getSheets";
+import { fetchRowBySlug, fetchAllIds } from "@/lib/get-works";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
