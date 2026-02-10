@@ -86,10 +86,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
-  other: {
-    "google-site-verification": "",
-  },
 };
 
 export async function generateStaticParams(): Promise<
@@ -110,10 +106,10 @@ function getJsonLd(locale: string) {
       : "TMU Industrial Art Graduation Exhibition 2026",
     alternateName: isJa
       ? [
-          "都立大 卒展 2026",
-          "TMU IA 卒展",
-          "インダストリアルアート 卒業制作展",
-        ]
+        "都立大 卒展 2026",
+        "TMU IA 卒展",
+        "インダストリアルアート 卒業制作展",
+      ]
       : ["TMU IA GE 2026"],
     description: isJa
       ? "東京都立大学（都立大）システムデザイン学部 インダストリアルアート学科・学域の卒業・修了制作研究展2026。テーマは『もや』。東京都美術館にて入場無料で開催。"
