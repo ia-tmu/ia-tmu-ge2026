@@ -1,0 +1,6 @@
+# robots.txt for 東京都立大学 卒業・修了制作研究展 2026
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://industrial-art.sd.tmu.ac.jp/ge2026/sitemap.xml
