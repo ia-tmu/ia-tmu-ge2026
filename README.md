@@ -31,6 +31,8 @@
     - 機能を含む UI を格納(.tsx)
   - lib
     - 機能を提供（.ts）
+  - generate-embeddings
+    - worksページにおけるレコメンデーションのためのベクトル生成
   - works
     - page.tsx
       - 作品一覧ページ
@@ -433,6 +435,7 @@ ls -la out/
   ```
 
 - **rsync を使用する場合**:
+
   ```bash
   rsync -avz out/ user@server:/path/to/ge2026/
   ```
@@ -489,6 +492,15 @@ ls -la out/
 #### 画像の最適化
 
 静的エクスポートでは、Next.js の画像最適化機能が使用できません。そのため、`next.config.ts` で `images: { unoptimized: true }` が設定されています。画像は元のサイズのまま配信されます。
+
+### worksページにおけるレコメンド機能のためのベクトル生成
+
+`/generate-embeddings`において、Pythonスクリプトを実行する。
+なお、この操作にはOllamaで任意のembeddingモデルをインストールし、実行できる環境にある必要があります。
+
+1. venvの有効化→`source venv/bin/activate`
+1. スクリプトの実行→`python3 generate_vector.py`
+1. embeddingsファイルの生成→`embeddings.json`が生成される。
 
 ### トラブルシューティング
 
