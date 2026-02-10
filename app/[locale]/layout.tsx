@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
   title: {
     default: title,
-    template: `%s | 東京都立大学 卒業・修了制作研究展 2026`,
+    template: `%s | 東京都立大学 卒展 2026`,
   },
 
   description,
@@ -45,11 +45,13 @@ export const metadata: Metadata = {
     url: baseUrl,
     siteName: title,
     locale: siteLocale,
+    alternateLocale: "en_US",
     images: [
       {
         url: ogpImageUrl,
         width: 1200,
         height: 630,
+        alt: "東京都立大学 卒展 2026 - インダストリアルアート学科 卒業・修了制作研究展",
       },
     ],
   },
@@ -65,7 +67,28 @@ export const metadata: Metadata = {
   keywords,
 
   alternates: {
-    canonical: baseUrl,
+    canonical: `${baseUrl}ja/`,
+    languages: {
+      ja: `${baseUrl}ja/`,
+      en: `${baseUrl}en/`,
+      "x-default": `${baseUrl}ja/`,
+    },
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  other: {
+    "google-site-verification": "",
   },
 };
 
@@ -73,6 +96,84 @@ export async function generateStaticParams(): Promise<
   Array<{ locale: Locale }>
 > {
   return locales.map((locale) => ({ locale }));
+}
+
+// JSON-LD 構造化データ（イベント情報 + WebSite）
+function getJsonLd(locale: string) {
+  const isJa = locale === "ja";
+
+  const eventJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ExhibitionEvent",
+    name: isJa
+      ? "東京都立大学 卒展 2026 - インダストリアルアート学科 卒業・修了制作研究展"
+      : "TMU Industrial Art Graduation Exhibition 2026",
+    alternateName: isJa
+      ? [
+          "都立大 卒展 2026",
+          "TMU IA 卒展",
+          "インダストリアルアート 卒業制作展",
+        ]
+      : ["TMU IA GE 2026"],
+    description: isJa
+      ? "東京都立大学（都立大）システムデザイン学部 インダストリアルアート学科・学域の卒業・修了制作研究展2026。テーマは『もや』。東京都美術館にて入場無料で開催。"
+      : "Tokyo Metropolitan University, Department of Industrial Art Graduation Exhibition 2026. Theme: 'Moya'. Free admission at Tokyo Metropolitan Art Museum.",
+    startDate: "2026-03-01T09:30:00+09:00",
+    endDate: "2026-03-07T12:00:00+09:00",
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: isJa
+        ? "東京都美術館 ギャラリーA・B"
+        : "Tokyo Metropolitan Art Museum Gallery A/B",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "8-36 Uenokoen",
+        addressLocality: isJa ? "台東区" : "Taito-ku",
+        addressRegion: isJa ? "東京都" : "Tokyo",
+        postalCode: "110-0007",
+        addressCountry: "JP",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 35.717211,
+        longitude: 139.772939,
+      },
+    },
+    organizer: {
+      "@type": "EducationalOrganization",
+      name: isJa
+        ? "東京都立大学 システムデザイン学部 インダストリアルアート学科"
+        : "Tokyo Metropolitan University, Department of Industrial Art",
+      url: "https://industrial-art.sd.tmu.ac.jp/",
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "JPY",
+      availability: "https://schema.org/InStock",
+      description: isJa ? "入場無料" : "Free admission",
+    },
+    image: ogpImageUrl,
+    url: baseUrl,
+    inLanguage: isJa ? "ja" : "en",
+  };
+
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: isJa
+      ? "東京都立大学 卒展 2026"
+      : "TMU Industrial Art Graduation Exhibition 2026",
+    alternateName: isJa
+      ? "都立大 卒展 2026"
+      : "TMU IA GE 2026",
+    url: baseUrl,
+    inLanguage: isJa ? "ja" : "en",
+  };
+
+  return { eventJsonLd, webSiteJsonLd };
 }
 
 export default async function RootLayout({
@@ -92,8 +193,25 @@ export default async function RootLayout({
       translation: i18n.getResourceBundle(locale, "translation"),
     },
   };
+
+  const { eventJsonLd, webSiteJsonLd } = getJsonLd(locale);
+
   return (
     <html lang={locale}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(eventJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteJsonLd),
+          }}
+        />
+      </head>
       <body className="antialiased scroll-smooth">
         <ScrollManager />
         <Script

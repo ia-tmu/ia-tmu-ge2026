@@ -15,11 +15,11 @@ export default function Info() {
       <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-9">
         <div className="flex flex-col items-start w-full mt-6 gap-9">
           <div className={rowStyle}>
-            <Heading size="sm" title={t("teaser.periodTitle")} />
+            <Heading size="sm" as="h3" title={t("teaser.periodTitle")} />
             <p>{t("teaser.period")}</p>
           </div>
           <div className={rowStyle}>
-            <Heading size="sm" title={t("teaser.datesTitle")} />
+            <Heading size="sm" as="h3" title={t("teaser.datesTitle")} />
             <div className="flex flex-col gap-3">
               <p>{t("teaser.hours")}</p>
               <p>{t("teaser.lastDayHours")}</p>
@@ -27,7 +27,7 @@ export default function Info() {
             </div>
           </div>
           <div className={rowStyle}>
-            <Heading size="sm" title={t("teaser.locationTitle")} />
+            <Heading size="sm" as="h3" title={t("teaser.locationTitle")} />
             <div className="flex flex-col gap-3">
               <p>{t("teaser.location")}</p>
               <ul className="flex flex-col gap-1 list-disc pl-5">
