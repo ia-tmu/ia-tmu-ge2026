@@ -14,7 +14,7 @@ export default function WebExhibition() {
       <div className="grid h-full gap-20 py-50 items-center justify-center">
 
         <div className="relative">
-          <h1 className="text-4xl md:text-6xl font-semibold text-center">Coming Soon</h1>
+          <h3 className="text-4xl md:text-6xl font-semibold text-center">Coming Soon</h3>
           <Guruguru
             className="w-40 md:w-72 aspect-square absolute top-1/2 right-3/4 md:-left-5/12 -translate-y-6/8"
             src={guruguru03Webm}

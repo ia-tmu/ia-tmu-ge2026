@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 :HL["/ge2026/_next/static/chunks/64b0f1284a7fa846.css","style"]
 0:{"buildId":"8KBpsy9wVmsgOo4xC03og","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"locale","paramType":"d","paramKey":"ja","hasRuntimePrefetch":false,"slots":{"children":{"name":"works","paramType":null,"paramKey":"works","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
+=======
+:HL["/ge2026/_next/static/chunks/93487c5d5ac41a09.css","style"]
+0:{"buildId":"45QK71sVHwGU7H5GOLwja","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"locale","paramType":"d","paramKey":"ja","hasRuntimePrefetch":false,"slots":{"children":{"name":"works","paramType":null,"paramKey":"works","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
+>>>>>>> dev

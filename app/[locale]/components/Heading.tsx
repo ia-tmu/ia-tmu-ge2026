@@ -1,12 +1,14 @@
 export default function Heading({
   title,
-  size = "lg"
+  size = "lg",
+  as: Tag = "h2",
 }: {
   title: string,
-  size?: "sm" | "md" | "lg" | string
+  size?: "sm" | "md" | "lg" | string,
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6",
 }) {
   return (
-    <h1 className={`
+    <Tag className={`
       ${size === "lg"
         ? "text-3xl"
         : size === "md"
@@ -18,6 +20,6 @@ export default function Heading({
       font-bold
     `}>
       {title}
-    </h1 >
+    </Tag>
   )
 }
