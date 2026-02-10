@@ -10,9 +10,8 @@
     "works": "作品一覧へ"
   },
   "works": {
-    "title": "これは作品一覧ページ",
-    "subtitle": "ここでは作品の一覧を見ることができます。",
-    "back": "ホームに戻る"
+    "title": "Web Exhibition",
+    "subtitle": "作品・研究一覧"
   },
   "teaser": {
     "department": "東京都立大学 システムデザイン学部・研究科\nインダストリアルアート学科・学域",
@@ -56,12 +55,12 @@
           {
             "name": "武田真衣",
             "profile": "製品・サービスデザインスタジオ",
-            "gradYear": "2019卒"
+            "gradYear": "2019修了"
           },
           {
             "name": "髙橋健太郎",
             "profile": "インテリアデザインスタジオ",
-            "gradYear": "2021卒"
+            "gradYear": "2021修了"
           },
           {
             "name": "現役学生",
@@ -79,7 +78,12 @@
           {
             "name": "島影圭佑",
             "profile": "製品・サービスデザインスタジオ",
-            "gradYear": "2014卒"
+            "gradYear": "2014卒業"
+          },
+          {
+            "name": "小林空",
+            "profile": "インテリアデザインスタジオ",
+            "gradYear": "2017修了"
           },
           {
             "name": "現役学生",
@@ -94,12 +98,12 @@
           {
             "name": "井上悠",
             "profile": "ヴィジュアルコミュニケーションデザインスタジオ",
-            "gradYear": "2014卒"
+            "gradYear": "2014卒業"
           },
           {
             "name": "舟山貴士",
             "profile": "ヴィジュアルコミュニケーションデザインスタジオ",
-            "gradYear": "2012卒"
+            "gradYear": "2012修了"
           },
           {
             "name": "現役学生",
@@ -128,6 +132,15 @@
   "sns": {
     "sectionTitle": "SNSで情報発信しています",
     "description": "最新情報はこちらからご確認ください"
+  },
+  "header": {
+    "nav": {
+      "concept": "Concept",
+      "info": "Information",
+      "webExhibition": "Web Exhibition",
+      "events": "Events",
+      "sns": "SNS"
+    }
   },
   "webExhibition": {
     "description": "会場に足を運べない方々にも<br/>制作や研究をご覧いただけるよう、<br2/>Web展として研究や作品の概要を掲載予定です。"

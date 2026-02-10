@@ -1,8 +1,8 @@
 {
-  "buildTime": "2026/01/30 19:41:11",
+  "buildTime": "2026/02/07 21:48:28",
   "git": {
-    "branch": "dev",
-    "sha": "e544783"
+    "branch": "124-web展レコメンデーションのアルゴリズム実装",
+    "sha": "fb0c46a"
   },
   "basePath": "/ge2026"
 }

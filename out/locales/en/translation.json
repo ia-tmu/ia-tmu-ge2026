@@ -10,9 +10,8 @@
     "works": "Go to Works"
   },
   "works": {
-    "title": "this is a works page",
-    "subtitle": "here you can see a list of works.",
-    "back": "Back to Home"
+    "title": "Web Exhibition",
+    "subtitle": "works and research projects"
   },
   "teaser": {
     "department": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art",
@@ -56,12 +55,12 @@
           {
             "name": "Mai Takeda",
             "profile": "Equipment & Service Design Studio",
-            "gradYear": "Class of 2019"
+            "gradYear": "Completed in 2019"
           },
           {
             "name": "Kentaro Takahashi",
             "profile": "Interior Design Studio",
-            "gradYear": "Class of 2021"
+            "gradYear": "Completed in 2021"
           },
           {
             "name": "Student",
@@ -79,7 +78,12 @@
           {
             "name": "Keisuke Shimakage",
             "profile": "Equipment & Service Design Studio",
-            "gradYear": "Class of 2014"
+            "gradYear": "Graduated in 2014"
+          },
+          {
+            "name": "Sora Kobayashi",
+            "profile": "Interior Design Studio",
+            "gradYear": "Completed in 2017"
           },
           {
             "name": "Student",
@@ -94,12 +98,12 @@
           {
             "name": "Yu Inoue",
             "profile": "Visual Communication Design Studio",
-            "gradYear": "Class of 2014"
+            "gradYear": "Graduated in 2014"
           },
           {
             "name": "Takashi Funayama",
             "profile": "Visual Communication Design Studio",
-            "gradYear": "Class of 2012"
+            "gradYear": "Completed in 2012"
           },
           {
             "name": "Student",
@@ -128,6 +132,15 @@
   "sns": {
     "sectionTitle": "We share information on SNS",
     "description": "Please check here for the latest information."
+  },
+  "header": {
+    "nav": {
+      "concept": "Concept",
+      "info": "Information",
+      "webExhibition": "Web Exhibition",
+      "events": "Events",
+      "sns": "SNS"
+    }
   },
   "webExhibition": {
     "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview <br2/> of research and works as a web exhibition."
