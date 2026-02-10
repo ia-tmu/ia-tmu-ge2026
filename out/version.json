@@ -1,8 +1,8 @@
 {
-  "buildTime": "2026/02/10 17:36:08",
+  "buildTime": "2026/02/10 18:41:33",
   "git": {
-    "branch": "dev",
-    "sha": "5630dcd"
+    "branch": "dev-web-exhibition",
+    "sha": "c099d9f"
   },
   "basePath": "/ge2026"
 }
