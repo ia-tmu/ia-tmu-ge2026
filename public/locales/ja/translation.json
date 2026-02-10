@@ -11,7 +11,9 @@
   },
   "works": {
     "title": "Web Exhibition",
-    "subtitle": "作品・研究一覧"
+    "subtitle": "作品・研究一覧",
+    "viewAll": "全てを見る",
+    "viewLess": "閉じる"
   },
   "teaser": {
     "department": "東京都立大学 システムデザイン学部・研究科\nインダストリアルアート学科・学域",

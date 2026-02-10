@@ -1,4 +1,5 @@
-import { embeddingTags, type SimilarTag } from "../app/[locale]/lib/tags"
+import type { SimilarTag } from "@/app/[locale]/types/tag"
+import { embeddingTags } from "@/app/[locale]/lib/tags"
 
 type EmbeddingMap = Map<string, number[]>
 
@@ -7,16 +8,21 @@ function cosineSimilarity(vec1: number[], vec2: number[]): number {
   const magnitude1 = Math.sqrt(vec1.reduce((sum, val) => sum + val * val, 0))
   const magnitude2 = Math.sqrt(vec2.reduce((sum, val) => sum + val * val, 0))
 
+  if (magnitude1 === 0 || magnitude2 === 0) {
+    return 0
+  }
+
   return dotProduct / (magnitude1 * magnitude2)
 }
+
+const embeddingMap: EmbeddingMap = new Map(
+  embeddingTags.map(({ title, embedding }) => [title, embedding])
+)
 
 export default async function sortTagsBySimilarity(
   inputTags: string[],
 ): Promise<SimilarTag[]> {
 
-  const embeddingMap: EmbeddingMap = new Map(
-    embeddingTags.map(({ title, embedding }) => [title, embedding])
-  )
 
   const inputEmbeddings = inputTags
     .map(tag => embeddingMap.get(tag))

@@ -1,4 +1,4 @@
-import { fetchSheetValues } from "@/lib/getSheets";
+import { fetchSheetValues } from "@/lib/get-works";
 import type { SheetData } from "../types/work";
 import { WorksPageContent } from "./WorksPageContent";
 
