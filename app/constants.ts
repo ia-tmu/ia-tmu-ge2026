@@ -73,7 +73,7 @@ export const STATIC_WORK_IDS = [
   "B10",
   "A14",
   "B22",
-  "W05",
+  "A06",
   "A24",
   "A38",
   "A32",
@@ -81,4 +81,5 @@ export const STATIC_WORK_IDS = [
   "B23",
   "B26",
   "A33",
+  "B04",
 ];
