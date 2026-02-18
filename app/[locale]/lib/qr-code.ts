@@ -8,6 +8,8 @@ export interface QRCodeOptions {
   errorCorrectionLevel?: "L" | "M" | "Q" | "H";
   /** マージン（モジュール数）。デフォルト: 4 */
   margin?: number;
+  /** 背景を透明にする。デフォルト: false */
+  transparent?: boolean;
 }
 
 /**
@@ -20,11 +22,19 @@ export async function generateQRCodeImage(
   url: string,
   options?: QRCodeOptions,
 ): Promise<string> {
-  const { size = 256, errorCorrectionLevel = "M", margin = 4 } = options ?? {};
+  const {
+    size = 256,
+    errorCorrectionLevel = "M",
+    margin = 4,
+    transparent = false,
+  } = options ?? {};
 
   return QRCode.toDataURL(url, {
     width: size,
     errorCorrectionLevel,
     margin,
+    ...(transparent && {
+      color: { dark: "#000000ff", light: "#00000000" },
+    }),
   });
 }

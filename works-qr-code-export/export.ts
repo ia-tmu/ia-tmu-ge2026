@@ -47,7 +47,7 @@ async function main() {
   for (const workId of STATIC_WORK_IDS) {
     const url = `${BASE_URL}/${workId}`;
     try {
-      const dataUrl = await generateQRCodeImage(url);
+      const dataUrl = await generateQRCodeImage(url, { transparent: true });
       const base64 = dataUrl.replace(/^data:image\/\w+;base64,/, "");
       const buffer = Buffer.from(base64, "base64");
       for (const outputPath of outputPaths) {
