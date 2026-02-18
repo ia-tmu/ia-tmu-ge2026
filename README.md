@@ -490,6 +490,16 @@ ls -la out/
 
 静的エクスポートでは、Next.js の画像最適化機能が使用できません。そのため、`next.config.ts` で `images: { unoptimized: true }` が設定されています。画像は元のサイズのまま配信されます。
 
+### 作品ページのQRコード一斉書き出し
+
+作品ページのURLをQRコード画像として一括書き出しするには、以下のコマンドを実行します。
+
+```bash
+npx tsx works-qr-code-export/export.ts
+```
+
+実行すると、`app/constants.ts` の `STATIC_WORK_IDS` に含まれる各作品IDに対応するQRコードが、`local/web-qr-code/` フォルダに PNG 画像として出力されます。各画像は `https://industrial-art.sd.tmu.ac.jp/ge2026/works/{work_id}` へのURLがエンコードされています。なお、`local/` フォルダは `.gitignore` に含まれているため、Git の管理対象外となります。
+
 ### トラブルシューティング
 
 **Node.js のバージョンが合わない場合：**
@@ -515,7 +525,6 @@ ls -la out/
 **静的エクスポートのビルドでエラーが発生する場合：**
 
 - `/[locale]/works/[slug]` ページのエラーが発生する場合:
-
   - 該当ページが一時的に無効化されているか確認してください
   - 無効化されていない場合は、上記の「動的ルートについて」セクションを参照してください
 
