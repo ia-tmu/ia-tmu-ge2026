@@ -1,34 +1,48 @@
 // lib/sheets.ts
 import { google } from "googleapis";
 
-const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "web_connect";
+const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "Web展回答";
 
-/** スプレッドシート1行分の列と意味の対応（A〜H列） */
+/** スプレッドシート1行分の列と意味の対応（A〜Q列） */
 export type WorksRow = {
   id: string; // A列
-  name: string; // B列
-  image: string; // C列
-  imageURL: string; // D列
-  studentID: string; // E列
-  studioName: string; // F列
+  timeStamp: string; // B列
+  name: string; // C列
+  studentID: string; // D列
+  studioName: string; // E列
+  degree: string; // F列
   workTitle: string; // G列
-  workDescription: string; // H列
-  keywords: string[]; // I列
+  workDescriptionJP: string; // H列
+  workDescriptionEN: string; // I列
+  thumbnail: string; // J列
+  image: string; // K列
+  movie: string; // L列
+  application: string; // M列
+  link1: string; // N列
+  link2: string; // O列
+  link3: string; // P列
+  order: string; // Q列
 };
 
 function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
   return {
     id: String(row[0] ?? ""),
-    name: String(row[1] ?? ""),
-    image: driveToImageUrl(String(row[2])) ?? "",
-    imageURL: driveToImageUrl(String(row[3])) ?? "",
-    studentID: String(row[4] ?? ""),
-    studioName: String(row[5] ?? ""),
+    timeStamp: String(row[1] ?? ""),
+    name: String(row[2] ?? ""),
+    studentID: String(row[3]) ?? "",
+    studioName: String(row[4]) ?? "",
+    degree: String(row[5] ?? ""),
     workTitle: String(row[6] ?? ""),
-    workDescription: String(row[7] ?? ""),
-    keywords: String(row[8] ?? "")
-      .split(",")
-      .map((k) => k.trim()),
+    workDescriptionJP: String(row[7] ?? ""),
+    workDescriptionEN: String(row[8] ?? ""),
+    thumbnail: String(row[9] ?? ""),
+    image: driveToImageUrl(String(row[10])) ?? "",
+    movie: String(row[11] ?? ""),
+    application: String(row[12] ?? ""),
+    link1: String(row[13] ?? ""),
+    link2: String(row[14] ?? ""),
+    link3: String(row[15] ?? ""),
+    order: String(row[16] ?? ""),
   };
 }
 
@@ -67,7 +81,7 @@ export async function fetchSheetValues() {
 
   const spreadsheetTitle = meta.data.properties?.title ?? "(untitled)";
 
-  // ② A〜H列を取得（id, name, image, imageURL, studentID, studio, workTitle, workDescription）
+  // ② A〜Q列を取得（id,timeStamp,name,studentID,studioName,degree,workTitle,workDescriptionJP,workDescriptionEN,thumbnail,image,movie,application,link1,link2,link3,order）
   const valuesRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
     range: `${WORKS_SHEET_NAME}!A1:Z`,

@@ -10,7 +10,11 @@ export async function generateStaticParams() {
   return ids.map((id) => ({ slug: id }));
 }
 
-export default async function Work({ params }: { params: Promise<{ slug: string }> }) {
+export default async function Work({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
 
   const work = await fetchRowBySlug(slug);
@@ -19,7 +23,6 @@ export default async function Work({ params }: { params: Promise<{ slug: string 
     notFound();
   }
 
-
   return (
     <div className="p-4 text-black">
       <h1 className="text-4xl font-bold">{work.name}</h1>
@@ -27,7 +30,7 @@ export default async function Work({ params }: { params: Promise<{ slug: string 
         {work.image && (
           <div className="w-full max-w-lg float-right">
             <Image
-              src={work.imageURL}
+              src={work.image}
               width={800}
               height={600}
               alt={work.name}
