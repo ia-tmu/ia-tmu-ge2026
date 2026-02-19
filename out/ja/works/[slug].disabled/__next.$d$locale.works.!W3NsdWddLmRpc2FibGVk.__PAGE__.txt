@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[51566,["/ge2026/_next/static/chunks/a250bd8eae67409e.js","/ge2026/_next/static/chunks/f4fd85e722e03927.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"buildId":"JN74pJFLJpwmhEdsIUD86","rsc":["$","$1","c",{"children":[["$","h1",null,{"children":"this is a work page."}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"h3OuBV6-XDeLT_DvDvWiW","rsc":["$","$1","c",{"children":[["$","h1",null,{"children":"this is a work page."}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null
