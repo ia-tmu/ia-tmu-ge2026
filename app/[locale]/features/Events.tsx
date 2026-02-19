@@ -76,6 +76,7 @@ export default function Events() {
         {
           name: t("events.sessions.1.speakers.0.name"),
           url: "https://www.instagram.com/kusumedia/",
+          profile: t("events.sessions.1.speakers.0.profile"),
           imageUrl: kusumiImage,
         },
         {
@@ -135,8 +136,8 @@ export default function Events() {
       startDateTime: "20260306T150000",
       endDateTime: "20260306T160000",
       speakers: [
-        { name: t("events.sessions.3.speakers.0.name"), imageUrl: babaImage, url: "https://tetsuakibaba.jp/", },
-        { name: t("events.sessions.3.speakers.1.name"), imageUrl: tsuchiyaImage, url: "https://trailer-house.sxd-d.com/designer/", },
+        { name: t("events.sessions.3.speakers.0.name"), profile: t("events.sessions.3.speakers.0.profile"), imageUrl: babaImage, url: "https://tetsuakibaba.jp/", },
+        { name: t("events.sessions.3.speakers.1.name"), profile: t("events.sessions.3.speakers.1.profile"), imageUrl: tsuchiyaImage, url: "https://trailer-house.sxd-d.com/designer/", },
         {
           name: t("events.sessions.3.speakers.2.name"),
           profile: t("events.sessions.3.speakers.2.profile"),
