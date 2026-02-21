@@ -29,13 +29,17 @@ export default async function Work({
   return (
     <main className="relative text-sm md:text-base pt-20 md:pt-[120px] text-foreground">
       <MoyaBG />
-      <div className="max-w-[960px] mx-auto">
-        <div className="flex flex-col md:flex-row items-start">
+      <div className="max-w-[355px] md:max-w-[960px] mx-auto">
+        <div className="flex flex-col-reverse md:flex-row items-start gap-3.75 md:gap-7.5">
           {/* 左側：テキスト・キーワード・リンク */}
-          <div className="flex-1 self-stretch flex flex-col gap-7.5 mr-7.5 min-h-full">
-            <h1 className="text-sm font-medium">{work.degree}</h1>
-            <h2 className="text-xl font-bold">{work.workTitle}</h2>
-            <div className="text-sm font-medium">{work.studioName}</div>
+          <div className="flex-1 self-stretch flex flex-col gap-3.75 md:gap-7.5 min-h-full">
+            <h1 className="text-xs md:text-sm font-medium">{work.degree}</h1>
+            <h2 className="text-sm md:text-xl font-bold leading-[1.5]">
+              {work.workTitle}
+            </h2>
+            <h3 className="text-xs md:text-sm font-medium">
+              {work.studioName}
+            </h3>
             <div className="flex flex-col text-sm gap-2.5">
               {[work.keyword1, work.keyword2, work.keyword3]
                 .filter(Boolean)
@@ -67,18 +71,20 @@ export default async function Work({
           <ImageSlider
             thumbnail={work.thumbnail}
             images={work.image}
+            movie={work.movie}
+            movieOrder={work.order}
             name={work.name}
           />
         </div>
-        <div className="flex flex-col mt-12.5 gap-12.5">
+        <div className="flex flex-col mt-7.5 gap-7.5 md:mt-12.5 md:gap-12.5">
           {/* 説明文（データがあれば表示） */}
           {work.workDescriptionJP && (
-            <div className="whitespace-pre-wrap text-md leading-8">
+            <div className="whitespace-pre-wrap text-sm md:text-md leading-[1.7]">
               {work.workDescriptionJP}
             </div>
           )}
           {work.workDescriptionEN && (
-            <div className="whitespace-pre-wrap text-md leading-8">
+            <div className="whitespace-pre-wrap text-sm md:text-md leading-[1.7]">
               {work.workDescriptionEN}
             </div>
           )}
