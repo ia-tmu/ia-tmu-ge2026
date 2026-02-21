@@ -6,43 +6,58 @@ const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "Web展回答";
 /** スプレッドシート1行分の列と意味の対応（A〜Q列） */
 export type WorksRow = {
   id: string; // A列
-  timeStamp: string; // B列
-  name: string; // C列
-  studentID: string; // D列
-  studioName: string; // E列
-  degree: string; // F列
-  workTitle: string; // G列
-  workDescriptionJP: string; // H列
-  workDescriptionEN: string; // I列
-  thumbnail: string; // J列
-  image: string; // K列
-  movie: string; // L列
-  application: string; // M列
-  link1: string; // N列
-  link2: string; // O列
-  link3: string; // P列
-  order: string; // Q列
+  keyword1: string; // B列
+  keyword2: string; // C列
+  keyword3: string; // D列
+  timeStamp: string; // E列
+  name: string; // F列
+  studentID: string; // G列
+  studioName: string; // H列
+  degree: string; // I列
+  workTitle: string; // J列
+  workDescriptionJP: string; // K列
+  workDescriptionEN: string; // L列
+  thumbnail: string; // M列
+  image: string[]; // N列（カンマ区切りで複数対応）
+  movie: string; // O列
+  application: string; // P列
+  link1: string; // Q列
+  link2: string; // R列
+  link3: string; // S列
+  order: string; // T列
+  link1Title: string; // U列
+  link2Title: string; // V列
+  link3Title: string; // W列
 };
 
 function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
   return {
     id: String(row[0] ?? ""),
-    timeStamp: String(row[1] ?? ""),
-    name: String(row[2] ?? ""),
-    studentID: String(row[3]) ?? "",
-    studioName: String(row[4]) ?? "",
-    degree: String(row[5] ?? ""),
-    workTitle: String(row[6] ?? ""),
-    workDescriptionJP: String(row[7] ?? ""),
-    workDescriptionEN: String(row[8] ?? ""),
-    thumbnail: String(row[9] ?? ""),
-    image: driveToImageUrl(String(row[10])) ?? "",
-    movie: String(row[11] ?? ""),
-    application: String(row[12] ?? ""),
-    link1: String(row[13] ?? ""),
-    link2: String(row[14] ?? ""),
-    link3: String(row[15] ?? ""),
-    order: String(row[16] ?? ""),
+    keyword1: String(row[1] ?? ""),
+    keyword2: String(row[2] ?? ""),
+    keyword3: String(row[3] ?? ""),
+    timeStamp: String(row[4] ?? ""),
+    name: String(row[5] ?? ""),
+    studentID: String(row[6]) ?? "",
+    studioName: String(row[7]) ?? "",
+    degree: String(row[8] ?? ""),
+    workTitle: String(row[9] ?? ""),
+    workDescriptionJP: String(row[10] ?? ""),
+    workDescriptionEN: String(row[11] ?? ""),
+    thumbnail: driveToImageUrl(String(row[12])) ?? "",
+    image: String(row[13] ?? "")
+      .split(/[,\n]/)
+      .map((img) => driveToImageUrl(img.trim()))
+      .filter(Boolean) as string[],
+    movie: String(row[14] ?? ""),
+    application: String(row[15] ?? ""),
+    link1: String(row[16] ?? ""),
+    link2: String(row[17] ?? ""),
+    link3: String(row[18] ?? ""),
+    order: String(row[19] ?? ""),
+    link1Title: String(row[20] ?? ""),
+    link2Title: String(row[21] ?? ""),
+    link3Title: String(row[22] ?? ""),
   };
 }
 
@@ -110,7 +125,7 @@ export async function fetchSheetValues() {
     sheetTitle: WORKS_SHEET_NAME,
     headers,
     rows: rawRows, // 2次元配列（ヘッダー除く）
-    works, // 列と意味を対応させた配列（A=id, B=name, C=image, D=imageURL, E=studentID, F=studio, G=workTitle, H=workDescription）
+    works, // 列と意味を対応させた配列
     objects,
     raw: values,
   };
