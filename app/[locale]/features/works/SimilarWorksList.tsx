@@ -17,23 +17,12 @@ export function SimilarWorksList({ items }: { items: SimilarWorkItem[] }) {
   }
 
   return (
-    <>
-      {/* SP: 縦並び（WorksListWithCategories の md:hidden と同じ flex-col gap-2） */}
-      <div className="flex md:hidden flex-col gap-2 list-none p-0 m-0">
-        {items.map((item) => (
-          <div key={item.work.id} className="shrink-0">
-            <WorkCard work={item.work} />
-          </div>
-        ))}
-      </div>
-      {/* md以上: 横並び・高さ揃え */}
-      <div className="hidden md:flex flex-wrap gap-4 list-none p-0 m-0">
-        {items.map((item) => (
-          <div key={item.work.id} className="shrink-0 h-[240px]">
-            <WorkCard work={item.work} />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="flex flex-col gap-2 md:flex-row md:flex-wrap md:gap-4">
+      {items.map((item) => (
+        <div key={item.work.id} className="shrink-0 md:h-[240px]">
+          <WorkCard work={item.work} />
+        </div>
+      ))}
+    </div>
   );
 }
