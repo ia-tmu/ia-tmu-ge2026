@@ -61,6 +61,11 @@
    pnpm build
    ```
 
+   ※ `pnpm build` は内部で以下を順に実行します：
+   1. `pnpm run fetch-works` … Google Sheets から作品データを1回取得し、`local/works-build-cache.json` にキャッシュ
+   2. `next build` … 静的エクスポート（キャッシュを使用するため API レート制限を回避）
+   3. `npm run postbuild` … index.html の生成など
+
    ※ このコマンドにより、`out` ディレクトリの中身が最新の状態に更新されます。
 
 3. **自動デプロイ**
@@ -492,6 +497,14 @@ ls -la out/
 #### 画像の最適化
 
 静的エクスポートでは、Next.js の画像最適化機能が使用できません。そのため、`next.config.ts` で `images: { unoptimized: true }` が設定されています。画像は元のサイズのまま配信されます。
+
+### ビルド時の作品データキャッシュ（Google Sheets レート制限対策）
+
+静的エクスポートでは、各 `works/[slug]` ページのプリレンダリング時に Google Sheets API が呼ばれます。作品数が多いと API のレート制限（429）に達するため、ビルド前に全データを1回取得してキャッシュし、ビルド中はそのキャッシュを使用します。
+
+- **キャッシュファイル**: `local/works-build-cache.json`（`local/` は `.gitignore` 対象）
+- **手動でキャッシュを更新する場合**: `pnpm run fetch-works` を実行
+- **キャッシュがない場合**: `fetchSheetValues` 等は API を直接呼びます（開発時や初回ビルド時）
 
 ### worksページにおけるレコメンド機能のためのベクトル生成
 

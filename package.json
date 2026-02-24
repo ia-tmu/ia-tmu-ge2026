@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
+    "build": "pnpm run fetch-works && next build && npm run postbuild",
+    "fetch-works": "npx tsx build-scripts/fetch-works-cache.ts",
     "build:no-export": "SKIP_EXPORT=true next build",
     "postbuild": "node build-scripts/generate-index.js",
     "start": "next start",
@@ -42,7 +43,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "tsx": "^4"
   },
   "volta": {
     "node": "22.21.1"

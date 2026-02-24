@@ -134,6 +134,7 @@ export default function ImageSlider({
                 fill
                 className="object-cover"
                 draggable={false}
+                priority={current === 0}
               />
             ) : (
               <iframe
@@ -191,6 +192,7 @@ export default function ImageSlider({
                 alt={`${name}-thumb-${index}`}
                 className="object-cover"
                 draggable={false}
+                priority={index === 0}
               />
 
               {s.type === "youtube" && (

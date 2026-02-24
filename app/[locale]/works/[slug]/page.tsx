@@ -4,6 +4,8 @@ import Footer from "../../components/Footer";
 import MoyaBG from "../../features/MoyaBG";
 import { WorkCard } from "../../features/works/WorkCard";
 import ImageSlider from "../../features/works/ImageSlider";
+import { MovieOrder } from "../../types/work";
+
 
 export const dynamicParams = false;
 
@@ -41,11 +43,9 @@ export default async function Work({
               {work.studioName}
             </h3>
             <div className="flex flex-col text-sm gap-2.5">
-              {[work.keyword1, work.keyword2, work.keyword3]
-                .filter(Boolean)
-                .map((kw, i) => (
-                  <span key={i}>#{kw}</span>
-                ))}
+              {work.keywords.map((kw, i) => (
+                <span key={i}>#{kw}</span>
+              ))}
             </div>
             <div className="flex flex-col text-sm gap-2.5 mt-auto">
               {[
@@ -70,10 +70,10 @@ export default async function Work({
           {/* 右側：画像 */}
           <ImageSlider
             thumbnail={work.thumbnail}
-            images={work.image}
+            images={work.images}
             movie={work.movie}
-            movieOrder={work.order}
-            name={work.name}
+            movieOrder={work.order as MovieOrder}
+            name={work.workTitle}
           />
         </div>
         <div className="flex flex-col mt-7.5 gap-7.5 md:mt-12.5 md:gap-12.5">
