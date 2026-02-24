@@ -47,7 +47,7 @@ export default async function Work({
                 <span key={i}>#{kw}</span>
               ))}
             </div>
-            <div className="flex flex-col text-sm gap-2.5 mt-auto">
+            <div className="flex flex-wrap gap-6 text-sm mt-auto">
               {[
                 { url: work.link1, title: work.link1Title },
                 { url: work.link2, title: work.link2Title },
@@ -79,12 +79,12 @@ export default async function Work({
         <div className="flex flex-col mt-7.5 gap-7.5 md:mt-12.5 md:gap-12.5">
           {/* 説明文（データがあれば表示） */}
           {work.workDescriptionJP && (
-            <div className="whitespace-pre-wrap text-sm md:text-md leading-[1.7]">
+            <div className="whitespace-pre-wrap text-sm md:text-base leading-[1.7]">
               {work.workDescriptionJP}
             </div>
           )}
           {work.workDescriptionEN && (
-            <div className="whitespace-pre-wrap text-sm md:text-md leading-[1.7]">
+            <div className="whitespace-pre-wrap text-sm md:text-base leading-[1.7]">
               {work.workDescriptionEN}
             </div>
           )}
