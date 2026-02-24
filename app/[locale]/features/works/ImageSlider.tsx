@@ -15,6 +15,7 @@ type Props = {
 };
 
 const SWIPE_THRESHOLD = 50;
+const THUMB_COUNT = 5;
 
 type Slide = { type: "image"; src: string } | { type: "youtube"; id: string };
 
@@ -66,8 +67,11 @@ export default function ImageSlider({
     }
   }
 
+  // state（※ hooksより前でreturnしない）
   const [current, setCurrent] = useState(0);
-  const [failedImageSrcs, setFailedImageSrcs] = useState<Set<string>>(() => new Set());
+  const [failedImageSrcs, setFailedImageSrcs] = useState<Set<string>>(
+    () => new Set(),
+  );
 
   const handleImageError = (src: string) => {
     setFailedImageSrcs((prev) => new Set(prev).add(src));
@@ -108,8 +112,7 @@ export default function ImageSlider({
     startXRef.current = null;
   };
 
-  const THUMB_COUNT = 5;
-
+  // サムネ表示（最大5枚）
   const start = Math.max(
     0,
     Math.min(
@@ -117,15 +120,28 @@ export default function ImageSlider({
       slides.length - THUMB_COUNT,
     ),
   );
-
   const thumbSlides = slides.slice(start, start + THUMB_COUNT);
+
+  // 続きがある方向（mask切替）
+  const hasLeft = slides.length > THUMB_COUNT && start > 0;
+  const hasRight =
+    slides.length > THUMB_COUNT && start + THUMB_COUNT < slides.length;
+
+  const maskClass =
+    hasLeft && hasRight
+      ? "scroll-mask-horizontal-both"
+      : hasLeft
+        ? "scroll-mask-horizontal-left-only"
+        : hasRight
+          ? "scroll-mask-horizontal-right-only"
+          : "";
 
   const currentSlide = slides[current];
 
   return (
-    <div className="w-full max-w-md md:max-w-lg flex flex-col gap-2.5">
+    <div className="w-full max-w-md md:max-w-lg flex flex-col gap-3">
       {/* メイン */}
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex justify-center items-center group">
         <div
           className="select-none touch-pan-y w-full"
           onPointerDown={onPointerDown}
@@ -164,76 +180,83 @@ export default function ImageSlider({
         </div>
 
         {current > 0 && (
-          <button
-            onClick={goPrev}
-            className="absolute left-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/0 hover:bg-black/20 transition-colors duration-300"
-          >
-            <ArrowIcon
-              width={19}
-              height={15}
-              className="mix-blend-difference"
-            />
-          </button>
+          <div className="relative">
+            <div className=" absolute right-118 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 hover:bg-black/20 mix-blend-difference">
+              <ArrowIcon width={19} height={15} />
+            </div>
+            <button
+              onClick={goPrev}
+              className="absolute cursor-pointer z-10 inset-0 rounded-full top-0 -left-126 top-1/2 -translate-y-1/2 hover:bg-black/20 h-8 w-8"
+            ></button>
+          </div>
         )}
         {current < slides.length - 1 && (
-          <button
-            onClick={goNext}
-            className="absolute right-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/0 hover:bg-black/20 transition-colors duration-300"
-          >
-            <ArrowIcon
-              width={19}
-              height={15}
-              className="-scale-x-100 mix-blend-difference"
-            />
-          </button>
+          <div className="relative">
+            <div className=" absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 hover:bg-black/20 mix-blend-difference">
+              <ArrowIcon width={19} height={15} className="-scale-x-100" />
+            </div>
+            <button
+              onClick={goNext}
+              className="absolute cursor-pointer z-10 inset-0 rounded-full top-0 -left-10 top-1/2 -translate-y-1/2 hover:bg-black/20 h-8 w-8"
+            ></button>
+          </div>
         )}
       </div>
 
-      {/* サムネ */}
-      <div className="flex justify-center gap-2">
-        {thumbSlides.map((s, i) => {
-          const index = start + i;
+      {/* サムネ（maskはこの列に掛ける） */}
+      <div className="flex justify-center">
+        <div className={`flex gap-2 ${maskClass} p-1 items-center`}>
+          {thumbSlides.map((s, i) => {
+            const index = start + i;
 
-          const thumbSrc =
-            s.type === "image"
-              ? s.src
-              : `https://img.youtube.com/vi/${s.id}/hqdefault.jpg`;
+            const thumbSrc =
+              s.type === "image"
+                ? s.src
+                : `https://img.youtube.com/vi/${s.id}/hqdefault.jpg`;
 
-          return (
-            <button
-              key={`${s.type}-${index}`}
-              onClick={() => setCurrent(index)}
-              className={`relative outline-2 outline-offset-2 w-[52px] h-[39px] shrink-0 overflow-hidden bg-muted ${
-                index === current ? "outline-white" : "outline-transparent"
-              }`}
-            >
-              {s.type === "image" && failedImageSrcs.has(thumbSrc) ? (
-                <div className="w-full h-full flex items-center justify-center text-[10px] text-muted-foreground">
-                  —
-                </div>
-              ) : (
-                <Image
-                  src={thumbSrc}
-                  width={52}
-                  height={39}
-                  alt={`${name}-thumb-${index}`}
-                  className="object-cover"
-                  draggable={false}
-                  priority={index === 0}
-                  onError={s.type === "image" ? () => handleImageError(thumbSrc) : undefined}
-                />
-              )}
+            return (
+              <button
+                key={`${s.type}-${index}`}
+                onClick={() => setCurrent(index)}
+                className={
+                  "relative w-[52px] h-[39px] shrink-0 overflow-hidden bg-muted transition-all " +
+                  (index === current
+                    ? "outline-2 outline outline-white outline-offset-2"
+                    : "")
+                }
+              >
+                {s.type === "image" && failedImageSrcs.has(thumbSrc) ? (
+                  <div className="w-full h-full flex items-center justify-center text-[10px] text-muted-foreground">
+                    —
+                  </div>
+                ) : (
+                  <Image
+                    src={thumbSrc}
+                    width={52}
+                    height={39}
+                    alt={`${name}-thumb-${index}`}
+                    className="object-cover"
+                    draggable={false}
+                    priority={index === 0}
+                    onError={
+                      s.type === "image"
+                        ? () => handleImageError(thumbSrc)
+                        : undefined
+                    }
+                  />
+                )}
 
-              {s.type === "youtube" && (
-                <span className="absolute inset-0 flex items-center justify-center">
-                  <span className="rounded-full bg-black/50 px-2 py-1 text-[10px]">
-                    ▶
+                {s.type === "youtube" && (
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="rounded-full bg-black/50 px-2 py-1 text-[10px]">
+                      ▶
+                    </span>
                   </span>
-                </span>
-              )}
-            </button>
-          );
-        })}
+                )}
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
