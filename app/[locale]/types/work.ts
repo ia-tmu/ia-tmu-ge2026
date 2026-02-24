@@ -1,13 +1,23 @@
 export interface Work {
   id: string;
-  name: string;
-  image: string;
-  imageURL: string;
+  keywords: string[];
   studentID: string;
   studioName: string;
+  degree: string;
   workTitle: string;
-  workDescription: string;
-  keywords: string[];
+  workDescriptionJP: string;
+  workDescriptionEN: string;
+  thumbnail: string;
+  images: string[];
+  movie: string;
+  application: string;
+  link1: string;
+  link2: string;
+  link3: string;
+  order: string;
+  link1Title: string;
+  link2Title: string;
+  link3Title: string;
 }
 
 export type SheetData = {
@@ -20,3 +30,5 @@ export type SheetData = {
   objects: Record<string, string>[];
   raw: string[][];
 };
+
+export type MovieOrder = "掲載なし" | "サムネイルの次（2番目）" | "最後";
