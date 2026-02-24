@@ -1,34 +1,76 @@
 // lib/sheets.ts
+import { readFile } from "fs/promises";
+import { join } from "path";
 import { google } from "googleapis";
 
-const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "web_connect";
+const WORKS_SHEET_NAME = process.env.WORKS_SHEET_NAME ?? "Web展回答";
 
-/** スプレッドシート1行分の列と意味の対応（A〜H列） */
+const CACHE_FILE = join(process.cwd(), "local", "works-build-cache.json");
+
+type CachedData = Awaited<ReturnType<typeof fetchSheetValuesFromApi>>;
+
+async function readCache(): Promise<CachedData | null> {
+  try {
+    const json = await readFile(CACHE_FILE, "utf-8");
+    return JSON.parse(json) as CachedData;
+  } catch {
+    return null;
+  }
+}
+
+/** スプレッドシート1行分の列と意味の対応（A〜Q列） */
 export type WorksRow = {
   id: string; // A列
-  name: string; // B列
-  image: string; // C列
-  imageURL: string; // D列
-  studentID: string; // E列
-  studioName: string; // F列
-  workTitle: string; // G列
-  workDescription: string; // H列
-  keywords: string[]; // I列
+  keywords: string[]; // B〜D列（keyword1,2,3 を結合）
+  timeStamp: string; // E列
+  studentID: string; // G列
+  studioName: string; // H列
+  degree: string; // I列
+  workTitle: string; // J列
+  workDescriptionJP: string; // K列
+  workDescriptionEN: string; // L列
+  thumbnail: string; // M列
+  images: string[]; // N列（カンマ区切りで複数対応）
+  movie: string; // O列
+  application: string; // P列
+  link1: string; // Q列
+  link2: string; // R列
+  link3: string; // S列
+  order: string; // T列
+  link1Title: string; // U列
+  link2Title: string; // V列
+  link3Title: string; // W列
 };
 
 function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
   return {
     id: String(row[0] ?? ""),
-    name: String(row[1] ?? ""),
-    image: driveToImageUrl(String(row[2])) ?? "",
-    imageURL: driveToImageUrl(String(row[3])) ?? "",
-    studentID: String(row[4] ?? ""),
-    studioName: String(row[5] ?? ""),
-    workTitle: String(row[6] ?? ""),
-    workDescription: String(row[7] ?? ""),
-    keywords: String(row[8] ?? "")
-      .split(",")
-      .map((k) => k.trim()),
+    keywords: [
+      String(row[1] ?? ""),
+      String(row[2] ?? ""),
+      String(row[3] ?? ""),
+    ].filter(Boolean),
+    timeStamp: String(row[4] ?? ""),
+    studentID: String(row[6]) ?? "",
+    studioName: String(row[7]) ?? "",
+    degree: String(row[8] ?? ""),
+    workTitle: String(row[9] ?? ""),
+    workDescriptionJP: String(row[10] ?? ""),
+    workDescriptionEN: String(row[11] ?? ""),
+    thumbnail: driveToImageUrl(String(row[12])) ?? "",
+    images: String(row[13] ?? "")
+      .split(/[,\n]/)
+      .map((img) => driveToImageUrl(img.trim()))
+      .filter(Boolean) as string[],
+    movie: String(row[14] ?? ""),
+    application: String(row[15] ?? ""),
+    link1: String(row[16] ?? ""),
+    link2: String(row[17] ?? ""),
+    link3: String(row[18] ?? ""),
+    order: String(row[19] ?? ""),
+    link1Title: String(row[20] ?? ""),
+    link2Title: String(row[21] ?? ""),
+    link3Title: String(row[22] ?? ""),
   };
 }
 
@@ -54,8 +96,9 @@ async function getSheetsClient() {
  * 最初のシート名を取得して、そのシートの値を2次元配列で返す
  * - 1行目をヘッダーとして分離
  * - headers / rows / objects も返す
+ * - キャッシュが存在する場合は API を呼ばずキャッシュを返す（ビルド時のレート制限回避）
  */
-export async function fetchSheetValues() {
+async function fetchSheetValuesFromApi() {
   const sheets = await getSheetsClient();
   const spreadsheetId = process.env.SPREADSHEET_ID;
 
@@ -67,7 +110,7 @@ export async function fetchSheetValues() {
 
   const spreadsheetTitle = meta.data.properties?.title ?? "(untitled)";
 
-  // ② A〜H列を取得（id, name, image, imageURL, studentID, studio, workTitle, workDescription）
+  // ② A〜Q列を取得（id,timeStamp,name,studentID,studioName,degree,workTitle,workDescriptionJP,workDescriptionEN,thumbnail,image,movie,application,link1,link2,link3,order）
   const valuesRes = await sheets.spreadsheets.values.get({
     spreadsheetId,
     range: `${WORKS_SHEET_NAME}!A1:Z`,
@@ -96,16 +139,29 @@ export async function fetchSheetValues() {
     sheetTitle: WORKS_SHEET_NAME,
     headers,
     rows: rawRows, // 2次元配列（ヘッダー除く）
-    works, // 列と意味を対応させた配列（A=id, B=name, C=image, D=imageURL, E=studentID, F=studio, G=workTitle, H=workDescription）
+    works, // 列と意味を対応させた配列
     objects,
     raw: values,
   };
 }
 
+export async function fetchSheetValues() {
+  const cached = await readCache();
+  if (cached) return cached;
+  return fetchSheetValuesFromApi();
+}
+
 /**
  * slug（ID）を元に、その行のデータだけをピンポイントで取得する
+ * キャッシュが存在する場合は API を呼ばずキャッシュから検索（ビルド時のレート制限回避）
  */
 export async function fetchRowBySlug(slug: string) {
+  const cached = await readCache();
+  if (cached) {
+    const work = cached.works.find((w) => w.id === slug);
+    return work ?? null;
+  }
+
   const sheets = await getSheetsClient();
   const spreadsheetId = process.env.SPREADSHEET_ID;
 
@@ -119,9 +175,7 @@ export async function fetchRowBySlug(slug: string) {
   // slugと一致するインデックスを探す（1行目がヘッダーなら +1 する）
   const rowIndex = ids.findIndex((row) => String(row[0]) === slug) + 1;
 
-  if (rowIndex === 0) {
-    throw new Error(`Slug "${slug}" not found`);
-  }
+  if (rowIndex === 0) return null;
 
   // 2. 特定した行だけを取得する
   const rowRes = await sheets.spreadsheets.values.get({
@@ -137,8 +191,12 @@ export async function fetchRowBySlug(slug: string) {
 /**
  * generateStaticParams用のID一覧だけを取得する軽量関数
  * シートが存在しない・未設定の場合は空配列を返しビルドを成功させる
+ * キャッシュが存在する場合は API を呼ばずキャッシュから取得（ビルド時のレート制限回避）
  */
 export async function fetchAllIds(): Promise<string[]> {
+  const cached = await readCache();
+  if (cached) return cached.works.map((w) => w.id);
+
   const spreadsheetId = process.env.SPREADSHEET_ID;
   if (!spreadsheetId) return [];
 

@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import LangSwitcher from "../features/LangSwitcher";
 import { useFVScrollRef } from "../contexts/FVScrollRefContext";
 import Button from "./Button";
+import { isTopPagePath, isWorksPagePath } from "../lib/pathUtils";
 import guruguru05Static from "../../../public/images/top/guruguru_05.png";
 
 const SECTION_IDS = [
@@ -26,10 +27,8 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const fvScrollRef = useFVScrollRef();
 
-    // トップページかどうか（[locale] 直下のみ＝FV があるページ。pathname は / または /works/ など）
-    const path = (pathname ?? "").replace(/\/$/, "") || "/";
-    const isTopPage = path === "/";
-    const isWorksPage = pathname?.startsWith("/works/");
+    const isTopPage = isTopPagePath(pathname);
+    const isWorksPage = isWorksPagePath(pathname);
 
     // FV→Concept のスクロールに合わせてロゴを透明→表示（Teaserのフェードアウトと同期）
     // トップページ以外ではロゴを常に表示

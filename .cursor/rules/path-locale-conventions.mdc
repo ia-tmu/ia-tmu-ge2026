@@ -1,0 +1,28 @@
+---
+description: パス・ロケール判定の共通ルール（pathUtils 使用）
+alwaysApply: false
+---
+
+# パス・ロケール判定
+
+next-i18n-router では、デフォルトロケール(ja)は URL にプレフィックスが付かない（`/`）、その他(en 等)は `/en` のように付く。
+**pathname を直接比較するとロケール違いで不具合が発生するため、`app/[locale]/lib/pathUtils` を使用すること。**
+
+## 使用例
+
+```typescript
+// ❌ BAD - ロケール付きパスで誤判定
+const isTopPage = path === "/";
+const isWorksPage = pathname?.startsWith("/works/");
+
+// ✅ GOOD
+import { isTopPagePath, isWorksPagePath } from "../lib/pathUtils";
+const isTopPage = isTopPagePath(pathname);
+const isWorksPage = isWorksPagePath(pathname);
+```
+
+## 提供関数
+
+- `getNormalizedPath(pathname)` - 末尾スラッシュ除去
+- `isTopPagePath(pathname)` - トップページ判定（`/`, `/ja`, `/en` 等）
+- `isWorksPagePath(pathname)` - 作品ページ判定（`/works`, `/en/works/xxx` 等）
