@@ -2,12 +2,14 @@
   "name": "ia-tmu-ge2026",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.4.0",
   "engines": {
     "node": "22.x"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
+    "build": "pnpm run fetch-works && next build && npm run postbuild",
+    "fetch-works": "npx tsx build-scripts/fetch-works-cache.ts",
     "build:no-export": "SKIP_EXPORT=true next build",
     "postbuild": "node build-scripts/generate-index.js",
     "start": "next start",

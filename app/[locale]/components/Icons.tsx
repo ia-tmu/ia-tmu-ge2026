@@ -149,7 +149,6 @@ export const ChevronDownIcon = ({
   );
 };
 
-
 export const CrossLargeIcon = ({
   width,
   height,
@@ -170,6 +169,26 @@ export const CrossLargeIcon = ({
         fillRule="evenodd"
         clipRule="evenodd"
       ></path>
+    </svg>
+  );
+};
+
+export const ArrowIcon = ({
+  width,
+  height,
+  color = "currentColor",
+  className,
+}: IconProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 19 15"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path d="M0.293856 6.64159C-0.0966665 7.03127 -0.0966665 7.66443 0.293856 8.0558L6.6578 14.4335C7.04833 14.8249 7.68149 14.8262 8.07201 14.4366C8.46254 14.0469 8.46254 13.4137 8.07201 13.0224L2.41517 7.35328L8.07201 1.70864C8.46254 1.31896 8.46254 0.685798 8.07201 0.29443C7.68149 -0.096938 7.04833 -0.098306 6.6578 0.291375L0.293856 6.64159ZM18.6992 7.38846L18.6992 6.38846L1.00096 6.35022L1.00096 7.35022L1.00096 8.35022L18.6992 8.38846L18.6992 7.38846Z" />
     </svg>
   );
 };
