@@ -60,7 +60,7 @@ export default function Header() {
             />
 
             <header
-                className={`w-full h-20 md:h-24 px-4 md:px-8 backdrop-blur-xs flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
+                className={`w-full h-20 md:h-24 px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isWorksPage ? "backdrop-blur-xs" : ""}`}
             >
                 {/* 左: ロゴ（FV→Concept スクロールでフェードイン） */}
                 <motion.a
