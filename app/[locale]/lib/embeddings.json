@@ -4,13 +4,9 @@
     "name": "佐藤 水梨亜",
     "grade": "M2",
     "title": {
-      "ja": "A Proposal for Architecture in a Flood Zone",
       "en": "A Proposal for Architecture in a Flood Zone"
     },
-    "lab": {
-      "ja": "ソシオリビングデザインスタジオ",
-      "en": "Socio Living Design Studio"
-    },
+    "lab": "ソシオリビングデザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -28,16 +24,16 @@
     },
     "embedding_text": "A Proposal for Architecture in a Flood Zone Spatial Design Urban Design Community Design",
     "embedding": [
-      -0.2456454787432325,
-      -0.1475796403983088,
-      0.14916712241956193,
-      -0.27798435030775265,
-      0.004422742388850046,
-      -0.11330028209389655,
-      -0.1391917821577728,
-      0.005181960467962545,
-      -0.040241920311491,
-      -0.05283933698772958
+      -0.22750817434282203,
+      0.10991441822427393,
+      0.21625659195194963,
+      -0.28194038696537993,
+      -0.06908602581191221,
+      0.13832160424031273,
+      0.05589801415886275,
+      0.0488652224577577,
+      0.014108270515276822,
+      -0.03826978933231002
     ],
     "embedding_dim": 10
   },
@@ -46,13 +42,9 @@
     "name": "柳原 萌生",
     "grade": "M2",
     "title": {
-      "ja": "A Proposal for a Cafe Offering Coffee Alternatives",
       "en": "A Proposal for a Cafe Offering Coffee Alternatives"
     },
-    "lab": {
-      "ja": "ソシオリビングデザインスタジオ",
-      "en": "Socio Living Design Studio"
-    },
+    "lab": "ソシオリビングデザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -70,16 +62,16 @@
     },
     "embedding_text": "A Proposal for a Cafe Offering Coffee Alternatives Spatial Design Community Design Sustainable Design",
     "embedding": [
-      -0.2581192097016537,
-      -0.12358096244229484,
-      0.0864562258127497,
-      -0.04926958793033056,
-      0.03859228044476039,
-      0.061996694632196356,
-      -0.05212317550329863,
-      0.06483382228709965,
-      -0.0018673935128930696,
-      0.17549231978118165
+      -0.25353550328628993,
+      0.08863662145710201,
+      0.1198369576609878,
+      -0.049079813067506,
+      0.04597196145790723,
+      0.05469589612074017,
+      -0.12634339485295687,
+      -0.08846384649181874,
+      -0.03238210044592013,
+      -0.024184674652321235
     ],
     "embedding_dim": 10
   },
@@ -91,10 +83,7 @@
       "ja": "水と共に生きる家",
       "en": "Living with Water"
     },
-    "lab": {
-      "ja": "ソシオリビングデザインスタジオ",
-      "en": "Socio Living Design Studio"
-    },
+    "lab": "ソシオリビングデザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -112,16 +101,16 @@
     },
     "embedding_text": "Living with Water Spatial Design Interior Design Landscape Design",
     "embedding": [
-      -0.1968542763319338,
-      -0.25606823157390124,
-      0.10375138138993659,
-      -0.24550702837345356,
-      0.008940372041250868,
-      0.031154842041202568,
-      -0.049300381136375346,
-      -0.01255368014021898,
-      0.005872420121679351,
-      -0.06569180574830014
+      -0.1905112887927393,
+      0.2369536098085818,
+      0.16775338507692397,
+      -0.23290293274680365,
+      0.002860920418168572,
+      0.044588128119554656,
+      -0.0495042102125554,
+      0.028061218352575603,
+      0.012250515321492073,
+      0.19214806948597232
     ],
     "embedding_dim": 10
   },
@@ -130,13 +119,9 @@
     "name": "兼村 小晴",
     "grade": "M2",
     "title": {
-      "ja": "A Proposal of a Next-Generation Capsule Hotel",
       "en": "A Proposal of a Next-Generation Capsule Hotel"
     },
-    "lab": {
-      "ja": "ソシオリビングデザインスタジオ",
-      "en": "Socio Living Design Studio"
-    },
+    "lab": "ソシオリビングデザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -154,16 +139,16 @@
     },
     "embedding_text": "A Proposal of a Next-Generation Capsule Hotel Spatial Design Interior Design Furniture Design",
     "embedding": [
-      -0.14298294472752066,
-      -0.21866901334381653,
-      0.048552498037448856,
-      -0.032575862230953184,
-      -0.05368852770809332,
-      0.061575311307932104,
-      -0.05372218164805755,
-      0.002849919314747711,
-      -0.03308175743711174,
-      0.06324031071150225
+      -0.14202299910190413,
+      0.1982385560133663,
+      0.09284184078017381,
+      -0.017965333422571568,
+      -0.04118626339832901,
+      0.04037535153083064,
+      -0.08653742289803193,
+      0.004520406180862598,
+      -0.05027449574498713,
+      0.03503807198543643
     ],
     "embedding_dim": 10
   },
@@ -175,10 +160,7 @@
       "ja": "交通集中地帯における新たな移動手段としての水上モビリティの提案",
       "en": "Proposal of Water Mobility as a New Mode of Transportation in Congested Urban Areas"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -191,16 +173,16 @@
     },
     "embedding_text": "Proposal of Water Mobility as a New Mode of Transportation in Congested Urban Areas Product Design Mobility Design",
     "embedding": [
-      -0.2519818897465139,
-      -0.10655117211750251,
-      0.03601253517678544,
-      0.07070885350184034,
-      -0.059793001326056715,
-      -0.2956289347052856,
-      0.005378035268792351,
-      0.06797580674725255,
-      -0.14091598957231344,
-      -0.18703475442303763
+      -0.24740233211082277,
+      0.0397090988381296,
+      0.08315261176047954,
+      0.004551783886750778,
+      -0.21933762259590733,
+      0.07249249703592382,
+      0.31733027263964825,
+      0.01720705943561902,
+      -0.011130136685031997,
+      0.0629945491232151
     ],
     "embedding_dim": 10
   },
@@ -209,13 +191,9 @@
     "name": "K.T.",
     "grade": "M2",
     "title": {
-      "ja": "Multisensory Synesthesic Architecture",
       "en": "Multisensory Synesthesic Architecture"
     },
-    "lab": {
-      "ja": "空間デザインスタジオ",
-      "en": "Spatial Design Studio"
-    },
+    "lab": "空間デザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -223,16 +201,16 @@
     },
     "embedding_text": "Multisensory Synesthesic Architecture Spatial Design",
     "embedding": [
-      0.009140395136899241,
-      -0.09744167457902332,
-      0.17933298130389333,
-      -0.13586417712612595,
-      0.16930078144654,
-      0.16739711797516146,
-      0.004142044568701914,
-      0.012224406601191586,
-      -0.021571568544553294,
-      -0.054671740377837535
+      0.010313259268628456,
+      0.07258137695607905,
+      0.18620162484266442,
+      -0.10662464393805628,
+      0.23964568568697947,
+      0.04175337497196631,
+      -0.07347617385107665,
+      0.01231390080446492,
+      -0.019332415432769236,
+      0.029441949996501918
     ],
     "embedding_dim": 10
   },
@@ -241,13 +219,9 @@
     "name": "髙橋 蘭",
     "grade": "B4",
     "title": {
-      "ja": "Experiencing Fermentation",
       "en": "Experiencing Fermentation"
     },
-    "lab": {
-      "ja": "空間デザインスタジオ",
-      "en": "Spatial Design Studio"
-    },
+    "lab": "空間デザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -265,16 +239,16 @@
     },
     "embedding_text": "Experiencing Fermentation Spatial Design Urban Design Landscape Design",
     "embedding": [
-      -0.15371105506703245,
-      -0.13501914720243105,
-      0.13805861822610538,
-      -0.1183449064528635,
-      0.08615731355658171,
-      0.05404659451741832,
-      -0.042945759792639926,
-      0.058319371189721934,
-      -0.017331027883817268,
-      -0.025141677034439612
+      -0.14161740137451603,
+      0.11152552245937568,
+      0.1809019543326956,
+      -0.1101131225148679,
+      0.0754684383730014,
+      0.07417133644628066,
+      -0.0013967972042538703,
+      -0.02331595007017029,
+      -0.013701921522357295,
+      -0.07958343815754326
     ],
     "embedding_dim": 10
   },
@@ -283,13 +257,9 @@
     "name": "García Rea Flor Arminda",
     "grade": "M2",
     "title": {
-      "ja": "Space and Emotions: Material Manifestations of Rituality",
       "en": "Space and Emotions: Material Manifestations of Rituality"
     },
-    "lab": {
-      "ja": "空間デザインスタジオ",
-      "en": "Spatial Design Studio"
-    },
+    "lab": "空間デザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -307,16 +277,16 @@
     },
     "embedding_text": "Space and Emotions: Material Manifestations of Rituality Spatial Design Interactive Architecture Speculative Design",
     "embedding": [
-      -0.056244593051814944,
-      -0.0713735897809076,
-      0.2577259103677687,
-      -0.059308693383350576,
-      0.19635595040475176,
-      0.06708189780943047,
-      -0.07696732967535568,
-      -0.018659043600592232,
-      0.05713524030106532,
-      -0.052623751754327056
+      -0.04019921279825971,
+      0.018268192486182944,
+      0.283780904800132,
+      -0.03528463203838965,
+      0.20174793869355195,
+      0.07658593638658576,
+      -0.012590434568161352,
+      0.009369115842507655,
+      0.05090335392303382,
+      -0.010556448543724279
     ],
     "embedding_dim": 10
   },
@@ -328,10 +298,7 @@
       "ja": "季節ごとの室内環境を最適化する可変空間のデザイン",
       "en": "Variable Space Design That Optimizes the Indoor Environment for Each Season"
     },
-    "lab": {
-      "ja": "ソシオリビングデザインスタジオ",
-      "en": "Socio Living Design Studio"
-    },
+    "lab": "ソシオリビングデザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -344,16 +311,16 @@
     },
     "embedding_text": "Variable Space Design That Optimizes the Indoor Environment for Each Season Spatial Design Interactive Architecture",
     "embedding": [
-      -0.0513417598251487,
-      -0.1478800894779149,
-      0.291115314006332,
-      -0.11957104798617954,
-      0.06626686650898361,
-      0.06291702330148044,
-      -0.02958880169693379,
-      -0.06462970633033761,
-      0.037071069655292756,
-      -0.016434299075410018
+      -0.04076984004373315,
+      0.08354807675800528,
+      0.31838778624881,
+      -0.1054258362818393,
+      0.09518324131271255,
+      -0.01625846704227754,
+      -0.07041097406159491,
+      0.07651530088690493,
+      0.02804032788460427,
+      0.04047796012901856
     ],
     "embedding_dim": 10
   },
@@ -365,10 +332,7 @@
       "ja": "坂道の文化的コンテクストを活かしたスローモビリティ提案",
       "en": "A Slow Mobility Proposal for Fostering Regional Affection by Leveraging the Cultural Context of Slopes"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "モビリティデザイン",
       "en": "Mobility Design",
@@ -381,16 +345,16 @@
     },
     "embedding_text": "A Slow Mobility Proposal for Fostering Regional Affection by Leveraging the Cultural Context of Slopes Mobility Design Product Design",
     "embedding": [
-      -0.2283085856998712,
-      0.022838383381687942,
-      0.08817531613446725,
-      0.09064940151386769,
-      -0.03644814944018493,
-      -0.2376004727254459,
-      0.0006026347269949753,
-      0.006276956264258362,
-      -0.05478348581734454,
-      -0.07927600425543184
+      -0.22501186631723735,
+      -0.10072928832236396,
+      0.10902277112637607,
+      0.029758997820332533,
+      -0.1356210514032168,
+      0.02305980383652427,
+      0.22174684614986484,
+      0.04653044493348871,
+      0.030928754890908308,
+      -0.13808404689318196
     ],
     "embedding_dim": 10
   },
@@ -402,10 +366,7 @@
       "ja": "デジタルノマドの増加が拡げる新たなモビリティーの可能性に関する研究",
       "en": "Research on the New Mobility Possibilities Expanded by the Rise of Digital Nomads"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -418,16 +379,16 @@
     },
     "embedding_text": "Research on the New Mobility Possibilities Expanded by the Rise of Digital Nomads Product Design Mobility Design",
     "embedding": [
-      -0.2542881023266598,
-      -0.0057175306334913915,
-      -0.029208574478936707,
-      0.11332326997408607,
-      -0.11688784040089023,
-      -0.23630928096033696,
-      -0.008421256275776098,
-      0.14706980901151376,
-      -0.08825932847529258,
-      -0.039077395894463435
+      -0.25347693889969053,
+      -0.043358723659223095,
+      -0.013583028968085107,
+      0.04611910454713234,
+      -0.24093914020738025,
+      0.08134083024315654,
+      0.18307848603661125,
+      -0.08898173120762397,
+      -0.024154058157972697,
+      0.04565344428880645
     ],
     "embedding_dim": 10
   },
@@ -439,10 +400,7 @@
       "ja": "創造意欲に火をつけるプロダクトデザインの探究",
       "en": "Product Design to Ignite Motivation for Creativity"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -455,16 +413,16 @@
     },
     "embedding_text": "Product Design to Ignite Motivation for Creativity Product Design Design Prototyping",
     "embedding": [
-      -0.11276478682423176,
-      0.037046173693340935,
-      -0.09441742689649167,
-      0.22143157163175772,
-      0.025599332991264358,
-      -0.017978377008939405,
-      -0.07975490542785268,
-      0.07639705238326777,
-      0.05253486824421501,
-      0.06198347156630478
+      -0.12489118579366514,
+      -0.06792139023560616,
+      -0.11403806028310552,
+      0.19842351145190792,
+      -0.023128565212914776,
+      0.08776756672628779,
+      -0.0649838030108157,
+      -0.10321030963698492,
+      0.0436817783066426,
+      0.16815857297841694
     ],
     "embedding_dim": 10
   },
@@ -473,13 +431,9 @@
     "name": "石神 翠香",
     "grade": "B4",
     "title": {
-      "ja": "Soft Architecture",
       "en": "Soft Architecture"
     },
-    "lab": {
-      "ja": "空間デザインスタジオ",
-      "en": "Spatial Design Studio"
-    },
+    "lab": "空間デザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -492,16 +446,16 @@
     },
     "embedding_text": "Soft Architecture Spatial Design Conceptual Design",
     "embedding": [
-      -0.20012705595356947,
-      -0.20988003903053845,
-      0.09860089666076605,
-      -0.22811185684368207,
-      0.09493459282247063,
-      0.05570736005285914,
-      -0.13999836326001988,
-      -0.030599576571572498,
-      0.021167095285742413,
-      -0.02508191411931354
+      -0.19191611839169043,
+      0.1950747709915101,
+      0.15906568687681422,
+      -0.19864927614407846,
+      0.09786533614545948,
+      0.1376081170604313,
+      -0.06872846388135821,
+      0.025001922409459927,
+      0.03863393265368035,
+      0.06674611985372228
     ],
     "embedding_dim": 10
   },
@@ -513,10 +467,7 @@
       "ja": "「SpeedTree」を用いたアマゾン熱帯雨林の樹種のデジタルアーカイブ化",
       "en": "Digital Archiving of Endangered Tree Species in the Amazon Rainforest using SpeedTree"
     },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "Interface Design Studio"
-    },
+    "lab": "インタフェースデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -534,16 +485,16 @@
     },
     "embedding_text": "Digital Archiving of Endangered Tree Species in the Amazon Rainforest using SpeedTree Graphic Design Web Design Digital Archive",
     "embedding": [
-      0.04801181375350432,
-      -0.05403048764369609,
-      -0.06994374882232691,
-      -0.23532643777191495,
-      -0.25615068871308344,
-      -0.06087350444929058,
-      0.016571746328792675,
-      0.10987256091683677,
-      -0.09678500202916628,
-      0.05882679607881246
+      0.042761944899285434,
+      0.06585130715507433,
+      -0.07056343866244504,
+      -0.22866027810719697,
+      -0.2406976234877408,
+      -0.004319419474518837,
+      -0.0664101372503847,
+      -0.06182893639911193,
+      -0.20642373260380317,
+      -0.016484818131443965
     ],
     "embedding_dim": 10
   },
@@ -552,13 +503,9 @@
     "name": "白石 快",
     "grade": "B4",
     "title": {
-      "ja": "遮蔽推定による夜景探索アプリの開発",
-      "en": "Development of a Night View Exploration Support Application using Occlusion Estimation"
+      "ja": "遮蔽推定による夜景探索アプリの開発"
     },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "Interface Design Studio"
-    },
+    "lab": "インタフェースデザインスタジオ",
     "keyword1": {
       "ja": "UIデザイン",
       "en": "UI Design",
@@ -574,18 +521,18 @@
       "en": "Digital Archive",
       "key": "digital_archive"
     },
-    "embedding_text": "Development of a Night View Exploration Support Application using Occlusion Estimation UI Design UX Design Digital Archive",
+    "embedding_text": "遮蔽推定による夜景探索アプリの開発 UI Design UX Design Digital Archive",
     "embedding": [
-      0.061529868410054825,
-      0.1020460565529038,
-      0.08558551004057498,
-      -0.17664335046300364,
-      -0.234761856654162,
-      -0.12672370243757694,
-      0.12193731311024927,
-      -0.1355353888615098,
-      -0.07269858494854953,
-      0.09341351459812615
+      -0.06622214531388414,
+      -0.12393515468723847,
+      -0.057265896771333,
+      -0.22489382267327757,
+      -0.15575157158236452,
+      -0.21218078859579895,
+      -0.028211185376348296,
+      -0.04815850869563852,
+      -0.2198738712112495,
+      0.03525954411919295
     ],
     "embedding_dim": 10
   },
@@ -597,10 +544,7 @@
       "ja": "スキャット歌唱の音色多様性に着目したピアノ音色の動的エフェクト制御",
       "en": "Dynamic Control of Piano Effects Inspired by Scat Singing"
     },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "Interface Design Studio"
-    },
+    "lab": "インタフェースデザインスタジオ",
     "keyword1": {
       "ja": "インタラクティブアート",
       "en": "Interactive Art",
@@ -618,16 +562,16 @@
     },
     "embedding_text": "Dynamic Control of Piano Effects Inspired by Scat Singing Interactive Art Performance Sound Design",
     "embedding": [
-      0.31471444908477875,
-      0.023593587792555527,
-      0.09126521673207977,
-      0.07137367710185487,
-      0.010820099889783658,
-      0.01139329589182089,
-      -0.04620107622113902,
-      0.021454022180669906,
-      -0.1717267619651612,
-      0.005804661303827793
+      0.3147021476681532,
+      -0.06778771933326197,
+      0.06659777326051272,
+      0.05297994000714655,
+      0.00291321062409533,
+      0.049274453276462675,
+      -0.006121718645640824,
+      0.1226717329578876,
+      -0.07604474927999935,
+      -0.040356616296579106
     ],
     "embedding_dim": 10
   },
@@ -639,10 +583,7 @@
       "ja": "マクラメ編みの体系化と立体編み図のシステム考案",
       "en": "Systematization of Macrame and Devising a System for 3D Macrame Patterns"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "インテリアデザイン",
       "en": "Interior Design",
@@ -660,16 +601,16 @@
     },
     "embedding_text": "Systematization of Macrame and Devising a System for 3D Macrame Patterns Interior Design Pattern Design Craft Design",
     "embedding": [
-      0.07796166018763669,
-      -0.20347502074195972,
-      -0.10908389262845905,
-      0.029976896009892524,
-      -0.0788125415527742,
-      0.17705460282170152,
-      -0.04254836741769743,
-      -0.047877169285639176,
-      -0.05929051797726577,
-      0.05845357878060319
+      0.08105298421331704,
+      0.2392860573883639,
+      -0.06355226192529916,
+      0.08588280100804105,
+      -0.023742406682189014,
+      0.022956098300341277,
+      -0.14716096925131628,
+      0.08282105619834765,
+      -0.08459753076514262,
+      -0.0314291446250678
     ],
     "embedding_dim": 10
   },
@@ -681,10 +622,7 @@
       "ja": "イラストからの3Dエフェクト生成",
       "en": "Generating 3D Effects from Illustrations"
     },
-    "lab": {
-      "ja": "ソフトウェアデザインスタジオ",
-      "en": "Software Design Studio"
-    },
+    "lab": "ソフトウェアデザインスタジオ",
     "keyword1": {
       "ja": "メディアアート",
       "en": "Media Art",
@@ -702,16 +640,16 @@
     },
     "embedding_text": "Generating 3D Effects from Illustrations Media Art AI Design Prototyping",
     "embedding": [
-      0.2640089095726381,
-      -0.1419622023507325,
-      -0.13337493614141716,
-      -0.03174606979973073,
-      -0.07013468617618437,
-      -0.014305797519480154,
-      -0.015355717613018401,
-      -0.019924159582437744,
-      -0.10981033266409515,
-      0.023855987094179798
+      0.25175273158957384,
+      0.15092596200543934,
+      -0.13910456875507413,
+      -0.006688447436505506,
+      -0.07970752247559595,
+      0.05415756155564468,
+      -0.045701499058768934,
+      0.02103865955580629,
+      -0.10861292968573262,
+      0.22687030044003553
     ],
     "embedding_dim": 10
   },
@@ -723,10 +661,7 @@
       "ja": "認知症の症状と行動の理解を促す子ども向けゲームの制作",
       "en": "A Children’s Game to Promote Understanding of Dementia Symptoms and Behaviors"
     },
-    "lab": {
-      "ja": "ソフトウェアデザインスタジオ",
-      "en": "Software Design Studio"
-    },
+    "lab": "ソフトウェアデザインスタジオ",
     "keyword1": {
       "ja": "ゲームデザイン",
       "en": "Game Design",
@@ -744,16 +679,16 @@
     },
     "embedding_text": "A Children’s Game to Promote Understanding of Dementia Symptoms and Behaviors Game Design Human-Centered Design UX Design",
     "embedding": [
-      -0.0647593938046931,
-      0.3203546096444949,
-      -0.0317433696965259,
-      0.054181490982729334,
-      -0.12971115786618947,
-      0.09028915635355383,
-      -0.21628622320405555,
-      -0.064179410904866,
-      0.1350514060095382,
-      -0.0900487463365203
+      -0.062459023449941344,
+      -0.32033890012862837,
+      -0.0826773535700529,
+      0.00416422158663751,
+      -0.06818444410691028,
+      0.03413957291526803,
+      -0.21852564364994154,
+      0.09983291457914611,
+      0.1780848380834701,
+      -0.06175219190022498
     ],
     "embedding_dim": 10
   },
@@ -765,10 +700,7 @@
       "ja": "バスケットボール選手の特徴分類とシュート傾向の可視化",
       "en": "Classification and Visualization of Basketball Player Characteristics and Shooting Tendencies"
     },
-    "lab": {
-      "ja": "ソフトウェアデザインスタジオ",
-      "en": "Software Design Studio"
-    },
+    "lab": "ソフトウェアデザインスタジオ",
     "keyword1": {
       "ja": "UXデザイン",
       "en": "UX Design",
@@ -786,16 +718,16 @@
     },
     "embedding_text": "Classification and Visualization of Basketball Player Characteristics and Shooting Tendencies UX Design Information Design Interaction Design",
     "embedding": [
-      0.00047728811031267303,
-      0.230650483432527,
-      -0.061734295694926646,
-      -0.1242200634123821,
-      -0.11082570743702769,
-      -0.07839746931645424,
-      -0.034922865344329874,
-      -0.20732503097721433,
-      -0.0028276939144078143,
-      0.0510213310363245
+      -0.005206382036789707,
+      -0.2330219209894199,
+      -0.0996646298685649,
+      -0.17477172291252674,
+      -0.07606990416453224,
+      -0.10349935584131582,
+      -0.10134389952588217,
+      0.1926646035745183,
+      0.02761070606378015,
+      0.04686752683967554
     ],
     "embedding_dim": 10
   },
@@ -807,10 +739,7 @@
       "ja": "キャラクターイラストのデフォルメ表現を考慮した立体化",
       "en": "3D Modeling of Character Illustrations, Considering their Deformed Expressions"
     },
-    "lab": {
-      "ja": "ソフトウェアデザインスタジオ",
-      "en": "Software Design Studio"
-    },
+    "lab": "ソフトウェアデザインスタジオ",
     "keyword1": {
       "ja": "インターフェースデザイン",
       "en": "Interface Design",
@@ -828,16 +757,16 @@
     },
     "embedding_text": "3D Modeling of Character Illustrations, Considering their Deformed Expressions Interface Design Human Computer Interaction Research Through Design",
     "embedding": [
-      0.16499694858341124,
-      0.1544763880456211,
-      -0.07233883803018647,
-      -0.005054748337157574,
-      0.06483087252624055,
-      -0.005728803059071935,
-      -0.07362243654280329,
-      -0.13086382664601479,
-      -0.16656507411106294,
-      -0.016673632554443787
+      0.17573321512651133,
+      -0.13557872108749275,
+      -0.096468115731283,
+      -0.0029944203771143435,
+      0.04265865164009844,
+      0.13421482179392372,
+      0.02470155750518263,
+      0.20526744909085773,
+      -0.034600929889080624,
+      0.10083996788611306
     ],
     "embedding_dim": 10
   },
@@ -849,10 +778,7 @@
       "ja": "利他的なマインドセットを用いたコミュニケーションデザインの研究と実践",
       "en": "Research and Practice of Communication Design using an Altruistic Mindset"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "コミュニティデザイン",
       "en": "Community Design",
@@ -870,16 +796,16 @@
     },
     "embedding_text": "Research and Practice of Communication Design using an Altruistic Mindset Community Design Co-design Book Design",
     "embedding": [
-      -0.13494977893924007,
-      0.13912458930823351,
-      -0.12812280437261234,
-      -0.05470482373107178,
-      0.1559545161221463,
-      -0.024621137065231558,
-      -0.019783169458567066,
-      0.1690131739568224,
-      0.15414339592801599,
-      0.1151032322018158
+      -0.1344221036812153,
+      -0.13696294199675124,
+      -0.1299832883006095,
+      -0.08346522501944612,
+      0.12948778930124824,
+      0.07896027592153457,
+      0.002778226665214653,
+      -0.20257530284887879,
+      0.12244801233327304,
+      -0.11194514435493476
     ],
     "embedding_dim": 10
   },
@@ -888,13 +814,9 @@
     "name": "佐藤 友",
     "grade": "B4",
     "title": {
-      "ja": "A Personal Space for Solitude",
       "en": "A Personal Space for Solitude"
     },
-    "lab": {
-      "ja": "空間デザインスタジオ",
-      "en": "Spatial Design Studio"
-    },
+    "lab": "空間デザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -912,16 +834,16 @@
     },
     "embedding_text": "A Personal Space for Solitude Spatial Design Conceptual Design Optical Art",
     "embedding": [
-      0.022921827836442164,
-      -0.22929836211924304,
-      0.12771723466951382,
-      -0.04262818136510214,
-      0.13917923790305503,
-      0.025184685477188808,
-      0.03762291556485103,
-      -0.08624387073844039,
-      0.1359898107567584,
-      -0.02271896634393743
+      0.0233541596366247,
+      0.19604469733358526,
+      0.18225790750259208,
+      -0.03201950014527711,
+      0.1486369447467774,
+      -0.07806197139662663,
+      0.015017942910497394,
+      -0.039260833309625306,
+      0.0845262720932395,
+      0.03639375565364824
     ],
     "embedding_dim": 10
   },
@@ -933,10 +855,7 @@
       "ja": "パンデミックに向き合う空間と造形の考案",
       "en": "Design Proposal for Spaces and Forms Engaging with Pandemics"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "空間デザイン",
       "en": "Spatial Design",
@@ -949,16 +868,16 @@
     },
     "embedding_text": "Design Proposal for Spaces and Forms Engaging with Pandemics Spatial Design Conceptual Design",
     "embedding": [
-      -0.19275523143120205,
-      -0.07158944145111244,
-      0.13087194011324232,
-      -0.1833853996844034,
-      0.09306733911816638,
-      -0.03743083169395516,
-      -0.10746067937883036,
-      0.01715929572634484,
-      0.04293488972911206,
-      0.040876543487884165
+      -0.17523865609046888,
+      0.04287654217594414,
+      0.17547110434324922,
+      -0.17281557792995225,
+      0.05798739910358282,
+      0.11297445206067214,
+      -0.018611705655251068,
+      -0.017285999893523092,
+      0.0361199535278697,
+      -0.08383055052099209
     ],
     "embedding_dim": 10
   },
@@ -970,10 +889,7 @@
       "ja": "近視者の視認性向上を目的とした特殊印刷表現の評価と設計",
       "en": "Evaluation and Design of Special Printing for Improving Visual Perceptibility for People with Myopia"
     },
-    "lab": {
-      "ja": "エルゴノミックデザインスタジオ",
-      "en": "Ergonomic Design Studio"
-    },
+    "lab": "エルゴノミックデザインスタジオ",
     "keyword1": {
       "ja": "UXデザイン",
       "en": "UX Design",
@@ -991,16 +907,55 @@
     },
     "embedding_text": "Evaluation and Design of Special Printing for Improving Visual Perceptibility for People with Myopia UX Design Human-Centered Design Universal Design",
     "embedding": [
-      -0.04433577895260206,
-      0.20409451279541055,
-      -0.14282104957836586,
-      0.00016182750142821673,
-      0.053797566696121984,
-      -0.03846462440108927,
-      0.20951708250614648,
-      -0.2065081630718476,
-      0.002585431404023767,
-      0.07976261379973619
+      -0.05971863201296258,
+      -0.1972515811707056,
+      -0.17199150393698903,
+      -0.014741033249825322,
+      0.09000810018741964,
+      -0.214119397688681,
+      0.061260139413995995,
+      0.09731681969505539,
+      -0.15304457964445756,
+      -0.08703985938030781
+    ],
+    "embedding_dim": 10
+  },
+  {
+    "id": "A26",
+    "name": "竹内 悠夏",
+    "grade": "B4",
+    "title": {
+      "ja": "義肢の使用経験に基づくエンパワメントエコシステムデザインの構築",
+      "en": "Study on Empowerment Ecosystem Design based on Prosthetic Usage Experience"
+    },
+    "lab": "エルゴノミックデザインスタジオ",
+    "keyword1": {
+      "ja": "福祉デザイン",
+      "en": "Welfare Design",
+      "key": "welfare_design"
+    },
+    "keyword2": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    },
+    "keyword3": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "embedding_text": "Study on Empowerment Ecosystem Design based on Prosthetic Usage Experience Welfare Design Human-Centered Design UX Design",
+    "embedding": [
+      -0.18498043924379437,
+      -0.2659955570054957,
+      0.0035144188724064154,
+      0.14420728041470715,
+      -0.03734071067320052,
+      -0.014997161014216073,
+      0.020669476835768773,
+      0.040988133866682826,
+      -0.07012730809759811,
+      -0.05559079319505228
     ],
     "embedding_dim": 10
   },
@@ -1012,10 +967,7 @@
       "ja": "香りのリラックス・集中の効果を活かしたデザイン提案",
       "en": "A Design Proposal Utilizing the Relaxation and Concentration Effects of Scent"
     },
-    "lab": {
-      "ja": "エルゴノミックデザインスタジオ",
-      "en": "Ergonomic Design Studio"
-    },
+    "lab": "エルゴノミックデザインスタジオ",
     "keyword1": {
       "ja": "UXデザイン",
       "en": "UX Design",
@@ -1033,16 +985,16 @@
     },
     "embedding_text": "A Design Proposal Utilizing the Relaxation and Concentration Effects of Scent UX Design Product Design Human-Centered Design",
     "embedding": [
-      -0.16271717646581688,
-      0.20629530991798728,
-      0.10241342038032711,
-      0.11436786204418367,
-      0.08434579387137935,
-      0.23830121298462972,
-      0.15718289735713875,
-      0.052899566700728116,
-      -0.12857811715568376,
-      -0.0017275238006148816
+      -0.16840964283183124,
+      -0.20349131441779048,
+      0.04214663999176089,
+      0.15371979600161523,
+      0.21172292152966943,
+      -0.03649087435589004,
+      -0.12145245714083647,
+      -0.029242983903715793,
+      -0.20245539954265604,
+      0.04075011774710914
     ],
     "embedding_dim": 10
   },
@@ -1054,10 +1006,7 @@
       "ja": "そわそわ行動をエンパワメントとして捉える──心理・生理指標に基づく評価",
       "en": "Reframing Fidgeting as Empowerment — A Psychophysiological Evaluation"
     },
-    "lab": {
-      "ja": "エルゴノミックデザインスタジオ",
-      "en": "Ergonomic Design Studio"
-    },
+    "lab": "エルゴノミックデザインスタジオ",
     "keyword1": {
       "ja": "UXデザイン",
       "en": "UX Design",
@@ -1075,16 +1024,16 @@
     },
     "embedding_text": "Reframing Fidgeting as Empowerment — A Psychophysiological Evaluation UX Design Human-Centered Design Human Computer Interaction",
     "embedding": [
-      -0.06235813887225282,
-      0.2933541998153657,
-      0.0367632854881731,
-      0.15866333281280326,
-      0.1468914487281157,
-      -0.05456956730618601,
-      -0.04677119273533513,
-      -0.20282425389994035,
-      -0.036944492262104875,
-      0.043075905051233904
+      -0.05904687230575261,
+      -0.33228148051660045,
+      0.005027049112338682,
+      0.11787715604820082,
+      0.10942523051528306,
+      0.004792500374017355,
+      0.041258190119290175,
+      0.1978372890789616,
+      0.05574755434402695,
+      0.0031684589376793854
     ],
     "embedding_dim": 10
   },
@@ -1096,10 +1045,7 @@
       "ja": "波型組み構造によるスツールの制作",
       "en": "A Stool using a Wave-Patterned Assembly Structure"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1117,16 +1063,16 @@
     },
     "embedding_text": "A Stool using a Wave-Patterned Assembly Structure Product Design Furniture Design Design Prototyping",
     "embedding": [
-      -0.10477004641272361,
-      -0.2626492992313113,
-      -0.11372794649177177,
-      0.24246536173291636,
-      -0.1267023397338099,
-      0.11581873805123703,
-      -0.04817613005318081,
-      -0.10961719344040828,
-      -0.12206770596569728,
-      0.07828892506655648
+      -0.11040964596591372,
+      0.2653221669359612,
+      -0.04646979552461254,
+      0.26280556061817917,
+      -0.10772793929304846,
+      0.012631292484228202,
+      -0.06606947550650395,
+      0.18571652019373194,
+      -0.01864776090405203,
+      -0.11079749860649085
     ],
     "embedding_dim": 10
   },
@@ -1138,10 +1084,7 @@
       "ja": "実体のないものへの理解を深めるための体感的なキャラクタライズ手法の提案",
       "en": "Proposal for Experiential Characterization Methods to Deepen Understanding of Intangible Entities"
     },
-    "lab": {
-      "ja": "エディティングスタジオ",
-      "en": "Editorial Design Studio"
-    },
+    "lab": "エディティングスタジオ",
     "keyword1": {
       "ja": "メディアアート",
       "en": "Media Art",
@@ -1159,16 +1102,16 @@
     },
     "embedding_text": "Proposal for Experiential Characterization Methods to Deepen Understanding of Intangible Entities Media Art Generative Art Conceptual Design",
     "embedding": [
-      0.26476384206933284,
-      -0.028399207803358455,
-      0.10462996733129513,
-      0.0273427072505394,
-      0.019453407644577054,
-      -0.06700761751306891,
-      -0.023438508785902503,
-      0.1957714817543926,
-      0.09062186587304422,
-      -0.006056902380937618
+      0.27574825984268847,
+      -0.009201114806325628,
+      0.09730229148785376,
+      0.020709850779232368,
+      -0.03712321581173365,
+      0.04900841878915977,
+      0.028088233831099024,
+      -0.22336175682543183,
+      0.0245651397744794,
+      0.0002529127674623224
     ],
     "embedding_dim": 10
   },
@@ -1180,10 +1123,7 @@
       "ja": "寄り添うA&R──アーティストと共に歩む制作プロセスの考察",
       "en": "Supportive A&R — A Study of the Creative Production Process with Artists"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "コミュニティデザイン",
       "en": "Community Design",
@@ -1201,16 +1141,16 @@
     },
     "embedding_text": "Supportive A&R — A Study of the Creative Production Process with Artists Community Design Co-design Media Art",
     "embedding": [
-      0.18339934455731033,
-      0.1021280060514084,
-      0.09103812770845197,
-      0.06763299741958892,
-      0.04769588176623907,
-      -0.08370124996432995,
-      -0.12257118182915412,
-      0.2710644241317192,
-      0.05322489349470938,
-      0.17238982319319185
+      0.19761836195172583,
+      -0.1500031679660206,
+      0.07079264601305514,
+      0.03231237883134218,
+      -0.04032589427429003,
+      0.1516416420254025,
+      -0.018725324939834424,
+      -0.23604873529794618,
+      0.04181541924633576,
+      -0.1939240523673584
     ],
     "embedding_dim": 10
   },
@@ -1222,10 +1162,7 @@
       "ja": "素材及び形状を変化させる誇張表現を用いた手描きアニメーション制作",
       "en": "Hand-Drawn Animation Production using Exaggerated Expressions that Transform Original Materials and Forms"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -1243,16 +1180,16 @@
     },
     "embedding_text": "Hand-Drawn Animation Production using Exaggerated Expressions that Transform Original Materials and Forms Graphic Design Animation Media Art",
     "embedding": [
-      0.31284828790454283,
-      0.02954884743298079,
-      -0.23940429229671678,
-      -0.031128743015935927,
-      0.1498830371534482,
-      -0.07354160384197879,
-      -0.16968254087992635,
-      0.050394746665581004,
-      -0.16884049408267016,
-      -0.02069545651186869
+      0.30723561323636467,
+      -0.008971663348115212,
+      -0.2357414097094252,
+      -0.053798479099809934,
+      0.058636014067106605,
+      0.2637411089057538,
+      0.11179164606050539,
+      0.06014587680993105,
+      -0.014803786961372736,
+      0.04689421304682129
     ],
     "embedding_dim": 10
   },
@@ -1264,10 +1201,7 @@
       "ja": "多様な学問分野への関心形成を目的としたインタラクティブ教育コンテンツの制作",
       "en": "Interactive Educational Content for Inspiring Interest in Diverse Fields of Study"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "UXデザイン",
       "en": "UX Design",
@@ -1285,16 +1219,16 @@
     },
     "embedding_text": "Interactive Educational Content for Inspiring Interest in Diverse Fields of Study UX Design Interaction Design Web Design",
     "embedding": [
-      -0.060371515134686395,
-      0.19487968581024454,
-      -0.042662685349316845,
-      0.005383655371401538,
-      0.013691373894125761,
-      0.01700865715339112,
-      -0.015152132440343307,
-      0.04485459554350358,
-      0.15783422095011265,
-      0.11745507836587445
+      -0.058782203831037196,
+      -0.18597344914119054,
+      -0.07299406931789237,
+      -0.04721304495500042,
+      0.014338801043373397,
+      -0.0149685182560812,
+      -0.11236113441150958,
+      -0.12570814978609854,
+      0.061535672006771444,
+      0.18489020399706801
     ],
     "embedding_dim": 10
   },
@@ -1306,10 +1240,7 @@
       "ja": "楽曲構造を基盤とした3DCGアニメーション制作に関する研究",
       "en": "A Study on 3DCG Animation Production based on Musical Structure"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "メディアアート",
       "en": "Media Art",
@@ -1322,16 +1253,16 @@
     },
     "embedding_text": "A Study on 3DCG Animation Production based on Musical Structure Media Art Animation",
     "embedding": [
-      0.3799587535901084,
-      -0.06450112189389243,
-      -0.028138822719056766,
-      0.031475519944139156,
-      0.013877040933611593,
-      0.06497482395815896,
-      -0.268550287967359,
-      0.12804512731636813,
-      -0.2547937034819441,
-      0.09147747057758125
+      0.39265838592379715,
+      0.06460666893396104,
+      -0.017354088920908166,
+      0.03849224672745927,
+      -0.04489553571711275,
+      0.3147532296097082,
+      -0.05838254488983616,
+      0.06092126469116293,
+      -0.12482563520254593,
+      -0.13477763082972588
     ],
     "embedding_dim": 10
   },
@@ -1343,10 +1274,7 @@
       "ja": "河川敷の傾斜空間を活用するどてファニチャーの有用性の検証",
       "en": "Verification of the Usefulness of Slope Furniture Utilizing Sloped Spaces on Riverbanks"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "インテリアデザイン",
       "en": "Interior Design",
@@ -1364,16 +1292,16 @@
     },
     "embedding_text": "Verification of the Usefulness of Slope Furniture Utilizing Sloped Spaces on Riverbanks Interior Design Urban Design Furniture Design",
     "embedding": [
-      -0.19876533273054037,
-      -0.204445031784478,
-      0.057313860302454264,
-      0.0181366691377988,
-      -0.08454811649814813,
-      -0.006675100794070656,
-      -0.06815650131620504,
-      -0.13801107797982431,
-      -0.06873005646940931,
-      0.007611336020525047
+      -0.18958682298586457,
+      0.1700136639069718,
+      0.128350181403694,
+      0.01312869668198018,
+      -0.0951590781821923,
+      0.01611611726698517,
+      0.01068642276462742,
+      0.17885405993859296,
+      0.003974107421041887,
+      -0.10221375400784942
     ],
     "embedding_dim": 10
   },
@@ -1385,10 +1313,7 @@
       "ja": "山手線ウォークブック",
       "en": "Yamanote Line Walkbook"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -1406,16 +1331,16 @@
     },
     "embedding_text": "Yamanote Line Walkbook Graphic Design Book Design Information Design",
     "embedding": [
-      -0.09603251973976691,
-      -0.04194475008756959,
-      -0.36111700791121437,
-      -0.13933605715880126,
-      0.04791930934954655,
-      -0.037644764615874925,
-      0.14918327648123286,
-      0.06196699661093611,
-      0.14754127803655673,
-      -0.1746415487752804
+      -0.12320982984771446,
+      0.10453292478022955,
+      -0.3330289654854869,
+      -0.17474926040608463,
+      0.09012572138151563,
+      -0.1241129062913303,
+      0.154765877265419,
+      -0.09220172597871479,
+      0.13556636242078002,
+      -0.009878852084331978
     ],
     "embedding_dim": 10
   },
@@ -1427,10 +1352,7 @@
       "ja": "かたちがな: 外形の影響に基づくひらがなのタイプフェイスデザイン",
       "en": "KATACHIGANA: Hiragana Typeface Designs based on External Shape Influence"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -1448,16 +1370,16 @@
     },
     "embedding_text": "KATACHIGANA: Hiragana Typeface Designs based on External Shape Influence Graphic Design Typography Design Book Design",
     "embedding": [
-      0.004634594353130319,
-      -0.059532558310749446,
-      -0.35898526517438933,
-      -0.13654769415629672,
-      0.12276190981835122,
-      0.052973913729286955,
-      0.08397855856411528,
-      -0.04523733120907995,
-      0.02957983840900016,
-      -0.07241353057166011
+      -0.013748660192480496,
+      0.13051592952826838,
+      -0.3206556180279632,
+      -0.14408040624008195,
+      0.17226942504642645,
+      -0.04614554052213176,
+      0.09119933822623548,
+      0.0742328678190694,
+      0.054403875021446765,
+      -0.06272736675203577
     ],
     "embedding_dim": 10
   },
@@ -1469,10 +1391,7 @@
       "ja": "視点の移動によるモアレタイポグラフィの研究",
       "en": "Moiré Typography in Physical Space"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -1490,16 +1409,16 @@
     },
     "embedding_text": "Moiré Typography in Physical Space Graphic Design Typography Design Optical Art",
     "embedding": [
-      0.1508459663038701,
-      -0.2227625681697002,
-      -0.17730239479586268,
-      -0.04325133190492718,
-      0.07213120694186974,
-      0.004183088809147751,
-      0.18347274156261859,
-      -0.15161945973723967,
-      0.09454869263003957,
-      -0.03854232071394598
+      0.1306625737669933,
+      0.24941928346251319,
+      -0.128841685669177,
+      -0.047622261411815824,
+      0.11374887348660935,
+      -0.2198706853640864,
+      0.10968288897784174,
+      0.04539917833210592,
+      0.042410145735209175,
+      -0.009951228855315988
     ],
     "embedding_dim": 10
   },
@@ -1511,10 +1430,7 @@
       "ja": "鳥をモチーフにした新しい文様の制作",
       "en": "New Bird Motif Patterns"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -1532,16 +1448,16 @@
     },
     "embedding_text": "New Bird Motif Patterns Graphic Design Pattern Design Book Design",
     "embedding": [
-      0.038149459661865025,
-      -0.19829042360178348,
-      -0.37495847622734135,
-      -0.0971597378679492,
-      -0.07449450263232889,
-      0.09759039716559229,
-      0.04477318116423863,
-      -0.010897238023903908,
-      0.007369486320326228,
-      -0.03495980034717343
+      0.011465085298597539,
+      0.266968051315059,
+      -0.3405645931693003,
+      -0.08498800834681432,
+      -0.006526195030579222,
+      -0.0434376818345615,
+      -0.07909099124147073,
+      0.059535626095107465,
+      0.014832150130491578,
+      0.0946451609761374
     ],
     "embedding_dim": 10
   },
@@ -1553,10 +1469,7 @@
       "ja": "あんぽ柿のブランディングにおける持続可能な紙の制作と応用",
       "en": "Sustainable Paper Production for Packaging and Branding of Anpo-Gaki"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -1574,16 +1487,16 @@
     },
     "embedding_text": "Sustainable Paper Production for Packaging and Branding of Anpo-Gaki Graphic Design Branding Design Sustainable Design",
     "embedding": [
-      -0.03855800591519395,
-      -0.07969992507692075,
-      -0.3634972147818433,
-      -0.05395656399739689,
-      0.032602657235445094,
-      0.061471648723167724,
-      -0.025392177637344148,
-      0.14903886688821294,
-      -0.004512684949541879,
-      0.06301981744815993
+      -0.06402558875460612,
+      0.14555745910413967,
+      -0.3381552383420895,
+      -0.05265953296607568,
+      0.03429448969207679,
+      0.07961293851569368,
+      -0.015086227286233439,
+      -0.10545357413504071,
+      -0.025454447681409358,
+      -0.18166570005831542
     ],
     "embedding_dim": 10
   },
@@ -1595,10 +1508,7 @@
       "ja": "歩行者に訴求する路上インフォメーションの設計",
       "en": "Design of Street Information for Pedestrians"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1616,16 +1526,55 @@
     },
     "embedding_text": "Design of Street Information for Pedestrians Product Design Community Design Service Design",
     "embedding": [
-      -0.2645122666025428,
-      0.07631435871638018,
-      -0.020176606997815667,
-      -0.024266605939888237,
-      -0.045973339292063875,
-      -0.1851118085500174,
-      0.12340254428157689,
-      0.03477692542636836,
-      0.012262697495414629,
-      0.016912890635863955
+      -0.2689236918193508,
+      -0.11333723758483505,
+      -0.013860707768924285,
+      -0.07272852063995182,
+      -0.07758652018641153,
+      -0.09512987381754219,
+      0.13367416218890016,
+      -0.05869845639136157,
+      0.015304138429951843,
+      -0.04947814714886193
+    ],
+    "embedding_dim": 10
+  },
+  {
+    "id": "A42",
+    "name": "H.S.",
+    "grade": "M2",
+    "title": {
+      "ja": "お弁当作りを拡張する製品ブランディング計画",
+      "en": "Product Branding Plan to Diversity Bento"
+    },
+    "lab": "製品・サービスデザインスタジオ",
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "パッケージデザイン",
+      "en": "Package Design",
+      "key": "package_design"
+    },
+    "keyword3": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    },
+    "embedding_text": "Product Branding Plan to Diversity Bento Product Design Package Design Design Prototyping",
+    "embedding": [
+      -0.17790363698046371,
+      0.051520279360412626,
+      -0.29821440734161125,
+      0.0998478640196418,
+      -0.05558014139259525,
+      0.03339255634403645,
+      -0.11038120345479581,
+      -0.14182108865918994,
+      -0.04381461154892707,
+      0.19820025954746082
     ],
     "embedding_dim": 10
   },
@@ -1637,10 +1586,7 @@
       "ja": "カード化によるものの拡張可能性に関する研究と提案",
       "en": "Research and Proposals on Product Scalability through Cardism"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1653,16 +1599,55 @@
     },
     "embedding_text": "Research and Proposals on Product Scalability through Cardism Product Design Design Prototyping",
     "embedding": [
-      -0.14424779254288247,
-      0.045853946748221644,
-      -0.09357457966130697,
-      0.18543876339835655,
-      -0.08034462308452087,
-      -0.0726247112887094,
-      -0.0227258083069106,
-      0.03101419180030832,
-      -0.05753074681576537,
-      0.048973823920860735
+      -0.15278865801655708,
+      -0.06598120041377327,
+      -0.10887515677299364,
+      0.16704769598101094,
+      -0.12342830636899998,
+      0.0467641090947406,
+      -0.0010022662047658457,
+      -0.0063497343865959194,
+      -0.05867573523402498,
+      0.007514828411974704
+    ],
+    "embedding_dim": 10
+  },
+  {
+    "id": "A44",
+    "name": "K.K.",
+    "grade": "B4",
+    "title": {
+      "ja": "お香を用いた、新しい祈願方法の提案",
+      "en": "A New Way to Pray with Incense"
+    },
+    "lab": "製品・サービスデザインスタジオ",
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    },
+    "keyword3": {
+      "ja": "クラフトデザイン",
+      "en": "Craft Design",
+      "key": "craft_design"
+    },
+    "embedding_text": "A New Way to Pray with Incense Product Design Conceptual Design Craft Design",
+    "embedding": [
+      -0.12458783630245086,
+      0.03871712228120891,
+      -0.035192472501005996,
+      0.2265088631276841,
+      0.18261555227905754,
+      -0.04344196759794712,
+      -0.14908013152972302,
+      -0.11101833904738126,
+      -0.14356563486728127,
+      0.02510482314118717
     ],
     "embedding_dim": 10
   },
@@ -1671,13 +1656,12 @@
     "name": "井原 瑞葵",
     "grade": "M2",
     "title": {
-      "ja": "行為を通して思考するインタラクティブブック「しくみ絵本」の開発研究",
-      "en": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action"
+      "ja": "行為を通して思考するインタラクティブブック「しくみ絵本」の開発研究──物理的感覚を重視した子ども向け絵本の提案",
+      "ja_short": "行為を通して思考するインタラクティブブック「しくみ絵本」の開発研究",
+      "en": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action — A Proposal for Children’s Books Focusing on Physical Tactility",
+      "en_short": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action"
     },
-    "lab": {
-      "ja": "エディティングスタジオ",
-      "en": "Editorial Design Studio"
-    },
+    "lab": "エディティングスタジオ",
     "keyword1": {
       "ja": "エディトリアルデザイン",
       "en": "Editorial Design",
@@ -1693,18 +1677,18 @@
       "en": "Book Art",
       "key": "book_art"
     },
-    "embedding_text": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action Editorial Design Book Design Book Art",
+    "embedding_text": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action — A Proposal for Children’s Books Focusing on Physical Tactility Editorial Design Book Design Book Art",
     "embedding": [
-      0.08236604114341048,
-      0.0905964672268755,
-      -0.10581643712930669,
-      0.012145316356291347,
-      0.11134942878360167,
-      0.023952902007343374,
-      0.02907738311818117,
-      0.012883528635416397,
-      0.23694935672423295,
-      -0.08823286521570664
+      0.03699277719899506,
+      -0.0776535620990619,
+      -0.11345073886448186,
+      0.01965958750937767,
+      0.1494056302667026,
+      -0.06035234089728793,
+      0.05263336549737115,
+      -0.00897918748015357,
+      0.19889703686998828,
+      0.026187412746547355
     ],
     "embedding_dim": 10
   },
@@ -1716,10 +1700,7 @@
       "ja": "空模様──過去気象データの可視化と活用可能性の検討",
       "en": "SORAMOYOU: Visualizing Past Weather Data and Exploring Its Potential Uses"
     },
-    "lab": {
-      "ja": "エディティングスタジオ",
-      "en": "Editorial Design Studio"
-    },
+    "lab": "エディティングスタジオ",
     "keyword1": {
       "ja": "サービスデザイン",
       "en": "Service Design",
@@ -1732,16 +1713,16 @@
     },
     "embedding_text": "SORAMOYOU: Visualizing Past Weather Data and Exploring Its Potential Uses Service Design Information Design",
     "embedding": [
-      -0.008269647252356054,
-      0.15002967643746962,
-      0.07105227493760678,
-      -0.2689907577713778,
-      -0.08357520424166537,
-      -0.0661953714189548,
-      0.19742082771266564,
-      -0.04225837090193895,
-      -0.07299893188386164,
-      -0.016916412534874845
+      -0.008385834478843697,
+      -0.1510841688888511,
+      0.04229468521438942,
+      -0.28298593409603934,
+      -0.024870840090038815,
+      -0.17553027849937206,
+      0.03186892293908683,
+      0.05345004485730501,
+      -0.18952297754509495,
+      -0.036646596532885725
     ],
     "embedding_dim": 10
   },
@@ -1753,10 +1734,7 @@
       "ja": "ボードゲームにおける「継続性」を主題としたゲームメカニクスの考案と制作",
       "en": "Design of Game Mechanics Focusing on Continuity in Board Games"
     },
-    "lab": {
-      "ja": "エディティングスタジオ",
-      "en": "Editorial Design Studio"
-    },
+    "lab": "エディティングスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1774,16 +1752,16 @@
     },
     "embedding_text": "Design of Game Mechanics Focusing on Continuity in Board Games Product Design Game Design Conceptual Design",
     "embedding": [
-      -0.07156948649970875,
-      0.07195615447589923,
-      -0.049147631640414136,
-      0.14598733746210243,
-      -0.18329360332450922,
-      0.06743515602311044,
-      -0.28391138699688045,
-      -0.0252877779320873,
-      0.1880021123712945,
-      -0.17426676536228622
+      -0.07636473650183367,
+      -0.07428214771572826,
+      -0.05078463311387195,
+      0.09685834341139132,
+      -0.15016566885167487,
+      0.06446337980752019,
+      -0.17443480460062294,
+      0.1009997799266653,
+      0.31935352305662384,
+      -0.0977552402613511
     ],
     "embedding_dim": 10
   },
@@ -1795,10 +1773,7 @@
       "ja": "視聴覚の連動による感情換気を高める映像表現の研究と実践",
       "en": "Research and Practice of Visual Expression That Enhances Emotional Ventilation through Audiovisual Interplay"
     },
-    "lab": {
-      "ja": "エディティングスタジオ",
-      "en": "Editorial Design Studio"
-    },
+    "lab": "エディティングスタジオ",
     "keyword1": {
       "ja": "アニメーション",
       "en": "Animation",
@@ -1806,16 +1781,45 @@
     },
     "embedding_text": "Research and Practice of Visual Expression That Enhances Emotional Ventilation through Audiovisual Interplay Animation",
     "embedding": [
-      0.3222042683970966,
-      0.17777318225033542,
-      0.07414443043019643,
-      -0.03787935736989442,
-      0.22468607096545176,
-      -0.025249979337530856,
-      -0.1294731408947788,
-      -0.031535363983187695,
-      -0.19344372130469858,
-      -0.057535801337176846
+      0.3245128224894816,
+      -0.19976458743907682,
+      0.03748513494003154,
+      -0.07139109683356618,
+      0.16925516384742614,
+      0.17231638182819112,
+      0.0727077175063474,
+      0.15083870205272462,
+      -0.027437565117937636,
+      0.029597220907740092
+    ],
+    "embedding_dim": 10
+  },
+  {
+    "id": "A49",
+    "name": "大場 史斗",
+    "grade": "B4",
+    "title": {
+      "ja": "3Dスカルプトツールを用いた空想生物の造形表現",
+      "en": "Sculpting of Imaginary Creatures using 3D Sculpting Tools"
+    },
+    "lab": "映像デザインスタジオ",
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "embedding_text": "Sculpting of Imaginary Creatures using 3D Sculpting Tools Media Art",
+    "embedding": [
+      0.35174924351620934,
+      0.03243204358365075,
+      0.042075238972416454,
+      0.10955794486848607,
+      -0.1062867820487716,
+      0.2579007991284297,
+      0.027852882160694196,
+      -0.06160278623826315,
+      -0.147097814840613,
+      0.05313659317931922
     ],
     "embedding_dim": 10
   },
@@ -1827,10 +1831,7 @@
       "ja": "SNS社会における新たな寄付文化に関する研究",
       "en": "Research on Emerging Donation Cultures in the SNS Society"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "サービスデザイン",
       "en": "Service Design",
@@ -1848,16 +1849,16 @@
     },
     "embedding_text": "Research on Emerging Donation Cultures in the SNS Society Service Design Interaction Design UX Design",
     "embedding": [
-      -0.15700741240617982,
-      0.27945144570588004,
-      -0.02969513185990644,
-      -0.05465498113210819,
-      -0.03691224876233133,
-      -0.07578206394850287,
-      -0.020527473235936754,
-      0.1270934067312128,
-      0.0440046898041845,
-      0.21879744697808307
+      -0.14076472276680624,
+      -0.2713209814709235,
+      -0.05605424330207931,
+      -0.08589190834821725,
+      -0.06321493347640174,
+      0.05277556241085845,
+      -0.045109008311699464,
+      -0.1416879420825803,
+      -0.0481446308551086,
+      -0.1815997009843895
     ],
     "embedding_dim": 10
   },
@@ -1869,10 +1870,7 @@
       "ja": "本音の対話を促進する椅子のデザイン",
       "en": "A Chair Designs Social Posture Design"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1890,16 +1888,16 @@
     },
     "embedding_text": "A Chair Designs Social Posture Design Product Design Interior Design Furniture Design",
     "embedding": [
-      -0.24883275266923868,
-      -0.11139297840012699,
-      -0.11479642958817748,
-      0.15725940824974166,
-      0.010669264654537183,
-      0.06150714925951292,
-      -0.05286599290403592,
-      -0.054065022128753866,
-      -0.02639293065335873,
-      0.08116912188171438
+      -0.254405300919296,
+      0.09800228490777944,
+      -0.07542192548567868,
+      0.14535121250702246,
+      0.00907616266215189,
+      0.053788294308824675,
+      -0.06918453989163979,
+      0.066700447074181,
+      0.07707460513754244,
+      0.07442697587454854
     ],
     "embedding_dim": 10
   },
@@ -1911,10 +1909,7 @@
       "ja": "香りの試飲を提供する体験設計とプロダクトの提案",
       "en": "Experience Design and Product Proposals Offering Scent Tasting"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1932,16 +1927,16 @@
     },
     "embedding_text": "Experience Design and Product Proposals Offering Scent Tasting Product Design Service Design Speculative Design",
     "embedding": [
-      -0.16059075300513004,
-      0.040504310322058236,
-      0.009911762305196558,
-      0.11459586594172842,
-      0.011698867014165983,
-      0.18866729174708305,
-      0.17230918026828906,
-      0.15557273144511005,
-      -0.0933739030223854,
-      -0.023482307304807017
+      -0.1788348528912036,
+      -0.04093717120616065,
+      -0.0458094902542835,
+      0.14668142994619326,
+      0.11587699495189757,
+      -0.03246980289260128,
+      -0.11399186711835674,
+      -0.13981518734195644,
+      -0.165783966107371,
+      0.17408707063223613
     ],
     "embedding_dim": 10
   },
@@ -1953,10 +1948,7 @@
       "ja": "ローカル素材と光のデザイン",
       "en": "Lighting Design with Local Materials"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -1974,16 +1966,16 @@
     },
     "embedding_text": "Lighting Design with Local Materials Product Design Sustainable Design Human-Centered Design",
     "embedding": [
-      -0.242833253871364,
-      -0.08967818930605251,
-      0.07045269266801765,
-      0.05976017734674813,
-      -0.02079510611443012,
-      0.12129610083928252,
-      0.042642931013500814,
-      0.031526106185595995,
-      0.10294032343756845,
-      0.21055043178869273
+      -0.2416859214355049,
+      0.06473651074452423,
+      0.09806060192891555,
+      0.06760382803224683,
+      0.0211999451103822,
+      -0.06909519480652596,
+      -0.15014078446967238,
+      -0.12003732339697999,
+      -0.041929826145004366,
+      -0.08353434980258863
     ],
     "embedding_dim": 10
   },
@@ -1995,10 +1987,7 @@
       "ja": "スリットスキャン断面操作による映像体験の拡張",
       "en": "Expanding Visual Experiences via Slit-Scan Cross-Section Manipulation"
     },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "Interface Design Studio"
-    },
+    "lab": "インタフェースデザインスタジオ",
     "keyword1": {
       "ja": "メディアアート",
       "en": "Media Art",
@@ -2016,16 +2005,16 @@
     },
     "embedding_text": "Expanding Visual Experiences via Slit-Scan Cross-Section Manipulation Media Art Image Processing Interaction Design",
     "embedding": [
-      0.3549016471697296,
-      -0.04058612931359348,
-      0.13682427727520502,
-      0.03162985145644164,
-      -0.010082498151998772,
-      -0.1293888613522229,
-      0.06733886425440096,
-      -0.04875372539845141,
-      -0.0019678273630393214,
-      0.035665617100923065
+      0.36059484255278107,
+      -0.007952007002377734,
+      0.12265309330773425,
+      0.01389086102783656,
+      -0.05783295742843974,
+      -0.09360665034901684,
+      0.09385274740983343,
+      -0.02721809478373279,
+      -0.06472750935950108,
+      -0.01883235940803489
     ],
     "embedding_dim": 10
   },
@@ -2035,12 +2024,9 @@
     "grade": "B4",
     "title": {
       "ja": "盤面画像解析と大規模言語モデルを用いたリアルタイムオセロ実況",
-      "en": "Real-Time Othello Commentary using Vision-Based Board Recognition and Large Language Models"
+      "en": "Real-Time Othello Commentary Using Vision-Based Board Recognition and Large Language Models"
     },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "Interface Design Studio"
-    },
+    "lab": "インタフェースデザインスタジオ",
     "keyword1": {
       "ja": "インターフェースデザイン",
       "en": "Interface Design",
@@ -2056,18 +2042,18 @@
       "en": "AI",
       "key": "ai"
     },
-    "embedding_text": "Real-Time Othello Commentary using Vision-Based Board Recognition and Large Language Models Interface Design Human Computer Interaction AI",
+    "embedding_text": "Real-Time Othello Commentary Using Vision-Based Board Recognition and Large Language Models Interface Design Human Computer Interaction AI",
     "embedding": [
-      0.14770747570063425,
-      0.10213730215147335,
-      0.02350410635595744,
-      -0.011075189534655012,
-      -0.4048908982435447,
-      0.029889840016298165,
-      -0.16790126320125665,
-      -0.10352673206230947,
-      0.11511017463523186,
-      -0.10123559067279173
+      0.13962754743374842,
+      -0.10749175058718857,
+      -0.021827820140594926,
+      -0.06600367929520441,
+      -0.3092004701078818,
+      -0.09514795435990578,
+      -0.2749200788937608,
+      0.14760512877265367,
+      0.24381301128237695,
+      0.043588138605176935
     ],
     "embedding_dim": 10
   },
@@ -2079,10 +2065,7 @@
       "ja": "書道とグラフィックデザインを掛け合わせる表現の研究",
       "en": "Visual Expressions Crossing Calligraphy and Graphics"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -2093,18 +2076,23 @@
       "en": "Research Through Design",
       "key": "research_through_design"
     },
-    "embedding_text": "Visual Expressions Crossing Calligraphy and Graphics Graphic Design Research Through Design",
+    "keyword3": {
+      "ja": "ブックアート",
+      "en": "Book Art",
+      "key": "book_art"
+    },
+    "embedding_text": "Visual Expressions Crossing Calligraphy and Graphics Graphic Design Research Through Design Book Art",
     "embedding": [
-      0.1750743479944621,
-      -0.0020597743544883834,
-      -0.26370905314426346,
-      -0.10522532776049008,
-      0.09936993723151347,
-      -0.0487135281895324,
-      0.07710464586368992,
-      0.012219680062743182,
-      0.03305834564164402,
-      -0.032324038715750236
+      0.13688256393050477,
+      0.08008144784686388,
+      -0.2916503997636397,
+      -0.12989802824701288,
+      0.13728056575650965,
+      -0.04638531585400744,
+      0.0929767454909154,
+      -0.046612256510956185,
+      0.08147267582560687,
+      0.04011579355776911
     ],
     "embedding_dim": 10
   },
@@ -2116,10 +2104,7 @@
       "ja": "芸術文化におけるドメイン専門家と大規模言語モデルの協調による知識グラフの段階的構築手法",
       "en": "Incremental, Collaborative Knowledge Graph Construction with Arts and Culture Domain Experts and Large Language Models"
     },
-    "lab": {
-      "ja": "エディティングスタジオ",
-      "en": "Editorial Design Studio"
-    },
+    "lab": "エディティングスタジオ",
     "keyword1": {
       "ja": "インターフェースデザイン",
       "en": "Interface Design",
@@ -2137,16 +2122,16 @@
     },
     "embedding_text": "Incremental, Collaborative Knowledge Graph Construction with Arts and Culture Domain Experts and Large Language Models Interface Design AI Digital Archive",
     "embedding": [
-      0.16012557569910643,
-      0.05256143368441779,
-      0.026938180332116278,
-      -0.15914612651392562,
-      -0.3314789629615754,
-      -0.02097526419888572,
-      0.029809752693360305,
-      0.20211996087089745,
-      0.0765773740422994,
-      0.13872871014609678
+      0.15817451560695095,
+      -0.048817603514931925,
+      -0.015388841331230292,
+      -0.16465608701526402,
+      -0.2714290010499773,
+      -0.049487022343868516,
+      -0.170742747464819,
+      -0.1737277861350111,
+      -0.0026702703080158864,
+      -0.07170984049135656
     ],
     "embedding_dim": 10
   },
@@ -2158,10 +2143,7 @@
       "ja": "マルチモーダルから考察するアトモスフィア ──「あたたかさ」を事例として",
       "en": "Exploring Atmosphere through Multimodality: “Warmth” as a Case Study"
     },
-    "lab": {
-      "ja": "エルゴノミックデザインスタジオ",
-      "en": "Ergonomic Design Studio"
-    },
+    "lab": "エルゴノミックデザインスタジオ",
     "keyword1": {
       "ja": "人間中心デザイン",
       "en": "Human-Centered Design",
@@ -2179,16 +2161,16 @@
     },
     "embedding_text": "Exploring Atmosphere through Multimodality: “Warmth” as a Case Study Human-Centered Design UX Design Universal Design",
     "embedding": [
-      -0.09124791591497204,
-      0.2680916991485513,
-      0.1414326602078043,
-      -0.03249277425548296,
-      0.11938039911518865,
-      0.07168848739678368,
-      0.08182121139296922,
-      -0.07502035085456026,
-      -0.12227306784353052,
-      -0.025695467211354274
+      -0.08548427020956499,
+      -0.2939789033021,
+      0.092826630566231,
+      -0.05003052699227232,
+      0.16328341129566007,
+      -0.04792224935745301,
+      0.004615260603561285,
+      0.11003098108731518,
+      -0.14192120525541171,
+      0.012811570361872929
     ],
     "embedding_dim": 10
   },
@@ -2200,10 +2182,7 @@
       "ja": "養蚕農家での実践を通じた平面吐糸の感性的価値の探究",
       "en": "A Practice-Based Exploration of the Sensory Value of Planar Silk-Spinning in Sericulture"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -2221,16 +2200,16 @@
     },
     "embedding_text": "A Practice-Based Exploration of the Sensory Value of Planar Silk-Spinning in Sericulture Product Design Speculative Design Research Through Design",
     "embedding": [
-      0.0006866865884580434,
-      -0.06062270780622037,
-      0.007643096896280688,
-      0.13669695016513986,
-      0.10733391500183752,
-      0.09052491991922085,
-      0.0394676224693011,
-      0.055238295007162985,
-      -0.026736903919222062,
-      0.04854416332738791
+      0.0018405809243369727,
+      0.041532912140895606,
+      0.028661870061573804,
+      0.1610161783020911,
+      0.10581955924009852,
+      0.020636442788019186,
+      0.005615064607427693,
+      -0.010919279962665602,
+      -0.06259839194165903,
+      -0.170342011236333
     ],
     "embedding_dim": 10
   },
@@ -2242,10 +2221,7 @@
       "ja": "ゆっくりとした歩行を促すソールデザインの探求",
       "en": "Exploring Sole Designs to Encourage Slow Walking"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -2263,16 +2239,16 @@
     },
     "embedding_text": "Exploring Sole Designs to Encourage Slow Walking Product Design Fashion Design Design Prototyping",
     "embedding": [
-      -0.18673520153724324,
-      -0.03896594260775542,
-      -0.08959771217908147,
-      0.1818538751831747,
-      0.013855545870814008,
-      -0.09305207521340438,
-      0.06858473582796187,
-      -0.0358701346922258,
-      -0.05882373092613734,
-      -0.05935256967787692
+      -0.19833200312589527,
+      -0.006216696429750437,
+      -0.06466769925323049,
+      0.15870036244344282,
+      -0.026800181672308274,
+      -0.028283735439078816,
+      0.1556610875585188,
+      0.06497426315979121,
+      -0.03036064391174093,
+      -0.08174155748839337
     ],
     "embedding_dim": 10
   },
@@ -2281,40 +2257,38 @@
     "name": "久保田 恭平",
     "grade": "M2",
     "title": {
-      "ja": "皮膚型インターフェースにおける生物的[ヒト-モノ]コミュニケーションの構築",
-      "en": "Designing Biological [Human-Product] Interaction through Skin Interfaces"
+      "ja": "皮膚型インターフェースにおける生物的[ヒト-モノ]コミュニケーションの構築──モノが皮膚を纏う",
+      "ja_short": "皮膚型インターフェースにおける生物的[ヒト-モノ]コミュニケーションの構築",
+      "en": "Designing Biological [Human-Product] Interaction through Skin Interfaces — When Products Wear Skin"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
       "key": "product_design"
     },
     "keyword2": {
-      "ja": "スペキュラティブデザイン",
-      "en": "Speculative Design",
-      "key": "speculative_design"
-    },
-    "keyword3": {
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
     },
-    "embedding_text": "Designing Biological [Human-Product] Interaction through Skin Interfaces Product Design Speculative Design Research Through Design",
+    "keyword3": {
+      "ja": "スペキュラティブデザイン",
+      "en": "Speculative Design",
+      "key": "speculative_design"
+    },
+    "embedding_text": "Designing Biological [Human-Product] Interaction through Skin Interfaces — When Products Wear Skin Product Design Research Through Design Speculative Design",
     "embedding": [
-      -0.08764635448480891,
-      0.13495067878966902,
-      0.07423667001290674,
-      0.18054230589361803,
-      0.11548807722557063,
-      -0.028906901830614222,
-      0.07353950147715947,
-      -0.014682309242696777,
-      0.04274057173940401,
-      -0.05116665393854805
+      -0.08255763167774038,
+      -0.17101780856177948,
+      0.049968825555694894,
+      0.2041762862730545,
+      0.06589042488841412,
+      -0.04958086982571436,
+      0.10488358894257432,
+      0.025438018640413063,
+      0.014761570059959293,
+      0.06856095955320603
     ],
     "embedding_dim": 10
   },
@@ -2326,10 +2300,7 @@
       "ja": "暮らしの余白空間を漂う浮遊型プロダクトの提案",
       "en": "Proposal for Floating Products Wandering through the Void of Daily Living"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -2347,16 +2318,16 @@
     },
     "embedding_text": "Proposal for Floating Products Wandering through the Void of Daily Living Product Design Mobility Design Furniture Design",
     "embedding": [
-      -0.24464151551327412,
-      -0.17549052321490785,
-      -0.0009686918410558217,
-      0.19219985509319953,
-      0.01555795801234066,
-      -0.134723937527807,
-      0.02122045060736179,
-      0.06322368878129811,
-      -0.02187990994725541,
-      -0.13911257742358224
+      -0.24800454463527621,
+      0.1189665401196818,
+      0.04840959154914326,
+      0.14784911963961814,
+      -0.07971845247484557,
+      0.03426570324524748,
+      0.19442790549394176,
+      -0.03930096604772819,
+      0.09273501393987751,
+      0.16133383329397474
     ],
     "embedding_dim": 10
   },
@@ -2368,10 +2339,7 @@
       "ja": "不整地における散布型表層ユニットのデザイン提案",
       "en": "Proposal for a Scatter-Based Surface System on Rough Terrain"
     },
-    "lab": {
-      "ja": "トランスポーテーションデザインスタジオ",
-      "en": "Transportation Design Studio"
-    },
+    "lab": "トランスポーテーションデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -2389,16 +2357,16 @@
     },
     "embedding_text": "Proposal for a Scatter-Based Surface System on Rough Terrain Product Design Mobility Design Speculative Design",
     "embedding": [
-      -0.13336127588758653,
-      -0.11609753503913066,
-      0.04820106193136989,
-      0.10670785134221217,
-      -0.02904691946619068,
-      -0.18950069048224594,
-      0.04472277350657242,
-      0.025087424343258436,
-      -0.1307015475524227,
-      -0.2051103495867481
+      -0.12920656948750886,
+      0.059007919121502876,
+      0.07850387351078393,
+      0.06835459731750523,
+      -0.13384241753301268,
+      0.03885465785913115,
+      0.25866226311300355,
+      0.052793425552164076,
+      -0.007492560741303977,
+      0.07532330665426051
     ],
     "embedding_dim": 10
   },
@@ -2408,12 +2376,10 @@
     "grade": "M2",
     "title": {
       "ja": "微細穴加工による角度依存型視覚効果: 設計変数に基づく制御と体系化",
-      "en": "Micro-Hole Engineering for Angle-Dependent Visual Effects"
+      "en": "Micro-Hole Engineering for Angle-Dependent Visual Effects — Systematization of Appearance Control based on Fabrication Parameters",
+      "en_short": "Micro-Hole Engineering for Angle-Dependent Visual Effects"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "メタデザイン",
       "en": "Meta Design",
@@ -2429,18 +2395,18 @@
       "en": "Optical Art",
       "key": "optical_art"
     },
-    "embedding_text": "Micro-Hole Engineering for Angle-Dependent Visual Effects Meta Design Human Computer Interaction Optical Art",
+    "embedding_text": "Micro-Hole Engineering for Angle-Dependent Visual Effects — Systematization of Appearance Control based on Fabrication Parameters Meta Design Human Computer Interaction Optical Art",
     "embedding": [
-      0.2540562172220293,
-      -0.09767330059848564,
-      0.07067274904214536,
-      0.0989692768735463,
-      0.018253585595967594,
-      0.027668775689953153,
-      0.10445703188100815,
-      -0.2189606396321963,
-      0.05823948315286836,
-      0.06087738628085809
+      0.24339278197940228,
+      0.13365886991318954,
+      0.052719145828200614,
+      0.14147806028493362,
+      0.027564164853198028,
+      -0.1772331727435031,
+      -0.004528353534971669,
+      0.11995870027140859,
+      -0.0369022811779275,
+      -0.068945951992625
     ],
     "embedding_dim": 10
   },
@@ -2452,10 +2418,7 @@
       "ja": "カテナリー曲線の自己復元性を利用した独立揺動型モアレの考案",
       "en": "Proposal of Independent Oscillating Moiré using Self-Restoring Property of Catenary Curves"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "キネティックアート",
       "en": "Kinetic Art",
@@ -2473,16 +2436,16 @@
     },
     "embedding_text": "Proposal of Independent Oscillating Moiré using Self-Restoring Property of Catenary Curves Kinetic Art Interactive Art Product Design",
     "embedding": [
-      0.23376515315367513,
-      -0.21433346700800635,
-      0.0008137629421543423,
-      0.177216583001378,
-      0.03694350688150937,
-      -0.02890262449711831,
-      0.05942091103672738,
-      -0.03060641607284508,
-      0.03725939902089133,
-      -0.011808547062082978
+      0.2222568209880485,
+      0.18098672188658746,
+      0.039540906220880086,
+      0.16891724014224896,
+      0.005271795254890916,
+      -0.08983818093161111,
+      0.10247148647567644,
+      0.005499592496886641,
+      0.07191510762107424,
+      -0.021324383151736463
     ],
     "embedding_dim": 10
   },
@@ -2494,10 +2457,7 @@
       "ja": "物体検出とインタラクティブな映像投影を用いたあやとりストーリーテリングの提案",
       "en": "Interactive Storytelling with String Figures using Object Detection and Projection Mapping"
     },
-    "lab": {
-      "ja": "インタラクティブアートスタジオ",
-      "en": "Interactive Art Studio"
-    },
+    "lab": "インタラクティブアートスタジオ",
     "keyword1": {
       "ja": "インタラクティブアート",
       "en": "Interactive Art",
@@ -2515,16 +2475,16 @@
     },
     "embedding_text": "Interactive Storytelling with String Figures using Object Detection and Projection Mapping Interactive Art Interaction Design Performance",
     "embedding": [
-      0.30349367777093283,
-      -0.00030480581492665345,
-      0.09919016393307101,
-      0.03470181087044794,
-      -0.07599246832262124,
-      -0.025704015482716003,
-      0.026177211833991337,
-      -0.06244407882015787,
-      0.036909915444689356,
-      -0.03375019812191243
+      0.2954996185406405,
+      -0.034527200348367426,
+      0.07366212503995441,
+      0.02320884899029593,
+      -0.05351399137133336,
+      -0.11587567726843194,
+      -0.020105824838370635,
+      0.02702631122126395,
+      0.05452040799516321,
+      0.08081490447066994
     ],
     "embedding_dim": 10
   },
@@ -2536,27 +2496,29 @@
       "ja": "バーテンダーの視点から見るバーでのコミュニケーション調査とカンバセーションスタータとしての照明の制作",
       "en": "A Study of Bar Communication from a Bartender's Perspective and the Creation of Lighting as a Conversation Starter"
     },
-    "lab": {
-      "ja": "インタラクティブアートスタジオ",
-      "en": "Interactive Art Studio"
-    },
+    "lab": "インタラクティブアートスタジオ",
     "keyword1": {
+      "ja": "インタラクティブアート",
+      "en": "Interactive Art",
+      "key": "interactive_art"
+    },
+    "keyword2": {
       "ja": "インタラクティブアーキテクチャー",
       "en": "Interactive Architecture",
       "key": "interactive_architecture"
     },
-    "embedding_text": "A Study of Bar Communication from a Bartender's Perspective and the Creation of Lighting as a Conversation Starter Interactive Architecture",
+    "embedding_text": "A Study of Bar Communication from a Bartender's Perspective and the Creation of Lighting as a Conversation Starter Interactive Art Interactive Architecture",
     "embedding": [
-      0.06846910673625396,
-      -0.033346196784822785,
-      0.223729170571328,
-      0.02099886756085255,
-      -0.006292817925081587,
-      0.09092960234187575,
-      -0.003238300194317011,
-      -0.05065971014894638,
-      0.08184644116511501,
-      0.14885709082316623
+      0.15349813136327262,
+      0.012257072129826789,
+      0.2124846518392022,
+      0.03364773878475963,
+      0.07378981966571549,
+      -0.1490186495818787,
+      -0.1261302796996304,
+      -0.12100632931207156,
+      0.10623719865239215,
+      0.006410982872209018
     ],
     "embedding_dim": 10
   },
@@ -2568,10 +2530,7 @@
       "ja": "液晶ディスプレイを用いたインフィニティミラーの開発",
       "en": "Development of an Infinity Mirror using Liquid Crystal Displays"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "インタラクティブアート",
       "en": "Interactive Art",
@@ -2589,16 +2548,16 @@
     },
     "embedding_text": "Development of an Infinity Mirror using Liquid Crystal Displays Interactive Art Media Art Generative Art",
     "embedding": [
-      0.3873456237280893,
-      -0.12055473825460547,
-      0.1806726639189668,
-      0.09256757919371554,
-      -0.08650128525660608,
-      -0.06457371585888226,
-      0.13960382229163604,
-      0.036783811442517064,
-      0.13566592616720474,
-      -0.03775520925806205
+      0.38146807821583917,
+      0.0708147442012155,
+      0.17073868848036308,
+      0.0764843913900165,
+      -0.09727987620590901,
+      -0.20798240011391156,
+      0.06358123885467394,
+      -0.13631534184058042,
+      0.03390041408702812,
+      0.07765855003177387
     ],
     "embedding_dim": 10
   },
@@ -2610,10 +2569,7 @@
       "ja": "水中気泡ディスプレイの多層化表現とシミュレーションシステムの構築",
       "en": "Multi-Layered Representation in Underwater Bubble Displays: Development of a Simulation System"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "インターフェースデザイン",
       "en": "Interface Design",
@@ -2631,16 +2587,16 @@
     },
     "embedding_text": "Multi-Layered Representation in Underwater Bubble Displays: Development of a Simulation System Interface Design Human Computer Interaction Interaction Design",
     "embedding": [
-      0.10295867537240239,
-      0.10969595742959568,
-      0.1558080432322682,
-      -0.051874796132812456,
-      -0.038366282148274186,
-      -0.08441885244098755,
-      0.08034744532230438,
-      -0.1899243862895459,
-      -0.0648698747966295,
-      -0.08906302237703997
+      0.10327807565484715,
+      -0.1414439601404707,
+      0.12268731096541109,
+      -0.08249425040298186,
+      -0.0431750432501078,
+      -0.11602490204002015,
+      0.06423587339612875,
+      0.18440424981562223,
+      -0.014581804189756947,
+      0.15317755954945866
     ],
     "embedding_dim": 10
   },
@@ -2649,13 +2605,12 @@
     "name": "坂村 空介",
     "grade": "B4",
     "title": {
-      "ja": "電子ペーパーを用いた環境決定的変数による装置統合型ビジュアル生成手法の研究",
-      "en": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display"
+      "ja": "電子ペーパーを用いた環境決定的変数による装置統合型ビジュアル生成手法の研究 《createdAt:》制作を通して",
+      "ja_short": "電子ペーパーを用いた環境決定的変数による装置統合型ビジュアル生成手法の研究",
+      "en": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display: Through the Production of \"createdAt:\"",
+      "en_short": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display"
     },
-    "lab": {
-      "ja": "ネットワークデザインスタジオ",
-      "en": "Network Design Studio"
-    },
+    "lab": "ネットワークデザインスタジオ",
     "keyword1": {
       "ja": "メディアアート",
       "en": "Media Art",
@@ -2666,18 +2621,18 @@
       "en": "Generative Art",
       "key": "generative_art"
     },
-    "embedding_text": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display Media Art Generative Art",
+    "embedding_text": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display: Through the Production of \"createdAt:\" Media Art Generative Art",
     "embedding": [
-      0.37316039492311126,
-      -0.08040253254513927,
-      0.061477468200458116,
-      0.017181520940857675,
-      -0.054426839679566366,
-      -0.12446617961888817,
-      0.11832777674807754,
-      0.09934624764688571,
-      0.0961223894405945,
-      -0.007977599449995673
+      0.36178668213227666,
+      0.021648200320996357,
+      0.06732168490592559,
+      0.01647768228898926,
+      -0.089198702645368,
+      -0.11992458419697741,
+      0.1045286454286737,
+      -0.17511359311453656,
+      -0.005522021244896813,
+      -0.06513585608099275
     ],
     "embedding_dim": 10
   },
@@ -2686,13 +2641,9 @@
     "name": "Saito Mira Ayana",
     "grade": "M2",
     "title": {
-      "ja": "Creating an Interactive Garden Ecosystem: A realm of Nature, Subjectivity and Technology",
       "en": "Creating an Interactive Garden Ecosystem: A realm of Nature, Subjectivity and Technology"
     },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "Interface Design Studio"
-    },
+    "lab": "インタフェースデザインスタジオ",
     "keyword1": {
       "ja": "インタラクティブアート",
       "en": "Interactive Art",
@@ -2710,16 +2661,16 @@
     },
     "embedding_text": "Creating an Interactive Garden Ecosystem: A realm of Nature, Subjectivity and Technology Interactive Art Interaction Design Research Through Design",
     "embedding": [
-      0.13683674728195516,
-      0.02533359420844287,
-      0.23586537523582696,
-      0.035079045502057336,
-      0.08989532648497044,
-      -0.043987459257418766,
-      0.030118614399975856,
-      0.0675644220287801,
-      0.1844852245410296,
-      -0.04641634251748689
+      0.15002115500232827,
+      -0.09489714823999924,
+      0.2340903222085363,
+      0.009917476491412667,
+      0.05587361253927681,
+      -0.06219691974938397,
+      0.04014150823438247,
+      -0.11023097201008658,
+      0.1391474253127797,
+      0.01191716830394877
     ],
     "embedding_dim": 10
   },
@@ -2731,10 +2682,7 @@
       "ja": "Signs of Life: 生きているを感じるデザイン",
       "en": "Signs of Life: Design That Evokes a Sense of Life"
     },
-    "lab": {
-      "ja": "製品・サービスデザインスタジオ",
-      "en": "Equipment & Service Design Studio"
-    },
+    "lab": "製品・サービスデザインスタジオ",
     "keyword1": {
       "ja": "メディアアート",
       "en": "Media Art",
@@ -2752,16 +2700,16 @@
     },
     "embedding_text": "Signs of Life: Design That Evokes a Sense of Life Media Art Interaction Design Design Prototyping",
     "embedding": [
-      0.08948356319012266,
-      0.06240700556765556,
-      0.06675101229173015,
-      0.15729339407633347,
-      0.12200957144006837,
-      -0.06154719135103272,
-      0.04093028099579747,
-      0.09653576661731048,
-      0.18093733632291617,
-      -0.06901071019903518
+      0.09463656644745899,
+      -0.10995125316741108,
+      0.05205656754290323,
+      0.12178897265937633,
+      0.06865591316051632,
+      -0.024324605703965198,
+      0.09662372391672339,
+      -0.1532189319403725,
+      0.13819240236490224,
+      0.049521456897408
     ],
     "embedding_dim": 10
   },
@@ -2773,10 +2721,7 @@
       "ja": "折り紙との融合による絞りの保存と普及",
       "en": "Preserving Shibori through Origami"
     },
-    "lab": {
-      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
-      "en": "Visual Communication Design Studio"
-    },
+    "lab": "ヴィジュアルコミュニケーションデザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -2794,16 +2739,16 @@
     },
     "embedding_text": "Preserving Shibori through Origami Graphic Design Pattern Design Research Through Design",
     "embedding": [
-      0.07594406482151567,
-      -0.11593323300492513,
-      -0.23934324874172566,
-      -0.04696167476374059,
-      0.07419839438693163,
-      0.07466839747369111,
-      0.09111561810493018,
-      -0.01946513440471775,
-      0.036108887151528365,
-      0.007723718925830596
+      0.06197806256156612,
+      0.17111310418041523,
+      -0.1929858691813743,
+      -0.030032918628853454,
+      0.11307232428307233,
+      -0.07497041990045412,
+      0.04619798067358298,
+      0.030477685204407207,
+      -0.005898410183467308,
+      -0.2296554590105949
     ],
     "embedding_dim": 10
   },
@@ -2815,10 +2760,7 @@
       "ja": "犬の不可解行動に対する「肯定的誤読」の提案──脳の可視化によるアニメーション制作",
       "en": "Proposal for \"Positive Misreading\" of Inscrutable Dog Behavior: Animation Production through Brain Visualization"
     },
-    "lab": {
-      "ja": "映像デザインスタジオ",
-      "en": "Kinematograph Design Studio"
-    },
+    "lab": "映像デザインスタジオ",
     "keyword1": {
       "ja": "グラフィックデザイン",
       "en": "Graphic Design",
@@ -2836,16 +2778,16 @@
     },
     "embedding_text": "Proposal for \"Positive Misreading\" of Inscrutable Dog Behavior: Animation Production through Brain Visualization Graphic Design Animation Conceptual Design",
     "embedding": [
-      0.16465850186798903,
-      0.0965797784409355,
-      -0.13568371126010512,
-      -0.07428302693314817,
-      0.14960602909959714,
-      -0.029899522922596514,
-      -0.1954117371190667,
-      0.09296510925021105,
-      -0.08167960926091465,
-      -0.06840019255884011
+      0.16122174383552876,
+      -0.0898024747471727,
+      -0.1464559784804301,
+      -0.11268200356362616,
+      0.08021674757995564,
+      0.24249956655279203,
+      0.020553702895700174,
+      0.008715100954537883,
+      0.06419848267255115,
+      0.05572293651192975
     ],
     "embedding_dim": 10
   },
@@ -2857,10 +2799,7 @@
       "ja": "正三角形薄板材のスリットジョイントによる可変型照明の制作",
       "en": "Variable Lighting Design based on​ Equilateral Triangle Slit-Joint Structures​"
     },
-    "lab": {
-      "ja": "インテリアデザインスタジオ",
-      "en": "Interior Design Studio"
-    },
+    "lab": "インテリアデザインスタジオ",
     "keyword1": {
       "ja": "プロダクトデザイン",
       "en": "Product Design",
@@ -2878,184 +2817,16 @@
     },
     "embedding_text": "Variable Lighting Design based on​ Equilateral Triangle Slit-Joint Structures​ Product Design Furniture Design Design Prototyping",
     "embedding": [
-      -0.026935945298093945,
-      -0.2641313094565644,
-      -0.00040770062252488867,
-      0.1858336453556346,
-      -0.13899941167448984,
-      0.15233386005852348,
-      0.003671833676479242,
-      -0.16435376986079728,
-      -0.004264007308914088,
-      0.19346249131756332
-    ],
-    "embedding_dim": 10
-  },
-  {
-    "id": "W01",
-    "name": "折居 隼",
-    "grade": null,
-    "title": {
-      "ja": "フィクションにおける架空言語の分析：言語解読ゲーム《7Days to End with You》を通して",
-      "en": "フィクションにおける架空言語の分析：言語解読ゲーム《7Days to End with You》を通して"
-    },
-    "lab": {
-      "ja": "ネットワークデザインスタジオ",
-      "en": "ネットワークデザインスタジオ"
-    },
-    "keyword1": {
-      "ja": "UXデザイン",
-      "en": "UX Design",
-      "key": "ux_design"
-    },
-    "keyword2": {
-      "ja": "ゲームデザイン",
-      "en": "Game Design",
-      "key": "game_design"
-    },
-    "keyword3": {
-      "ja": "メタデザイン",
-      "en": "Meta Design",
-      "key": "meta_design"
-    },
-    "embedding_text": "フィクションにおける架空言語の分析：言語解読ゲーム《7Days to End with You》を通して UX Design Game Design Meta Design",
-    "embedding": [
-      -0.07933076011534171,
-      0.2663097842683435,
-      -0.06664569574620544,
-      -0.011485007416151535,
-      -0.1222521611001226,
-      0.23422317679829946,
-      -0.23718584249614583,
-      -0.10770352072427088,
-      0.15942867538284666,
-      -0.24561154119549966
-    ],
-    "embedding_dim": 10
-  },
-  {
-    "id": "W02",
-    "name": "津江 勇作",
-    "grade": null,
-    "title": {
-      "ja": "香りから想起される多様なエピソード記憶の収集・共有システムの開発およびLLMを用いた香りの言語表現",
-      "en": "香りから想起される多様なエピソード記憶の収集・共有システムの開発およびLLMを用いた香りの言語表現"
-    },
-    "lab": {
-      "ja": "インタフェースデザインスタジオ",
-      "en": "インタフェースデザインスタジオ"
-    },
-    "keyword1": {
-      "ja": "インターフェースデザイン",
-      "en": "Interface Design",
-      "key": "interface_design"
-    },
-    "keyword2": {
-      "ja": "インタラクションデザイン",
-      "en": "Interaction Design",
-      "key": "interaction_design"
-    },
-    "keyword3": {
-      "ja": "マルチモーダルデザイン",
-      "en": "Multimodal Design",
-      "key": "multimodal_design"
-    },
-    "embedding_text": "香りから想起される多様なエピソード記憶の収集・共有システムの開発およびLLMを用いた香りの言語表現 Interface Design Interaction Design Multimodal Design",
-    "embedding": [
-      -0.0028854652513726742,
-      0.23292340764629293,
-      0.15167947572440926,
-      -0.01349065846152061,
-      -0.20047472745905393,
-      0.4619220937517112,
-      0.29528393896428673,
-      0.2675053004698531,
-      -0.187758902844727,
-      -0.22914687384008234
-    ],
-    "embedding_dim": 10
-  },
-  {
-    "id": "W03",
-    "name": "谷合 望々",
-    "grade": null,
-    "title": {
-      "ja": "強緊張状態の可視化とレジリエンスに関する研究",
-      "en": "強緊張状態の可視化とレジリエンスに関する研究"
-    },
-    "lab": {
-      "ja": "エルゴノミックデザインスタジオ",
-      "en": "エルゴノミックデザインスタジオ"
-    },
-    "keyword1": {
-      "ja": "UXデザイン",
-      "en": "UX Design",
-      "key": "ux_design"
-    },
-    "keyword2": {
-      "ja": "ナラティブリサーチ",
-      "en": "Narrative Research",
-      "key": "narrative_research"
-    },
-    "keyword3": {
-      "ja": "人間中心デザイン",
-      "en": "Human-Centered Design",
-      "key": "human_centered_design"
-    },
-    "embedding_text": "強緊張状態の可視化とレジリエンスに関する研究 UX Design Narrative Research Human-Centered Design",
-    "embedding": [
-      -0.10931271396479154,
-      0.3253108669444658,
-      -0.07639374572253776,
-      -0.06807665671250011,
-      0.1193699339122066,
-      0.04020255248908544,
-      -0.03410768296096685,
-      -0.10908216805597871,
-      -0.10161024058184101,
-      0.09856058079434708
-    ],
-    "embedding_dim": 10
-  },
-  {
-    "id": "W04",
-    "name": "卓 暁桐",
-    "grade": null,
-    "title": {
-      "ja": "Design for Women Health Condition Sharing",
-      "en": "Design for Women Health Condition Sharing"
-    },
-    "lab": {
-      "ja": "エルゴノミックデザインスタジオ",
-      "en": "エルゴノミックデザインスタジオ"
-    },
-    "keyword1": {
-      "ja": "サービスデザイン",
-      "en": "Service Design",
-      "key": "service_design"
-    },
-    "keyword2": {
-      "ja": "UIデザイン",
-      "en": "UI Design",
-      "key": "ui_design"
-    },
-    "keyword3": {
-      "ja": "リサーチスルーデザイン",
-      "en": "Research Through Design",
-      "key": "research_through_design"
-    },
-    "embedding_text": "Design for Women Health Condition Sharing Service Design UI Design Research Through Design",
-    "embedding": [
-      -0.15889800866202045,
-      0.2747029705186644,
-      -0.01700904252475198,
-      -0.0604047211959434,
-      -0.01648023052636873,
-      -0.11080349232870246,
-      0.09115441676349241,
-      -0.05681536719730522,
-      0.024674322726089437,
-      0.17974655348340515
+      -0.03191161175055285,
+      0.2614152209153203,
+      0.048434918411364825,
+      0.2027840406099882,
+      -0.07346988582276014,
+      -0.11710684393320767,
+      -0.15074095456499165,
+      0.1262308662945804,
+      -0.02457450497248885,
+      -0.12095819222145411
     ],
     "embedding_dim": 10
   }

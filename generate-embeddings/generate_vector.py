@@ -1,182 +1,153 @@
-import requests
 import json
+import requests
 import numpy as np
 from sklearn.decomposition import PCA
 
-
-OLLAMA_URL = "http://localhost:11434/api/embeddings"
-MODEL_NAME = "qwen3-embedding:4b"
-TARGET_DIM = 3
-
-design_fields = [
-    {"key": "product_design", "ja": "プロダクトデザイン", "en": "Product Design"},
-    {"key": "service_design", "ja": "サービスデザイン", "en": "Service Design"},
-    {"key": "graphic_design", "ja": "グラフィックデザイン", "en": "Graphic Design"},
-    {"key": "spatial_design", "ja": "空間デザイン", "en": "Spatial Design"},
-    {"key": "interior_design", "ja": "インテリアデザイン", "en": "Interior Design"},
-    {"key": "ux_design", "ja": "UXデザイン", "en": "UX Design"},
-    {"key": "media_art", "ja": "メディアアート", "en": "Media Art"},
-    {
-        "key": "editorial_design",
-        "ja": "エディトリアルデザイン",
-        "en": "Editorial Design",
-    },
-    {"key": "interactive_art", "ja": "インタラクティブアート", "en": "Interactive Art"},
-    {
-        "key": "interface_design",
-        "ja": "インターフェースデザイン",
-        "en": "Interface Design",
-    },
-    {"key": "community_design", "ja": "コミュニティデザイン", "en": "Community Design"},
-    {"key": "sound_design", "ja": "音響デザイン", "en": "Sound Design"},
-    {"key": "animation", "ja": "アニメーション", "en": "Animation"},
-    {"key": "game_design", "ja": "ゲームデザイン", "en": "Game Design"},
-    {
-        "key": "information_design",
-        "ja": "インフォメーションデザイン",
-        "en": "Information Design",
-    },
-    {"key": "mobility_design", "ja": "モビリティデザイン", "en": "Mobility Design"},
-    {"key": "robotics_design", "ja": "ロボティクスデザイン", "en": "Robotics Design"},
-    {
-        "key": "landscape_design",
-        "ja": "ランドスケープデザイン",
-        "en": "Landscape Design",
-    },
-    {"key": "urban_design", "ja": "都市デザイン", "en": "Urban Design"},
-    {
-        "key": "interactive_architecture",
-        "ja": "インタラクティブアーキテクチャー",
-        "en": "Interactive Architecture",
-    },
-    {"key": "fashion_design", "ja": "ファッションデザイン", "en": "Fashion Design"},
-    {
-        "key": "furniture_design",
-        "ja": "ファーニチャーデザイン",
-        "en": "Furniture Design",
-    },
-    {"key": "ui_design", "ja": "UIデザイン", "en": "UI Design"},
-    {"key": "branding_design", "ja": "ブランディングデザイン", "en": "Branding Design"},
-    {"key": "web_design", "ja": "Webデザイン", "en": "Web Design"},
-    {"key": "app_design", "ja": "アプリデザイン", "en": "App Design"},
-    {"key": "book_design", "ja": "ブックデザイン", "en": "Book Design"},
-    {"key": "book_art", "ja": "ブックアート", "en": "Book Art"},
-    {"key": "package_design", "ja": "パッケージデザイン", "en": "Package Design"},
-    {
-        "key": "typography_design",
-        "ja": "タイポグラフィデザイン",
-        "en": "Typography Design",
-    },
-    {"key": "optical_art", "ja": "オプティカルアート", "en": "Optical Art"},
-    {"key": "kinetic_art", "ja": "キネティックアート", "en": "Kinetic Art"},
-    {"key": "performance", "ja": "パフォーマンス", "en": "Performance"},
-    {"key": "digital_archive", "ja": "デジタルアーカイブ", "en": "Digital Archive"},
-    {"key": "craft_design", "ja": "クラフトデザイン", "en": "Craft Design"},
-    {"key": "pattern_design", "ja": "パターンデザイン", "en": "Pattern Design"},
-    {"key": "haptics_design", "ja": "ハプティクスデザイン", "en": "Haptics Design"},
-    {
-        "key": "human_computer_interaction",
-        "ja": "ヒューマンコンピュータインタラクション",
-        "en": "Human Computer Interaction",
-    },
-    {"key": "ar_vr", "ja": "AR/VR", "en": "AR / VR"},
-    {"key": "image_processing", "ja": "画像処理", "en": "Image Processing"},
-    {"key": "generative_art", "ja": "ジェネラティブアート", "en": "Generative Art"},
-    {"key": "welfare_design", "ja": "福祉デザイン", "en": "Welfare Design"},
-    {
-        "key": "interaction_design",
-        "ja": "インタラクションデザイン",
-        "en": "Interaction Design",
-    },
-    {
-        "key": "human_centered_design",
-        "ja": "人間中心デザイン",
-        "en": "Human-Centered Design",
-    },
-    {"key": "universal_design", "ja": "ユニバーサルデザイン", "en": "Universal Design"},
-    {
-        "key": "sustainable_design",
-        "ja": "サスティナブルデザイン",
-        "en": "Sustainable Design",
-    },
-    {"key": "ethical_design", "ja": "エシカルデザイン", "en": "Ethical Design"},
-    {
-        "key": "speculative_design",
-        "ja": "スペキュラティブデザイン",
-        "en": "Speculative Design",
-    },
-    {"key": "co_design", "ja": "コ・デザイン", "en": "Co-design"},
-    {"key": "meta_design", "ja": "メタデザイン", "en": "Meta Design"},
-    {"key": "bio_design", "ja": "バイオデザイン", "en": "Bio Design"},
-    {
-        "key": "conceptual_design",
-        "ja": "コンセプチュアルデザイン",
-        "en": "Conceptual Design",
-    },
-    {
-        "key": "research_through_design",
-        "ja": "リサーチスルーデザイン",
-        "en": "Research Through Design",
-    },
-    {
-        "key": "narrative_research",
-        "ja": "ナラティブリサーチ",
-        "en": "Narrative Research",
-    },
-    {
-        "key": "design_prototyping",
-        "ja": "デザインプロトタイピング",
-        "en": "Design Prototyping",
-    },
-    {
-        "key": "multimodal_design",
-        "ja": "マルチモーダルデザイン",
-        "en": "Multimodal Design",
-    },
-    {"key": "ai", "ja": "AI", "en": "AI"},
-]
+OLLAMA_API_URL = "http://localhost:11434/api/embeddings"
+EMBEDDING_MODEL = "qwen3-embedding:4b"
+TARGET_DIMENSIONS = 10
 
 
-def get_embedding(text: str) -> list[float]:
-    response = requests.post(OLLAMA_URL, json={"model": MODEL_NAME, "prompt": text})
-    response.raise_for_status()
-    return response.json()["embedding"]
+def get_ollama_embedding(text, model=EMBEDDING_MODEL):
+    """Ollama APIを使ってembeddingを取得"""
+    try:
+        response = requests.post(
+            OLLAMA_API_URL, json={"model": model, "prompt": text}, timeout=30
+        )
+
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("embedding")
+        else:
+            print(f"Error: HTTP {response.status_code}")
+            return None
+
+    except requests.exceptions.ConnectionError:
+        print(f"✗ Error: Ollamaに接続できません")
+        return None
+    except Exception as e:
+        print(f"✗ Error: {e}")
+        return None
 
 
-embeddings = {}
+def load_works_from_json(json_path):
+    """JSONから作品データを読み込み"""
+    with open(json_path, "r", encoding="utf-8") as f:
+        works = json.load(f)
 
-# ─── 1. Embedding取得 ─────────────────────────────
-labels = []  # 出力用（日本語）
-keys = []  # 任意：内部識別子
-vectors = []
+    for work in works:
+        text_parts = []
 
-for item in design_fields:
-    calc_text = item["en"]  # ← 計算は英語
-    label_ja = item["ja"]  # ← 出力は日本語（デザイン含む）
+        if "title" in work:
+            title = work["title"].get("en") or work["title"].get("ja", "")
+            if title:
+                text_parts.append(title)
 
-    embedding = get_embedding(calc_text)
+        for key in ["keyword1", "keyword2", "keyword3"]:
+            if key in work and work[key]:
+                keyword_en = work[key].get("en", "")
+                if keyword_en:
+                    text_parts.append(keyword_en)
 
-    keys.append(item["key"])
-    labels.append(label_ja)
-    vectors.append(embedding)
+        work["embedding_text"] = " ".join(text_parts)
 
-    print(f"{label_ja} -> {calc_text}: {len(embedding)} dim")
+    return works
 
-X = np.array(vectors)
 
-print("before PCA:", X.shape)
+def generate_embeddings(works):
+    """Ollama APIを使ってembeddingを生成（元の次元）"""
+    print(f"Processing {len(works)} works with model '{EMBEDDING_MODEL}'...")
+    print()
 
-# ─── 2. PCAで次元削減 ─────────────────────────────
-pca = PCA(n_components=TARGET_DIM, random_state=42)
-X_reduced = pca.fit_transform(X)
+    embeddings = []
+    successful_indices = []
 
-print("after PCA :", X_reduced.shape)
+    for i, work in enumerate(works):
+        try:
+            embedding = get_ollama_embedding(work["embedding_text"])
 
-# ─── 3. 辞書に戻して保存 ─────────────────────────
-reduced_embeddings = [
-    {"title": label, "embedding": X_reduced[i].tolist()}
-    for i, label in enumerate(labels)
-]
+            if embedding:
+                embeddings.append(embedding)
+                successful_indices.append(i)
 
-with open("embeddings.json", "w", encoding="utf-8") as f:
-    json.dump(reduced_embeddings, f, ensure_ascii=False, indent=2)
+                title = work.get("title", {}).get("en") or work.get("title", {}).get(
+                    "ja", "No title"
+                )
+                print(f"✓ {i + 1}/{len(works)}: {work['id']} - {title[:50]}...")
+            else:
+                print(f"✗ {i + 1}/{len(works)}: {work['id']} - Failed")
+
+        except Exception as e:
+            print(f"✗ {i + 1}/{len(works)}: Error processing {work['id']}: {e}")
+
+    return embeddings, successful_indices
+
+
+def reduce_dimensions(embeddings, target_dim=TARGET_DIMENSIONS):
+    """PCAで次元削減"""
+    print(f"\nReducing dimensions from {len(embeddings[0])} to {target_dim}...")
+
+    embeddings_array = np.array(embeddings)
+
+    pca = PCA(n_components=target_dim)
+    reduced_embeddings = pca.fit_transform(embeddings_array)
+
+    explained_variance = sum(pca.explained_variance_ratio_) * 100
+    print(f"Explained variance: {explained_variance:.2f}%")
+
+    return reduced_embeddings.tolist()
+
+
+def save_to_json(works, output_path):
+    """結果をJSONファイルに保存"""
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(works, f, ensure_ascii=False, indent=2)
+
+    print(f"\n✓ Saved to {output_path}")
+
+    import os
+
+    file_size = os.path.getsize(output_path) / 1024
+    print(f"File size: {file_size:.1f} KB")
+
+    successful = sum(1 for w in works if w.get("embedding") is not None)
+    print(f"Successfully processed: {successful}/{len(works)} works")
+
+
+def main():
+    print("=" * 60)
+    print(f"Ollama Embedding Generator (10D)")
+    print("=" * 60)
+    print()
+
+    json_path = "./list.json"
+    output_path = "./embeddings.json"
+
+    print("Step 1: Loading JSON...")
+    works = load_works_from_json(json_path)
+    print(f"Loaded {len(works)} works\n")
+
+    print("Step 2: Generating embeddings...")
+    embeddings, successful_indices = generate_embeddings(works)
+
+    if not embeddings:
+        print("Error: No embeddings generated")
+        return
+
+    print(f"\nStep 3: Reducing dimensions to {TARGET_DIMENSIONS}...")
+    reduced_embeddings = reduce_dimensions(embeddings, TARGET_DIMENSIONS)
+
+    print("\nStep 4: Saving results...")
+    for i, work_idx in enumerate(successful_indices):
+        works[work_idx]["embedding"] = reduced_embeddings[i]
+        works[work_idx]["embedding_dim"] = TARGET_DIMENSIONS
+
+    save_to_json(works, output_path)
+
+    print("\n✓ Done!")
+    print(f"\nEmbedding dimensions: {TARGET_DIMENSIONS}")
+    print(f"File is much smaller and faster to process!")
+
+
+if __name__ == "__main__":
+    main()

@@ -5,11 +5,8 @@ import MoyaBG from "../features/MoyaBG";
 import { Works } from "../features/works/Works";
 import type { SheetData } from "../types/work";
 
-export function WorksPageContent({
-  data,
-}: {
-  data: SheetData;
-}) {
+export function WorksPageContent({ data }: { data: SheetData }) {
+
   return (
     <main className="relative text-sm md:text-base pt-20 md:pt-[120px]">
       <MoyaBG />
