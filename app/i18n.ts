@@ -14,6 +14,8 @@ export type Locale = (typeof locales)[number];
 export const i18nConfig = {
   locales,
   defaultLocale,
+  /** Vercel 等で /works がミドルウェアを経由せず 404 になるのを防ぐため、常に URL にロケールを付与する */
+  prefixDefault: true,
 };
 
 export function isValidLocale(locale: string): locale is Locale {
