@@ -32,9 +32,11 @@ export default function Header() {
 
     // FV→Concept のスクロールに合わせてロゴを透明→表示（Teaserのフェードアウトと同期）
     // トップページ以外ではロゴを常に表示
+    // layoutEffect: false で ref が別コンポーネント（Teaser）のためハイドレート前に参照される警告を回避
     const { scrollYProgress } = useScroll({
         target: fvScrollRef ?? undefined,
         offset: ["start start", "end start"],
+        layoutEffect: false,
     });
     const logoOpacityFromScroll = useTransform(scrollYProgress, [0, 0.08, 0.2], [0, 0, 1]);
     const logoOpacity = isTopPage ? logoOpacityFromScroll : 1;
@@ -58,7 +60,7 @@ export default function Header() {
             />
 
             <header
-                className={`w-full h-20 md:h-24 px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
+                className={`w-full h-20 md:h-24 px-4 md:px-8 backdrop-blur-xs flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
             >
                 {/* 左: ロゴ（FV→Concept スクロールでフェードイン） */}
                 <motion.a

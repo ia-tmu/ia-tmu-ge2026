@@ -199,3 +199,60 @@ html.wf-inactive body {
   mask-size: 100% 100%;
   -webkit-mask-size: 100% 100%;
 }
+
+/* WebExhibition: 3段の自動横スクロール（作品サムネイル） */
+.scroll-row-track {
+  animation-duration: 1000s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.scroll-row-track-left {
+  animation-name: scroll-row-left;
+}
+.scroll-row-track-right {
+  animation-name: scroll-row-right;
+}
+@keyframes scroll-row-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scroll-row-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-row-track {
+    animation: none;
+  }
+}
+
+/* 検索入力のネイティブ×ボタン（クリア）のスタイル */
+.search-input-clear::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  margin-inline-start: 0.25rem;
+  background: var(--foreground);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.search-input-clear::-webkit-search-cancel-button:hover {
+  opacity: 1;
+}
+/* Edge (Chromium) など */
+.search-input-clear::-ms-clear {
+  display: none;
+}

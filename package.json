@@ -18,6 +18,7 @@
     "prepare:export": "cd out && ln -sf . ge2026 2>/dev/null || true"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "framer-motion": "^11.11.17",
