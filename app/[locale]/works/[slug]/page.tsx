@@ -11,6 +11,7 @@ import { getSimilarWorks } from "@/lib/similarity";
 export const dynamicParams = false;
 
 import MapSvg from "../../features/works/Map"
+import { div } from "framer-motion/client";
 
 // ID列だけを読み込んでURLリストを作る
 export async function generateStaticParams() {
@@ -107,10 +108,12 @@ export default async function Work({
           )}
           <hr className="border-t border-white-300" />
           {!slug.includes("W") &&
-            <>
-              <div className="text-md">Map</div>
+            <div
+              className={`w-full flex flex-col gap-6 items-end overflow-x-hidden ${slug.includes("A") ? "items-start" : "items-end"}`}
+            >
+              <div className="text-md w-full">Map</div>
               <MapSvg ids={[slug]} />
-            </>
+            </div>
           }
           <hr className="border-t border-white-300" />
 
@@ -122,6 +125,6 @@ export default async function Work({
         </div>
       </div>
       <Footer />
-    </main>
+    </main >
   );
 }
