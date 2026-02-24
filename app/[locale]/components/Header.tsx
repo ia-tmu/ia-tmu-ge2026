@@ -22,6 +22,8 @@ const SECTION_IDS = [
 ] as const;
 
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Header() {
     const { t } = useTranslation();
     const pathname = usePathname();
@@ -67,7 +69,7 @@ export default function Header() {
             >
                 {/* 左: ロゴ（FV→Concept スクロールでフェードイン） */}
                 <motion.a
-                    href={localePath(locale, "/")}
+                    href={`${basePath}${localePath(locale, "/")}`}
                     className="shrink-0 w-10 h-10 md:w-14 md:h-14 relative overflow-hidden rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary block transition-opacity duration-300"
                     aria-label={t("teaser.logo")}
                     style={{ opacity: menuOpen ? 1 : logoOpacity }}
