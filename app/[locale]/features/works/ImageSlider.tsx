@@ -10,7 +10,7 @@ type Props = {
   thumbnail?: string;
   images?: string[];
   movie?: string; // YouTube URL
-  movieOrder?: MovieOrder; // ★ work.order を渡す
+  movieOrder?: MovieOrder;
   name: string;
 };
 
@@ -125,7 +125,7 @@ export default function ImageSlider({
           onPointerUp={onPointerUp}
           onPointerCancel={onPointerCancel}
         >
-          {/* 画像/動画を同じ枠で表示（16:9） */}
+          {/* 画像/動画を同じ枠で表示（4:3） */}
           <div className="relative w-full aspect-[4/3] overflow-hidden">
             {currentSlide.type === "image" ? (
               <Image
@@ -153,7 +153,11 @@ export default function ImageSlider({
             onClick={goPrev}
             className="absolute left-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/0 hover:bg-black/20 transition-colors duration-300"
           >
-            <ArrowIcon width={19} height={15} />
+            <ArrowIcon
+              width={19}
+              height={15}
+              className="mix-blend-difference"
+            />
           </button>
         )}
         {current < slides.length - 1 && (
@@ -161,7 +165,11 @@ export default function ImageSlider({
             onClick={goNext}
             className="absolute right-2 w-8 h-8 flex items-center justify-center rounded-full bg-black/0 hover:bg-black/20 transition-colors duration-300"
           >
-            <ArrowIcon width={19} height={15} className="-scale-x-100" />
+            <ArrowIcon
+              width={19}
+              height={15}
+              className="-scale-x-100 mix-blend-difference"
+            />
           </button>
         )}
       </div>
