@@ -5,9 +5,9 @@ import MoyaBG from "../../features/MoyaBG";
 import { WorkCard } from "../../features/works/WorkCard";
 import ImageSlider from "../../features/works/ImageSlider";
 import { MovieOrder } from "../../types/work";
-
-
 export const dynamicParams = false;
+
+import MapSvg from "../../features/works/Map"
 
 // ID列だけを読み込んでURLリストを作る
 export async function generateStaticParams() {
@@ -88,6 +88,13 @@ export default async function Work({
               {work.workDescriptionEN}
             </div>
           )}
+          <hr className="border-t border-white-300" />
+          {!slug.includes("W") &&
+            <>
+              <div className="text-md">Map</div>
+              <MapSvg ids={[slug]} />
+            </>
+          }
           <hr className="border-t border-white-300" />
           <div className="text-md">この作品に関連した作品・研究</div>
           <WorkCard work={work} />
