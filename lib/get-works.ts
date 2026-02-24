@@ -74,11 +74,41 @@ function rowToWorksRow(row: (string | number | null | undefined)[]): WorksRow {
   };
 }
 
+/**
+ * セル文字列から Google Drive のファイルIDを抽出し、画像表示用の lh3 URL を返す。
+ * 対応形式:
+ * - クエリ: ?id=FILE_ID または &id=FILE_ID
+ * - パス: drive.google.com/file/d/FILE_ID または drive.google.com/open?id=FILE_ID
+ * - 既に lh3 URL: lh3.googleusercontent.com/d/FILE_ID の場合はそのまま利用（検証のみ）
+ */
 function driveToImageUrl(raw: string): string | null {
-  const m = raw.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-  if (!m?.[1]) return null;
-  const fileId = m[1];
-  return `https://lh3.googleusercontent.com/d/${fileId}`;
+  const trimmed = raw.trim();
+  if (!trimmed) return null;
+
+  // 既に lh3 の直接URLの形式なら、/d/ の直後の FILE_ID を検証して利用
+  const lh3Match = trimmed.match(/lh[0-9]\.googleusercontent\.com\/d\/([a-zA-Z0-9_-]+)/i);
+  if (lh3Match?.[1]) {
+    return `https://lh3.googleusercontent.com/d/${lh3Match[1]}`;
+  }
+
+  // クエリパラメータ id= から取得（従来対応）
+  const queryMatch = trimmed.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (queryMatch?.[1]) {
+    return `https://lh3.googleusercontent.com/d/${queryMatch[1]}`;
+  }
+
+  // パス形式: /file/d/FILE_ID または /open の id= （Drive の標準共有リンク）
+  const pathMatch = trimmed.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/i);
+  if (pathMatch?.[1]) {
+    return `https://lh3.googleusercontent.com/d/${pathMatch[1]}`;
+  }
+
+  const openMatch = trimmed.match(/drive\.google\.com\/open\?id=([a-zA-Z0-9_-]+)/i);
+  if (openMatch?.[1]) {
+    return `https://lh3.googleusercontent.com/d/${openMatch[1]}`;
+  }
+
+  return null;
 }
 
 // 共通の認証設定

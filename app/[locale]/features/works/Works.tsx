@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { shuffle } from "@/lib/shuffle";
 import {
   STUDIO_KEYS,
   getStudioName,
@@ -8,22 +10,63 @@ import {
   getStudioEnName,
   getStudioKeyByName,
 } from "../../types/studio";
+import { SEARCH_KEYWORD_CATEGORIES } from "@/app/constants";
 import { WorksListWithCategories } from "./WorksListWithCategories";
-import { SheetData } from "../../types/work";
-import { useState } from "react";
+import { WorksSearch } from "./WorksSearch";
+import { SheetData, type Work } from "../../types/work";
 
-/** ヘッダー文字列がスタジオ key なら正式名称、それ以外はそのまま返す */
-// function resolveHeaderLabel(header: string): string {
-//   return isStudioKey(header) ? getStudioName(header) : header;
-// }
+function getFilteredWorksByStudio(works: Work[]) {
+  const list = works ?? [];
+  return Object.fromEntries(
+    STUDIO_KEYS.map((studioKey) => {
+      const filtered = list.filter(
+        (work) => getStudioKeyByName(work.studioName) === studioKey
+      );
+      return [studioKey, filtered] as const;
+    })
+  );
+}
 
-// function isUrl(v: unknown): v is string {
-//   return typeof v === "string" && v.startsWith("http");
-// }
+function applyKeywordFilter(
+  worksByStudio: Record<string, Work[]>,
+  selectedKeywords: string[]
+): Record<string, Work[]> {
+  if (selectedKeywords.length === 0) return worksByStudio;
+  return Object.fromEntries(
+    Object.entries(worksByStudio).map(([studioKey, list]) => [
+      studioKey,
+      list.filter((work) =>
+        work.keywords.some((k) => selectedKeywords.includes(k))
+      ),
+    ])
+  );
+}
 
 export function Works({ data }: { data: SheetData }) {
   const { t } = useTranslation();
   const [showAllSectionId, setShowAllSectionId] = useState<string | null>(null);
+  const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
+  // SSR・初回クライアントはフィルタのみ（シャッフルしない）で一致させる
+  const [worksByStudio, setWorksByStudio] = useState(() =>
+    getFilteredWorksByStudio(data.works ?? [])
+  );
+  const worksByStudioFiltered = applyKeywordFilter(
+    worksByStudio,
+    selectedKeywords
+  );
+
+  useEffect(() => {
+    const works = data.works ?? [];
+    const next = Object.fromEntries(
+      STUDIO_KEYS.map((studioKey) => {
+        const filtered = works.filter(
+          (work) => getStudioKeyByName(work.studioName) === studioKey
+        );
+        return [studioKey, shuffle(filtered)] as const;
+      })
+    );
+    queueMicrotask(() => setWorksByStudio(next));
+  }, [data.works]);
 
   if (data.error) {
     return (
@@ -44,24 +87,25 @@ export function Works({ data }: { data: SheetData }) {
           </h1>
         </div>
 
+        <WorksSearch
+          works={data.works ?? []}
+          keywordCategories={SEARCH_KEYWORD_CATEGORIES}
+          selectedKeywords={selectedKeywords}
+          onSelectedKeywordsChange={setSelectedKeywords}
+        />
 
-        {STUDIO_KEYS.map((studioKey) => {
-          const worksForStudio = (data.works ?? []).filter(
-            (work) => getStudioKeyByName(work.studioName) === studioKey
-          );
-          return (
-            <WorksListWithCategories
-              key={studioKey}
-              id={studioKey}
-              title={getStudioEnName(studioKey)}
-              subtitle={getStudioName(studioKey)}
-              categories={[getStudioCategoryLabel(studioKey)]}
-              works={worksForStudio}
-              showAllSectionId={showAllSectionId}
-              setShowAllSectionId={setShowAllSectionId}
-            />
-          );
-        })}
+        {STUDIO_KEYS.map((studioKey) => (
+          <WorksListWithCategories
+            key={studioKey}
+            id={studioKey}
+            title={getStudioEnName(studioKey)}
+            subtitle={getStudioName(studioKey)}
+            categories={[getStudioCategoryLabel(studioKey)]}
+            works={worksByStudioFiltered[studioKey] ?? []}
+            showAllSectionId={showAllSectionId}
+            setShowAllSectionId={setShowAllSectionId}
+          />
+        ))}
 
 
 

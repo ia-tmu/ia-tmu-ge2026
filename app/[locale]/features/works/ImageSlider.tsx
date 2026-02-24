@@ -46,8 +46,10 @@ export default function ImageSlider({
   movieOrder = "掲載なし",
   name,
 }: Props) {
-  // 画像スライド作成（thumbnail + images）
-  const baseImages = [thumbnail, ...images].filter(Boolean) as string[];
+  // 画像スライド作成（thumbnail + images）。空・空白のみのURLは除外
+  const baseImages = [thumbnail, ...images]
+    .map((s) => (typeof s === "string" ? s.trim() : ""))
+    .filter((s) => s.length > 0) as string[];
   const slides: Slide[] = baseImages.map((src) => ({ type: "image", src }));
 
   // 動画を挿入（掲載順に応じて）
@@ -65,6 +67,11 @@ export default function ImageSlider({
   }
 
   const [current, setCurrent] = useState(0);
+  const [failedImageSrcs, setFailedImageSrcs] = useState<Set<string>>(() => new Set());
+
+  const handleImageError = (src: string) => {
+    setFailedImageSrcs((prev) => new Set(prev).add(src));
+  };
 
   // スワイプ用
   const startXRef = useRef<number | null>(null);
@@ -126,16 +133,23 @@ export default function ImageSlider({
           onPointerCancel={onPointerCancel}
         >
           {/* 画像/動画を同じ枠で表示（4:3） */}
-          <div className="relative w-full aspect-[4/3] overflow-hidden">
+          <div className="relative w-full aspect-[4/3] overflow-hidden bg-muted">
             {currentSlide.type === "image" ? (
-              <Image
-                src={currentSlide.src}
-                alt={`${name}-${current}`}
-                fill
-                className="object-cover"
-                draggable={false}
-                priority={current === 0}
-              />
+              failedImageSrcs.has(currentSlide.src) ? (
+                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
+                  画像を読み込めません
+                </div>
+              ) : (
+                <Image
+                  src={currentSlide.src}
+                  alt={`${name}-${current}`}
+                  fill
+                  className="object-cover"
+                  draggable={false}
+                  priority={current === 0}
+                  onError={() => handleImageError(currentSlide.src)}
+                />
+              )
             ) : (
               <iframe
                 className="absolute inset-0 h-full w-full"
@@ -189,19 +203,26 @@ export default function ImageSlider({
             <button
               key={`${s.type}-${index}`}
               onClick={() => setCurrent(index)}
-              className={`relative outline-2 outline-offset-2 ${
+              className={`relative outline-2 outline-offset-2 w-[52px] h-[39px] shrink-0 overflow-hidden bg-muted ${
                 index === current ? "outline-white" : "outline-transparent"
               }`}
             >
-              <Image
-                src={thumbSrc}
-                width={52}
-                height={39}
-                alt={`${name}-thumb-${index}`}
-                className="object-cover"
-                draggable={false}
-                priority={index === 0}
-              />
+              {s.type === "image" && failedImageSrcs.has(thumbSrc) ? (
+                <div className="w-full h-full flex items-center justify-center text-[10px] text-muted-foreground">
+                  —
+                </div>
+              ) : (
+                <Image
+                  src={thumbSrc}
+                  width={52}
+                  height={39}
+                  alt={`${name}-thumb-${index}`}
+                  className="object-cover"
+                  draggable={false}
+                  priority={index === 0}
+                  onError={s.type === "image" ? () => handleImageError(thumbSrc) : undefined}
+                />
+              )}
 
               {s.type === "youtube" && (
                 <span className="absolute inset-0 flex items-center justify-center">
