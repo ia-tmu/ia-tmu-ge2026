@@ -5,6 +5,8 @@ import MoyaBG from "../../features/MoyaBG";
 import { WorkCard } from "../../features/works/WorkCard";
 import ImageSlider from "../../features/works/ImageSlider";
 import { MovieOrder } from "../../types/work";
+import { getSimilarWorks } from "@/lib/similarity";
+
 export const dynamicParams = false;
 
 import MapSvg from "../../features/works/Map"
@@ -27,6 +29,10 @@ export default async function Work({
   if (!work) {
     notFound();
   }
+
+  const result = getSimilarWorks(slug, 10);
+
+  if (!result) return <div>作品が見つかりません</div>
 
   return (
     <main className="relative text-sm md:text-base pt-20 md:pt-[120px] text-foreground">
@@ -98,6 +104,12 @@ export default async function Work({
           <hr className="border-t border-white-300" />
           <div className="text-md">この作品に関連した作品・研究</div>
           <WorkCard work={work} />
+          {result.similarWorks && result.similarWorks.map((item) => (
+            <div key={item.work.id}>
+              {item.rank}位: {item.work.title.ja ? item.work.title.ja : item.work.title.en}
+              ({(item.similarity * 100).toFixed(1)}% 類似)
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
