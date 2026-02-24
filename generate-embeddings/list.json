@@ -25,21 +25,7 @@
       "ja": "コミュニティデザイン",
       "en": "Community Design",
       "key": "community_design"
-    },
-    "embedding_text": "A Proposal for Architecture in a Flood Zone Spatial Design Urban Design Community Design",
-    "embedding": [
-      -0.2456454787432325,
-      -0.1475796403983088,
-      0.14916712241956193,
-      -0.27798435030775265,
-      0.004422742388850046,
-      -0.11330028209389655,
-      -0.1391917821577728,
-      0.005181960467962545,
-      -0.040241920311491,
-      -0.05283933698772958
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A02",
@@ -67,21 +53,7 @@
       "ja": "サスティナブルデザイン",
       "en": "Sustainable Design",
       "key": "sustainable_design"
-    },
-    "embedding_text": "A Proposal for a Cafe Offering Coffee Alternatives Spatial Design Community Design Sustainable Design",
-    "embedding": [
-      -0.2581192097016537,
-      -0.12358096244229484,
-      0.0864562258127497,
-      -0.04926958793033056,
-      0.03859228044476039,
-      0.061996694632196356,
-      -0.05212317550329863,
-      0.06483382228709965,
-      -0.0018673935128930696,
-      0.17549231978118165
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A03",
@@ -109,21 +81,7 @@
       "ja": "ランドスケープデザイン",
       "en": "Landscape Design",
       "key": "landscape_design"
-    },
-    "embedding_text": "Living with Water Spatial Design Interior Design Landscape Design",
-    "embedding": [
-      -0.1968542763319338,
-      -0.25606823157390124,
-      0.10375138138993659,
-      -0.24550702837345356,
-      0.008940372041250868,
-      0.031154842041202568,
-      -0.049300381136375346,
-      -0.01255368014021898,
-      0.005872420121679351,
-      -0.06569180574830014
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A04",
@@ -151,21 +109,7 @@
       "ja": "ファーニチャーデザイン",
       "en": "Furniture Design",
       "key": "furniture_design"
-    },
-    "embedding_text": "A Proposal of a Next-Generation Capsule Hotel Spatial Design Interior Design Furniture Design",
-    "embedding": [
-      -0.14298294472752066,
-      -0.21866901334381653,
-      0.048552498037448856,
-      -0.032575862230953184,
-      -0.05368852770809332,
-      0.061575311307932104,
-      -0.05372218164805755,
-      0.002849919314747711,
-      -0.03308175743711174,
-      0.06324031071150225
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A05",
@@ -188,21 +132,7 @@
       "ja": "モビリティデザイン",
       "en": "Mobility Design",
       "key": "mobility_design"
-    },
-    "embedding_text": "Proposal of Water Mobility as a New Mode of Transportation in Congested Urban Areas Product Design Mobility Design",
-    "embedding": [
-      -0.2519818897465139,
-      -0.10655117211750251,
-      0.03601253517678544,
-      0.07070885350184034,
-      -0.059793001326056715,
-      -0.2956289347052856,
-      0.005378035268792351,
-      0.06797580674725255,
-      -0.14091598957231344,
-      -0.18703475442303763
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A06",
@@ -220,21 +150,7 @@
       "ja": "空間デザイン",
       "en": "Spatial Design",
       "key": "spatial_design"
-    },
-    "embedding_text": "Multisensory Synesthesic Architecture Spatial Design",
-    "embedding": [
-      0.009140395136899241,
-      -0.09744167457902332,
-      0.17933298130389333,
-      -0.13586417712612595,
-      0.16930078144654,
-      0.16739711797516146,
-      0.004142044568701914,
-      0.012224406601191586,
-      -0.021571568544553294,
-      -0.054671740377837535
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A07",
@@ -262,21 +178,7 @@
       "ja": "ランドスケープデザイン",
       "en": "Landscape Design",
       "key": "landscape_design"
-    },
-    "embedding_text": "Experiencing Fermentation Spatial Design Urban Design Landscape Design",
-    "embedding": [
-      -0.15371105506703245,
-      -0.13501914720243105,
-      0.13805861822610538,
-      -0.1183449064528635,
-      0.08615731355658171,
-      0.05404659451741832,
-      -0.042945759792639926,
-      0.058319371189721934,
-      -0.017331027883817268,
-      -0.025141677034439612
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A08",
@@ -304,21 +206,7 @@
       "ja": "スペキュラティブデザイン",
       "en": "Speculative Design",
       "key": "speculative_design"
-    },
-    "embedding_text": "Space and Emotions: Material Manifestations of Rituality Spatial Design Interactive Architecture Speculative Design",
-    "embedding": [
-      -0.056244593051814944,
-      -0.0713735897809076,
-      0.2577259103677687,
-      -0.059308693383350576,
-      0.19635595040475176,
-      0.06708189780943047,
-      -0.07696732967535568,
-      -0.018659043600592232,
-      0.05713524030106532,
-      -0.052623751754327056
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A09",
@@ -341,21 +229,7 @@
       "ja": "インタラクティブアーキテクチャー",
       "en": "Interactive Architecture",
       "key": "interactive_architecture"
-    },
-    "embedding_text": "Variable Space Design That Optimizes the Indoor Environment for Each Season Spatial Design Interactive Architecture",
-    "embedding": [
-      -0.0513417598251487,
-      -0.1478800894779149,
-      0.291115314006332,
-      -0.11957104798617954,
-      0.06626686650898361,
-      0.06291702330148044,
-      -0.02958880169693379,
-      -0.06462970633033761,
-      0.037071069655292756,
-      -0.016434299075410018
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A10",
@@ -378,21 +252,7 @@
       "ja": "プロダクトデザイン",
       "en": "Product Design",
       "key": "product_design"
-    },
-    "embedding_text": "A Slow Mobility Proposal for Fostering Regional Affection by Leveraging the Cultural Context of Slopes Mobility Design Product Design",
-    "embedding": [
-      -0.2283085856998712,
-      0.022838383381687942,
-      0.08817531613446725,
-      0.09064940151386769,
-      -0.03644814944018493,
-      -0.2376004727254459,
-      0.0006026347269949753,
-      0.006276956264258362,
-      -0.05478348581734454,
-      -0.07927600425543184
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A11",
@@ -415,21 +275,7 @@
       "ja": "モビリティデザイン",
       "en": "Mobility Design",
       "key": "mobility_design"
-    },
-    "embedding_text": "Research on the New Mobility Possibilities Expanded by the Rise of Digital Nomads Product Design Mobility Design",
-    "embedding": [
-      -0.2542881023266598,
-      -0.0057175306334913915,
-      -0.029208574478936707,
-      0.11332326997408607,
-      -0.11688784040089023,
-      -0.23630928096033696,
-      -0.008421256275776098,
-      0.14706980901151376,
-      -0.08825932847529258,
-      -0.039077395894463435
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A12",
@@ -452,21 +298,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "Product Design to Ignite Motivation for Creativity Product Design Design Prototyping",
-    "embedding": [
-      -0.11276478682423176,
-      0.037046173693340935,
-      -0.09441742689649167,
-      0.22143157163175772,
-      0.025599332991264358,
-      -0.017978377008939405,
-      -0.07975490542785268,
-      0.07639705238326777,
-      0.05253486824421501,
-      0.06198347156630478
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A13",
@@ -489,21 +321,7 @@
       "ja": "コンセプチュアルデザイン",
       "en": "Conceptual Design",
       "key": "conceptual_design"
-    },
-    "embedding_text": "Soft Architecture Spatial Design Conceptual Design",
-    "embedding": [
-      -0.20012705595356947,
-      -0.20988003903053845,
-      0.09860089666076605,
-      -0.22811185684368207,
-      0.09493459282247063,
-      0.05570736005285914,
-      -0.13999836326001988,
-      -0.030599576571572498,
-      0.021167095285742413,
-      -0.02508191411931354
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A14",
@@ -531,21 +349,7 @@
       "ja": "デジタルアーカイブ",
       "en": "Digital Archive",
       "key": "digital_archive"
-    },
-    "embedding_text": "Digital Archiving of Endangered Tree Species in the Amazon Rainforest using SpeedTree Graphic Design Web Design Digital Archive",
-    "embedding": [
-      0.04801181375350432,
-      -0.05403048764369609,
-      -0.06994374882232691,
-      -0.23532643777191495,
-      -0.25615068871308344,
-      -0.06087350444929058,
-      0.016571746328792675,
-      0.10987256091683677,
-      -0.09678500202916628,
-      0.05882679607881246
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A15",
@@ -573,21 +377,7 @@
       "ja": "デジタルアーカイブ",
       "en": "Digital Archive",
       "key": "digital_archive"
-    },
-    "embedding_text": "Development of a Night View Exploration Support Application using Occlusion Estimation UI Design UX Design Digital Archive",
-    "embedding": [
-      0.061529868410054825,
-      0.1020460565529038,
-      0.08558551004057498,
-      -0.17664335046300364,
-      -0.234761856654162,
-      -0.12672370243757694,
-      0.12193731311024927,
-      -0.1355353888615098,
-      -0.07269858494854953,
-      0.09341351459812615
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A16",
@@ -615,21 +405,7 @@
       "ja": "音響デザイン",
       "en": "Sound Design",
       "key": "sound_design"
-    },
-    "embedding_text": "Dynamic Control of Piano Effects Inspired by Scat Singing Interactive Art Performance Sound Design",
-    "embedding": [
-      0.31471444908477875,
-      0.023593587792555527,
-      0.09126521673207977,
-      0.07137367710185487,
-      0.010820099889783658,
-      0.01139329589182089,
-      -0.04620107622113902,
-      0.021454022180669906,
-      -0.1717267619651612,
-      0.005804661303827793
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A17",
@@ -657,21 +433,7 @@
       "ja": "クラフトデザイン",
       "en": "Craft Design",
       "key": "craft_design"
-    },
-    "embedding_text": "Systematization of Macrame and Devising a System for 3D Macrame Patterns Interior Design Pattern Design Craft Design",
-    "embedding": [
-      0.07796166018763669,
-      -0.20347502074195972,
-      -0.10908389262845905,
-      0.029976896009892524,
-      -0.0788125415527742,
-      0.17705460282170152,
-      -0.04254836741769743,
-      -0.047877169285639176,
-      -0.05929051797726577,
-      0.05845357878060319
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A18",
@@ -699,21 +461,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "Generating 3D Effects from Illustrations Media Art AI Design Prototyping",
-    "embedding": [
-      0.2640089095726381,
-      -0.1419622023507325,
-      -0.13337493614141716,
-      -0.03174606979973073,
-      -0.07013468617618437,
-      -0.014305797519480154,
-      -0.015355717613018401,
-      -0.019924159582437744,
-      -0.10981033266409515,
-      0.023855987094179798
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A19",
@@ -741,21 +489,7 @@
       "ja": "UXデザイン",
       "en": "UX Design",
       "key": "ux_design"
-    },
-    "embedding_text": "A Children’s Game to Promote Understanding of Dementia Symptoms and Behaviors Game Design Human-Centered Design UX Design",
-    "embedding": [
-      -0.0647593938046931,
-      0.3203546096444949,
-      -0.0317433696965259,
-      0.054181490982729334,
-      -0.12971115786618947,
-      0.09028915635355383,
-      -0.21628622320405555,
-      -0.064179410904866,
-      0.1350514060095382,
-      -0.0900487463365203
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A20",
@@ -783,21 +517,7 @@
       "ja": "インタラクションデザイン",
       "en": "Interaction Design",
       "key": "interaction_design"
-    },
-    "embedding_text": "Classification and Visualization of Basketball Player Characteristics and Shooting Tendencies UX Design Information Design Interaction Design",
-    "embedding": [
-      0.00047728811031267303,
-      0.230650483432527,
-      -0.061734295694926646,
-      -0.1242200634123821,
-      -0.11082570743702769,
-      -0.07839746931645424,
-      -0.034922865344329874,
-      -0.20732503097721433,
-      -0.0028276939144078143,
-      0.0510213310363245
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A21",
@@ -825,21 +545,7 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "3D Modeling of Character Illustrations, Considering their Deformed Expressions Interface Design Human Computer Interaction Research Through Design",
-    "embedding": [
-      0.16499694858341124,
-      0.1544763880456211,
-      -0.07233883803018647,
-      -0.005054748337157574,
-      0.06483087252624055,
-      -0.005728803059071935,
-      -0.07362243654280329,
-      -0.13086382664601479,
-      -0.16656507411106294,
-      -0.016673632554443787
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A22",
@@ -867,21 +573,7 @@
       "ja": "ブックデザイン",
       "en": "Book Design",
       "key": "book_design"
-    },
-    "embedding_text": "Research and Practice of Communication Design using an Altruistic Mindset Community Design Co-design Book Design",
-    "embedding": [
-      -0.13494977893924007,
-      0.13912458930823351,
-      -0.12812280437261234,
-      -0.05470482373107178,
-      0.1559545161221463,
-      -0.024621137065231558,
-      -0.019783169458567066,
-      0.1690131739568224,
-      0.15414339592801599,
-      0.1151032322018158
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A23",
@@ -909,21 +601,7 @@
       "ja": "オプティカルアート",
       "en": "Optical Art",
       "key": "optical_art"
-    },
-    "embedding_text": "A Personal Space for Solitude Spatial Design Conceptual Design Optical Art",
-    "embedding": [
-      0.022921827836442164,
-      -0.22929836211924304,
-      0.12771723466951382,
-      -0.04262818136510214,
-      0.13917923790305503,
-      0.025184685477188808,
-      0.03762291556485103,
-      -0.08624387073844039,
-      0.1359898107567584,
-      -0.02271896634393743
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A24",
@@ -946,21 +624,7 @@
       "ja": "コンセプチュアルデザイン",
       "en": "Conceptual Design",
       "key": "conceptual_design"
-    },
-    "embedding_text": "Design Proposal for Spaces and Forms Engaging with Pandemics Spatial Design Conceptual Design",
-    "embedding": [
-      -0.19275523143120205,
-      -0.07158944145111244,
-      0.13087194011324232,
-      -0.1833853996844034,
-      0.09306733911816638,
-      -0.03743083169395516,
-      -0.10746067937883036,
-      0.01715929572634484,
-      0.04293488972911206,
-      0.040876543487884165
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A25",
@@ -988,21 +652,7 @@
       "ja": "ユニバーサルデザイン",
       "en": "Universal Design",
       "key": "universal_design"
-    },
-    "embedding_text": "Evaluation and Design of Special Printing for Improving Visual Perceptibility for People with Myopia UX Design Human-Centered Design Universal Design",
-    "embedding": [
-      -0.04433577895260206,
-      0.20409451279541055,
-      -0.14282104957836586,
-      0.00016182750142821673,
-      0.053797566696121984,
-      -0.03846462440108927,
-      0.20951708250614648,
-      -0.2065081630718476,
-      0.002585431404023767,
-      0.07976261379973619
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A27",
@@ -1030,21 +680,7 @@
       "ja": "人間中心デザイン",
       "en": "Human-Centered Design",
       "key": "human_centered_design"
-    },
-    "embedding_text": "A Design Proposal Utilizing the Relaxation and Concentration Effects of Scent UX Design Product Design Human-Centered Design",
-    "embedding": [
-      -0.16271717646581688,
-      0.20629530991798728,
-      0.10241342038032711,
-      0.11436786204418367,
-      0.08434579387137935,
-      0.23830121298462972,
-      0.15718289735713875,
-      0.052899566700728116,
-      -0.12857811715568376,
-      -0.0017275238006148816
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A28",
@@ -1072,21 +708,7 @@
       "ja": "ヒューマンコンピュータインタラクション",
       "en": "Human Computer Interaction",
       "key": "human_computer_interaction"
-    },
-    "embedding_text": "Reframing Fidgeting as Empowerment — A Psychophysiological Evaluation UX Design Human-Centered Design Human Computer Interaction",
-    "embedding": [
-      -0.06235813887225282,
-      0.2933541998153657,
-      0.0367632854881731,
-      0.15866333281280326,
-      0.1468914487281157,
-      -0.05456956730618601,
-      -0.04677119273533513,
-      -0.20282425389994035,
-      -0.036944492262104875,
-      0.043075905051233904
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A29",
@@ -1114,21 +736,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "A Stool using a Wave-Patterned Assembly Structure Product Design Furniture Design Design Prototyping",
-    "embedding": [
-      -0.10477004641272361,
-      -0.2626492992313113,
-      -0.11372794649177177,
-      0.24246536173291636,
-      -0.1267023397338099,
-      0.11581873805123703,
-      -0.04817613005318081,
-      -0.10961719344040828,
-      -0.12206770596569728,
-      0.07828892506655648
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A30",
@@ -1156,21 +764,7 @@
       "ja": "コンセプチュアルデザイン",
       "en": "Conceptual Design",
       "key": "conceptual_design"
-    },
-    "embedding_text": "Proposal for Experiential Characterization Methods to Deepen Understanding of Intangible Entities Media Art Generative Art Conceptual Design",
-    "embedding": [
-      0.26476384206933284,
-      -0.028399207803358455,
-      0.10462996733129513,
-      0.0273427072505394,
-      0.019453407644577054,
-      -0.06700761751306891,
-      -0.023438508785902503,
-      0.1957714817543926,
-      0.09062186587304422,
-      -0.006056902380937618
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A31",
@@ -1198,21 +792,7 @@
       "ja": "メディアアート",
       "en": "Media Art",
       "key": "media_art"
-    },
-    "embedding_text": "Supportive A&R — A Study of the Creative Production Process with Artists Community Design Co-design Media Art",
-    "embedding": [
-      0.18339934455731033,
-      0.1021280060514084,
-      0.09103812770845197,
-      0.06763299741958892,
-      0.04769588176623907,
-      -0.08370124996432995,
-      -0.12257118182915412,
-      0.2710644241317192,
-      0.05322489349470938,
-      0.17238982319319185
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A32",
@@ -1240,21 +820,7 @@
       "ja": "メディアアート",
       "en": "Media Art",
       "key": "media_art"
-    },
-    "embedding_text": "Hand-Drawn Animation Production using Exaggerated Expressions that Transform Original Materials and Forms Graphic Design Animation Media Art",
-    "embedding": [
-      0.31284828790454283,
-      0.02954884743298079,
-      -0.23940429229671678,
-      -0.031128743015935927,
-      0.1498830371534482,
-      -0.07354160384197879,
-      -0.16968254087992635,
-      0.050394746665581004,
-      -0.16884049408267016,
-      -0.02069545651186869
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A33",
@@ -1282,21 +848,7 @@
       "ja": "Webデザイン",
       "en": "Web Design",
       "key": "web_design"
-    },
-    "embedding_text": "Interactive Educational Content for Inspiring Interest in Diverse Fields of Study UX Design Interaction Design Web Design",
-    "embedding": [
-      -0.060371515134686395,
-      0.19487968581024454,
-      -0.042662685349316845,
-      0.005383655371401538,
-      0.013691373894125761,
-      0.01700865715339112,
-      -0.015152132440343307,
-      0.04485459554350358,
-      0.15783422095011265,
-      0.11745507836587445
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A34",
@@ -1319,21 +871,7 @@
       "ja": "アニメーション",
       "en": "Animation",
       "key": "animation"
-    },
-    "embedding_text": "A Study on 3DCG Animation Production based on Musical Structure Media Art Animation",
-    "embedding": [
-      0.3799587535901084,
-      -0.06450112189389243,
-      -0.028138822719056766,
-      0.031475519944139156,
-      0.013877040933611593,
-      0.06497482395815896,
-      -0.268550287967359,
-      0.12804512731636813,
-      -0.2547937034819441,
-      0.09147747057758125
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A35",
@@ -1361,21 +899,7 @@
       "ja": "ファーニチャーデザイン",
       "en": "Furniture Design",
       "key": "furniture_design"
-    },
-    "embedding_text": "Verification of the Usefulness of Slope Furniture Utilizing Sloped Spaces on Riverbanks Interior Design Urban Design Furniture Design",
-    "embedding": [
-      -0.19876533273054037,
-      -0.204445031784478,
-      0.057313860302454264,
-      0.0181366691377988,
-      -0.08454811649814813,
-      -0.006675100794070656,
-      -0.06815650131620504,
-      -0.13801107797982431,
-      -0.06873005646940931,
-      0.007611336020525047
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A36",
@@ -1403,21 +927,7 @@
       "ja": "インフォメーションデザイン",
       "en": "Information Design",
       "key": "information_design"
-    },
-    "embedding_text": "Yamanote Line Walkbook Graphic Design Book Design Information Design",
-    "embedding": [
-      -0.09603251973976691,
-      -0.04194475008756959,
-      -0.36111700791121437,
-      -0.13933605715880126,
-      0.04791930934954655,
-      -0.037644764615874925,
-      0.14918327648123286,
-      0.06196699661093611,
-      0.14754127803655673,
-      -0.1746415487752804
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A37",
@@ -1445,21 +955,7 @@
       "ja": "ブックデザイン",
       "en": "Book Design",
       "key": "book_design"
-    },
-    "embedding_text": "KATACHIGANA: Hiragana Typeface Designs based on External Shape Influence Graphic Design Typography Design Book Design",
-    "embedding": [
-      0.004634594353130319,
-      -0.059532558310749446,
-      -0.35898526517438933,
-      -0.13654769415629672,
-      0.12276190981835122,
-      0.052973913729286955,
-      0.08397855856411528,
-      -0.04523733120907995,
-      0.02957983840900016,
-      -0.07241353057166011
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A38",
@@ -1487,21 +983,7 @@
       "ja": "オプティカルアート",
       "en": "Optical Art",
       "key": "optical_art"
-    },
-    "embedding_text": "Moiré Typography in Physical Space Graphic Design Typography Design Optical Art",
-    "embedding": [
-      0.1508459663038701,
-      -0.2227625681697002,
-      -0.17730239479586268,
-      -0.04325133190492718,
-      0.07213120694186974,
-      0.004183088809147751,
-      0.18347274156261859,
-      -0.15161945973723967,
-      0.09454869263003957,
-      -0.03854232071394598
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A39",
@@ -1529,21 +1011,7 @@
       "ja": "ブックデザイン",
       "en": "Book Design",
       "key": "book_design"
-    },
-    "embedding_text": "New Bird Motif Patterns Graphic Design Pattern Design Book Design",
-    "embedding": [
-      0.038149459661865025,
-      -0.19829042360178348,
-      -0.37495847622734135,
-      -0.0971597378679492,
-      -0.07449450263232889,
-      0.09759039716559229,
-      0.04477318116423863,
-      -0.010897238023903908,
-      0.007369486320326228,
-      -0.03495980034717343
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A40",
@@ -1571,21 +1039,7 @@
       "ja": "サスティナブルデザイン",
       "en": "Sustainable Design",
       "key": "sustainable_design"
-    },
-    "embedding_text": "Sustainable Paper Production for Packaging and Branding of Anpo-Gaki Graphic Design Branding Design Sustainable Design",
-    "embedding": [
-      -0.03855800591519395,
-      -0.07969992507692075,
-      -0.3634972147818433,
-      -0.05395656399739689,
-      0.032602657235445094,
-      0.061471648723167724,
-      -0.025392177637344148,
-      0.14903886688821294,
-      -0.004512684949541879,
-      0.06301981744815993
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A41",
@@ -1613,21 +1067,7 @@
       "ja": "サービスデザイン",
       "en": "Service Design",
       "key": "service_design"
-    },
-    "embedding_text": "Design of Street Information for Pedestrians Product Design Community Design Service Design",
-    "embedding": [
-      -0.2645122666025428,
-      0.07631435871638018,
-      -0.020176606997815667,
-      -0.024266605939888237,
-      -0.045973339292063875,
-      -0.1851118085500174,
-      0.12340254428157689,
-      0.03477692542636836,
-      0.012262697495414629,
-      0.016912890635863955
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A43",
@@ -1650,21 +1090,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "Research and Proposals on Product Scalability through Cardism Product Design Design Prototyping",
-    "embedding": [
-      -0.14424779254288247,
-      0.045853946748221644,
-      -0.09357457966130697,
-      0.18543876339835655,
-      -0.08034462308452087,
-      -0.0726247112887094,
-      -0.0227258083069106,
-      0.03101419180030832,
-      -0.05753074681576537,
-      0.048973823920860735
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A45",
@@ -1692,21 +1118,7 @@
       "ja": "ブックアート",
       "en": "Book Art",
       "key": "book_art"
-    },
-    "embedding_text": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action Editorial Design Book Design Book Art",
-    "embedding": [
-      0.08236604114341048,
-      0.0905964672268755,
-      -0.10581643712930669,
-      0.012145316356291347,
-      0.11134942878360167,
-      0.023952902007343374,
-      0.02907738311818117,
-      0.012883528635416397,
-      0.23694935672423295,
-      -0.08823286521570664
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A46",
@@ -1729,21 +1141,7 @@
       "ja": "インフォメーションデザイン",
       "en": "Information Design",
       "key": "information_design"
-    },
-    "embedding_text": "SORAMOYOU: Visualizing Past Weather Data and Exploring Its Potential Uses Service Design Information Design",
-    "embedding": [
-      -0.008269647252356054,
-      0.15002967643746962,
-      0.07105227493760678,
-      -0.2689907577713778,
-      -0.08357520424166537,
-      -0.0661953714189548,
-      0.19742082771266564,
-      -0.04225837090193895,
-      -0.07299893188386164,
-      -0.016916412534874845
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A47",
@@ -1771,21 +1169,7 @@
       "ja": "コンセプチュアルデザイン",
       "en": "Conceptual Design",
       "key": "conceptual_design"
-    },
-    "embedding_text": "Design of Game Mechanics Focusing on Continuity in Board Games Product Design Game Design Conceptual Design",
-    "embedding": [
-      -0.07156948649970875,
-      0.07195615447589923,
-      -0.049147631640414136,
-      0.14598733746210243,
-      -0.18329360332450922,
-      0.06743515602311044,
-      -0.28391138699688045,
-      -0.0252877779320873,
-      0.1880021123712945,
-      -0.17426676536228622
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "A48",
@@ -1803,21 +1187,7 @@
       "ja": "アニメーション",
       "en": "Animation",
       "key": "animation"
-    },
-    "embedding_text": "Research and Practice of Visual Expression That Enhances Emotional Ventilation through Audiovisual Interplay Animation",
-    "embedding": [
-      0.3222042683970966,
-      0.17777318225033542,
-      0.07414443043019643,
-      -0.03787935736989442,
-      0.22468607096545176,
-      -0.025249979337530856,
-      -0.1294731408947788,
-      -0.031535363983187695,
-      -0.19344372130469858,
-      -0.057535801337176846
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B01",
@@ -1845,21 +1215,7 @@
       "ja": "UXデザイン",
       "en": "UX Design",
       "key": "ux_design"
-    },
-    "embedding_text": "Research on Emerging Donation Cultures in the SNS Society Service Design Interaction Design UX Design",
-    "embedding": [
-      -0.15700741240617982,
-      0.27945144570588004,
-      -0.02969513185990644,
-      -0.05465498113210819,
-      -0.03691224876233133,
-      -0.07578206394850287,
-      -0.020527473235936754,
-      0.1270934067312128,
-      0.0440046898041845,
-      0.21879744697808307
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B02",
@@ -1887,21 +1243,7 @@
       "ja": "ファーニチャーデザイン",
       "en": "Furniture Design",
       "key": "furniture_design"
-    },
-    "embedding_text": "A Chair Designs Social Posture Design Product Design Interior Design Furniture Design",
-    "embedding": [
-      -0.24883275266923868,
-      -0.11139297840012699,
-      -0.11479642958817748,
-      0.15725940824974166,
-      0.010669264654537183,
-      0.06150714925951292,
-      -0.05286599290403592,
-      -0.054065022128753866,
-      -0.02639293065335873,
-      0.08116912188171438
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B03",
@@ -1929,21 +1271,7 @@
       "ja": "スペキュラティブデザイン",
       "en": "Speculative Design",
       "key": "speculative_design"
-    },
-    "embedding_text": "Experience Design and Product Proposals Offering Scent Tasting Product Design Service Design Speculative Design",
-    "embedding": [
-      -0.16059075300513004,
-      0.040504310322058236,
-      0.009911762305196558,
-      0.11459586594172842,
-      0.011698867014165983,
-      0.18866729174708305,
-      0.17230918026828906,
-      0.15557273144511005,
-      -0.0933739030223854,
-      -0.023482307304807017
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B04",
@@ -1971,21 +1299,7 @@
       "ja": "人間中心デザイン",
       "en": "Human-Centered Design",
       "key": "human_centered_design"
-    },
-    "embedding_text": "Lighting Design with Local Materials Product Design Sustainable Design Human-Centered Design",
-    "embedding": [
-      -0.242833253871364,
-      -0.08967818930605251,
-      0.07045269266801765,
-      0.05976017734674813,
-      -0.02079510611443012,
-      0.12129610083928252,
-      0.042642931013500814,
-      0.031526106185595995,
-      0.10294032343756845,
-      0.21055043178869273
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B05",
@@ -2013,21 +1327,7 @@
       "ja": "インタラクションデザイン",
       "en": "Interaction Design",
       "key": "interaction_design"
-    },
-    "embedding_text": "Expanding Visual Experiences via Slit-Scan Cross-Section Manipulation Media Art Image Processing Interaction Design",
-    "embedding": [
-      0.3549016471697296,
-      -0.04058612931359348,
-      0.13682427727520502,
-      0.03162985145644164,
-      -0.010082498151998772,
-      -0.1293888613522229,
-      0.06733886425440096,
-      -0.04875372539845141,
-      -0.0019678273630393214,
-      0.035665617100923065
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B06",
@@ -2055,21 +1355,7 @@
       "ja": "AI",
       "en": "AI",
       "key": "ai"
-    },
-    "embedding_text": "Real-Time Othello Commentary using Vision-Based Board Recognition and Large Language Models Interface Design Human Computer Interaction AI",
-    "embedding": [
-      0.14770747570063425,
-      0.10213730215147335,
-      0.02350410635595744,
-      -0.011075189534655012,
-      -0.4048908982435447,
-      0.029889840016298165,
-      -0.16790126320125665,
-      -0.10352673206230947,
-      0.11511017463523186,
-      -0.10123559067279173
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B07",
@@ -2092,21 +1378,7 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "Visual Expressions Crossing Calligraphy and Graphics Graphic Design Research Through Design",
-    "embedding": [
-      0.1750743479944621,
-      -0.0020597743544883834,
-      -0.26370905314426346,
-      -0.10522532776049008,
-      0.09936993723151347,
-      -0.0487135281895324,
-      0.07710464586368992,
-      0.012219680062743182,
-      0.03305834564164402,
-      -0.032324038715750236
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B08",
@@ -2134,21 +1406,7 @@
       "ja": "デジタルアーカイブ",
       "en": "Digital Archive",
       "key": "digital_archive"
-    },
-    "embedding_text": "Incremental, Collaborative Knowledge Graph Construction with Arts and Culture Domain Experts and Large Language Models Interface Design AI Digital Archive",
-    "embedding": [
-      0.16012557569910643,
-      0.05256143368441779,
-      0.026938180332116278,
-      -0.15914612651392562,
-      -0.3314789629615754,
-      -0.02097526419888572,
-      0.029809752693360305,
-      0.20211996087089745,
-      0.0765773740422994,
-      0.13872871014609678
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B09",
@@ -2176,21 +1434,7 @@
       "ja": "ユニバーサルデザイン",
       "en": "Universal Design",
       "key": "universal_design"
-    },
-    "embedding_text": "Exploring Atmosphere through Multimodality: “Warmth” as a Case Study Human-Centered Design UX Design Universal Design",
-    "embedding": [
-      -0.09124791591497204,
-      0.2680916991485513,
-      0.1414326602078043,
-      -0.03249277425548296,
-      0.11938039911518865,
-      0.07168848739678368,
-      0.08182121139296922,
-      -0.07502035085456026,
-      -0.12227306784353052,
-      -0.025695467211354274
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B10",
@@ -2218,21 +1462,7 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "A Practice-Based Exploration of the Sensory Value of Planar Silk-Spinning in Sericulture Product Design Speculative Design Research Through Design",
-    "embedding": [
-      0.0006866865884580434,
-      -0.06062270780622037,
-      0.007643096896280688,
-      0.13669695016513986,
-      0.10733391500183752,
-      0.09052491991922085,
-      0.0394676224693011,
-      0.055238295007162985,
-      -0.026736903919222062,
-      0.04854416332738791
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B11",
@@ -2260,21 +1490,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "Exploring Sole Designs to Encourage Slow Walking Product Design Fashion Design Design Prototyping",
-    "embedding": [
-      -0.18673520153724324,
-      -0.03896594260775542,
-      -0.08959771217908147,
-      0.1818538751831747,
-      0.013855545870814008,
-      -0.09305207521340438,
-      0.06858473582796187,
-      -0.0358701346922258,
-      -0.05882373092613734,
-      -0.05935256967787692
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B12",
@@ -2302,21 +1518,7 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "Designing Biological [Human-Product] Interaction through Skin Interfaces Product Design Speculative Design Research Through Design",
-    "embedding": [
-      -0.08764635448480891,
-      0.13495067878966902,
-      0.07423667001290674,
-      0.18054230589361803,
-      0.11548807722557063,
-      -0.028906901830614222,
-      0.07353950147715947,
-      -0.014682309242696777,
-      0.04274057173940401,
-      -0.05116665393854805
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B13",
@@ -2344,21 +1546,7 @@
       "ja": "ファーニチャーデザイン",
       "en": "Furniture Design",
       "key": "furniture_design"
-    },
-    "embedding_text": "Proposal for Floating Products Wandering through the Void of Daily Living Product Design Mobility Design Furniture Design",
-    "embedding": [
-      -0.24464151551327412,
-      -0.17549052321490785,
-      -0.0009686918410558217,
-      0.19219985509319953,
-      0.01555795801234066,
-      -0.134723937527807,
-      0.02122045060736179,
-      0.06322368878129811,
-      -0.02187990994725541,
-      -0.13911257742358224
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B14",
@@ -2386,21 +1574,7 @@
       "ja": "スペキュラティブデザイン",
       "en": "Speculative Design",
       "key": "speculative_design"
-    },
-    "embedding_text": "Proposal for a Scatter-Based Surface System on Rough Terrain Product Design Mobility Design Speculative Design",
-    "embedding": [
-      -0.13336127588758653,
-      -0.11609753503913066,
-      0.04820106193136989,
-      0.10670785134221217,
-      -0.02904691946619068,
-      -0.18950069048224594,
-      0.04472277350657242,
-      0.025087424343258436,
-      -0.1307015475524227,
-      -0.2051103495867481
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B15",
@@ -2428,21 +1602,7 @@
       "ja": "オプティカルアート",
       "en": "Optical Art",
       "key": "optical_art"
-    },
-    "embedding_text": "Micro-Hole Engineering for Angle-Dependent Visual Effects Meta Design Human Computer Interaction Optical Art",
-    "embedding": [
-      0.2540562172220293,
-      -0.09767330059848564,
-      0.07067274904214536,
-      0.0989692768735463,
-      0.018253585595967594,
-      0.027668775689953153,
-      0.10445703188100815,
-      -0.2189606396321963,
-      0.05823948315286836,
-      0.06087738628085809
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B16",
@@ -2470,21 +1630,7 @@
       "ja": "プロダクトデザイン",
       "en": "Product Design",
       "key": "product_design"
-    },
-    "embedding_text": "Proposal of Independent Oscillating Moiré using Self-Restoring Property of Catenary Curves Kinetic Art Interactive Art Product Design",
-    "embedding": [
-      0.23376515315367513,
-      -0.21433346700800635,
-      0.0008137629421543423,
-      0.177216583001378,
-      0.03694350688150937,
-      -0.02890262449711831,
-      0.05942091103672738,
-      -0.03060641607284508,
-      0.03725939902089133,
-      -0.011808547062082978
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B17",
@@ -2512,21 +1658,7 @@
       "ja": "パフォーマンス",
       "en": "Performance",
       "key": "performance"
-    },
-    "embedding_text": "Interactive Storytelling with String Figures using Object Detection and Projection Mapping Interactive Art Interaction Design Performance",
-    "embedding": [
-      0.30349367777093283,
-      -0.00030480581492665345,
-      0.09919016393307101,
-      0.03470181087044794,
-      -0.07599246832262124,
-      -0.025704015482716003,
-      0.026177211833991337,
-      -0.06244407882015787,
-      0.036909915444689356,
-      -0.03375019812191243
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B18",
@@ -2544,21 +1676,7 @@
       "ja": "インタラクティブアーキテクチャー",
       "en": "Interactive Architecture",
       "key": "interactive_architecture"
-    },
-    "embedding_text": "A Study of Bar Communication from a Bartender's Perspective and the Creation of Lighting as a Conversation Starter Interactive Architecture",
-    "embedding": [
-      0.06846910673625396,
-      -0.033346196784822785,
-      0.223729170571328,
-      0.02099886756085255,
-      -0.006292817925081587,
-      0.09092960234187575,
-      -0.003238300194317011,
-      -0.05065971014894638,
-      0.08184644116511501,
-      0.14885709082316623
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B19",
@@ -2586,21 +1704,7 @@
       "ja": "ジェネラティブアート",
       "en": "Generative Art",
       "key": "generative_art"
-    },
-    "embedding_text": "Development of an Infinity Mirror using Liquid Crystal Displays Interactive Art Media Art Generative Art",
-    "embedding": [
-      0.3873456237280893,
-      -0.12055473825460547,
-      0.1806726639189668,
-      0.09256757919371554,
-      -0.08650128525660608,
-      -0.06457371585888226,
-      0.13960382229163604,
-      0.036783811442517064,
-      0.13566592616720474,
-      -0.03775520925806205
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B20",
@@ -2628,21 +1732,7 @@
       "ja": "インタラクションデザイン",
       "en": "Interaction Design",
       "key": "interaction_design"
-    },
-    "embedding_text": "Multi-Layered Representation in Underwater Bubble Displays: Development of a Simulation System Interface Design Human Computer Interaction Interaction Design",
-    "embedding": [
-      0.10295867537240239,
-      0.10969595742959568,
-      0.1558080432322682,
-      -0.051874796132812456,
-      -0.038366282148274186,
-      -0.08441885244098755,
-      0.08034744532230438,
-      -0.1899243862895459,
-      -0.0648698747966295,
-      -0.08906302237703997
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B21",
@@ -2665,21 +1755,7 @@
       "ja": "ジェネラティブアート",
       "en": "Generative Art",
       "key": "generative_art"
-    },
-    "embedding_text": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display Media Art Generative Art",
-    "embedding": [
-      0.37316039492311126,
-      -0.08040253254513927,
-      0.061477468200458116,
-      0.017181520940857675,
-      -0.054426839679566366,
-      -0.12446617961888817,
-      0.11832777674807754,
-      0.09934624764688571,
-      0.0961223894405945,
-      -0.007977599449995673
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B22",
@@ -2707,21 +1783,7 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "Creating an Interactive Garden Ecosystem: A realm of Nature, Subjectivity and Technology Interactive Art Interaction Design Research Through Design",
-    "embedding": [
-      0.13683674728195516,
-      0.02533359420844287,
-      0.23586537523582696,
-      0.035079045502057336,
-      0.08989532648497044,
-      -0.043987459257418766,
-      0.030118614399975856,
-      0.0675644220287801,
-      0.1844852245410296,
-      -0.04641634251748689
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B23",
@@ -2749,21 +1811,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "Signs of Life: Design That Evokes a Sense of Life Media Art Interaction Design Design Prototyping",
-    "embedding": [
-      0.08948356319012266,
-      0.06240700556765556,
-      0.06675101229173015,
-      0.15729339407633347,
-      0.12200957144006837,
-      -0.06154719135103272,
-      0.04093028099579747,
-      0.09653576661731048,
-      0.18093733632291617,
-      -0.06901071019903518
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B24",
@@ -2791,21 +1839,7 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "Preserving Shibori through Origami Graphic Design Pattern Design Research Through Design",
-    "embedding": [
-      0.07594406482151567,
-      -0.11593323300492513,
-      -0.23934324874172566,
-      -0.04696167476374059,
-      0.07419839438693163,
-      0.07466839747369111,
-      0.09111561810493018,
-      -0.01946513440471775,
-      0.036108887151528365,
-      0.007723718925830596
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B25",
@@ -2833,21 +1867,7 @@
       "ja": "コンセプチュアルデザイン",
       "en": "Conceptual Design",
       "key": "conceptual_design"
-    },
-    "embedding_text": "Proposal for \"Positive Misreading\" of Inscrutable Dog Behavior: Animation Production through Brain Visualization Graphic Design Animation Conceptual Design",
-    "embedding": [
-      0.16465850186798903,
-      0.0965797784409355,
-      -0.13568371126010512,
-      -0.07428302693314817,
-      0.14960602909959714,
-      -0.029899522922596514,
-      -0.1954117371190667,
-      0.09296510925021105,
-      -0.08167960926091465,
-      -0.06840019255884011
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "B26",
@@ -2875,21 +1895,7 @@
       "ja": "デザインプロトタイピング",
       "en": "Design Prototyping",
       "key": "design_prototyping"
-    },
-    "embedding_text": "Variable Lighting Design based on​ Equilateral Triangle Slit-Joint Structures​ Product Design Furniture Design Design Prototyping",
-    "embedding": [
-      -0.026935945298093945,
-      -0.2641313094565644,
-      -0.00040770062252488867,
-      0.1858336453556346,
-      -0.13899941167448984,
-      0.15233386005852348,
-      0.003671833676479242,
-      -0.16435376986079728,
-      -0.004264007308914088,
-      0.19346249131756332
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "W01",
@@ -2917,21 +1923,7 @@
       "ja": "メタデザイン",
       "en": "Meta Design",
       "key": "meta_design"
-    },
-    "embedding_text": "フィクションにおける架空言語の分析：言語解読ゲーム《7Days to End with You》を通して UX Design Game Design Meta Design",
-    "embedding": [
-      -0.07933076011534171,
-      0.2663097842683435,
-      -0.06664569574620544,
-      -0.011485007416151535,
-      -0.1222521611001226,
-      0.23422317679829946,
-      -0.23718584249614583,
-      -0.10770352072427088,
-      0.15942867538284666,
-      -0.24561154119549966
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "W02",
@@ -2959,21 +1951,7 @@
       "ja": "マルチモーダルデザイン",
       "en": "Multimodal Design",
       "key": "multimodal_design"
-    },
-    "embedding_text": "香りから想起される多様なエピソード記憶の収集・共有システムの開発およびLLMを用いた香りの言語表現 Interface Design Interaction Design Multimodal Design",
-    "embedding": [
-      -0.0028854652513726742,
-      0.23292340764629293,
-      0.15167947572440926,
-      -0.01349065846152061,
-      -0.20047472745905393,
-      0.4619220937517112,
-      0.29528393896428673,
-      0.2675053004698531,
-      -0.187758902844727,
-      -0.22914687384008234
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "W03",
@@ -3001,21 +1979,7 @@
       "ja": "人間中心デザイン",
       "en": "Human-Centered Design",
       "key": "human_centered_design"
-    },
-    "embedding_text": "強緊張状態の可視化とレジリエンスに関する研究 UX Design Narrative Research Human-Centered Design",
-    "embedding": [
-      -0.10931271396479154,
-      0.3253108669444658,
-      -0.07639374572253776,
-      -0.06807665671250011,
-      0.1193699339122066,
-      0.04020255248908544,
-      -0.03410768296096685,
-      -0.10908216805597871,
-      -0.10161024058184101,
-      0.09856058079434708
-    ],
-    "embedding_dim": 10
+    }
   },
   {
     "id": "W04",
@@ -3043,20 +2007,6 @@
       "ja": "リサーチスルーデザイン",
       "en": "Research Through Design",
       "key": "research_through_design"
-    },
-    "embedding_text": "Design for Women Health Condition Sharing Service Design UI Design Research Through Design",
-    "embedding": [
-      -0.15889800866202045,
-      0.2747029705186644,
-      -0.01700904252475198,
-      -0.0604047211959434,
-      -0.01648023052636873,
-      -0.11080349232870246,
-      0.09115441676349241,
-      -0.05681536719730522,
-      0.024674322726089437,
-      0.17974655348340515
-    ],
-    "embedding_dim": 10
+    }
   }
 ]
