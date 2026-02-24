@@ -39,5 +39,5 @@ next-env.d.ts
 # local env files
 .env.local
 
-# build cache (works data for static export)
+# local files (build cache, QR code output, etc.)
 /local/
