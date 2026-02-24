@@ -542,6 +542,13 @@ npx tsx works-qr-code-export/export.ts
 - Node.js のバージョンが 20.20.0 以上であることを確認してください
 - `node_modules` フォルダと `pnpm-lock.yaml` を削除して、再度 `pnpm install` を実行してください
 
+**Vercel デプロイで `ERR_PNPM_OUTDATED_LOCKFILE` が出る場合：**
+
+- `package.json` の `packageManager` で pnpm バージョンを固定しています。Vercel で Corepack を有効にしてください。
+  - Vercel ダッシュボード → プロジェクト → Settings → General → Environment Variables
+  - 変数名: `ENABLE_EXPERIMENTAL_COREPACK`、値: `1` を追加
+- まだ解消しない場合は、依存を変更したあと必ず `pnpm install` を実行し、更新された `pnpm-lock.yaml` をコミットしてください。
+
 **開発サーバーが起動しない場合：**
 
 - ポート 3000 が他のアプリケーションで使用されていないか確認してください
