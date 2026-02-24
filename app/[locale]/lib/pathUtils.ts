@@ -31,8 +31,9 @@ export function isWorksPagePath(
   pathname: string | null | undefined
 ): boolean {
   const path = getNormalizedPath(pathname);
-  if (path === "/works" || path.startsWith("/works/")) return true;
-  return locales.some(
-    (loc) => path === `/${loc}/works` || path.startsWith(`/${loc}/works/`)
-  );
+  const possiblePrefixes = ["", ...locales.map((loc) => `/${loc}`)];
+  return possiblePrefixes.some((prefix) => {
+    const worksPath = `${prefix}/works`;
+    return path === worksPath || path.startsWith(`${worksPath}/`);
+  });
 }
