@@ -94,7 +94,10 @@ export function Works({ data }: { data: SheetData }) {
           onSelectedKeywordsChange={setSelectedKeywords}
         />
 
-        {STUDIO_KEYS.map((studioKey) => (
+        {STUDIO_KEYS.filter((studioKey) => {
+          const list = worksByStudioFiltered[studioKey] ?? [];
+          return list.length > 0;
+        }).map((studioKey) => (
           <WorksListWithCategories
             key={studioKey}
             id={studioKey}

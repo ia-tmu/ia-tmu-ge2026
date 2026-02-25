@@ -13,7 +13,16 @@
     "title": "Web Exhibition",
     "subtitle": "works and research projects",
     "viewAll": "View all",
-    "viewLess": "Close"
+    "viewLess": "Close",
+    "search": {
+      "label": "Search works",
+      "placeholder": "Search by work or keyword",
+      "worksHeading": "Works",
+      "worksAriaLabel": "Work suggestions",
+      "keywordsHeading": "Keywords",
+      "keywordsAriaLabel": "Keyword suggestions",
+      "removeKeyword": "Remove \"{{keyword}}\""
+    }
   },
   "teaser": {
     "department": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art",
@@ -75,7 +84,8 @@
         "subtitle": "Practices of Curation, Installation, and Critique",
         "speakers": [
           {
-            "name": "Professor Kiyoshi Kusumi"
+            "name": "Professor Kiyoshi Kusumi",
+            "profile": "Editorial Design Studio"
           },
           {
             "name": "Keisuke Shimakage",
@@ -117,10 +127,12 @@
         "title": "Reflecting on This Year’s Graduation Exhibition / About IA's 20th Anniversary",
         "speakers": [
           {
-            "name": "Professor Tetsuaki Baba"
+            "name": "Professor Tetsuaki Baba",
+            "profile": "Interface Design Studio"
           },
           {
-            "name": "Associate Professor Shin Tsuchiya"
+            "name": "Associate Professor Shin Tsuchiya",
+            "profile": "Socio Living Design Studio"
           },
           {
             "name": "Student",
@@ -145,6 +157,7 @@
     }
   },
   "webExhibition": {
-    "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview <br2/> of research and works as a web exhibition."
+    "description": "So that you can view the works online, <br/> we are publishing an overview of productions <br/> and research as a Web exhibition.",
+    "list": "Go to Works"
   }
 }

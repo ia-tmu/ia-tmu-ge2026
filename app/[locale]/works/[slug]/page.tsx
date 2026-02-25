@@ -1,10 +1,11 @@
-import { fetchRowBySlug, fetchAllIds } from "@/lib/get-works";
+import { fetchRowBySlug, fetchAllIds, fetchSheetValues } from "@/lib/get-works";
 import { notFound } from "next/navigation";
 import Footer from "../../components/Footer";
 import MoyaBG from "../../features/MoyaBG";
-import { WorkCard } from "../../features/works/WorkCard";
+import { SimilarWorksList } from "../../features/works/SimilarWorksList";
 import ImageSlider from "../../features/works/ImageSlider";
 import { MovieOrder } from "../../types/work";
+import type { Work } from "../../types/work";
 import { getSimilarWorks } from "@/lib/similarity";
 import { BackIcon } from "../../components/Icons";
 import Link from "next/link";
@@ -35,6 +36,16 @@ export default async function Work({
   const result = getSimilarWorks(slug, 10);
 
   if (!result) return <div>作品が見つかりません</div>;
+
+  const sheetData = await fetchSheetValues();
+  const similarItems = result.similarWorks
+    .map((sw) => {
+      const fullWork = sheetData.works.find((w) => w.id === sw.work.id);
+      return fullWork
+        ? { work: fullWork as Work, rank: sw.rank, similarity: sw.similarity }
+        : null;
+    })
+    .filter((x): x is { work: Work; rank: number; similarity: number } => x != null);
 
   return (
     <main className="relative text-sm md:text-base pt-20 md:pt-[120px] text-foreground">
@@ -127,22 +138,20 @@ export default async function Work({
           )}
           <hr className="border-t border-white-300" />
           {!slug.includes("W") && (
-            <>
-              <div className="text-md">Map</div>
+            <div
+              className={`w-full flex flex-col gap-6 items-end overflow-x-hidden ${slug.includes("A") ? "items-start" : "items-end"}`}
+            >
+              <div className="text-md w-full">Map</div>
+              <div className="text-md w-full">この作品は Gallery {slug.slice(0, 1)} : {slug}にてご覧いただけます。</div>
               <MapSvg ids={[slug]} />
-            </>
+            </div>
           )}
           <hr className="border-t border-white-300" />
-          <div className="text-md">この作品に関連した作品・研究</div>
-          <WorkCard work={work} />
-          {result.similarWorks &&
-            result.similarWorks.map((item) => (
-              <div key={item.work.id}>
-                {item.rank}位:{" "}
-                {item.work.title.ja ? item.work.title.ja : item.work.title.en}(
-                {(item.similarity * 100).toFixed(1)}% 類似)
-              </div>
-            ))}
+
+          <div className="flex flex-col gap-4 mb-12 md:mb-16">
+            <div className="text-md">この作品に関連した作品・研究</div>
+            <SimilarWorksList items={similarItems} />
+          </div>
         </div>
       </div>
       <Footer />

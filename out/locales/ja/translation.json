@@ -13,7 +13,16 @@
     "title": "Web Exhibition",
     "subtitle": "作品・研究一覧",
     "viewAll": "全てを見る",
-    "viewLess": "閉じる"
+    "viewLess": "閉じる",
+    "search": {
+      "label": "作品を検索",
+      "placeholder": "作品やキーワードで検索",
+      "worksHeading": "作品",
+      "worksAriaLabel": "作品候補",
+      "keywordsHeading": "キーワード",
+      "keywordsAriaLabel": "キーワード候補",
+      "removeKeyword": "「{{keyword}}」の選択を解除"
+    }
   },
   "teaser": {
     "department": "東京都立大学 システムデザイン学部・研究科\nインダストリアルアート学科・学域",
@@ -75,7 +84,8 @@
         "subtitle": "キュレーション、インストール、クリティークの実践",
         "speakers": [
           {
-            "name": "楠見清 教授"
+            "name": "楠見清 教授",
+            "profile": "エディティングスタジオ"
           },
           {
             "name": "島影圭佑",
@@ -117,10 +127,12 @@
         "title": "今回の卒展を振り返って・IA20周年について",
         "speakers": [
           {
-            "name": "馬場哲晃 教授"
+            "name": "馬場哲晃 教授",
+            "profile": "インタフェースデザインスタジオ"
           },
           {
-            "name": "土屋真 准教授"
+            "name": "土屋真 准教授",
+            "profile": "ソシオリビングデザインスタジオ"
           },
           {
             "name": "現役学生",
@@ -145,6 +157,7 @@
     }
   },
   "webExhibition": {
-    "description": "会場に足を運べない方々にも<br/>制作や研究をご覧いただけるよう、<br2/>Web展として研究や作品の概要を掲載予定です。"
+    "description": "オンラインでも作品をご覧いただけるよう、 <br/> Web展として制作や研究の概要を掲載しています。",
+    "list": "作品一覧へ"
   }
 }

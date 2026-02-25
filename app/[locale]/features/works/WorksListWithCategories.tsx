@@ -10,6 +10,13 @@ import { CrossLargeIcon } from "../../components/Icons";
 /** 縮小時の表示高さ（3枚＋4枚目の半分程度） */
 const PREVIEW_MAX_HEIGHT_PX = 520;
 
+/** md以上で1行分のアイテムのときの高さ（カード max-h-[240px] + 余白） */
+const ONE_ROW_HEIGHT_PX = 280;
+/** md以上で複数行のときの最大高さ */
+const MULTI_ROW_MAX_HEIGHT_PX = 400;
+/** 1行に収まる件数の目安（カード幅192px+gap で約5枚/行） */
+const ONE_ROW_THRESHOLD = 5;
+
 
 
 function SectionActionButton({
@@ -104,13 +111,20 @@ export function WorksListWithCategories({ title, subtitle, id, categories, works
 
       </div>
 
-      <VerticalScrollArea contentKey={works.length} className="md:flex hidden h-[400px]!">
-        {works.map((work) => (
-          <div key={work.id} className="shrink-0">
-            <WorkCard work={work} />
-          </div>
-        ))}
-      </VerticalScrollArea>
+      <div
+        className="hidden md:flex flex-1 min-w-0"
+        style={{
+          height: works.length <= ONE_ROW_THRESHOLD ? ONE_ROW_HEIGHT_PX : MULTI_ROW_MAX_HEIGHT_PX,
+        }}
+      >
+        <VerticalScrollArea contentKey={works.length} className="h-full w-full">
+          {works.map((work) => (
+            <div key={work.id} className="shrink-0">
+              <WorkCard work={work} />
+            </div>
+          ))}
+        </VerticalScrollArea>
+      </div>
 
 
       <div className="md:hidden flex flex-col gap-2">

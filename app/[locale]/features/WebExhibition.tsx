@@ -67,7 +67,7 @@ export default function WebExhibition({ works }: Props) {
           </Link>
         </div>
 
-        <div className="grid h-full gap-4 py-8 items-center justify-center w-full max-w-6xl mx-auto">
+        <div className="grid h-full gap-4 py-8 items-center justify-center md:w-[calc(100vw+40px)]  w-[calc(100vw+24px)] max-w-none -ml-6 md:-ml-8 lg:-ml-10">
           {hasRows ? (
             <>
               <ScrollingThumbnailsRow items={rows.row1} direction="left" />

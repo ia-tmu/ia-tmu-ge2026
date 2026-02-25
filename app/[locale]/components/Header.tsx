@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
@@ -10,6 +10,7 @@ import LangSwitcher from "../features/LangSwitcher";
 import { useFVScrollRef } from "../contexts/FVScrollRefContext";
 import Button from "./Button";
 import { isTopPagePath, isWorksPagePath } from "../lib/pathUtils";
+import { localePath } from "../lib/localePath";
 import guruguru05Static from "../../../public/images/top/guruguru_05.png";
 
 const SECTION_IDS = [
@@ -21,9 +22,13 @@ const SECTION_IDS = [
 ] as const;
 
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Header() {
     const { t } = useTranslation();
     const pathname = usePathname();
+    const params = useParams();
+    const locale = (params?.locale as string) ?? "ja";
     const [menuOpen, setMenuOpen] = useState(false);
     const fvScrollRef = useFVScrollRef();
 
@@ -60,11 +65,11 @@ export default function Header() {
             />
 
             <header
-                className={`w-full h-20 md:h-24 px-4 md:px-8 backdrop-blur-xs flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}
+                className={`w-full h-20 md:h-24 px-4 md:px-8 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isWorksPage ? "backdrop-blur-xs" : ""}`}
             >
                 {/* 左: ロゴ（FV→Concept スクロールでフェードイン） */}
                 <motion.a
-                    href="/"
+                    href={`${basePath}${localePath(locale, "/")}`}
                     className="shrink-0 w-10 h-10 md:w-14 md:h-14 relative overflow-hidden rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-blue-primary block transition-opacity duration-300"
                     aria-label={t("teaser.logo")}
                     style={{ opacity: menuOpen ? 1 : logoOpacity }}
@@ -86,13 +91,13 @@ export default function Header() {
                 >
                     {SECTION_IDS.map(({ id, key }) => (
                         isWorksPage && id === "web-exhibition" ? (
-                            <Button key={id} href={`/works`} linkNoUnderline={true}>
+                            <Button key={id} href={localePath(locale, "/works")} linkNoUnderline={true}>
                                 <Highlighted>
                                     {t(key)}
                                 </Highlighted>
                             </Button>
                         ) : (
-                            <Button key={id} href={`/#${id}`} linkNoUnderline={true}>
+                            <Button key={id} href={`${localePath(locale, "/")}#${id}`} linkNoUnderline={true}>
                                 {t(key)}
                             </Button>
                         )
@@ -140,7 +145,7 @@ export default function Header() {
                     aria-label="Menu navigation"
                 >
                     {SECTION_IDS.map(({ id, key }) => (
-                        <Button key={id} href={`/#${id}`} linkNoUnderline={true} onClick={closeMenu}>
+                        <Button key={id} href={`${localePath(locale, "/")}#${id}`} linkNoUnderline={true} onClick={closeMenu}>
                             {t(key)}
                         </Button>
                     ))}
