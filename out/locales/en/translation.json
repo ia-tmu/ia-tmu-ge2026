@@ -13,7 +13,16 @@
     "title": "Web Exhibition",
     "subtitle": "works and research projects",
     "viewAll": "View all",
-    "viewLess": "Close"
+    "viewLess": "Close",
+    "search": {
+      "label": "Search works",
+      "placeholder": "Search by work or keyword",
+      "worksHeading": "Works",
+      "worksAriaLabel": "Work suggestions",
+      "keywordsHeading": "Keywords",
+      "keywordsAriaLabel": "Keyword suggestions",
+      "removeKeyword": "Remove \"{{keyword}}\""
+    }
   },
   "teaser": {
     "department": "Tokyo Metropolitan University\nFaculty of Systems Design Department of Industrial Art",
@@ -148,6 +157,7 @@
     }
   },
   "webExhibition": {
-    "description": "For those who cannot visit our exhibition,<br/>we plan to publish an overview <br2/> of research and works as a web exhibition."
+    "description": "So that you can view the works online, <br/> we are publishing an overview of productions <br/> and research as a Web exhibition.",
+    "list": "Go to Works"
   }
 }
