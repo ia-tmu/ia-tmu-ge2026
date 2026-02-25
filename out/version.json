@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "buildTime": "2026/02/10 18:41:33",
   "git": {
     "branch": "dev-web-exhibition",
     "sha": "c099d9f"
+=======
+  "buildTime": "2026/02/19 20:08:50",
+  "git": {
+    "branch": "dev",
+    "sha": "37cbf50"
+>>>>>>> dev
   },
   "basePath": "/ge2026"
 }

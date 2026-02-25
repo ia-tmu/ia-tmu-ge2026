@@ -1,4 +1,5 @@
 1:"$Sreact.fragment"
+<<<<<<< HEAD
 2:I[55206,["/ge2026/_next/static/chunks/d07112aadb664617.js","/ge2026/_next/static/chunks/d236f19f03b9b124.js","/ge2026/_next/static/chunks/fe67f51a9594c8c0.js","/ge2026/_next/static/chunks/71a8bdf9b567c019.js","/ge2026/_next/static/chunks/c280443f2a16b16b.js"],"WorksPageContent"]
 16:I[51566,["/ge2026/_next/static/chunks/a250bd8eae67409e.js","/ge2026/_next/static/chunks/f4fd85e722e03927.js"],"OutletBoundary"]
 17:"$Sreact.suspense"
@@ -327,3 +328,13 @@
 14:["$","script","script-1",{"src":"/ge2026/_next/static/chunks/c280443f2a16b16b.js","async":true}]
 15:["$","$L16",null,{"children":["$","$17",null,{"name":"Next.MetadataOutlet","children":"$@18"}]}]
 18:null
+=======
+2:I[58593,["/ge2026/_next/static/chunks/a250bd8eae67409e.js","/ge2026/_next/static/chunks/f4fd85e722e03927.js"],"ClientPageRoot"]
+3:I[36446,["/ge2026/_next/static/chunks/ec19b74b24a53852.js","/ge2026/_next/static/chunks/42d8c522cbb2830d.js","/ge2026/_next/static/chunks/6066d7e23337f2f7.js"],"default"]
+6:I[51566,["/ge2026/_next/static/chunks/a250bd8eae67409e.js","/ge2026/_next/static/chunks/f4fd85e722e03927.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"buildId":"h3OuBV6-XDeLT_DvDvWiW","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{"locale":"en"},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/ge2026/_next/static/chunks/6066d7e23337f2f7.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
+>>>>>>> dev
