@@ -7,7 +7,6 @@ import ImageSlider from "../../features/works/ImageSlider";
 import { MovieOrder } from "../../types/work";
 import type { Work } from "../../types/work";
 import { getSimilarWorks } from "@/lib/similarity";
-
 export const dynamicParams = false;
 
 import MapSvg from "../../features/works/Map"
@@ -112,6 +111,7 @@ export default async function Work({
               className={`w-full flex flex-col gap-6 items-end overflow-x-hidden ${slug.includes("A") ? "items-start" : "items-end"}`}
             >
               <div className="text-md w-full">Map</div>
+              <div className="text-md w-full">この作品は Gallery {slug.slice(0, 1)} : {slug}にてご覧いただけます。</div>
               <MapSvg ids={[slug]} />
             </div>
           }
