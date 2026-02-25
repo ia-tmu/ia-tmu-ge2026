@@ -35,20 +35,8 @@ export default function ClientLanguageRedirect({ locale }: Props) {
     // 3. 言語設定と現在のページが不一致の場合にリダイレクト
     if (isEnglishBrowser && locale !== "en") {
       // 英語ブラウザなのに日本語ページ（locale="ja"）にいる場合 -> 英語ページへ
-      // 現在のパス（例: /works）に /en を付与（例: /en/works）
-      // ただし、pathnameには既にロケールが含まれている可能性があるため注意が必要だが、
-      // defaultLocale="ja" の場合、pathnameは "/works" のようになっているはず。
-      // 安全のため localePath 的な処理をする
-
-      let targetPath = pathname;
-      // 万が一 /ja/ から始まっていたら削除（通常はないはず）
-      if (targetPath.startsWith("/ja/")) {
-        targetPath = targetPath.replace("/ja/", "/");
-      } else if (targetPath === "/ja") {
-        targetPath = "/";
-      }
-
-      const newPath = targetPath === "/" ? "/en" : `/en${targetPath}`;
+      // prefixDefault: true のため pathname は常に /ja/... または /en/... の形式
+      const newPath = pathname.replace(/^\/ja/, "/en");
       router.replace(newPath);
     }
 

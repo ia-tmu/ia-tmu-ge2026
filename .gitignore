@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.pnpm-store
 /.pnp
 .pnp.*
 .yarn/*
@@ -29,9 +30,6 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
-
 # vercel
 .vercel
 
@@ -42,5 +40,5 @@ next-env.d.ts
 # local env files
 .env.local
 
-#local files
-/local
+# local files (build cache, QR code output, etc.)
+/local/

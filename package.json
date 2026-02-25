@@ -2,23 +2,28 @@
   "name": "ia-tmu-ge2026",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.4.0",
   "engines": {
     "node": "22.x"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
+    "build": "pnpm run fetch-works && next build && npm run postbuild",
+    "fetch-works": "npx tsx build-scripts/fetch-works-cache.ts",
     "build:no-export": "SKIP_EXPORT=true next build",
-    "postbuild": "node scripts/generate-index.js",
+    "postbuild": "node build-scripts/generate-index.js",
     "start": "next start",
     "lint": "eslint",
     "serve:export": "npm run prepare:export && npx serve@latest out -p 3001",
     "prepare:export": "cd out && ln -sf . ge2026 2>/dev/null || true"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "framer-motion": "^11.11.17",
+    "google-auth-library": "^10.5.0",
+    "googleapis": "^170.0.0",
     "i18next": "^25.6.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",

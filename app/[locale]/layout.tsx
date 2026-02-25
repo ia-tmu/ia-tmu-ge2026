@@ -11,6 +11,8 @@ import {
 import ClientLanguageRedirect from "./features/ClientLanguageRedirect";
 import ScrollManager from "./components/ScrollManager";
 import BuildInfoLogger from "./components/BuildInfoLogger";
+import { FVScrollRefProvider } from "./contexts/FVScrollRefContext";
+import Header from "./components/Header";
 import "../../globals.css";
 import siteConfig from "../../site.config";
 
@@ -91,6 +93,7 @@ export const metadata: Metadata = {
 export async function generateStaticParams(): Promise<
   Array<{ locale: Locale }>
 > {
+  console.log("generateStaticParams-@/layout:", locales);
   return locales.map((locale) => ({ locale }));
 }
 
@@ -227,9 +230,12 @@ export default async function RootLayout({
           }}
         />
         <I18nProvider locale={locale} resources={resources}>
-          <ClientLanguageRedirect locale={locale} />
-          <BuildInfoLogger />
-          {children}
+          <FVScrollRefProvider>
+            <ClientLanguageRedirect locale={locale} />
+            <BuildInfoLogger />
+            <Header />
+            {children}
+          </FVScrollRefProvider>
         </I18nProvider>
       </body>
     </html>

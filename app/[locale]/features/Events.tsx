@@ -164,7 +164,7 @@ export default function Events() {
   };
 
   return (
-    <Section title={t("events.title")}>
+    <Section id="events" title={t("events.title")}>
       <div className="space-y-12">
         {/* 概要 */}
         <div className="space-y-4">
