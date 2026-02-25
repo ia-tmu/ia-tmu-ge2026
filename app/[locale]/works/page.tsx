@@ -1,18 +1,33 @@
-"use client"
+import { fetchSheetValues } from "@/lib/get-works";
+import type { SheetData } from "../types/work";
+import { WorksPageContent } from "./WorksPageContent";
 
-import { useParams } from "next/navigation";
-import Button from "../components/Button"
-import Section from "../components/Section"
-import { useTranslation } from "react-i18next"
-import { localePath } from "../lib/localePath";
+export default async function WorksPage() {
+  let data: SheetData;
+  try {
+    const fetched = await fetchSheetValues();
+    data = {
+      spreadsheetTitle: fetched.spreadsheetTitle,
+      sheetTitle: fetched.sheetTitle,
+      headers: fetched.headers,
+      works: fetched.works,
+      rows: fetched.rows,
+      objects: fetched.objects,
+      raw: fetched.raw,
+    };
+  } catch (e: unknown) {
+    const message = e instanceof Error ? e.message : "Failed to fetch sheets";
+    data = {
+      spreadsheetTitle: "",
+      sheetTitle: "",
+      headers: [],
+      works: [],
+      rows: [],
+      objects: [],
+      raw: [],
+      error: message,
+    };
+  }
 
-export default function Works() {
-  const params = useParams();
-  const locale = params.locale;
-  const { t } = useTranslation()
-  return (
-    <Section title={t("works.title")} subtitle={t("works.subtitle")}>
-      <Button href={localePath(locale as string, "/")}>{t("works.back")}</Button>
-    </Section>
-  )
+  return <WorksPageContent data={data} />;
 }

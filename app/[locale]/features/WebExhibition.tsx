@@ -1,29 +1,52 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { shuffle } from "@/lib/shuffle";
+import Link from "next/link";
 import Section from "../components/Section";
-import Guruguru from "./GuruguruVideo";
-import { Trans } from "react-i18next";
+import { ScrollingThumbnailsRow, type WorkThumbnailItem } from "../components/ScrollingThumbnailsRow";
+import { Trans, useTranslation } from "react-i18next";
+import { localePath } from "../lib/localePath";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const guruguru03Webm = `${basePath}/images/top/guruguru_03.webm`;
-const guruguru03Static = `${basePath}/images/top/guruguru_03.png`;
+type Props = {
+  works: WorkThumbnailItem[];
+};
 
-export default function WebExhibition() {
+type RowsState = {
+  row1: WorkThumbnailItem[];
+  row2: WorkThumbnailItem[];
+  row3: WorkThumbnailItem[];
+};
+
+const emptyRows: RowsState = { row1: [], row2: [], row3: [] };
+
+export default function WebExhibition({ works }: Props) {
+  const { t } = useTranslation();
+  const params = useParams();
+  const locale = (params?.locale as string) ?? "ja";
+  const [rows, setRows] = useState<RowsState>(emptyRows);
+
+  useEffect(() => {
+    queueMicrotask(() => {
+      if (works.length === 0) {
+        setRows(emptyRows);
+        return;
+      }
+      setRows({
+        row1: shuffle(works),
+        row2: shuffle(works),
+        row3: shuffle(works),
+      });
+    });
+  }, [works]);
+
+  const hasRows = rows.row1.length > 0;
+
   return (
-    <Section title={"Web Exhibition"}>
-      <div className="grid h-full gap-20 py-50 items-center justify-center">
+    <Section id="web-exhibition" title={"Web Exhibition"}>
 
-        <div className="relative">
-          <h3 className="text-4xl md:text-6xl font-semibold text-center">Coming Soon</h3>
-          <Guruguru
-            className="w-40 md:w-72 aspect-square absolute top-1/2 right-3/4 md:-left-5/12 -translate-y-6/8"
-            src={guruguru03Webm}
-            staticSrc={guruguru03Static}
-            staticImageClassName="justify-center"
-            startDelayMs={1000}
-          />
-        </div>
-
+      <div>
         <div className="text-center text-xs md:text-sm leading-6 md:leading-8 font-semibold">
           <Trans
             i18nKey="webExhibition.description"
@@ -33,7 +56,32 @@ export default function WebExhibition() {
             }}
           />
         </div>
+
+
+        <div className="flex justify-center mt-6">
+          <Link
+            href={localePath(locale, "/works")}
+            className="text-sm md:text-base font-semibold border border-foreground hover:border-dark-blue-primary px-4 py-2 rounded hover:bg-dark-blue-primary hover:text-foreground transition-colors flex items-center justify-center gap-1 duration-300"
+          >
+            {t("webExhibition.list")}
+          </Link>
+        </div>
+
+        <div className="grid h-full gap-4 py-8 items-center justify-center md:w-[calc(100vw+40px)]  w-[calc(100vw+24px)] max-w-none -ml-6 md:-ml-8 lg:-ml-10">
+          {hasRows ? (
+            <>
+              <ScrollingThumbnailsRow items={rows.row1} direction="left" />
+              <ScrollingThumbnailsRow items={rows.row2} direction="right" />
+              <ScrollingThumbnailsRow items={rows.row3} direction="left" />
+            </>
+          ) : null}
+
+
+        </div>
+
       </div>
+
+
     </Section>
   );
 }

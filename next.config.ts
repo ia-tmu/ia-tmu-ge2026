@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { getBuildInfo } from "./scripts/get-build-info";
+import { getBuildInfo } from "./build-scripts/get-build-info";
 
 // 開発モードかどうかの判定
 const isDev = process.env.NODE_ENV === "development";
@@ -16,8 +16,8 @@ const isVercel = process.env.VERCEL === "1";
 const basePath = isDev
   ? ""
   : isVercel
-  ? process.env.BASE_PATH || ""
-  : "/ge2026";
+    ? process.env.BASE_PATH || ""
+    : "/ge2026";
 
 const nextConfig: NextConfig = {
   // 開発モードでは静的エクスポートを無効化（middlewareを使用するため）
@@ -36,6 +36,12 @@ const nextConfig: NextConfig = {
   // 静的エクスポートでは画像の最適化機能が使えないため無効化
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+    ],
   },
   // Apache等の静的ホスティングでディレクトリインデックス（/path/）を正しく機能させる設定
   trailingSlash: true,

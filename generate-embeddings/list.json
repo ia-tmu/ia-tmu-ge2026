@@ -1,0 +1,2012 @@
+[
+  {
+    "id": "A01",
+    "name": "佐藤 水梨亜",
+    "grade": "M2",
+    "title": {
+      "ja": "A Proposal for Architecture in a Flood Zone",
+      "en": "A Proposal for Architecture in a Flood Zone"
+    },
+    "lab": {
+      "ja": "ソシオリビングデザインスタジオ",
+      "en": "Socio Living Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "都市デザイン",
+      "en": "Urban Design",
+      "key": "urban_design"
+    },
+    "keyword3": {
+      "ja": "コミュニティデザイン",
+      "en": "Community Design",
+      "key": "community_design"
+    }
+  },
+  {
+    "id": "A02",
+    "name": "柳原 萌生",
+    "grade": "M2",
+    "title": {
+      "ja": "A Proposal for a Cafe Offering Coffee Alternatives",
+      "en": "A Proposal for a Cafe Offering Coffee Alternatives"
+    },
+    "lab": {
+      "ja": "ソシオリビングデザインスタジオ",
+      "en": "Socio Living Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "コミュニティデザイン",
+      "en": "Community Design",
+      "key": "community_design"
+    },
+    "keyword3": {
+      "ja": "サスティナブルデザイン",
+      "en": "Sustainable Design",
+      "key": "sustainable_design"
+    }
+  },
+  {
+    "id": "A03",
+    "name": "長谷川 愛子",
+    "grade": "B4",
+    "title": {
+      "ja": "水と共に生きる家",
+      "en": "Living with Water"
+    },
+    "lab": {
+      "ja": "ソシオリビングデザインスタジオ",
+      "en": "Socio Living Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "インテリアデザイン",
+      "en": "Interior Design",
+      "key": "interior_design"
+    },
+    "keyword3": {
+      "ja": "ランドスケープデザイン",
+      "en": "Landscape Design",
+      "key": "landscape_design"
+    }
+  },
+  {
+    "id": "A04",
+    "name": "兼村 小晴",
+    "grade": "M2",
+    "title": {
+      "ja": "A Proposal of a Next-Generation Capsule Hotel",
+      "en": "A Proposal of a Next-Generation Capsule Hotel"
+    },
+    "lab": {
+      "ja": "ソシオリビングデザインスタジオ",
+      "en": "Socio Living Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "インテリアデザイン",
+      "en": "Interior Design",
+      "key": "interior_design"
+    },
+    "keyword3": {
+      "ja": "ファーニチャーデザイン",
+      "en": "Furniture Design",
+      "key": "furniture_design"
+    }
+  },
+  {
+    "id": "A05",
+    "name": "近藤 友紀",
+    "grade": "B4",
+    "title": {
+      "ja": "交通集中地帯における新たな移動手段としての水上モビリティの提案",
+      "en": "Proposal of Water Mobility as a New Mode of Transportation in Congested Urban Areas"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "モビリティデザイン",
+      "en": "Mobility Design",
+      "key": "mobility_design"
+    }
+  },
+  {
+    "id": "A06",
+    "name": "K.T.",
+    "grade": "M2",
+    "title": {
+      "ja": "Multisensory Synesthesic Architecture",
+      "en": "Multisensory Synesthesic Architecture"
+    },
+    "lab": {
+      "ja": "空間デザインスタジオ",
+      "en": "Spatial Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    }
+  },
+  {
+    "id": "A07",
+    "name": "髙橋 蘭",
+    "grade": "B4",
+    "title": {
+      "ja": "Experiencing Fermentation",
+      "en": "Experiencing Fermentation"
+    },
+    "lab": {
+      "ja": "空間デザインスタジオ",
+      "en": "Spatial Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "都市デザイン",
+      "en": "Urban Design",
+      "key": "urban_design"
+    },
+    "keyword3": {
+      "ja": "ランドスケープデザイン",
+      "en": "Landscape Design",
+      "key": "landscape_design"
+    }
+  },
+  {
+    "id": "A08",
+    "name": "García Rea Flor Arminda",
+    "grade": "M2",
+    "title": {
+      "ja": "Space and Emotions: Material Manifestations of Rituality",
+      "en": "Space and Emotions: Material Manifestations of Rituality"
+    },
+    "lab": {
+      "ja": "空間デザインスタジオ",
+      "en": "Spatial Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "インタラクティブアーキテクチャー",
+      "en": "Interactive Architecture",
+      "key": "interactive_architecture"
+    },
+    "keyword3": {
+      "ja": "スペキュラティブデザイン",
+      "en": "Speculative Design",
+      "key": "speculative_design"
+    }
+  },
+  {
+    "id": "A09",
+    "name": "栁 菜月",
+    "grade": "B4",
+    "title": {
+      "ja": "季節ごとの室内環境を最適化する可変空間のデザイン",
+      "en": "Variable Space Design That Optimizes the Indoor Environment for Each Season"
+    },
+    "lab": {
+      "ja": "ソシオリビングデザインスタジオ",
+      "en": "Socio Living Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "インタラクティブアーキテクチャー",
+      "en": "Interactive Architecture",
+      "key": "interactive_architecture"
+    }
+  },
+  {
+    "id": "A10",
+    "name": "横須賀 陽希",
+    "grade": "M2",
+    "title": {
+      "ja": "坂道の文化的コンテクストを活かしたスローモビリティ提案",
+      "en": "A Slow Mobility Proposal for Fostering Regional Affection by Leveraging the Cultural Context of Slopes"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "モビリティデザイン",
+      "en": "Mobility Design",
+      "key": "mobility_design"
+    },
+    "keyword2": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    }
+  },
+  {
+    "id": "A11",
+    "name": "徐 驍威",
+    "grade": "M2",
+    "title": {
+      "ja": "デジタルノマドの増加が拡げる新たなモビリティーの可能性に関する研究",
+      "en": "Research on the New Mobility Possibilities Expanded by the Rise of Digital Nomads"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "モビリティデザイン",
+      "en": "Mobility Design",
+      "key": "mobility_design"
+    }
+  },
+  {
+    "id": "A12",
+    "name": "吉澤 風真",
+    "grade": "B4",
+    "title": {
+      "ja": "創造意欲に火をつけるプロダクトデザインの探究",
+      "en": "Product Design to Ignite Motivation for Creativity"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "A13",
+    "name": "石神 翠香",
+    "grade": "B4",
+    "title": {
+      "ja": "Soft Architecture",
+      "en": "Soft Architecture"
+    },
+    "lab": {
+      "ja": "空間デザインスタジオ",
+      "en": "Spatial Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    }
+  },
+  {
+    "id": "A14",
+    "name": "Ivan Mello",
+    "grade": "M2",
+    "title": {
+      "ja": "「SpeedTree」を用いたアマゾン熱帯雨林の樹種のデジタルアーカイブ化",
+      "en": "Digital Archiving of Endangered Tree Species in the Amazon Rainforest using SpeedTree"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "Interface Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "Webデザイン",
+      "en": "Web Design",
+      "key": "web_design"
+    },
+    "keyword3": {
+      "ja": "デジタルアーカイブ",
+      "en": "Digital Archive",
+      "key": "digital_archive"
+    }
+  },
+  {
+    "id": "A15",
+    "name": "白石 快",
+    "grade": "B4",
+    "title": {
+      "ja": "遮蔽推定による夜景探索アプリの開発",
+      "en": "Development of a Night View Exploration Support Application using Occlusion Estimation"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "Interface Design Studio"
+    },
+    "keyword1": {
+      "ja": "UIデザイン",
+      "en": "UI Design",
+      "key": "ui_design"
+    },
+    "keyword2": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword3": {
+      "ja": "デジタルアーカイブ",
+      "en": "Digital Archive",
+      "key": "digital_archive"
+    }
+  },
+  {
+    "id": "A16",
+    "name": "嶋﨑 太智",
+    "grade": "B4",
+    "title": {
+      "ja": "スキャット歌唱の音色多様性に着目したピアノ音色の動的エフェクト制御",
+      "en": "Dynamic Control of Piano Effects Inspired by Scat Singing"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "Interface Design Studio"
+    },
+    "keyword1": {
+      "ja": "インタラクティブアート",
+      "en": "Interactive Art",
+      "key": "interactive_art"
+    },
+    "keyword2": {
+      "ja": "パフォーマンス",
+      "en": "Performance",
+      "key": "performance"
+    },
+    "keyword3": {
+      "ja": "音響デザイン",
+      "en": "Sound Design",
+      "key": "sound_design"
+    }
+  },
+  {
+    "id": "A17",
+    "name": "小島 安万音",
+    "grade": "B4",
+    "title": {
+      "ja": "マクラメ編みの体系化と立体編み図のシステム考案",
+      "en": "Systematization of Macrame and Devising a System for 3D Macrame Patterns"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "インテリアデザイン",
+      "en": "Interior Design",
+      "key": "interior_design"
+    },
+    "keyword2": {
+      "ja": "パターンデザイン",
+      "en": "Pattern Design",
+      "key": "pattern_design"
+    },
+    "keyword3": {
+      "ja": "クラフトデザイン",
+      "en": "Craft Design",
+      "key": "craft_design"
+    }
+  },
+  {
+    "id": "A18",
+    "name": "S.K.",
+    "grade": "B4",
+    "title": {
+      "ja": "イラストからの3Dエフェクト生成",
+      "en": "Generating 3D Effects from Illustrations"
+    },
+    "lab": {
+      "ja": "ソフトウェアデザインスタジオ",
+      "en": "Software Design Studio"
+    },
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword2": {
+      "ja": "AI",
+      "en": "AI",
+      "key": "ai"
+    },
+    "keyword3": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "A19",
+    "name": "A.M.",
+    "grade": "B4",
+    "title": {
+      "ja": "認知症の症状と行動の理解を促す子ども向けゲームの制作",
+      "en": "A Children’s Game to Promote Understanding of Dementia Symptoms and Behaviors"
+    },
+    "lab": {
+      "ja": "ソフトウェアデザインスタジオ",
+      "en": "Software Design Studio"
+    },
+    "keyword1": {
+      "ja": "ゲームデザイン",
+      "en": "Game Design",
+      "key": "game_design"
+    },
+    "keyword2": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    },
+    "keyword3": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    }
+  },
+  {
+    "id": "A20",
+    "name": "田村 吏功",
+    "grade": "B4",
+    "title": {
+      "ja": "バスケットボール選手の特徴分類とシュート傾向の可視化",
+      "en": "Classification and Visualization of Basketball Player Characteristics and Shooting Tendencies"
+    },
+    "lab": {
+      "ja": "ソフトウェアデザインスタジオ",
+      "en": "Software Design Studio"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "インフォメーションデザイン",
+      "en": "Information Design",
+      "key": "information_design"
+    },
+    "keyword3": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    }
+  },
+  {
+    "id": "A21",
+    "name": "我妻 ひより",
+    "grade": "M2",
+    "title": {
+      "ja": "キャラクターイラストのデフォルメ表現を考慮した立体化",
+      "en": "3D Modeling of Character Illustrations, Considering their Deformed Expressions"
+    },
+    "lab": {
+      "ja": "ソフトウェアデザインスタジオ",
+      "en": "Software Design Studio"
+    },
+    "keyword1": {
+      "ja": "インターフェースデザイン",
+      "en": "Interface Design",
+      "key": "interface_design"
+    },
+    "keyword2": {
+      "ja": "ヒューマンコンピュータインタラクション",
+      "en": "Human Computer Interaction",
+      "key": "human_computer_interaction"
+    },
+    "keyword3": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  },
+  {
+    "id": "A22",
+    "name": "南雲 琴寧",
+    "grade": "M2",
+    "title": {
+      "ja": "利他的なマインドセットを用いたコミュニケーションデザインの研究と実践",
+      "en": "Research and Practice of Communication Design using an Altruistic Mindset"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "コミュニティデザイン",
+      "en": "Community Design",
+      "key": "community_design"
+    },
+    "keyword2": {
+      "ja": "コ・デザイン",
+      "en": "Co-design",
+      "key": "co_design"
+    },
+    "keyword3": {
+      "ja": "ブックデザイン",
+      "en": "Book Design",
+      "key": "book_design"
+    }
+  },
+  {
+    "id": "A23",
+    "name": "佐藤 友",
+    "grade": "B4",
+    "title": {
+      "ja": "A Personal Space for Solitude",
+      "en": "A Personal Space for Solitude"
+    },
+    "lab": {
+      "ja": "空間デザインスタジオ",
+      "en": "Spatial Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    },
+    "keyword3": {
+      "ja": "オプティカルアート",
+      "en": "Optical Art",
+      "key": "optical_art"
+    }
+  },
+  {
+    "id": "A24",
+    "name": "赤林 理紗子",
+    "grade": "B4",
+    "title": {
+      "ja": "パンデミックに向き合う空間と造形の考案",
+      "en": "Design Proposal for Spaces and Forms Engaging with Pandemics"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "空間デザイン",
+      "en": "Spatial Design",
+      "key": "spatial_design"
+    },
+    "keyword2": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    }
+  },
+  {
+    "id": "A25",
+    "name": "前田 春奈",
+    "grade": "B4",
+    "title": {
+      "ja": "近視者の視認性向上を目的とした特殊印刷表現の評価と設計",
+      "en": "Evaluation and Design of Special Printing for Improving Visual Perceptibility for People with Myopia"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "Ergonomic Design Studio"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    },
+    "keyword3": {
+      "ja": "ユニバーサルデザイン",
+      "en": "Universal Design",
+      "key": "universal_design"
+    }
+  },
+  {
+    "id": "A27",
+    "name": "野口 明日美",
+    "grade": "M2",
+    "title": {
+      "ja": "香りのリラックス・集中の効果を活かしたデザイン提案",
+      "en": "A Design Proposal Utilizing the Relaxation and Concentration Effects of Scent"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "Ergonomic Design Studio"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword3": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    }
+  },
+  {
+    "id": "A28",
+    "name": "井上　絢夕香",
+    "grade": "B4",
+    "title": {
+      "ja": "そわそわ行動をエンパワメントとして捉える──心理・生理指標に基づく評価",
+      "en": "Reframing Fidgeting as Empowerment — A Psychophysiological Evaluation"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "Ergonomic Design Studio"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    },
+    "keyword3": {
+      "ja": "ヒューマンコンピュータインタラクション",
+      "en": "Human Computer Interaction",
+      "key": "human_computer_interaction"
+    }
+  },
+  {
+    "id": "A29",
+    "name": "松本 果南",
+    "grade": "B4",
+    "title": {
+      "ja": "波型組み構造によるスツールの制作",
+      "en": "A Stool using a Wave-Patterned Assembly Structure"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "ファーニチャーデザイン",
+      "en": "Furniture Design",
+      "key": "furniture_design"
+    },
+    "keyword3": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "A30",
+    "name": "西澤 有祐",
+    "grade": "B4",
+    "title": {
+      "ja": "実体のないものへの理解を深めるための体感的なキャラクタライズ手法の提案",
+      "en": "Proposal for Experiential Characterization Methods to Deepen Understanding of Intangible Entities"
+    },
+    "lab": {
+      "ja": "エディティングスタジオ",
+      "en": "Editorial Design Studio"
+    },
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword2": {
+      "ja": "ジェネラティブアート",
+      "en": "Generative Art",
+      "key": "generative_art"
+    },
+    "keyword3": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    }
+  },
+  {
+    "id": "A31",
+    "name": "東海林 杏見",
+    "grade": "B4",
+    "title": {
+      "ja": "寄り添うA&R──アーティストと共に歩む制作プロセスの考察",
+      "en": "Supportive A&R — A Study of the Creative Production Process with Artists"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "コミュニティデザイン",
+      "en": "Community Design",
+      "key": "community_design"
+    },
+    "keyword2": {
+      "ja": "コ・デザイン",
+      "en": "Co-design",
+      "key": "co_design"
+    },
+    "keyword3": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    }
+  },
+  {
+    "id": "A32",
+    "name": "西山 瑞姫",
+    "grade": "B4",
+    "title": {
+      "ja": "素材及び形状を変化させる誇張表現を用いた手描きアニメーション制作",
+      "en": "Hand-Drawn Animation Production using Exaggerated Expressions that Transform Original Materials and Forms"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "アニメーション",
+      "en": "Animation",
+      "key": "animation"
+    },
+    "keyword3": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    }
+  },
+  {
+    "id": "A33",
+    "name": "辻村 アレクシ 健",
+    "grade": "B4",
+    "title": {
+      "ja": "多様な学問分野への関心形成を目的としたインタラクティブ教育コンテンツの制作",
+      "en": "Interactive Educational Content for Inspiring Interest in Diverse Fields of Study"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    },
+    "keyword3": {
+      "ja": "Webデザイン",
+      "en": "Web Design",
+      "key": "web_design"
+    }
+  },
+  {
+    "id": "A34",
+    "name": "青木 裕作",
+    "grade": "M2",
+    "title": {
+      "ja": "楽曲構造を基盤とした3DCGアニメーション制作に関する研究",
+      "en": "A Study on 3DCG Animation Production based on Musical Structure"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword2": {
+      "ja": "アニメーション",
+      "en": "Animation",
+      "key": "animation"
+    }
+  },
+  {
+    "id": "A35",
+    "name": "上野 美優",
+    "grade": "M2",
+    "title": {
+      "ja": "河川敷の傾斜空間を活用するどてファニチャーの有用性の検証",
+      "en": "Verification of the Usefulness of Slope Furniture Utilizing Sloped Spaces on Riverbanks"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "インテリアデザイン",
+      "en": "Interior Design",
+      "key": "interior_design"
+    },
+    "keyword2": {
+      "ja": "都市デザイン",
+      "en": "Urban Design",
+      "key": "urban_design"
+    },
+    "keyword3": {
+      "ja": "ファーニチャーデザイン",
+      "en": "Furniture Design",
+      "key": "furniture_design"
+    }
+  },
+  {
+    "id": "A36",
+    "name": "近藤 多実子",
+    "grade": "B4",
+    "title": {
+      "ja": "山手線ウォークブック",
+      "en": "Yamanote Line Walkbook"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "ブックデザイン",
+      "en": "Book Design",
+      "key": "book_design"
+    },
+    "keyword3": {
+      "ja": "インフォメーションデザイン",
+      "en": "Information Design",
+      "key": "information_design"
+    }
+  },
+  {
+    "id": "A37",
+    "name": "岩下 莉愛",
+    "grade": "B4",
+    "title": {
+      "ja": "かたちがな: 外形の影響に基づくひらがなのタイプフェイスデザイン",
+      "en": "KATACHIGANA: Hiragana Typeface Designs based on External Shape Influence"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "タイポグラフィデザイン",
+      "en": "Typography Design",
+      "key": "typography_design"
+    },
+    "keyword3": {
+      "ja": "ブックデザイン",
+      "en": "Book Design",
+      "key": "book_design"
+    }
+  },
+  {
+    "id": "A38",
+    "name": "福與 愛美",
+    "grade": "B4",
+    "title": {
+      "ja": "視点の移動によるモアレタイポグラフィの研究",
+      "en": "Moiré Typography in Physical Space"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "タイポグラフィデザイン",
+      "en": "Typography Design",
+      "key": "typography_design"
+    },
+    "keyword3": {
+      "ja": "オプティカルアート",
+      "en": "Optical Art",
+      "key": "optical_art"
+    }
+  },
+  {
+    "id": "A39",
+    "name": "水島 理湖",
+    "grade": "B4",
+    "title": {
+      "ja": "鳥をモチーフにした新しい文様の制作",
+      "en": "New Bird Motif Patterns"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "パターンデザイン",
+      "en": "Pattern Design",
+      "key": "pattern_design"
+    },
+    "keyword3": {
+      "ja": "ブックデザイン",
+      "en": "Book Design",
+      "key": "book_design"
+    }
+  },
+  {
+    "id": "A40",
+    "name": "氏家 雛子",
+    "grade": "B4",
+    "title": {
+      "ja": "あんぽ柿のブランディングにおける持続可能な紙の制作と応用",
+      "en": "Sustainable Paper Production for Packaging and Branding of Anpo-Gaki"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "ブランディングデザイン",
+      "en": "Branding Design",
+      "key": "branding_design"
+    },
+    "keyword3": {
+      "ja": "サスティナブルデザイン",
+      "en": "Sustainable Design",
+      "key": "sustainable_design"
+    }
+  },
+  {
+    "id": "A41",
+    "name": "太田 智也",
+    "grade": "M2",
+    "title": {
+      "ja": "歩行者に訴求する路上インフォメーションの設計",
+      "en": "Design of Street Information for Pedestrians"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "コミュニティデザイン",
+      "en": "Community Design",
+      "key": "community_design"
+    },
+    "keyword3": {
+      "ja": "サービスデザイン",
+      "en": "Service Design",
+      "key": "service_design"
+    }
+  },
+  {
+    "id": "A43",
+    "name": "A.S.",
+    "grade": "M2",
+    "title": {
+      "ja": "カード化によるものの拡張可能性に関する研究と提案",
+      "en": "Research and Proposals on Product Scalability through Cardism"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "A45",
+    "name": "井原 瑞葵",
+    "grade": "M2",
+    "title": {
+      "ja": "行為を通して思考するインタラクティブブック「しくみ絵本」の開発研究",
+      "en": "Development of ”Shikumi Ehon”: Interactive Books that Foster Thinking through Action"
+    },
+    "lab": {
+      "ja": "エディティングスタジオ",
+      "en": "Editorial Design Studio"
+    },
+    "keyword1": {
+      "ja": "エディトリアルデザイン",
+      "en": "Editorial Design",
+      "key": "editorial_design"
+    },
+    "keyword2": {
+      "ja": "ブックデザイン",
+      "en": "Book Design",
+      "key": "book_design"
+    },
+    "keyword3": {
+      "ja": "ブックアート",
+      "en": "Book Art",
+      "key": "book_art"
+    }
+  },
+  {
+    "id": "A46",
+    "name": "藤田 真衣",
+    "grade": "B4",
+    "title": {
+      "ja": "空模様──過去気象データの可視化と活用可能性の検討",
+      "en": "SORAMOYOU: Visualizing Past Weather Data and Exploring Its Potential Uses"
+    },
+    "lab": {
+      "ja": "エディティングスタジオ",
+      "en": "Editorial Design Studio"
+    },
+    "keyword1": {
+      "ja": "サービスデザイン",
+      "en": "Service Design",
+      "key": "service_design"
+    },
+    "keyword2": {
+      "ja": "インフォメーションデザイン",
+      "en": "Information Design",
+      "key": "information_design"
+    }
+  },
+  {
+    "id": "A47",
+    "name": "奥山 和輝",
+    "grade": "B4",
+    "title": {
+      "ja": "ボードゲームにおける「継続性」を主題としたゲームメカニクスの考案と制作",
+      "en": "Design of Game Mechanics Focusing on Continuity in Board Games"
+    },
+    "lab": {
+      "ja": "エディティングスタジオ",
+      "en": "Editorial Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "ゲームデザイン",
+      "en": "Game Design",
+      "key": "game_design"
+    },
+    "keyword3": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    }
+  },
+  {
+    "id": "A48",
+    "name": "伊橋 瑠菜",
+    "grade": "B4",
+    "title": {
+      "ja": "視聴覚の連動による感情換気を高める映像表現の研究と実践",
+      "en": "Research and Practice of Visual Expression That Enhances Emotional Ventilation through Audiovisual Interplay"
+    },
+    "lab": {
+      "ja": "エディティングスタジオ",
+      "en": "Editorial Design Studio"
+    },
+    "keyword1": {
+      "ja": "アニメーション",
+      "en": "Animation",
+      "key": "animation"
+    }
+  },
+  {
+    "id": "B01",
+    "name": "庾 佳希",
+    "grade": "M2",
+    "title": {
+      "ja": "SNS社会における新たな寄付文化に関する研究",
+      "en": "Research on Emerging Donation Cultures in the SNS Society"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "サービスデザイン",
+      "en": "Service Design",
+      "key": "service_design"
+    },
+    "keyword2": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    },
+    "keyword3": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    }
+  },
+  {
+    "id": "B02",
+    "name": "清都 麗加",
+    "grade": "B4",
+    "title": {
+      "ja": "本音の対話を促進する椅子のデザイン",
+      "en": "A Chair Designs Social Posture Design"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "インテリアデザイン",
+      "en": "Interior Design",
+      "key": "interior_design"
+    },
+    "keyword3": {
+      "ja": "ファーニチャーデザイン",
+      "en": "Furniture Design",
+      "key": "furniture_design"
+    }
+  },
+  {
+    "id": "B03",
+    "name": "和田 颯",
+    "grade": "M2",
+    "title": {
+      "ja": "香りの試飲を提供する体験設計とプロダクトの提案",
+      "en": "Experience Design and Product Proposals Offering Scent Tasting"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "サービスデザイン",
+      "en": "Service Design",
+      "key": "service_design"
+    },
+    "keyword3": {
+      "ja": "スペキュラティブデザイン",
+      "en": "Speculative Design",
+      "key": "speculative_design"
+    }
+  },
+  {
+    "id": "B04",
+    "name": "小林 桃佳",
+    "grade": "B4",
+    "title": {
+      "ja": "ローカル素材と光のデザイン",
+      "en": "Lighting Design with Local Materials"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "サスティナブルデザイン",
+      "en": "Sustainable Design",
+      "key": "sustainable_design"
+    },
+    "keyword3": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    }
+  },
+  {
+    "id": "B05",
+    "name": "野々川 凜",
+    "grade": "B4",
+    "title": {
+      "ja": "スリットスキャン断面操作による映像体験の拡張",
+      "en": "Expanding Visual Experiences via Slit-Scan Cross-Section Manipulation"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "Interface Design Studio"
+    },
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword2": {
+      "ja": "画像処理",
+      "en": "Image Processing",
+      "key": "image_processing"
+    },
+    "keyword3": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    }
+  },
+  {
+    "id": "B06",
+    "name": "道家 昌希",
+    "grade": "B4",
+    "title": {
+      "ja": "盤面画像解析と大規模言語モデルを用いたリアルタイムオセロ実況",
+      "en": "Real-Time Othello Commentary using Vision-Based Board Recognition and Large Language Models"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "Interface Design Studio"
+    },
+    "keyword1": {
+      "ja": "インターフェースデザイン",
+      "en": "Interface Design",
+      "key": "interface_design"
+    },
+    "keyword2": {
+      "ja": "ヒューマンコンピュータインタラクション",
+      "en": "Human Computer Interaction",
+      "key": "human_computer_interaction"
+    },
+    "keyword3": {
+      "ja": "AI",
+      "en": "AI",
+      "key": "ai"
+    }
+  },
+  {
+    "id": "B07",
+    "name": "嶋村 有彩",
+    "grade": "M2",
+    "title": {
+      "ja": "書道とグラフィックデザインを掛け合わせる表現の研究",
+      "en": "Visual Expressions Crossing Calligraphy and Graphics"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  },
+  {
+    "id": "B08",
+    "name": "松野 仁志",
+    "grade": "M2",
+    "title": {
+      "ja": "芸術文化におけるドメイン専門家と大規模言語モデルの協調による知識グラフの段階的構築手法",
+      "en": "Incremental, Collaborative Knowledge Graph Construction with Arts and Culture Domain Experts and Large Language Models"
+    },
+    "lab": {
+      "ja": "エディティングスタジオ",
+      "en": "Editorial Design Studio"
+    },
+    "keyword1": {
+      "ja": "インターフェースデザイン",
+      "en": "Interface Design",
+      "key": "interface_design"
+    },
+    "keyword2": {
+      "ja": "AI",
+      "en": "AI",
+      "key": "ai"
+    },
+    "keyword3": {
+      "ja": "デジタルアーカイブ",
+      "en": "Digital Archive",
+      "key": "digital_archive"
+    }
+  },
+  {
+    "id": "B09",
+    "name": "阿部 真歩",
+    "grade": "B4",
+    "title": {
+      "ja": "マルチモーダルから考察するアトモスフィア ──「あたたかさ」を事例として",
+      "en": "Exploring Atmosphere through Multimodality: “Warmth” as a Case Study"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "Ergonomic Design Studio"
+    },
+    "keyword1": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    },
+    "keyword2": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword3": {
+      "ja": "ユニバーサルデザイン",
+      "en": "Universal Design",
+      "key": "universal_design"
+    }
+  },
+  {
+    "id": "B10",
+    "name": "峰村 明瑠",
+    "grade": "M2",
+    "title": {
+      "ja": "養蚕農家での実践を通じた平面吐糸の感性的価値の探究",
+      "en": "A Practice-Based Exploration of the Sensory Value of Planar Silk-Spinning in Sericulture"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "スペキュラティブデザイン",
+      "en": "Speculative Design",
+      "key": "speculative_design"
+    },
+    "keyword3": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  },
+  {
+    "id": "B11",
+    "name": "小森谷 健一",
+    "grade": "B4",
+    "title": {
+      "ja": "ゆっくりとした歩行を促すソールデザインの探求",
+      "en": "Exploring Sole Designs to Encourage Slow Walking"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "ファッションデザイン",
+      "en": "Fashion Design",
+      "key": "fashion_design"
+    },
+    "keyword3": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "B12",
+    "name": "久保田 恭平",
+    "grade": "M2",
+    "title": {
+      "ja": "皮膚型インターフェースにおける生物的[ヒト-モノ]コミュニケーションの構築",
+      "en": "Designing Biological [Human-Product] Interaction through Skin Interfaces"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "スペキュラティブデザイン",
+      "en": "Speculative Design",
+      "key": "speculative_design"
+    },
+    "keyword3": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  },
+  {
+    "id": "B13",
+    "name": "池谷 朋晃",
+    "grade": "B4",
+    "title": {
+      "ja": "暮らしの余白空間を漂う浮遊型プロダクトの提案",
+      "en": "Proposal for Floating Products Wandering through the Void of Daily Living"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "モビリティデザイン",
+      "en": "Mobility Design",
+      "key": "mobility_design"
+    },
+    "keyword3": {
+      "ja": "ファーニチャーデザイン",
+      "en": "Furniture Design",
+      "key": "furniture_design"
+    }
+  },
+  {
+    "id": "B14",
+    "name": "五十嵐 奏也",
+    "grade": "B4",
+    "title": {
+      "ja": "不整地における散布型表層ユニットのデザイン提案",
+      "en": "Proposal for a Scatter-Based Surface System on Rough Terrain"
+    },
+    "lab": {
+      "ja": "トランスポーテーションデザインスタジオ",
+      "en": "Transportation Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "モビリティデザイン",
+      "en": "Mobility Design",
+      "key": "mobility_design"
+    },
+    "keyword3": {
+      "ja": "スペキュラティブデザイン",
+      "en": "Speculative Design",
+      "key": "speculative_design"
+    }
+  },
+  {
+    "id": "B15",
+    "name": "鳥生 菜々子",
+    "grade": "M2",
+    "title": {
+      "ja": "微細穴加工による角度依存型視覚効果: 設計変数に基づく制御と体系化",
+      "en": "Micro-Hole Engineering for Angle-Dependent Visual Effects"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "メタデザイン",
+      "en": "Meta Design",
+      "key": "meta_design"
+    },
+    "keyword2": {
+      "ja": "ヒューマンコンピュータインタラクション",
+      "en": "Human Computer Interaction",
+      "key": "human_computer_interaction"
+    },
+    "keyword3": {
+      "ja": "オプティカルアート",
+      "en": "Optical Art",
+      "key": "optical_art"
+    }
+  },
+  {
+    "id": "B16",
+    "name": "ホーケン 舞理衣",
+    "grade": "M2",
+    "title": {
+      "ja": "カテナリー曲線の自己復元性を利用した独立揺動型モアレの考案",
+      "en": "Proposal of Independent Oscillating Moiré using Self-Restoring Property of Catenary Curves"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "キネティックアート",
+      "en": "Kinetic Art",
+      "key": "kinetic_art"
+    },
+    "keyword2": {
+      "ja": "インタラクティブアート",
+      "en": "Interactive Art",
+      "key": "interactive_art"
+    },
+    "keyword3": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    }
+  },
+  {
+    "id": "B17",
+    "name": "竹迫 穂香",
+    "grade": "B4",
+    "title": {
+      "ja": "物体検出とインタラクティブな映像投影を用いたあやとりストーリーテリングの提案",
+      "en": "Interactive Storytelling with String Figures using Object Detection and Projection Mapping"
+    },
+    "lab": {
+      "ja": "インタラクティブアートスタジオ",
+      "en": "Interactive Art Studio"
+    },
+    "keyword1": {
+      "ja": "インタラクティブアート",
+      "en": "Interactive Art",
+      "key": "interactive_art"
+    },
+    "keyword2": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    },
+    "keyword3": {
+      "ja": "パフォーマンス",
+      "en": "Performance",
+      "key": "performance"
+    }
+  },
+  {
+    "id": "B18",
+    "name": "中原 麻結",
+    "grade": "B4",
+    "title": {
+      "ja": "バーテンダーの視点から見るバーでのコミュニケーション調査とカンバセーションスタータとしての照明の制作",
+      "en": "A Study of Bar Communication from a Bartender's Perspective and the Creation of Lighting as a Conversation Starter"
+    },
+    "lab": {
+      "ja": "インタラクティブアートスタジオ",
+      "en": "Interactive Art Studio"
+    },
+    "keyword1": {
+      "ja": "インタラクティブアーキテクチャー",
+      "en": "Interactive Architecture",
+      "key": "interactive_architecture"
+    }
+  },
+  {
+    "id": "B19",
+    "name": "髙見 明花",
+    "grade": "B4",
+    "title": {
+      "ja": "液晶ディスプレイを用いたインフィニティミラーの開発",
+      "en": "Development of an Infinity Mirror using Liquid Crystal Displays"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "インタラクティブアート",
+      "en": "Interactive Art",
+      "key": "interactive_art"
+    },
+    "keyword2": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword3": {
+      "ja": "ジェネラティブアート",
+      "en": "Generative Art",
+      "key": "generative_art"
+    }
+  },
+  {
+    "id": "B20",
+    "name": "梶田 朋花",
+    "grade": "M2",
+    "title": {
+      "ja": "水中気泡ディスプレイの多層化表現とシミュレーションシステムの構築",
+      "en": "Multi-Layered Representation in Underwater Bubble Displays: Development of a Simulation System"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "インターフェースデザイン",
+      "en": "Interface Design",
+      "key": "interface_design"
+    },
+    "keyword2": {
+      "ja": "ヒューマンコンピュータインタラクション",
+      "en": "Human Computer Interaction",
+      "key": "human_computer_interaction"
+    },
+    "keyword3": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    }
+  },
+  {
+    "id": "B21",
+    "name": "坂村 空介",
+    "grade": "B4",
+    "title": {
+      "ja": "電子ペーパーを用いた環境決定的変数による装置統合型ビジュアル生成手法の研究",
+      "en": "A Study of Device-Integrated Visual Generation using Environment-Determined Variables with Electronic Paper Display"
+    },
+    "lab": {
+      "ja": "ネットワークデザインスタジオ",
+      "en": "Network Design Studio"
+    },
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword2": {
+      "ja": "ジェネラティブアート",
+      "en": "Generative Art",
+      "key": "generative_art"
+    }
+  },
+  {
+    "id": "B22",
+    "name": "Saito Mira Ayana",
+    "grade": "M2",
+    "title": {
+      "ja": "Creating an Interactive Garden Ecosystem: A realm of Nature, Subjectivity and Technology",
+      "en": "Creating an Interactive Garden Ecosystem: A realm of Nature, Subjectivity and Technology"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "Interface Design Studio"
+    },
+    "keyword1": {
+      "ja": "インタラクティブアート",
+      "en": "Interactive Art",
+      "key": "interactive_art"
+    },
+    "keyword2": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    },
+    "keyword3": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  },
+  {
+    "id": "B23",
+    "name": "清水 勇希",
+    "grade": "M2",
+    "title": {
+      "ja": "Signs of Life: 生きているを感じるデザイン",
+      "en": "Signs of Life: Design That Evokes a Sense of Life"
+    },
+    "lab": {
+      "ja": "製品・サービスデザインスタジオ",
+      "en": "Equipment & Service Design Studio"
+    },
+    "keyword1": {
+      "ja": "メディアアート",
+      "en": "Media Art",
+      "key": "media_art"
+    },
+    "keyword2": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    },
+    "keyword3": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "B24",
+    "name": "本多 こころ",
+    "grade": "M2",
+    "title": {
+      "ja": "折り紙との融合による絞りの保存と普及",
+      "en": "Preserving Shibori through Origami"
+    },
+    "lab": {
+      "ja": "ヴィジュアルコミュニケーションデザインスタジオ",
+      "en": "Visual Communication Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "パターンデザイン",
+      "en": "Pattern Design",
+      "key": "pattern_design"
+    },
+    "keyword3": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  },
+  {
+    "id": "B25",
+    "name": "石上 茉奈",
+    "grade": "B4",
+    "title": {
+      "ja": "犬の不可解行動に対する「肯定的誤読」の提案──脳の可視化によるアニメーション制作",
+      "en": "Proposal for \"Positive Misreading\" of Inscrutable Dog Behavior: Animation Production through Brain Visualization"
+    },
+    "lab": {
+      "ja": "映像デザインスタジオ",
+      "en": "Kinematograph Design Studio"
+    },
+    "keyword1": {
+      "ja": "グラフィックデザイン",
+      "en": "Graphic Design",
+      "key": "graphic_design"
+    },
+    "keyword2": {
+      "ja": "アニメーション",
+      "en": "Animation",
+      "key": "animation"
+    },
+    "keyword3": {
+      "ja": "コンセプチュアルデザイン",
+      "en": "Conceptual Design",
+      "key": "conceptual_design"
+    }
+  },
+  {
+    "id": "B26",
+    "name": "森 花純",
+    "grade": "B4",
+    "title": {
+      "ja": "正三角形薄板材のスリットジョイントによる可変型照明の制作",
+      "en": "Variable Lighting Design based on​ Equilateral Triangle Slit-Joint Structures​"
+    },
+    "lab": {
+      "ja": "インテリアデザインスタジオ",
+      "en": "Interior Design Studio"
+    },
+    "keyword1": {
+      "ja": "プロダクトデザイン",
+      "en": "Product Design",
+      "key": "product_design"
+    },
+    "keyword2": {
+      "ja": "ファーニチャーデザイン",
+      "en": "Furniture Design",
+      "key": "furniture_design"
+    },
+    "keyword3": {
+      "ja": "デザインプロトタイピング",
+      "en": "Design Prototyping",
+      "key": "design_prototyping"
+    }
+  },
+  {
+    "id": "W01",
+    "name": "折居 隼",
+    "grade": null,
+    "title": {
+      "ja": "フィクションにおける架空言語の分析：言語解読ゲーム《7Days to End with You》を通して",
+      "en": "フィクションにおける架空言語の分析：言語解読ゲーム《7Days to End with You》を通して"
+    },
+    "lab": {
+      "ja": "ネットワークデザインスタジオ",
+      "en": "ネットワークデザインスタジオ"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "ゲームデザイン",
+      "en": "Game Design",
+      "key": "game_design"
+    },
+    "keyword3": {
+      "ja": "メタデザイン",
+      "en": "Meta Design",
+      "key": "meta_design"
+    }
+  },
+  {
+    "id": "W02",
+    "name": "津江 勇作",
+    "grade": null,
+    "title": {
+      "ja": "香りから想起される多様なエピソード記憶の収集・共有システムの開発およびLLMを用いた香りの言語表現",
+      "en": "香りから想起される多様なエピソード記憶の収集・共有システムの開発およびLLMを用いた香りの言語表現"
+    },
+    "lab": {
+      "ja": "インタフェースデザインスタジオ",
+      "en": "インタフェースデザインスタジオ"
+    },
+    "keyword1": {
+      "ja": "インターフェースデザイン",
+      "en": "Interface Design",
+      "key": "interface_design"
+    },
+    "keyword2": {
+      "ja": "インタラクションデザイン",
+      "en": "Interaction Design",
+      "key": "interaction_design"
+    },
+    "keyword3": {
+      "ja": "マルチモーダルデザイン",
+      "en": "Multimodal Design",
+      "key": "multimodal_design"
+    }
+  },
+  {
+    "id": "W03",
+    "name": "谷合 望々",
+    "grade": null,
+    "title": {
+      "ja": "強緊張状態の可視化とレジリエンスに関する研究",
+      "en": "強緊張状態の可視化とレジリエンスに関する研究"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "エルゴノミックデザインスタジオ"
+    },
+    "keyword1": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    },
+    "keyword2": {
+      "ja": "ナラティブリサーチ",
+      "en": "Narrative Research",
+      "key": "narrative_research"
+    },
+    "keyword3": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    }
+  },
+  {
+    "id": "W04",
+    "name": "卓 暁桐",
+    "grade": null,
+    "title": {
+      "ja": "Design for Women Health Condition Sharing",
+      "en": "Design for Women Health Condition Sharing"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "エルゴノミックデザインスタジオ"
+    },
+    "keyword1": {
+      "ja": "サービスデザイン",
+      "en": "Service Design",
+      "key": "service_design"
+    },
+    "keyword2": {
+      "ja": "UIデザイン",
+      "en": "UI Design",
+      "key": "ui_design"
+    },
+    "keyword3": {
+      "ja": "リサーチスルーデザイン",
+      "en": "Research Through Design",
+      "key": "research_through_design"
+    }
+  }
+]
