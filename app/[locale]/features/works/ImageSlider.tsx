@@ -219,9 +219,9 @@ export default function ImageSlider({
                 key={`${s.type}-${index}`}
                 onClick={() => setCurrent(index)}
                 className={
-                  "relative w-[52px] h-[39px] shrink-0 overflow-hidden bg-muted transition-all " +
+                  "relative w-[52px] h-[39px] shrink-0 overflow-hidden bg-muted transition-all cursor-pointer" +
                   (index === current
-                    ? "outline-2 outline outline-white outline-offset-2"
+                    ? "outline-2 outline outline-white outline-offset-2 cursor-pointer"
                     : "")
                 }
               >

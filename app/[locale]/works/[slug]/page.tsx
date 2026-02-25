@@ -41,17 +41,15 @@ export default async function Work({
       <MoyaBG />
       <div className="max-w-[355px] md:max-w-[960px] mx-auto">
         {/* ✅ 最上部の列：ホバーすると文字が出る戻るボタン */}
-        <div className="flex justify-start mb-2 md:mb-4">
+        <div className="flex justify-start mb-4 md:mb-8">
           <Link
             href="/works"
-            className="flex items-center transition-all group/back"
+            className="flex items-center transition-all group/back gap-1"
             aria-label="作品一覧に戻る"
           >
             {/* アイコン：常に表示 */}
-            <div className="flex items-center justify-center w-10 h-10">
-              <div className="group-hover/back:-translate-x-1 transition-transform duration-300">
-                <BackIcon width={36} height={36} />
-              </div>
+            <div className="flex items-center justify-center">
+              <BackIcon width={16} height={16} />
             </div>
 
             {/* テキスト：ホバー時のみ表示 */}

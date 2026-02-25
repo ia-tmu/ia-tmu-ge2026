@@ -203,7 +203,7 @@ export const BackIcon = ({
     <svg
       width={width}
       height={height}
-      viewBox="0 0 15 15"
+      viewBox="5 4 4 7"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
       className={className}
