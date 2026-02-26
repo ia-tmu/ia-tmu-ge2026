@@ -132,7 +132,7 @@ def main():
 
     if not embeddings:
         print("Error: No embeddings generated")
-        return
+        raise SystemExit(1)
 
     print(f"\nStep 3: Reducing dimensions to {TARGET_DIMENSIONS}...")
     reduced_embeddings = reduce_dimensions(embeddings, TARGET_DIMENSIONS)
