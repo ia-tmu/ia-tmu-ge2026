@@ -22,7 +22,8 @@
       "keywordsHeading": "Keywords",
       "keywordsAriaLabel": "Keyword suggestions",
       "removeKeyword": "Remove \"{{keyword}}\"",
-      "keywordList": "List of Keywords"
+      "keywordList": "List of Keywords",
+      "viewAllWorks": "View all"
     }
   },
   "teaser": {
