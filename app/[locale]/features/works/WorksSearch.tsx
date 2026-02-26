@@ -53,6 +53,7 @@ export function WorksSearch({
   const [query, setQuery] = useState("");
   const [closedByUser, setClosedByUser] = useState(false);
   const [keywordModalOpen, setKeywordModalOpen] = useState(false);
+  const [worksExpanded, setWorksExpanded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const allKeywords = useMemo(
@@ -63,10 +64,15 @@ export function WorksSearch({
   const matchedWorks = useMemo(() => {
     const q = query.trim();
     if (!q) return [];
-    return works
-      .filter((w) => matchTitle(query, w) || matchId(query, w))
-      .slice(0, MAX_WORK_SUGGESTIONS);
+    return works.filter((w) => matchTitle(query, w) || matchId(query, w));
   }, [works, query]);
+
+  const displayedWorks = useMemo(
+    () =>
+      worksExpanded ? matchedWorks : matchedWorks.slice(0, MAX_WORK_SUGGESTIONS),
+    [matchedWorks, worksExpanded]
+  );
+  const hasMoreWorks = matchedWorks.length > MAX_WORK_SUGGESTIONS;
 
   /** 検索は全キーワード横断。一致したキーワードを件数制限しつつ、分類ごとにまとめる。 */
   const matchedKeywordsByCategory = useMemo(() => {
@@ -101,6 +107,7 @@ export function WorksSearch({
   const handleQueryChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
     setClosedByUser(false);
+    setWorksExpanded(false);
   }, []);
 
   const toggleKeyword = useCallback(
@@ -167,11 +174,8 @@ export function WorksSearch({
         >
           {matchedWorks.length > 0 && (
             <div className="p-2 border-b border-foreground/30">
-              {/* <div className="text-xs font-semibold text-foreground/75 uppercase tracking-wide px-2 py-1">
-                {t("works.search.worksHeading")}
-              </div> */}
               <ul className="flex flex-col gap-1" role="group" aria-label={t("works.search.worksAriaLabel")}>
-                {matchedWorks.map((work) => {
+                {displayedWorks.map((work) => {
                   const href = localePath(locale, `/works/${work.id}`);
                   const imageSrc = (work.thumbnail?.trim() || work.images?.[0]?.trim()) || null;
                   return (
@@ -199,6 +203,17 @@ export function WorksSearch({
                   );
                 })}
               </ul>
+              {hasMoreWorks && !worksExpanded && (
+                <div className="flex justify-end mt-1 px-2">
+                  <button
+                    type="button"
+                    onClick={() => setWorksExpanded(true)}
+                    className="text-sm text-foreground/80 hover:text-foreground underline underline-offset-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset rounded"
+                  >
+                    {t("works.search.viewAllWorks")}
+                  </button>
+                </div>
+              )}
             </div>
           )}
           {hasMatchedKeywords && (
@@ -206,7 +221,7 @@ export function WorksSearch({
               <div className="flex flex-col gap-3" role="group" aria-label={t("works.search.keywordsAriaLabel")}>
                 {matchedKeywordsByCategory.map(({ category, keywords }) => (
                   <div key={category.id}>
-                    <ul className="flex flex-col gap-0.5 mt-0.5">
+                    <ul className="flex flex-row flex-wrap gap-1.5 mt-0.5">
                       {keywords.map((keyword) => {
                         const isSelected = selectedKeywords.includes(keyword);
                         return (
@@ -214,7 +229,7 @@ export function WorksSearch({
                             <button
                               type="button"
                               onClick={() => toggleKeyword(keyword)}
-                              className="flex items-center gap-2 w-full px-2 py-2 text-sm text-left rounded-sm hover:bg-foreground/10 focus:bg-foreground/10 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                              className="flex items-center cursor-pointer gap-2 px-2 py-2 text-sm text-left rounded-sm hover:bg-foreground/10 focus:bg-foreground/10 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
                             >
                               <span
                                 className="shrink-0 w-4 h-4 border border-foreground rounded flex items-center justify-center"
@@ -259,7 +274,10 @@ export function WorksSearch({
             ))}
           </div>
         )}
+
         <button className="ml-auto shrink-0 cursor-pointer underline underline-offset-4 hover:no-underline hover:text-dark-blue-primary transition-all duration-300" onClick={() => setKeywordModalOpen(true)}>{t("works.search.keywordList")}</button>
+
+
       </div>
 
       <KeywordListModal

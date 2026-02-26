@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { shuffle } from "@/lib/shuffle";
 import {
   STUDIO_KEYS,
+  type StudioKey,
   getStudioName,
   getStudioCategoryLabel,
   getStudioEnName,
@@ -42,10 +43,45 @@ function applyKeywordFilter(
   );
 }
 
+const STUDIO_ORDER_STORAGE_KEY = "works-studio-order";
+
+/** セッション内で保存された順序を取得する。無ければ新規シャッフルして保存。SSRでは未使用。 */
+function getOrCreateStudioOrder(): StudioKey[] {
+  if (typeof window === "undefined") return [...STUDIO_KEYS];
+  try {
+    const stored = sessionStorage.getItem(STUDIO_ORDER_STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored) as string[];
+      const set = new Set(STUDIO_KEYS);
+      if (
+        parsed.length === set.size &&
+        parsed.every((k) => set.has(k as StudioKey))
+      ) {
+        return parsed as StudioKey[];
+      }
+    }
+  } catch {
+    // 無効な保存値は無視
+  }
+  const order = shuffle([...STUDIO_KEYS]);
+  sessionStorage.setItem(STUDIO_ORDER_STORAGE_KEY, JSON.stringify(order));
+  return order;
+}
+
 export function Works({ data }: { data: SheetData }) {
   const { t } = useTranslation();
   const [showAllSectionId, setShowAllSectionId] = useState<string | null>(null);
   const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
+  // 同一ブラウザセッション内では並び順を固定。sessionStorage で保持し、新規タブ・別日は新ランダム順。
+  const [studioOrder, setStudioOrder] = useState<StudioKey[]>(() => [
+    ...STUDIO_KEYS,
+  ]);
+
+  useEffect(() => {
+    // マウント後に sessionStorage から順序を復元（SSR との hydration 整合のため初回はデフォルト順で描画）
+    const order = getOrCreateStudioOrder();
+    queueMicrotask(() => setStudioOrder(order));
+  }, []);
   // SSR・初回クライアントはフィルタのみ（シャッフルしない）で一致させる
   const [worksByStudio, setWorksByStudio] = useState(() =>
     getFilteredWorksByStudio(data.works ?? [])
@@ -94,7 +130,7 @@ export function Works({ data }: { data: SheetData }) {
           onSelectedKeywordsChange={setSelectedKeywords}
         />
 
-        {STUDIO_KEYS.filter((studioKey) => {
+        {studioOrder.filter((studioKey) => {
           const list = worksByStudioFiltered[studioKey] ?? [];
           return list.length > 0;
         }).map((studioKey) => (

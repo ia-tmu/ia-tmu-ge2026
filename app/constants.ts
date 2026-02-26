@@ -70,6 +70,7 @@ export const STATIC_WORK_IDS = [
   "A48",
   "B09",
   "A25",
+  "A26",
   "B10",
   "A14",
   "B22",

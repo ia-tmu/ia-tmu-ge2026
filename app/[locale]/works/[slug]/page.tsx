@@ -8,6 +8,7 @@ import { MovieOrder } from "../../types/work";
 import type { Work } from "../../types/work";
 import { getSimilarWorks } from "@/lib/similarity";
 import { BackIcon } from "../../components/Icons";
+import { localePath } from "../../lib/localePath";
 import Link from "next/link";
 
 export const dynamicParams = false;
@@ -23,9 +24,9 @@ export async function generateStaticParams() {
 export default async function Work({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
 
   const work = await fetchRowBySlug(slug);
 
@@ -54,7 +55,7 @@ export default async function Work({
         {/* ✅ 最上部の列：ホバーすると文字が出る戻るボタン */}
         <div className="flex justify-start mb-4 md:mb-8">
           <Link
-            href="/works"
+            href={localePath(locale, "/works")}
             className="flex items-center transition-all group/back gap-1"
             aria-label="作品一覧に戻る"
           >

@@ -655,6 +655,34 @@
     }
   },
   {
+    "id": "A26",
+    "name": "竹内 悠夏",
+    "grade": "B4",
+    "title": {
+      "ja": "義肢の使用経験に基づくエンパワメントエコシステムデザインの構築",
+      "en": "Study on Empowerment Ecosystem Design based on Prosthetic Usage Experience"
+    },
+    "lab": {
+      "ja": "エルゴノミックデザインスタジオ",
+      "en": "Ergonomic Design Studio"
+    },
+    "keyword1": {
+      "ja": "福祉デザイン",
+      "en": "Welfare Design",
+      "key": "welfare_design"
+    },
+    "keyword2": {
+      "ja": "人間中心デザイン",
+      "en": "Human-Centered Design",
+      "key": "human_centered_design"
+    },
+    "keyword3": {
+      "ja": "UXデザイン",
+      "en": "UX Design",
+      "key": "ux_design"
+    }
+  },
+  {
     "id": "A27",
     "name": "野口 明日美",
     "grade": "M2",
