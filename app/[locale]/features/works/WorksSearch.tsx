@@ -259,7 +259,7 @@ export function WorksSearch({
             ))}
           </div>
         )}
-        <button className="ml-auto shrink-0 cursor-pointer underline underline-offset-4 hover:no-underline hover:text-dark-blue-primary transition-all duration-300" onClick={() => setKeywordModalOpen(true)}>キーワード一覧</button>
+        <button className="ml-auto shrink-0 cursor-pointer underline underline-offset-4 hover:no-underline hover:text-dark-blue-primary transition-all duration-300" onClick={() => setKeywordModalOpen(true)}>{t("works.search.keywordList")}</button>
       </div>
 
       <KeywordListModal

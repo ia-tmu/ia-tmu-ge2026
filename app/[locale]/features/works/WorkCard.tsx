@@ -15,31 +15,46 @@ export function WorkCard({ work }: { work: Work }) {
   const imageSrc = (work.thumbnail?.trim() || work.images?.[0]?.trim()) || null;
 
   return (
-    <Link href={href} className="block h-full max-h-[240px] outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+    <Link
+      href={href}
+      className="block h-[138px] md:h-[312px] w-full md:w-[200px] shrink-0 overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+    >
       <div
-        className={`hidden md:flex p-4 h-full max-h-[240px] max-w-[192px] min-w-[192px] w-[192px] flex-col items-start gap-2 border border-foreground backdrop-blur-lg rounded-sm ${cardHoverClass}`}
+        className={`hidden md:flex h-full w-full flex-col items-start overflow-hidden rounded-sm border border-foreground backdrop-blur-lg ${cardHoverClass}`}
       >
-        <div className="relative w-full h-full max-h-[120px] max-w-[160px] overflow-hidden bg-muted">
+        <div className="relative h-[150px] w-full shrink-0 overflow-hidden bg-muted">
           {imageSrc ? (
             <Image
               src={imageSrc}
               alt={work.workTitle}
+              fill
               className="object-cover object-center"
-              width={160}
-              height={120}
-              style={{ width: "auto", height: "auto" }}
+              sizes="200px"
             />
           ) : null}
         </div>
-        <div className="flex flex-col items-start gap-2">
-          <h3 className="text-sm w-full line-clamp-4 font-semibold">{work.workTitle}</h3>
+
+        <div className="relative flex flex-col items-start py-2 px-1 justify-between h-full">
+          <div className="flex flex-col items-start gap-2">
+            <h3 className="text-sm w-full line-clamp-4 font-semibold">{work.workTitle}</h3>
+          </div>
+
+          <div className="flex flex-col gap-1 mt-auto">
+            {work.keywords?.map((keyword) => (
+              <div key={`${work.id}-${keyword}`} className="text-[10px] w-full line-clamp-4 font-semibold">
+                {keyword}
+              </div>
+            ))}
+          </div>
+
         </div>
+
       </div>
 
       <div
-        className={`flex md:hidden h-full max-h-[240px] w-full flex-row items-stretch gap-3 border border-foreground backdrop-blur-lg overflow-hidden p-2 rounded-sm ${cardHoverClass}`}
+        className={`flex md:hidden p-2 h-full gap-2 w -full flex-row items-stretch border border-foreground backdrop-blur-lg overflow-hidden rounded-sm ${cardHoverClass}`}
       >
-        <div className="relative w-[120px] h-[120px] shrink-0 p-2 bg-muted">
+        <div className="relative w-[160px] h-[120px] shrink-0 p-2 bg-muted">
           {imageSrc ? (
             <Image
               src={imageSrc}
@@ -51,10 +66,10 @@ export function WorkCard({ work }: { work: Work }) {
           ) : null}
         </div>
         <div className="flex flex-col items-start gap-1.5 flex-1 min-w-0">
-          <h3 className="text-sm w-full line-clamp-4 font-semibold">{work.workTitle}</h3>
+          <h3 className="text-sm w-full line-clamp-3 font-semibold">{work.workTitle}</h3>
           <div className="flex flex-col gap-1">
             {work.keywords?.map((keyword) => (
-              <div key={`${work.id}-${keyword}`} className="text-xs w-full line-clamp-4 font-semibold">
+              <div key={`${work.id}-${keyword}`} className="text-[10px] w-full line-clamp-4 font-semibold">
                 {keyword}
               </div>
             ))}

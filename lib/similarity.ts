@@ -1,4 +1,4 @@
-import worksData from '@/app//[locale]/lib/embeddings.json';
+import worksData from "@/app//[locale]/lib/embeddings.json";
 
 export interface Keyword {
   ja: string;
@@ -16,7 +16,7 @@ export interface Work {
   name: string;
   grade: string;
   title: Title;
-  lab: string;
+  lab: string | { ja: string; en: string };
   keyword1: Keyword;
   keyword2: Keyword;
   keyword3: Keyword;
@@ -60,21 +60,29 @@ function cosineSimilarity(vecA: number[], vecB: number[]): number {
 
 export function getSimilarWorks(
   id: string,
-  limit: number = 10
+  limit: number = 10,
 ): SimilarityResult | null {
-  const selectedWork = works.find(work => work.id === id);
+  const selectedWork = works.find((work) => work.id === id);
+  const wPrefixedInEmbeddings = works
+    .filter((w) => w.id.startsWith("W") || w.id.startsWith("w"))
+    .map((w) => w.id);
 
   if (!selectedWork || !selectedWork.embedding) {
+    if (id.startsWith("W") || id.startsWith("w")) {
+      console.log(
+        "[similarity] getSimilarWorks: id not in embeddings or no embedding",
+        "id=" + JSON.stringify(id),
+        "embeddingIds(W)=[" + wPrefixedInEmbeddings.slice(0, 8).join(",") + "]",
+      );
+    }
     return null;
   }
 
   const similarWorks: SimilarWork[] = works
-    .filter(work =>
-      work.id !== id &&
-      work.embedding &&
-      work.embedding.length > 0
+    .filter(
+      (work) => work.id !== id && work.embedding && work.embedding.length > 0,
     )
-    .map(work => ({
+    .map((work) => ({
       work,
       similarity: cosineSimilarity(selectedWork.embedding, work.embedding),
       rank: 0,
@@ -90,9 +98,11 @@ export function getSimilarWorks(
     count: similarWorks.length,
     maxSimilarity: similarWorks[0]?.similarity || 0,
     minSimilarity: similarWorks[similarWorks.length - 1]?.similarity || 0,
-    avgSimilarity: similarWorks.length > 0
-      ? similarWorks.reduce((sum, item) => sum + item.similarity, 0) / similarWorks.length
-      : 0,
+    avgSimilarity:
+      similarWorks.length > 0
+        ? similarWorks.reduce((sum, item) => sum + item.similarity, 0) /
+          similarWorks.length
+        : 0,
   };
 
   return {
@@ -107,5 +117,5 @@ export function getAllWorks(): Work[] {
 }
 
 export function getWorkById(id: string): Work | undefined {
-  return works.find(work => work.id === id);
+  return works.find((work) => work.id === id);
 }
