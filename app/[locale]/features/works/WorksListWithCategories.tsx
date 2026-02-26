@@ -85,7 +85,7 @@ export function WorksListWithCategories({ title, subtitle, id, categories, works
   };
 
   return (
-    <div className="py-3 md:py-12 flex flex-col md:flex-row gap-4 overflow-hidden md:overflow-hidden max-md:overflow-visible md:justify-between">
+    <div className="py-3 md:py-10 md:h-[496px] flex flex-col md:flex-row gap-4 overflow-hidden md:overflow-hidden max-md:overflow-visible md:justify-between">
       <div
         className="md:min-w-[245px] md:max-w-[245px] flex flex-col items-start gap-4 md:gap-8 sticky top-20 z-10 md:static max-md:backdrop-blur-xs py-6 md:py-0"
       >
@@ -112,7 +112,7 @@ export function WorksListWithCategories({ title, subtitle, id, categories, works
       </div>
 
       <div
-        className="hidden md:flex flex-1 min-w-0"
+        className="hidden md:flex flex-1 min-w-0 md:h-full!"
         style={{
           height: works.length <= ONE_ROW_THRESHOLD ? ONE_ROW_HEIGHT_PX : MULTI_ROW_MAX_HEIGHT_PX,
         }}

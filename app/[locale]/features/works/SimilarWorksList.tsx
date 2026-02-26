@@ -19,7 +19,7 @@ export function SimilarWorksList({ items }: { items: SimilarWorkItem[] }) {
   return (
     <div className="flex flex-col gap-2 md:flex-row md:flex-wrap md:gap-4">
       {items.map((item) => (
-        <div key={item.work.id} className="shrink-0 md:h-[240px]">
+        <div key={item.work.id} className="shrink-0">
           <WorkCard work={item.work} />
         </div>
       ))}
