@@ -85,7 +85,9 @@ function rowToWorksRow(
       const fileId = extractDriveFileId(trimmed);
       return { url, fileId };
     })
-    .filter((e): e is { url: string; fileId: string } => Boolean(e.url && e.fileId));
+    .filter((e): e is { url: string; fileId: string } =>
+      Boolean(e.url && e.fileId),
+    );
 
   return {
     id: String(row[0] ?? ""),
@@ -365,7 +367,9 @@ export async function fetchSheetValues() {
     );
     return cached;
   }
-  console.log("[get-works] fetchSheetValues: no cache, calling API (image sort will run)");
+  console.log(
+    "[get-works] fetchSheetValues: no cache, calling API (image sort will run)",
+  );
   return fetchSheetValuesFromApi();
 }
 
@@ -376,17 +380,27 @@ export async function fetchSheetValues() {
 export async function fetchRowBySlug(slug: string) {
   const cached = await readCache();
   if (cached) {
+    const allIds = cached.works.map((w) => w.id);
     const work = cached.works.find((w) => w.id === slug) ?? null;
+    const wPrefixed = allIds.filter(
+      (id) => id.startsWith("W") || id.startsWith("w"),
+    );
     console.log(
-      "[get-works] fetchRowBySlug(" + slug + "): fromCache=true",
+      "[get-works] fetchRowBySlug(" +
+        JSON.stringify(slug) +
+        "): fromCache=true",
+      "totalWorks=" + cached.works.length,
       "imageCount=" + (work?.images?.length ?? 0),
-      "(images were sorted when cache was built)",
+      "sampleIds(W)=[" + wPrefixed.slice(0, 5).join(",") + "]",
+      "found=" + (work != null),
     );
     return work;
   }
 
   console.log(
-    "[get-works] fetchRowBySlug(" + slug + "): fromCache=false, loading from Sheets API (no Drive sort for single row)",
+    "[get-works] fetchRowBySlug(" +
+      JSON.stringify(slug) +
+      "): fromCache=false, loading from Sheets API (no Drive sort for single row)",
   );
   const sheets = await getSheetsClient();
   const spreadsheetId = process.env.SPREADSHEET_ID;
@@ -398,10 +412,27 @@ export async function fetchRowBySlug(slug: string) {
   });
 
   const ids = rangeRes.data.values || [];
+  const idStrings = ids.map((row) => String(row?.[0] ?? ""));
+  const wPrefixedFromSheet = idStrings.filter(
+    (id) => id.startsWith("W") || id.startsWith("w"),
+  );
+  console.log(
+    "[get-works] fetchRowBySlug: A列取得",
+    "rows=" + idStrings.length,
+    "sampleIds(W)=[" + wPrefixedFromSheet.slice(0, 8).join(",") + "]",
+    "slug in ids=" + idStrings.includes(slug),
+  );
   // slugと一致するインデックスを探す（1行目がヘッダーなら +1 する）
   const rowIndex = ids.findIndex((row) => String(row[0]) === slug) + 1;
 
-  if (rowIndex === 0) return null;
+  if (rowIndex === 0) {
+    console.log(
+      "[get-works] fetchRowBySlug(" +
+        JSON.stringify(slug) +
+        "): rowIndex=0 (not found in A column)",
+    );
+    return null;
+  }
 
   // 2. 特定した行だけを取得する
   const rowRes = await sheets.spreadsheets.values.get({
@@ -414,7 +445,9 @@ export async function fetchRowBySlug(slug: string) {
   const { imageFileIds: _omit, ...work } = rowToWorksRow(rowData);
   void _omit;
   console.log(
-    "[get-works] fetchRowBySlug(" + slug + "): fromCache=false, returned single row",
+    "[get-works] fetchRowBySlug(" +
+      slug +
+      "): fromCache=false, returned single row",
     "imageCount=" + (work.images?.length ?? 0),
     "(N-column order, no sort)",
   );
@@ -428,10 +461,23 @@ export async function fetchRowBySlug(slug: string) {
  */
 export async function fetchAllIds(): Promise<string[]> {
   const cached = await readCache();
-  if (cached) return cached.works.map((w) => w.id);
+  if (cached) {
+    const ids = cached.works.map((w) => w.id);
+    const wIds = ids.filter((id) => id.startsWith("W") || id.startsWith("w"));
+    console.log(
+      "[get-works] fetchAllIds: fromCache=true",
+      "total=" + ids.length,
+      "W-prefixed=" + wIds.length,
+      "sampleW=" + wIds.slice(0, 5).join(","),
+    );
+    return ids;
+  }
 
   const spreadsheetId = process.env.SPREADSHEET_ID;
-  if (!spreadsheetId) return [];
+  if (!spreadsheetId) {
+    console.log("[get-works] fetchAllIds: no SPREADSHEET_ID, returning []");
+    return [];
+  }
 
   try {
     const sheets = await getSheetsClient();
@@ -439,8 +485,17 @@ export async function fetchAllIds(): Promise<string[]> {
       spreadsheetId,
       range: `${WORKS_SHEET_NAME}!A2:A`,
     });
-    return (rangeRes.data.values || []).map((row) => String(row[0]));
-  } catch {
+    const ids = (rangeRes.data.values || []).map((row) => String(row[0]));
+    const wIds = ids.filter((id) => id.startsWith("W") || id.startsWith("w"));
+    console.log(
+      "[get-works] fetchAllIds: fromSheet",
+      "total=" + ids.length,
+      "W-prefixed=" + wIds.length,
+      "sampleW=" + wIds.slice(0, 5).join(","),
+    );
+    return ids;
+  } catch (e) {
+    console.log("[get-works] fetchAllIds: catch", String(e));
     return ["1"];
   }
 }

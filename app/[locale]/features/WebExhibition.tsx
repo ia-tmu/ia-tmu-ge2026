@@ -33,10 +33,16 @@ export default function WebExhibition({ works }: Props) {
         setRows(emptyRows);
         return;
       }
+      const n = works.length;
+      const size1 = Math.ceil(n / 3);
+      const size2 = Math.ceil((n - size1) / 2);
+      const part1 = works.slice(0, size1);
+      const part2 = works.slice(size1, size1 + size2);
+      const part3 = works.slice(size1 + size2, n);
       setRows({
-        row1: shuffle(works),
-        row2: shuffle(works),
-        row3: shuffle(works),
+        row1: shuffle(part1),
+        row2: shuffle(part2),
+        row3: shuffle(part3),
       });
     });
   }, [works]);

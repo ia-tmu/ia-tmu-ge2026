@@ -29,8 +29,8 @@ export default async function Page() {
       <FixedBackground />
       <Teaser />
       <Concept />
-      <WebExhibitionComingSoon />
-      {/* <WebExhibition works={works} /> */}
+      {/* <WebExhibitionComingSoon /> */}
+      <WebExhibition works={works} />
       <Events />
       <Info />
       <SNSEmbedding />

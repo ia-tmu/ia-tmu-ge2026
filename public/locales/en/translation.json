@@ -21,7 +21,8 @@
       "worksAriaLabel": "Work suggestions",
       "keywordsHeading": "Keywords",
       "keywordsAriaLabel": "Keyword suggestions",
-      "removeKeyword": "Remove \"{{keyword}}\""
+      "removeKeyword": "Remove \"{{keyword}}\"",
+      "keywordList": "List of Keywords"
     }
   },
   "teaser": {

@@ -52,14 +52,14 @@ export interface StudioInfo {
  */
 export const STUDIO_MAP: Record<StudioKey, StudioInfo> = {
   interface: {
-    name: "インターフェースデザインスタジオ",
+    name: "インタフェースデザインスタジオ",
     enName: "Interface Design Studio",
-    designDomain: "インターフェースデザイン",
+    designDomain: "インタフェースデザイン",
     category: "media",
   },
   editing: {
     name: "エディティングスタジオ",
-    enName: "Editing Studio",
+    enName: "Editorial Design Studio",
     designDomain: "エディティング",
     category: "media",
   },
@@ -77,7 +77,7 @@ export const STUDIO_MAP: Record<StudioKey, StudioInfo> = {
   },
   equipment: {
     name: "製品・サービスデザインスタジオ", // STUDIO_KEYS[4]
-    enName: "Product & Service Design Studio",
+    enName: "Equipment & Service Design Studio",
     designDomain: "製品・サービスデザイン",
     category: "product",
   },
@@ -125,7 +125,7 @@ export const STUDIO_MAP: Record<StudioKey, StudioInfo> = {
   },
   space: {
     name: "空間デザインスタジオ",
-    enName: "Space Design Studio",
+    enName: "Spatial Design Studio",
     designDomain: "空間デザイン",
     category: "product",
   },
