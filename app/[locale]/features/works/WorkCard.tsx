@@ -68,11 +68,20 @@ export function WorkCard({ work }: { work: Work }) {
         <div className="flex flex-col items-start gap-1.5 flex-1 min-w-0">
           <h3 className="text-sm w-full line-clamp-3 font-semibold">{work.workTitle}</h3>
           <div className="flex flex-col gap-1 w-full">
-            {work.keywords?.map((keyword) => (
-              <div key={`${work.id}-${keyword}`} className="text-[10px] w-full truncate text-ellipsis whitespace-nowrap font-semibold">
-                {keyword}
-              </div>
-            ))}
+            {work.keywords?.map((keyword) => {
+              const displayKeyword =
+                keyword === "ヒューマンコンピュータインタラクション"
+                  ? "HCI"
+                  : keyword;
+              return (
+                <div
+                  key={`${work.id}-${keyword}`}
+                  className="text-[10px] w-full truncate text-ellipsis whitespace-nowrap font-semibold"
+                >
+                  {displayKeyword}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
