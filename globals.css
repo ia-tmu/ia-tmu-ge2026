@@ -182,6 +182,62 @@ html.wf-inactive body {
   }
 }
 
+/* 画像列：右側だけフェード */
+.scroll-mask-horizontal-right-only {
+  mask-image: linear-gradient(
+    to right,
+    black 0,
+    black calc(100% - 4rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0,
+    black calc(100% - 4rem),
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+/* 画像列：左側だけフェード */
+.scroll-mask-horizontal-left-only {
+  mask-image: linear-gradient(
+    to left,
+    black 0,
+    black calc(100% - 2rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    black 0,
+    black calc(100% - 2rem),
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+/* 画像列：左右両方フェード（両端が透明） */
+.scroll-mask-horizontal-both {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 2rem,
+    black calc(100% - 2rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 2rem,
+    black calc(100% - 2rem),
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
 /* 下端のみフェード（モバイルなど・縦スクロールと同様にコンテンツ自体が透明化） */
 .mask-fade-bottom {
   mask-image: linear-gradient(
