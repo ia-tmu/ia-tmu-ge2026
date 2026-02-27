@@ -42,3 +42,16 @@ export function removeBookmark(slug: string) {
   const list = getBookmarks().filter((id) => id !== slug);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
 }
+
+export function createShareUrl(basePath = "/share"): string | null {
+  if (typeof window === "undefined") return null;
+
+  const ids = getBookmarks();
+  if (ids.length === 0) return null;
+
+  const params = new URLSearchParams({
+    ids: ids.join(","), // ← 仕様固定
+  });
+
+  return `${basePath}?${params.toString()}`;
+}
