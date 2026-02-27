@@ -10,6 +10,8 @@ import { getSimilarWorks } from "@/lib/similarity";
 import { BackIcon } from "../../components/Icons";
 import { localePath } from "../../lib/localePath";
 import Link from "next/link";
+import BookmarkButton from "../../features/works/BookMarkButton";
+import { BookmarkedWorksList } from "../../features/works/BookmarkedWorksList";
 
 export const dynamicParams = false;
 
@@ -84,7 +86,10 @@ export default async function Work({
         <div className="flex flex-col-reverse md:flex-row items-start gap-4 md:gap-8">
           {/* 左側：テキスト・キーワード・リンク */}
           <div className="flex-1 self-stretch flex flex-col gap-4 md:gap-8 min-h-full">
-            <h1 className="text-xs md:text-sm font-medium">{work.degree}</h1>
+            <div className="flex flx-row w-full justify-between items-center">
+              <h1 className="text-xs md:text-sm font-medium">{work.degree}</h1>
+              <BookmarkButton slug={slug} />
+            </div>
             <h2 className="text-sm md:text-xl font-bold leading-[1.5]">
               {work.workTitle}
             </h2>
@@ -149,9 +154,18 @@ export default async function Work({
           )}
           <hr className="border-t border-white-300" />
 
-          <div className="flex flex-col gap-4 mb-12 md:mb-16">
+          <div className="flex flex-col gap-4">
             <div className="text-md">この作品に関連した作品・研究</div>
             <SimilarWorksList items={similarItems} />
+          </div>
+          <hr className="border-t border-white-300" />
+          <div className="flex flex-col gap-4 mb-12 md:mb-16">
+            <div className="text-md">お気に入りの作品</div>
+            <BookmarkedWorksList
+              allWorks={sheetData.works}
+              currentSlug={slug}
+              limit={10}
+            />
           </div>
         </div>
       </div>
