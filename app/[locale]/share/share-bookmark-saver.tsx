@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const STORAGE_KEY = "bookmarkedWorks";
 
@@ -32,13 +32,12 @@ function saveMerged(newIds: string[]) {
   window.dispatchEvent(new Event("bookmark-updated"));
 }
 
-export default function ShareBookmarkSaver({
-  idsParam,
-}: {
-  idsParam: string;
-}) {
+export default function ShareBookmarkSaver() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const hasRunRef = useRef(false);
+
+  const idsParam = searchParams.get("ids") ?? "";
 
   useEffect(() => {
     if (hasRunRef.current) return;
