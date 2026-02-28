@@ -31,13 +31,9 @@ export function BookmarkedWorksList({
   useEffect(() => {
     const bookmarks = getBookmarks();
 
-    // 今見ている作品は除外したい場合
-    const filtered = currentSlug
-      ? bookmarks.filter((id) => id !== currentSlug)
-      : bookmarks;
 
     // slug → Workに復元（similarItemsと同じ形にする）
-    const mapped = filtered
+    const mapped = bookmarks
       .map((id, index) => {
         const fullWork = allWorks.find((w) => w.id === id);
         if (!fullWork) return null;
