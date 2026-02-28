@@ -3,17 +3,7 @@
 import { useEffect, useState } from "react";
 import type { Work } from "../../types/work";
 import { SimilarWorksList } from "./SimilarWorksList";
-
-const STORAGE_KEY = "bookmarkedWorks";
-
-function getBookmarks(): string[] {
-  if (typeof window === "undefined") return [];
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-  } catch {
-    return [];
-  }
-}
+import { getBookmarks } from "../../lib/bookmark";
 
 export function BookmarkedWorksList({
   allWorks,
