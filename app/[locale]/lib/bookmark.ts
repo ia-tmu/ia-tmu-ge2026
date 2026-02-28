@@ -53,5 +53,5 @@ export function createShareUrl(basePath = "/share"): string | null {
     ids: ids.join(","), // ← 仕様固定
   });
 
-  return `${basePath}?${params.toString()}`;
+  return `${location.origin}${basePath}?${params.toString()}`;
 }

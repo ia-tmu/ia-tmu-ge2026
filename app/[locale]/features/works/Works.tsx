@@ -16,7 +16,7 @@ import { WorksListWithCategories } from "./WorksListWithCategories";
 import { WorksSearch } from "./WorksSearch";
 import { SheetData, type Work } from "../../types/work";
 import { BookmarkedWorksSection } from "./BookmarkedWorksSection";
-import { ShareBookmarksButton } from "./ShareBookmarksButton";
+import { ShareQRButton } from "./ShareQRButton";
 
 function getFilteredWorksByStudio(works: Work[]) {
   const list = works ?? [];
@@ -132,7 +132,7 @@ export function Works({ data }: { data: SheetData }) {
           onSelectedKeywordsChange={setSelectedKeywords}
         />
         <div className="flex justify-end mt-4">
-          <ShareBookmarksButton />
+          <ShareQRButton allWorks={data.works} />
         </div>
         <BookmarkedWorksSection
           allWorks={data.works ?? []}
