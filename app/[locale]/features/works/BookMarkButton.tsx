@@ -23,7 +23,7 @@ export default function BookmarkButton({ slug }: { slug: string }) {
   return (
     <button
       onClick={handleToggle}
-      className="text-sm px-3 py-1 border border-white/30 hover:bg-white/10 transition-all"
+      className={`text-sm px-3 py-1 border border-white/30 hover:bg-white/10 transition-all ${bookmarked ? "bg-dark-blue-primary/50 text-foreground" : ""}`}
       aria-pressed={bookmarked}
     >
       {bookmarked ? "★ お気に入り" : "☆ お気に入りに追加"}

@@ -6,7 +6,6 @@ import Concept from "./features/Concept";
 import Info from "./features/Info";
 import Footer from "./components/Footer";
 import WebExhibition from "./features/WebExhibition";
-import WebExhibitionComingSoon from "./features/WebExhibitionComingSoon";
 import Events from "./features/Events";
 import SNSEmbedding from "./features/SNSEmbedding";
 
@@ -29,7 +28,6 @@ export default async function Page() {
       <FixedBackground />
       <Teaser />
       <Concept />
-      {/* <WebExhibitionComingSoon /> */}
       <WebExhibition works={works} />
       <Events />
       <Info />

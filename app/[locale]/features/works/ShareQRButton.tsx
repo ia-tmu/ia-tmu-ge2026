@@ -11,9 +11,9 @@ export function ShareQRButton({ allWorks }: { allWorks: Work[] }) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="text-sm border border-foreground px-3 py-2 cursor-pointer hover:bg-foreground/10 transition"
+        className="text-sm border border-foreground px-3 py-2 cursor-pointer bg-foreground/10 backdrop-blur-2xl hover:bg-dark-blue-primary/10 hover:text-foreground transition-colors duration-300"
       >
-        Share (QR)
+        お気に入りをシェアする
       </button>
 
       <ShareQRModal open={open} onClose={() => setOpen(false)} allWorks={allWorks} />

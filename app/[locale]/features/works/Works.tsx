@@ -131,7 +131,7 @@ export function Works({ data }: { data: SheetData }) {
           selectedKeywords={selectedKeywords}
           onSelectedKeywordsChange={setSelectedKeywords}
         />
-        <div className="flex justify-end mt-4">
+        <div className="fixed bottom-6 right-6 z-100">
           <ShareQRButton allWorks={data.works} />
         </div>
         <BookmarkedWorksSection

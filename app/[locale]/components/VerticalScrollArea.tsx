@@ -78,6 +78,10 @@ export function VerticalScrollArea({
       <div
         ref={scrollRef}
         onScroll={updateScrollState}
+        style={{
+          msOverflowStyle: "none",
+          scrollbarWidth: "none",
+        }}
         className={`flex min-h-0 flex-1 flex-row justify-start flex-wrap gap-2 overflow-y-auto scroll-smooth py-2 md:py-0 ${scrollMaskClass} ${scrollClassName}`.trim()}
       >
         {children}
