@@ -5,7 +5,7 @@ const CANVAS_W = 1080;
 const CANVAS_H = 1920;
 const PADDING = 75;
 const GAP = 20;
-const HEADER_H = 250;
+const HEADER_H = 275;
 
 // カード：サムネイル左 + テキスト右（横並び）
 const CARD_THUMB_RATIO = 16 / 9; // サムネイルのアスペクト比
@@ -98,7 +98,7 @@ export async function generateBookmarkImage(
   ctx.fillStyle = "#ffffff";
   ctx.textAlign = "left";
   ctx.textBaseline = "middle";
-  ctx.font = `400 50px "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP", serif`;
+  ctx.font = `400 40px "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP", serif`;
   ctx.fillText("お気に入り作品リスト", PADDING + LOGO_H * 1.25, headerMidY);
   ctx.font = `500 30px "しっぽり明朝", "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HiraMinProN-W3", "Noto Serif JP", serif`;
   ctx.textAlign = "center";
@@ -179,8 +179,8 @@ export async function generateBookmarkImage(
     const textMidY = cardY + cardH / 2;
 
     // ID
-    const idFontSize = Math.round(cardH * 0.225);
-    const titleFontSize = Math.round(cardH * 0.275);
+    const idFontSize = Math.round(cardH * 0.22);
+    const titleFontSize = Math.round(cardH * 0.235);
 
     ctx.fillStyle = "rgba(255,255,255)";
     ctx.textAlign = "left";
