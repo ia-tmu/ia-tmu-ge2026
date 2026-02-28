@@ -15,6 +15,8 @@ import { SEARCH_KEYWORD_CATEGORIES } from "@/app/constants";
 import { WorksListWithCategories } from "./WorksListWithCategories";
 import { WorksSearch } from "./WorksSearch";
 import { SheetData, type Work } from "../../types/work";
+import { BookmarkedWorksSection } from "./BookmarkedWorksSection";
+import { ShareQRButton } from "./ShareQRButton";
 
 function getFilteredWorksByStudio(works: Work[]) {
   const list = works ?? [];
@@ -128,6 +130,14 @@ export function Works({ data }: { data: SheetData }) {
           keywordCategories={SEARCH_KEYWORD_CATEGORIES}
           selectedKeywords={selectedKeywords}
           onSelectedKeywordsChange={setSelectedKeywords}
+        />
+        <div className="fixed bottom-6 right-6 z-100">
+          <ShareQRButton allWorks={data.works} />
+        </div>
+        <BookmarkedWorksSection
+          allWorks={data.works ?? []}
+          showAllSectionId={showAllSectionId}
+          setShowAllSectionId={setShowAllSectionId}
         />
 
         {studioOrder.filter((studioKey) => {
