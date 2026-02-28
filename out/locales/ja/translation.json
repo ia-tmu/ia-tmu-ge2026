@@ -21,7 +21,9 @@
       "worksAriaLabel": "作品候補",
       "keywordsHeading": "キーワード",
       "keywordsAriaLabel": "キーワード候補",
-      "removeKeyword": "「{{keyword}}」の選択を解除"
+      "removeKeyword": "「{{keyword}}」の選択を解除",
+      "keywordList": "キーワード一覧",
+      "viewAllWorks": "すべて見る"
     }
   },
   "teaser": {
