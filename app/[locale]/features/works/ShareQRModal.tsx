@@ -121,7 +121,8 @@ export function ShareQRModal({ open, onClose, allWorks }: ShareQRModalProps) {
           )}
           <p className="my-6">
             気になった作品のリストを、他のデバイスやSNSに共有できます。<br />
-            会場での鑑賞用や、後で見返す際にご活用ください。
+            会場での鑑賞用や、後で見返す際にご活用ください。<br />
+            会場は電波が入りにくいため画像での保存を推奨しています。
           </p>
         </div>
 
