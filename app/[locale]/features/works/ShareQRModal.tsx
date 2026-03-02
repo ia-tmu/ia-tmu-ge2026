@@ -24,7 +24,7 @@ export function ShareQRModal({ open, onClose, allWorks }: ShareQRModalProps) {
   const [imgProgress, setImgProgress] = useState("");
   const [imgSrc, setImgSrc] = useState<string | null>(null);
 
-  const shareUrl = createShareUrl("/share");
+  const shareUrl = createShareUrl();
 
   useEffect(() => {
     if (!open || !shareUrl) {
