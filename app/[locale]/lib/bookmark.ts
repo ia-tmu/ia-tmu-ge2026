@@ -1,4 +1,5 @@
 const STORAGE_KEY = "bookmarkedWorks";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export function getBookmarks(): string[] {
   if (typeof window === "undefined") return [];
@@ -43,7 +44,7 @@ export function removeBookmark(slug: string) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
 }
 
-export function createShareUrl(basePath = "/ge2026/share"): string | null {
+export function createShareUrl() {
   if (typeof window === "undefined") return null;
 
   const ids = getBookmarks();
@@ -53,5 +54,5 @@ export function createShareUrl(basePath = "/ge2026/share"): string | null {
     ids: ids.join(","), // ← 仕様固定
   });
 
-  return `${location.origin}${basePath}?${params.toString()}`;
+  return `${location.origin}${basePath}/share?${params.toString()}`;
 }
