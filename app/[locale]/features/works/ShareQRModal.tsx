@@ -132,7 +132,7 @@ export function ShareQRModal({ open, onClose, allWorks }: ShareQRModalProps) {
         {imgStatus === "done" && imgSrc && (
           <div className="flex flex-col gap-3">
             <div className="w-full flex items-center justify-between">
-              <h3 className="text-base font-semibold">お気に入り一覧を画像で保存</h3>
+              <h3 className="text-base font-semibold">リストを画像で保存</h3>
               <button
                 onClick={handleDownload}
                 className="text-sm border border-foreground px-3 py-2 cursor-pointer bg-foreground/10 hover:bg-dark-blue-primary/10 hover:text-foreground transition-colors duration-300"

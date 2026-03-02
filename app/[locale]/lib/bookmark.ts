@@ -1,3 +1,5 @@
+import { localePath } from "./localePath";
+
 const STORAGE_KEY = "bookmarkedWorks";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -50,9 +52,12 @@ export function createShareUrl() {
   const ids = getBookmarks();
   if (ids.length === 0) return null;
 
+  const locale = document.documentElement.lang?.startsWith("en") ? "en" : "ja";
+  const path = localePath(locale, "/share");
+
   const params = new URLSearchParams({
-    ids: ids.join(","), // ← 仕様固定
+    ids: ids.join(","),
   });
 
-  return `${location.origin}${basePath}/share?${params.toString()}`;
+  return `${location.origin}${basePath}${path}?${params.toString()}`;
 }
