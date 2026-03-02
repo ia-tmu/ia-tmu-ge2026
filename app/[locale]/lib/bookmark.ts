@@ -43,7 +43,7 @@ export function removeBookmark(slug: string) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
 }
 
-export function createShareUrl(basePath = "/share"): string | null {
+export function createShareUrl(basePath = "/ge2026/share"): string | null {
   if (typeof window === "undefined") return null;
 
   const ids = getBookmarks();
