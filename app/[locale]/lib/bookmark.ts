@@ -50,9 +50,12 @@ export function createShareUrl() {
   const ids = getBookmarks();
   if (ids.length === 0) return null;
 
+  const lang = document.documentElement.lang || "ja";
+  const langPath = lang.startsWith("en") ? "/en" : "/ja";
+
   const params = new URLSearchParams({
-    ids: ids.join(","), // ← 仕様固定
+    ids: ids.join(","),
   });
 
-  return `${location.origin}${basePath}/share?${params.toString()}`;
+  return `${location.origin}${basePath}${langPath}/share?${params.toString()}`;
 }
