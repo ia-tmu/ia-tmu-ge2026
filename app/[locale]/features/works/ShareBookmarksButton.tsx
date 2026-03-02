@@ -7,7 +7,7 @@ export function ShareBookmarksButton() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    const url = createShareUrl("/share");
+    const url = createShareUrl();
 
     if (!url) {
       alert("ブックマークがありません");
