@@ -188,7 +188,7 @@ export default function MoyaBG() {
       top: 0,
       left: 0,
       width: '100vw',
-      height: '100vh',
+      height: '120vh',
       zIndex: -1
     }}>
       <Canvas
