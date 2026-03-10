@@ -23,6 +23,10 @@ export type ModalProps = {
   showCloseButton?: boolean;
   /** モーダルのサイズ */
   size?: "small" | "medium" | "large" | "extra-large";
+  /** ヘッダー右側に表示するアクション（タイトルと閉じるボタンの間）。スクロール時も常に表示される。 */
+  headerActions?: React.ReactNode;
+  /** モーダル下部に固定表示するフッター（スクロールしても常に表示される）。 */
+  footer?: React.ReactNode;
 };
 
 /**
@@ -37,6 +41,8 @@ export function Modal({
   className = "",
   showCloseButton = true,
   size = "medium",
+  headerActions,
+  footer,
 }: ModalProps) {
   const handleClose = () => onClose();
 
@@ -60,7 +66,7 @@ export function Modal({
                   : "max-w-md"
             }`.trim()}
         >
-          {(title || showCloseButton) && (
+          {(title || showCloseButton || headerActions) && (
             <div className="sticky top-0 z-10 shrink-0 flex items-start justify-between gap-4 p-6 border-b border-foreground/20">
               {title ? (
                 <DialogTitle className="text-lg font-semibold text-foreground">
@@ -69,20 +75,29 @@ export function Modal({
               ) : (
                 <span />
               )}
-              {showCloseButton && (
-                <button
-                  type="button"
-                  onClick={handleClose}
-                  className="shrink-0 p-1 cursor-pointer rounded text-foreground hover:bg-foreground/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  aria-label="閉じる"
-                >
-                  <CrossLargeIcon width={20} height={20} />
-                </button>
-              )}
+              <div className="flex items-center gap-2 shrink-0">
+                {headerActions}
+                {showCloseButton && (
+                  <button
+                    type="button"
+                    onClick={handleClose}
+                    className="shrink-0 p-1 cursor-pointer rounded text-foreground hover:bg-foreground/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    aria-label="閉じる"
+                  >
+                    <CrossLargeIcon width={20} height={20} />
+                  </button>
+                )}
+              </div>
             </div>
           )}
 
           <div className="flex-1 min-h-0 overflow-y-auto p-6 text-foreground">{children}</div>
+
+          {footer && (
+            <div className="shrink-0 border-t border-foreground/20 bg-white/30 p-2 flex items-center justify-end gap-2 backdrop-blur-3xl">
+              {footer}
+            </div>
+          )}
         </DialogPanel>
       </div>
     </Dialog>
