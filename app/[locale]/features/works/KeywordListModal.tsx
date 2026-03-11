@@ -67,8 +67,24 @@ export function KeywordListModal({
     });
   }, []);
 
+  const handleSearch = () => onClose();
+
   return (
-    <Modal open={open} onClose={onClose} title="キーワード一覧" size="extra-large">
+    <Modal
+      open={open}
+      onClose={onClose}
+      title="キーワード一覧"
+      size="extra-large"
+      footer={
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="cursor-pointer text-sm md:text-base font-semibold border border-foreground hover:border-dark-blue-primary px-3 py-1 rounded hover:bg-dark-blue-primary hover:text-foreground transition-colors flex items-center justify-center gap-1 duration-300"
+        >
+          探す
+        </button>
+      }
+    >
       <Listbox
         value={selectedKeywords}
         onChange={onSelectedKeywordsChange}
