@@ -20,7 +20,7 @@ const VOICES = [
 export default function ReportVisitorsVoices() {
   return (
     <section className="flex flex-col gap-4 md:gap-6">
-      <h2 className="text-xl md:text-2xl font-semibold">Visitors&apos; Voices</h2>
+      <h2 className="text-xl md:text-2xl font-semibold">Visitors’ Voices</h2>
 
       <p className="text-xs md:text-sm leading-7 md:leading-8 text-justify whitespace-pre-line">
         来場者アンケートでは、多くの方から展示全体に対する前向きな感想が寄せられました。作品の完成度や多様性に加え、展示の見やすさや研究内容の伝わりやすさに関する声も多く見られました。作品そのものだけでなく、その背景にある視点や制作の過程まで受け取られていたことが印象的でした。一方で、QRコード表示や展示分類など、今後の運営に活かせる改善提案も寄せられました。
