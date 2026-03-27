@@ -2,7 +2,7 @@ export default function ReportIntro() {
   return (
     <section className="flex flex-col gap-4 md:gap-5">
       <div className="flex flex-col gap-1">
-        <h1 className="text-2xl md:text-3xl font-semibold leading-tight">Graduation Exhibition 2026 Archive</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold leading-tight">Graduation Exhibition 2026 Archive</h1>
         <h2 className="text-xl md:text-2xl leading-tight">卒業・修了制作研究展2026 実施報告</h2>
       </div>
 

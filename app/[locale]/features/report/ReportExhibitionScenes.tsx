@@ -6,7 +6,7 @@ type AutoScrollRowProps = {
 };
 
 const fullBleedAutoScrollWrapClass =
-  "w-[100dvw] max-w-[100dvw] shrink-0 self-start overflow-x-clip ml-[calc(50%-50dvw)]";
+  "w-screen max-w-screen shrink-0 self-start overflow-x-hidden ml-[calc(50%_-_50vw)]";
 
 function AutoScrollRow({ labels, direction }: AutoScrollRowProps) {
   const trackClass =
@@ -48,7 +48,7 @@ export default function ReportExhibitionScenes() {
     <section className="flex flex-col gap-4 md:gap-6">
 
       <div className="flex flex-col">
-        <h2 className="text-xl md:text-2xl font-semibold">Exhibition Scenes</h2>
+        <h2 className="text-3xl font-semibold">Exhibition Scenes</h2>
         <p className="text-xs md:text-sm leading-7 md:leading-8 whitespace-pre-line">
           会場風景や作品写真を通して、展覧会の様子をご紹介します。展示空間の広がりや、作品と鑑賞者の関わりをご覧ください。
         </p>
