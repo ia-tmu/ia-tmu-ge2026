@@ -6,7 +6,7 @@ type AutoScrollRowProps = {
 };
 
 const fullBleedAutoScrollWrapClass =
-  "w-[100dvw] max-w-[100dvw] shrink-0 self-start overflow-x-clip ml-[calc(50%-50dvw)]";
+  "w-screen max-w-screen shrink-0 self-start overflow-x-hidden ml-[calc(50%_-_50vw)]";
 
 function AutoScrollRow({ labels, direction }: AutoScrollRowProps) {
   const trackClass =
