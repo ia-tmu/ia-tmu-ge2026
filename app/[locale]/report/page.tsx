@@ -10,7 +10,7 @@ export default function ReportPage() {
   return (
     <main className="relative text-sm md:text-base pt-20 md:pt-[120px]">
       <MoyaBG />
-      <div className="w-full max-w-5xl mx-auto px-6 md:px-10 lg:px-14 py-8 md:py-12 flex flex-col gap-12 md:gap-16">
+      <div className="w-full max-w-5xl mx-auto px-6 md:px-10 lg:px-14 py-8 md:py-12 flex flex-col gap-16">
         <ReportIntro />
         <ReportExhibitionScenes />
         <ReportTalkSessions />
