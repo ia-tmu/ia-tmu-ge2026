@@ -64,7 +64,7 @@ export function ReportExhibitionScenesGalleries() {
   );
 
   return (
-    <div className="flex flex-col gap-4 md:gap-5">
+    <div className="flex flex-col gap-4 md:gap-5 -mt-12">
       <div className={`${reportContentGutterClass} shrink-0`}>
         <p className="text-xs md:text-sm font-semibold">Gallery A</p>
       </div>
