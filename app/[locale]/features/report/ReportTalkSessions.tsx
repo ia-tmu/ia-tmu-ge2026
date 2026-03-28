@@ -32,7 +32,7 @@ export default function ReportTalkSessions() {
   return (
     <section className="flex flex-col gap-5 md:gap-7">
       <div className="flex flex-col">
-        <h2 className="text-3xl font-semibold text-right">Talk Sessions</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold text-right">Talk Sessions</h2>
         <p className="text-xs md:text-sm leading-7 md:leading-8 text-justify whitespace-pre-line">
           会期中に実施した4回のトークセッションの記録です。登壇者それぞれの実践や視点を通して、展示テーマ「もや」をめぐる思考や、制作の背景が語られました。
         </p>
