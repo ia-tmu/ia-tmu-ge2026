@@ -1,12 +1,13 @@
 import ReportImagePlaceholder from "./ReportImagePlaceholder";
 
+/** 本文カラムと同一の余白（report/page.tsx の内側ラッパーと揃える） */
+const reportContentGutterClass =
+  "w-full max-w-5xl mx-auto px-6 md:px-10 lg:px-14";
+
 type AutoScrollRowProps = {
   labels: string[];
   direction: "left" | "right";
 };
-
-const fullBleedAutoScrollWrapClass =
-  "w-[100dvw] max-w-[100dvw] shrink-0 self-start overflow-x-hidden ml-[calc(50%_-_50dvw)]";
 
 function AutoScrollRow({ labels, direction }: AutoScrollRowProps) {
   const trackClass =
@@ -34,7 +35,25 @@ function AutoScrollRow({ labels, direction }: AutoScrollRowProps) {
   );
 }
 
-export default function ReportExhibitionScenes() {
+/** px 付きラッパー内に置く（見出し・リード文） */
+export function ReportExhibitionScenesIntro() {
+  return (
+    <section className="flex flex-col gap-4 md:gap-6">
+      <div className="flex flex-col">
+        <h2 className="text-3xl font-semibold">Exhibition Scenes</h2>
+        <p className="text-xs md:text-sm leading-7 md:leading-8 whitespace-pre-line">
+          会場風景や作品写真を通して、展覧会の様子をご紹介します。展示空間の広がりや、作品と鑑賞者の関わりをご覧ください。
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * main 直下（水平 padding の外）に置く。ビューポート全幅の帯になる。
+ * ラベルだけ本文カラムの余白に合わせる。
+ */
+export function ReportExhibitionScenesGalleries() {
   const galleryALabels = Array.from(
     { length: 30 },
     (_, i) => `Gallery A Placeholder ${i + 1}`
@@ -45,31 +64,20 @@ export default function ReportExhibitionScenes() {
   );
 
   return (
-    <section className="flex flex-col gap-4 md:gap-6">
-
-      <div className="flex flex-col">
-        <h2 className="text-3xl font-semibold">Exhibition Scenes</h2>
-        <p className="text-xs md:text-sm leading-7 md:leading-8 whitespace-pre-line">
-          会場風景や作品写真を通して、展覧会の様子をご紹介します。展示空間の広がりや、作品と鑑賞者の関わりをご覧ください。
-        </p>
+    <div className="flex flex-col gap-4 md:gap-5">
+      <div className={`${reportContentGutterClass} shrink-0`}>
+        <p className="text-xs md:text-sm font-semibold">Gallery A</p>
+      </div>
+      <div className="w-full min-w-0 overflow-x-hidden shrink-0">
+        <AutoScrollRow labels={galleryALabels} direction="right" />
       </div>
 
-
-      <div className="grid gap-4 md:gap-5">
-        <div className="flex flex-col gap-3">
-          <p className="text-xs md:text-sm font-semibold">Gallery A</p>
-          <div className={fullBleedAutoScrollWrapClass}>
-            <AutoScrollRow labels={galleryALabels} direction="right" />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-3">
-          <p className="text-xs md:text-sm font-semibold">Gallery B</p>
-          <div className={fullBleedAutoScrollWrapClass}>
-            <AutoScrollRow labels={galleryBLabels} direction="left" />
-          </div>
-        </div>
+      <div className={`${reportContentGutterClass} shrink-0`}>
+        <p className="text-xs md:text-sm font-semibold">Gallery B</p>
       </div>
-    </section>
+      <div className="w-full min-w-0 overflow-x-hidden shrink-0">
+        <AutoScrollRow labels={galleryBLabels} direction="left" />
+      </div>
+    </div>
   );
 }
