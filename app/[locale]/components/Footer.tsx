@@ -23,7 +23,7 @@ export default function Footer() {
               Department Website
             </Button>
           </div>
-          <div className="flex flex-col gap-3 items-center">
+          <div className="flex flex-col gap-3 items-center pb-10">
             <div>
               © {currentYear} Department of Industrial Art, Tokyo Metropolitan
               University

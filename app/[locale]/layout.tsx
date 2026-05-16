@@ -13,6 +13,7 @@ import ScrollManager from "./components/ScrollManager";
 import BuildInfoLogger from "./components/BuildInfoLogger";
 import { FVScrollRefProvider } from "./contexts/FVScrollRefContext";
 import Header from "./components/Header";
+import ReportFAB from "./components/ReportFAB";
 import "../../globals.css";
 import siteConfig from "../../site.config";
 
@@ -234,6 +235,7 @@ export default async function RootLayout({
             <ClientLanguageRedirect locale={locale} />
             <BuildInfoLogger />
             <Header />
+            <ReportFAB />
             {children}
           </FVScrollRefProvider>
         </I18nProvider>

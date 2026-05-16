@@ -1,5 +1,11 @@
+import Image from "next/image";
 import Button from "../../components/Button";
-import ReportImagePlaceholder from "./ReportImagePlaceholder";
+import talk1 from "../../../../public/images/report/talk/talk1.png";
+import talk2 from "../../../../public/images/report/talk/talk2.png";
+import talk3 from "../../../../public/images/report/talk/talk3.png";
+import talk4 from "../../../../public/images/report/talk/talk4.png";
+
+const TALK_SESSION_IMAGES = [talk1, talk2, talk3, talk4] as const;
 
 const SESSIONS = [
   {
@@ -12,19 +18,19 @@ const SESSIONS = [
     title: "第2回｜もやを支える：キュレーション、インストール、クリティークの実践",
     meta: "2026.03.01 / 楠見清、島影圭佑、小林空、清水勇希",
     body: "第2回では、キュレーション、インストール、クリティークといった、作品の手前や周囲で展覧会を支える実践を通して、「もや」と向き合う方法が語られました。もやを晴らすのではなく、より深いもやへと進むために、技術や関係性、共同体をどのように築いていくかが、それぞれの経験に基づいて共有されました。さらに、鑑賞者との距離や、作家・批評家・キュレーターといった役割の境界を越える視点にも話題が広がり、本展を支える実践の豊かさに触れる機会となりました。",
-    url: "https://note.com/tmu_ia/n/nf73eb263d398",
+    url: "https://note.com/tmu_ia/n/nd45a2abdf6a8",
   },
   {
     title: "第3回｜もやを“伝わる形”に変える：言語化・可視化・編集の技術",
     meta: "2026.03.06 / 井上悠、舟山貴士、嶋村有彩",
     body: "第3回では、「もや」を他者に伝わる形へと変えていくための、言語化・可視化・編集の技術について語られました。クライアントとの対話を通して判断基準を組み立てるプロセスや、書籍デザインにおいて内容を深く読み込みながら設計へと結びつけていく思考が、それぞれの実践に基づいて共有されました。さらに、学生時代から現在に至るまで変わらず持ち続けている問いや、展示を通して見えてきたインダストリアルアートの強みにも話題が広がり、本展を「伝える」という観点から捉え直す機会となりました。",
-    url: "https://note.com/tmu_ia/n/nf73eb263d398",
+    url: "https://note.com/tmu_ia/n/nf3b329227937",
   },
   {
     title: "第4回｜今回の卒展を振り返って・IA20周年について",
     meta: "2026.03.06 / 馬場哲晃、土屋真、南雲琴寧",
     body: "第4回では、今回の卒展を手がかりに、インダストリアルアート学科・学域が積み重ねてきた20年の歩みと、これからの展望について語られました。展示が手探りだった頃のエピソードや、学生主導で運営が成熟していった経緯、プロダクトとメディアの境界が次第に融け合ってきた変化などが、それぞれの経験を通して共有されました。卒展を支えてきた歴史や文化に触れることで、本展を学科の時間の積み重ねのなかで捉え直す機会となりました。",
-    url: "https://note.com/tmu_ia/n/nf73eb263d398",
+    url: "https://note.com/tmu_ia/n/n33c815d8f78c",
   },
 ] as const;
 
@@ -33,8 +39,8 @@ export default function ReportTalkSessions() {
     <section className="flex flex-col gap-5 md:gap-7">
       <div className="flex flex-col">
         <h2 className="text-3xl md:text-4xl font-semibold text-right">Talk Sessions</h2>
-        <p className="text-xs md:text-sm leading-7 md:leading-8 text-justify whitespace-pre-line">
-          会期中に実施した4回のトークセッションの記録です。登壇者それぞれの実践や視点を通して、展示テーマ「もや」をめぐる思考や、制作の背景が語られました。
+        <p className="text-xs md:text-sm leading-7 md:leading-8 text-justify whitespace-pre-line drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
+          会期中に実施した4回のトークセッションの記録です。登壇者それぞれの実践や視点を通して、展示テーマ「もや」をめぐる思考や、本展の背景が語られました。
         </p>
       </div>
 
@@ -46,19 +52,21 @@ export default function ReportTalkSessions() {
         >
           <div className="flex flex-col gap-1">
             <h3 className="text-base md:text-lg font-semibold">{session.title}</h3>
-            <p className="text-xs md:text-sm text-foreground/80">{session.meta}</p>
+            <p className="text-xs md:text-sm text-foreground/80 drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">{session.meta}</p>
           </div>
 
           <div className="grid gap-4 md:gap-6 md:grid-cols-[minmax(0,480px)_1fr]">
-            <div>
-              <ReportImagePlaceholder
-                aspectClassName="aspect-[8/5]"
-                label={`Talk Session Placeholder ${index + 1}`}
-                className="bg-foreground/5"
+            <div className="relative w-full aspect-8/5 overflow-hidden border border-foreground/30 bg-foreground/5">
+              <Image
+                src={TALK_SESSION_IMAGES[index]}
+                alt={session.title}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 480px"
               />
             </div>
             <div className="flex flex-col gap-1 md:gap-2">
-              <p className="text-xs md:text-sm leading-7 text-justify whitespace-pre-line">
+              <p className="text-xs md:text-sm leading-7 text-justify whitespace-pre-line drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
                 {session.body}
               </p>
               {session.url && (

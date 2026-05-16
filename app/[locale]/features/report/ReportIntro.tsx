@@ -11,7 +11,7 @@ export default function ReportIntro() {
         会場：東京都美術館 ギャラリーA・B
       </p> */}
 
-      <p className="text-xs md:text-sm leading-7 md:leading-8 whitespace-pre-line">
+      <p className="text-xs md:text-sm leading-7 md:leading-8 whitespace-pre-line drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
         東京都立大学システムデザイン学部・研究科 インダストリアルアート学科・学域 卒業・修了制作研究展2026は、2026年3月1日から3月7日まで、東京都美術館 ギャラリーA・Bにて開催されました（3月2日は休館日）。 {"\n"}
         会期中は1,972名の方にご来場いただきました。ご来場くださった皆さまに、心より御礼申し上げます。
       </p>
