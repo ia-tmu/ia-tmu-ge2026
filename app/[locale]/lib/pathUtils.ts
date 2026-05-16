@@ -36,3 +36,18 @@ export function isWorksPagePath(
     return path === worksPath || path.startsWith(`${worksPath}/`);
   });
 }
+
+/**
+ * 実施報告ページかどうか
+ * pathname が "/report" または "/ja/report"、"/en/report" 等の場合に true
+ */
+export function isReportPagePath(
+  pathname: string | null | undefined
+): boolean {
+  const path = getNormalizedPath(pathname);
+  const possiblePrefixes = ["", ...locales.map((loc) => `/${loc}`)];
+  return possiblePrefixes.some((prefix) => {
+    const reportPath = `${prefix}/report`;
+    return path === reportPath || path.startsWith(`${reportPath}/`);
+  });
+}
