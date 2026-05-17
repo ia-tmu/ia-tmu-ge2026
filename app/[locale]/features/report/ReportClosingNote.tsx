@@ -15,6 +15,9 @@ export default function ReportClosingNote() {
         <p>
           改めまして、本展示に関心を寄せてくださったすべての皆様に御礼申し上げます。誠にありがとうございました。
         </p>
+        <p className="pt-4">
+          卒業・修了制作研究展2026 卒展委員一同
+        </p>
       </div>
     </section>
   );
