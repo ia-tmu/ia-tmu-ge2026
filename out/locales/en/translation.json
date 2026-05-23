@@ -161,5 +161,10 @@
   "webExhibition": {
     "description": "So that you can view the works online, <br/> we are publishing an overview of productions <br/> and research as a Web exhibition.",
     "list": "Go to Works"
+  },
+  "reportFAB": {
+    "line1": "",
+    "line2": "Report",
+    "aria": "Go to Report"
   }
 }
