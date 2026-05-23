@@ -19,7 +19,7 @@ export default function Footer() {
             <Button href="https://x.com/tmu_ia_sotsuten" target="_blank">
               X (Twitter)
             </Button>
-            <Button href="https://note.com/tmu_ia" target="_blank" className="no-underline" >
+            <Button href="https://note.com/tmu_ia" target="_blank" className="no-underline!" >
               <div className="text-base -mt-[3px]  underline decoration-[0.05rem]">
                 note
               </div>
