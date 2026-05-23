@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="relative mb-8 w-full pointer-events-none z-10">
       <div className="w-full max-w-4xl px-2 md:px-12 lg:px-16 mx-auto pointer-events-auto">
         <div className="flex flex-col gap-8 items-center text-xs md:text-sm font-medium">
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="flex flex-wrap justify-end gap-6 text-sm">
             <Button
               href="https://www.instagram.com/tmu_ia_sotsuten/"
               target="_blank"
@@ -18,6 +18,11 @@ export default function Footer() {
             </Button>
             <Button href="https://x.com/tmu_ia_sotsuten" target="_blank">
               X (Twitter)
+            </Button>
+            <Button href="https://note.com/tmu_ia" target="_blank" className="no-underline" >
+              <div className="text-base -mt-[3px]  underline decoration-[0.05rem]">
+                note
+              </div>
             </Button>
             <Button href="https://industrial-art.sd.tmu.ac.jp/" target="_blank">
               Department Website
@@ -40,56 +45,4 @@ export default function Footer() {
       </div>
     </div>
   );
-}
-
-{
-  /* <footer className="w-full py-8 px-6 md:px-12 lg:px-16"> */
-}
-{
-  /*   <div className="flex flex-wrap gap-6 text-xs md:text-sm font-medium opacity-60"> */
-}
-{
-  /*     <Button */
-}
-{
-  /*       href="https://www.instagram.com/tmu_ia_sotsuten/" */
-}
-{
-  /*       target="_blank" */
-}
-{
-  /*     > */
-}
-{
-  /*       Instagram */
-}
-{
-  /*     </Button> */
-}
-{
-  /*     <Button href="https://x.com/tmu_ia_sotsuten" target="_blank"> */
-}
-{
-  /*       X (Twitter) */
-}
-{
-  /*     </Button> */
-}
-{
-  /*     <Button href="https://industrial-art.sd.tmu.ac.jp/" target="_blank"> */
-}
-{
-  /*       Department Website */
-}
-{
-  /*     </Button> */
-}
-{
-  /*   </div> */
-}
-{
-  /* </footer> */
-}
-{
-  /**/
 }
